@@ -1,0 +1,278 @@
+/* General Styles */
+.Logo {
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #cceeff 10%, #99ddff 30%, #e6f7ff 50%, transparent 70%),
+                linear-gradient(135deg, #e6f7ff 0%, #f0f9ff 100%);
+    background-size: cover;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .logo-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links.active {
+    display: block;
+  }
+  
+  .nav-links button {
+    background: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .nav-links button:hover {
+    color: #fd3765;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 0.4rem;
+    width: 25px;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    background: #333;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+  }
+  
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(6px);
+  }
+  
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-6px);
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      justify-content: center;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 1rem;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+  
+ /* Logo Description */
+/* Logo Description */
+.logo-description {
+    position: absolute;
+    top: 25%; /* Adjusted to move it up slightly */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #4c4949;
+    font-size: 3rem;
+    font-weight: bold;
+    width: 70%;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Start invisible */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+  }
+  
+  /* Visible class to animate the description */
+  .logo-description.visible {
+    opacity: 1; /* Become visible */
+    transform: translate(-50%, -50%) translateY(0); /* Move to final position */
+  }
+  
+  /* Description Parts */
+  .description-part {
+    width: 50%;
+    padding: 0 10px;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(100%); /* Start from the right or left */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+  }
+  
+  .description-left {
+    transform: translateX(-100%); /* Start from the left */
+  }
+  
+  .description-right {
+    transform: translateX(100%); /* Start from the right */
+  }
+  
+  .logo-description.visible .description-left {
+    opacity: 1;
+    transform: translateX(0); /* Slide into the center */
+  }
+  
+  .logo-description.visible .description-right {
+    opacity: 1;
+    transform: translateX(0); /* Slide into the center */
+  }
+  
+  /* Media Query for responsiveness */
+  @media (max-width: 768px) {
+    .logo-description {
+      font-size: 2rem; /* Adjust font size for smaller screens */
+      width: 90%; /* Allow more width for smaller screens */
+    }
+  
+    .description-part {
+      width: 100%;
+      padding: 0 20px;
+    }
+  }
+
+ /* Logo Image */
+.logo-image {
+    margin-top: 850px; /* Pull down the logo image (adjust this value as needed) */
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Add animation to the logo image */
+  .logo-image img {
+    width: 1150px; /* Increased width of the image */
+    height: auto; /* Maintain aspect ratio */
+    opacity: 0; /* Start with the image invisible */
+    animation: fadeInMove 2s forwards; /* Apply animation */
+  }
+  
+  /* Keyframe animation for fade-in and slight upward movement */
+  @keyframes fadeInMove {
+    0% {
+      opacity: 0;
+      transform: translateY(30px); /* Start from below */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Move to final position */
+    }
+  }
+
+ /* Package Section */
+/* Package Section */
+.packages {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+  }
+  
+  .package {
+    padding: 30px;
+    border-radius: 12px; /* Rounded corners */
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-shadow: 2px solid black; /* Black border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 200px;
+  }
+  
+  .package:hover {
+    background: radial-gradient(circle at center, #cceeff 10%, #99ddff 30%, #e6f7ff 50%, transparent 70%), 
+                linear-gradient(135deg, #e6f7ff 0%, #f0f9ff 100%);
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .package h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .package p {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  .package ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .package ul li {
+    margin-bottom: 10px;
+  }
+  
+  .package button {
+    background-color: black; /* Black button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .package button:hover {
+    background-color: #333; /* Darker black on hover */
+  }
+  
+  /* Media Query for Responsiveness */
+  @media (max-width: 768px) {
+    .packages {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .package {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  }
+  
