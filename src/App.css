@@ -1,3 +1,4 @@
+
 .app {
   max-height: 140vh;
   background: radial-gradient(circle at center, #cceeff 10%, #99ddff 30%, #e6f7ff 50%, transparent 70%),
@@ -468,4 +469,23 @@ textarea {
 
 .footer .footer-bottom a:hover {
   color: #f4d03f;
+}
+
+
+/* **********************************Footer******************************** */
+.line-h {
+  line-height: 1.3; /* Adjusted to 1.3 for consistent spacing */
+}
+
+.line-h h5,
+.line-h p,
+.line-h span {
+  margin: 0; 
+  line-height: inherit; /* Ensures all elements inherit the parent line-height */
+}
+.foot {
+  background: linear-gradient(to bottom, #a6e2f8dc, #3777a1); /* Gradient from light cyan to dark blue */
+  color: #fff; /* Adjust text color for better contrast */
+  padding: 2rem 0; /* Add padding for better spacing */
+  
 }

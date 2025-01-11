@@ -20,6 +20,7 @@ import Flyer from "./Components/Flyer/flyer";
 import Exhibition from "./Components/Exibition/exibition";
 import Brochure from "./Components/Brochure/brochure";
 import UIUX from "./Components/UIUX/uiux";
+import Footer from "./Components/Footer";
 
 const ContactSection = () => (
   <div className="contact-section">
@@ -142,7 +143,7 @@ const App = () => {
           <img src={statueImage} alt="Artistic statue with sunglasses" className="hero-image" />
         </div>
 
-        <section className="form-section" ref={contactFormRef}>
+        {/* <section className="form-section" ref={contactFormRef}>
           <h2 className="form-title">Let's Get in Touch</h2>
 
           <form className="contact-form" onSubmit={handleSubmit}>
@@ -232,12 +233,12 @@ const App = () => {
             <button type="submit" className="submit-button">Send Message</button>
           </form>
 
-          {acknowledgmentMessage && <div className="acknowledgment-message">{acknowledgmentMessage}</div>} {/* Show acknowledgment message */}
-        </section>
+          {acknowledgmentMessage && <div className="acknowledgment-message">{acknowledgmentMessage}</div>} {/* Show acknowledgment message 
+        </section> */}
       </main>
 
       {/* Footer */}
-      <footer className="footer">
+      {/* <footer className="footer">
         <div className="footer-content">
           <div className="footer-section">
             <h4>About Artisticify</h4>
@@ -261,7 +262,7 @@ const App = () => {
         <div className="footer-bottom">
           <p>&copy; 2025 Artisticify. All Rights Reserved.</p>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };
@@ -285,6 +286,7 @@ const Root = () => (
       <Route path="/icon" element={<Icon />} />
       <Route path="/stationary" element={<Stationary />} />
     </Routes>
+    <Footer/>
   </Router>
 );
 
