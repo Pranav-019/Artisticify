@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-route
 import "./App.css";
 import statueImage from "./assets/homepage-bg.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import Design from "./Components/Design/design";
 import About from "./Components/About/about";
