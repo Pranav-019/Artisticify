@@ -106,7 +106,7 @@
  /* Logo Description */
 /* Logo Description */
 .logo-description {
-    margin-top: 500px;
+    margin-top: 250px;
     position: absolute; /* Adjusted to move it up slightly */
     left: 50%;
     transform: translate(-50%, -50%);
@@ -181,7 +181,7 @@
 
  /* Logo Image */
 .logo-image {
-    margin-top: 800px; /* Pull down the logo image (adjust this value as needed) */
+    margin-top: 30%; /* Pull down the logo image (adjust this value as needed) */
     display: flex;
     justify-content: center;
 
@@ -215,13 +215,13 @@
     justify-content: center;
     gap: 20px;
    
-    margin-top: 50px;
+    margin-top: 500px;
     
   }
   
   .package {
     padding: 30px;
-    border-radius: 12px; /* Rounded corners */
+    border-radius: 10; /* Rounded corners */
     /* background-color: #333; */
     width: 25%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -308,10 +308,62 @@
   .description-part {
     width: 500px;  /* Adjust as needed */
     height: auto; /* Adjust as needed */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(13, 62, 114, 0.6);
     margin: 10px;
     font-size: 30px;
-    padding: 20px;
+    padding: 50px;
+    border-radius: 5%;
+  }
+  .description-part {
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .description-left:hover {
+    transform: translateY(-10px); /* Move the div slightly upwards */
+  }
+  
+  .description-right:hover {
+    transform: translateX(10px); /* Move the div slightly to the right */
+  }
+  /* .description-right::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    background: #13367b81;
+    transition: .5s;
+    z-index: 203;
+  }
+  .description-right:hover::before {
+    border-radius: 2%;
+    height: 350px;
+    color: white;
+    background-color: #13367b81;
+  }
+  
+  .description-left::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    background: #13367b81;
+    transition: .5s;
+    z-index: 203;
+  }
+  .description-left:hover::before {
+    border-radius: 2%;
+    height: 350px;
+    color: white;
+    background-color: #13367b81;
+  } */
+  .description-part i{
+    font-size: 50px;
   }
   
   

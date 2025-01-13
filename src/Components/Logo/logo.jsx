@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import "./logo.css";
-import logos from "./logo-assets/logos-2.jpeg";
+import "./logo.css"; // Ensure your CSS file path is correct
+import logos from "./logo-assets/logos-2.jpeg"; // Ensure your image path is correct
 
 const Logo = () => {
   const navigate = useNavigate();
@@ -89,48 +89,35 @@ const Logo = () => {
     navigate(path);
   };
 
-  // const loadMorePackages = () => {
-  //   if (loading) return;
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setPackages((prev) => [
-  //       ...prev,
-  //       ...initialPackages.map((pkg) => ({
-  //         ...pkg,
-  //         name: `${pkg.name} (New)`,
-  //       })),
-  //     ]);
-  //     setLoading(false);
-  //   }, 1000); // Simulate loading delay
-  // };
+  const loadMorePackages = () => {
+    if (loading) return;
+    setLoading(true);
+    setTimeout(() => {
+      setPackages((prev) => [
+        ...prev,
+        ...initialPackages.map((pkg) => ({
+          ...pkg,
+          name: `${pkg.name} (New)`,
+        })),
+      ]);
+      setLoading(false);
+    }, 1000); // Simulate loading delay
+  };
 
   return (
     <div className="Logo">
       {/* Navbar */}
       <nav className="navbar">
-        <div className="logo-title" onClick={() => handleNavigation("/")}>Artisticify</div>
+        <div className="logo-title" onClick={() => handleNavigation("/")}>
+          Artisticify
+        </div>
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <button onClick={() => handleNavigation("/home")} aria-label="Go to Home">
-            Home
-          </button>
-          <button onClick={() => handleNavigation("/about")} aria-label="Learn About Us">
-            About
-          </button>
-          <button onClick={() => handleNavigation("/design")} aria-label="View Designs">
-            Design
-          </button>
-          <button
-            onClick={() => handleNavigation("/digitalMarketing")}
-            aria-label="Explore Digital Marketing"
-          >
-            Digital Marketing
-          </button>
-          <button onClick={() => handleNavigation("/our-work")} aria-label="View Our Work">
-            Our Work
-          </button>
-          <button onClick={() => handleNavigation("/contact")} aria-label="Contact Us">
-            Contact
-          </button>
+          <button onClick={() => handleNavigation("/home")} aria-label="Go to Home">Home</button>
+          <button onClick={() => handleNavigation("/about")} aria-label="Learn About Us">About</button>
+          <button onClick={() => handleNavigation("/design")} aria-label="View Designs">Design</button>
+          <button onClick={() => handleNavigation("/digitalMarketing")} aria-label="Explore Digital Marketing">Digital Marketing</button>
+          <button onClick={() => handleNavigation("/our-work")} aria-label="View Our Work">Our Work</button>
+          <button onClick={() => handleNavigation("/contact")} aria-label="Contact Us">Contact</button>
         </div>
         <div
           className={`hamburger ${menuOpen ? "open" : ""}`}
@@ -143,52 +130,60 @@ const Logo = () => {
       </nav>
 
       {/* Logo Design Description */}
-      <div className={`logo-description  ${isVisible ? "visible" : ""}`}>
-      <div className="description-part description-left">
-  <i className="fas fa-pen-fancy"></i>
-  Our logo design services focus on creating unique and memorable brand identities.
-</div>
-<div className="description-part description-right">
-  <i className="fas fa-briefcase"></i>
-  Let us craft a logo that truly represents your business and leaves a lasting impression.
+      <div className={`logo-description ${isVisible ? "visible" : ""}`}>
+  <div className="container">
+    <div className="row">
+      {/* Left Description */}
+      <div className="col-12 col-md-6 description-part description-left py-5">
+        <div>
+          <i className="fas fa-pen-fancy"></i>
+        </div>
+        <p className="p">
+          Our logo design services focus on creating unique and memorable brand
+          identities.
+        </p>
+      </div>
+
+      {/* Right Description */}
+      <div className="col-12 col-md-6 description-part description-right py-5">
+        <div>
+          <i className="fas fa-briefcase"></i>
+        </div>
+        <p>
+          Let us craft a logo that truly represents your business and leaves a
+          lasting impression.
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
 
-      </div>
-      
 
       {/* Scrollable Content */}
-      <div className="">
+      <div className="content-container">
         {/* Logo Image */}
-        
-        <div className="logo-image">
-          <img src={logos} alt="Artisticify Logo" />
-        </div>
+        {/* <div className="logo-image">
+  <img src={logos} alt="Artisticify Logo" className="img-fluid" />
+</div> */}
+
 
         {/* Package Section */}
-        {/* <h1 className="text-center mb-3">Our Packages</h1> */}
-        <div className="packages" >
-  {/* Centering the h1 text */}
-  
-
-  {packages.map((pkg, index) => (
-    <div className="package mb-3" key={index}>
-      <h3 className="text-center">{pkg.name}</h3>
-      <p>{pkg.description}</p>
-      <ul>
-        {pkg.features.map((feature, i) => (
-          <li key={i}>{feature}</li>
-        ))}
-      </ul>
-      <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto">
-        Buy Now
-      </button>
-    </div>
-  ))}
-</div>
-
-        {/* <div ref={loaderRef} className="loader">
-          {loading ? "Loading more packages..." : "Scroll down for more packages"}
-        </div> */}
+        <div className="packages">
+          {packages.map((pkg, index) => (
+            <div className="package mb-3" key={index}>
+              <h3 className="text-center">{pkg.name}</h3>
+              <p>{pkg.description}</p>
+              <ul>
+                {pkg.features.map((feature, i) => (
+                  <li key={i}>{feature}</li>
+                ))}
+              </ul>
+              <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto">
+                Buy Now
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

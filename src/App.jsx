@@ -117,7 +117,9 @@ const App = () => {
       <nav className="navbar">
         <div className="logo">Artisticify</div>
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <button onClick={() => navigate("/home")}>Home</button>
+        <div className="">
+  <button onClick={() => navigate("/home")}>Home</button>
+</div>
           <button onClick={() => navigate("/about")}>About</button>
           <button onClick={() => navigate("/design")}>Design</button>
           <button onClick={() => navigate("/digitalMarketing")}>Digital Marketing</button>
