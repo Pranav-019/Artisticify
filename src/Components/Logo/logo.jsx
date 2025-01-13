@@ -1,36 +1,136 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./logo.css";
-import logos from './logo-assets/logos-2.jpeg';
+import logos from "./logo-assets/logos-2.jpeg";
 
 const Logo = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false); // State to handle visibility
+  const [isVisible, setIsVisible] = useState(false);
+  const [packages, setPackages] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const loaderRef = useRef(null);
+
+  // Initial package data
+  const initialPackages = [
+    {
+      name: "Basic",
+      description: "Perfect for startups and small businesses",
+      features: [
+        "Professional logo design",
+        "1 logo concept",
+        "2 rounds of revisions",
+        "High-quality vector files",
+        "Basic brand guidelines",
+        "Fast delivery in 5 business days",
+        "Dedicated support during the process",
+      ],
+    },
+    {
+      name: "Standard",
+      description: "Ideal for growing businesses with more needs",
+      features: [
+        "Custom logo design",
+        "2 logo concepts",
+        "3 rounds of revisions",
+        "High-quality vector files",
+        "Branding guideline booklet",
+        "Delivery in 7 business days",
+        "Priority support during the process",
+      ],
+    },
+    {
+      name: "Premium",
+      description: "For established businesses looking for premium services",
+      features: [
+        "Exclusive logo design",
+        "3 unique logo concepts",
+        "Unlimited revisions",
+        "High-quality vector and raster files",
+        "Complete brand identity guide",
+        "Delivery in 10 business days",
+        "Full support and consultation",
+      ],
+    },
+  ];
+
+  useEffect(() => {
+    setPackages(initialPackages); // Load initial packages
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsVisible(true); // Show description after 500ms
-    }, 500); // Adjust delay here
-    return () => clearTimeout(timer); // Clean up timeout on component unmount
+      setIsVisible(true);
+    }, 500);
+    return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          loadMorePackages();
+        }
+      },
+      { threshold: 1.0 }
+    );
+    if (loaderRef.current) {
+      observer.observe(loaderRef.current);
+    }
+    return () => {
+      if (loaderRef.current) {
+        observer.unobserve(loaderRef.current);
+      }
+    };
+  }, []);
+
+  const handleNavigation = (path) => {
+    setMenuOpen(false);
+    navigate(path);
+  };
+
+  const loadMorePackages = () => {
+    if (loading) return;
+    setLoading(true);
+    setTimeout(() => {
+      setPackages((prev) => [
+        ...prev,
+        ...initialPackages.map((pkg) => ({
+          ...pkg,
+          name: `${pkg.name} (New)`,
+        })),
+      ]);
+      setLoading(false);
+    }, 1000); // Simulate loading delay
+  };
 
   return (
     <div className="Logo">
       {/* Navbar */}
       <nav className="navbar">
-        <div className="logo-title" onClick={() => navigate("/")}>
-          Artisticify
-        </div>
+        <div className="logo-title" onClick={() => handleNavigation("/")}>Artisticify</div>
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <button onClick={() => navigate("/home")}>Home</button>
-          <button onClick={() => navigate("/about")}>About</button>
-          <button onClick={() => navigate("/design")}>Design</button>
-          <button onClick={() => navigate("/digitalMarketing")}>
+          <button onClick={() => handleNavigation("/home")} aria-label="Go to Home">
+            Home
+          </button>
+          <button onClick={() => handleNavigation("/about")} aria-label="Learn About Us">
+            About
+          </button>
+          <button onClick={() => handleNavigation("/design")} aria-label="View Designs">
+            Design
+          </button>
+          <button
+            onClick={() => handleNavigation("/digitalMarketing")}
+            aria-label="Explore Digital Marketing"
+          >
             Digital Marketing
           </button>
-          <button onClick={() => navigate("/our-work")}>Our Work</button>
-          <button onClick={() => navigate("/contact")}>Contact</button>
+          <button onClick={() => handleNavigation("/our-work")} aria-label="View Our Work">
+            Our Work
+          </button>
+          <button onClick={() => handleNavigation("/contact")} aria-label="Contact Us">
+            Contact
+          </button>
         </div>
         <div
           className={`hamburger ${menuOpen ? "open" : ""}`}
@@ -52,54 +152,30 @@ const Logo = () => {
         </div>
       </div>
 
-      {/* Logo Image */}
-      <div className="logo-image">
-        <img src={logos} alt="Artisticify Logo" />
-      </div>
+      {/* Scrollable Content */}
+      <div className="scrollable-content">
+        {/* Logo Image */}
+        <div className="logo-image">
+          <img src={logos} alt="Artisticify Logo" />
+        </div>
 
-      {/* Package Section */}
-      <div className="packages">
-        <div className="package">
-          <h3>Basic</h3>
-          <p>Perfect for startups and small businesses</p>
-          <ul>
-            <li>Professional logo design</li>
-            <li>1 logo concept</li>
-            <li>2 rounds of revisions</li>
-            <li>High-quality vector files</li>
-            <li>Basic brand guidelines</li>
-            <li>Fast delivery in 5 business days</li>
-            <li>Dedicated support during the process</li>
-          </ul>
-          <button>Buy Now</button>
+        {/* Package Section */}
+        <div className="packages" style={{height:"auto"}}>
+          {packages.map((pkg, index) => (
+            <div className="package" key={index}>
+              <h3>{pkg.name}</h3>
+              <p>{pkg.description}</p>
+              <ul>
+                {pkg.features.map((feature, i) => (
+                  <li key={i}>{feature}</li>
+                ))}
+              </ul>
+              <button>Buy Now</button>
+            </div>
+          ))}
         </div>
-        <div className="package">
-          <h3>Standard</h3>
-          <p>Ideal for growing businesses with more needs</p>
-          <ul>
-            <li>Custom logo design</li>
-            <li>2 logo concepts</li>
-            <li>3 rounds of revisions</li>
-            <li>High-quality vector files</li>
-            <li>Branding guideline booklet</li>
-            <li>Delivery in 7 business days</li>
-            <li>Priority support during the process</li>
-          </ul>
-          <button>Buy Now</button>
-        </div>
-        <div className="package">
-          <h3>Premium</h3>
-          <p>For established businesses looking for premium services</p>
-          <ul>
-            <li>Exclusive logo design</li>
-            <li>3 unique logo concepts</li>
-            <li>Unlimited revisions</li>
-            <li>High-quality vector and raster files</li>
-            <li>Complete brand identity guide</li>
-            <li>Delivery in 10 business days</li>
-            <li>Full support and consultation</li>
-          </ul>
-          <button>Buy Now</button>
+        <div ref={loaderRef} className="loader">
+          {loading ? "Loading more packages..." : "Scroll down for more packages"}
         </div>
       </div>
     </div>

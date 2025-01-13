@@ -11,7 +11,7 @@ import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="  py-4 foot text-dark">
+    <div className="  py-4 foot text-dark" style={{paddingTop:"200px"}}>
       <Container>
         <Row className="gy-4 py-3 ">
           {/* Office Address */}
