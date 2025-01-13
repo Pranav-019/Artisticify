@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 function Contact() {
   return (
     <div>
-        <Container  className="d-flex justify-content-center align-items-center">
+        <Container  className=" ">
       <Row>
         <Col md={3}>
         111
