@@ -288,7 +288,7 @@ const Root = () => (
       <Route path="/icon" element={<Icon />} />
       <Route path="/stationary" element={<Stationary />} />
     </Routes>
-    <Footer/>
+    <Footer/> 
   </Router>
 );
 
