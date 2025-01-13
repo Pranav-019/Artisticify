@@ -32,12 +32,52 @@ const Footer = () => {
               <p>
                 <MdEmail /> info@artisticify.com
               </p>
-              <div className="mt-3">
-                <FaTwitter className="social-icon me-2" />
-                <FaFacebookF className="social-icon me-2" />
-                <FaLinkedinIn className="social-icon me-2" />
-                <FaInstagram className="social-icon me-2" />
-                <IoLogoWhatsapp className="social-icon me-2" />
+              <div className="mt-2">
+                <FaTwitter
+                  className="social-icon border border-1 rounded-circle p-2 me-2"
+                  style={{
+                    width: "35px",
+                    height: "35px",
+                    color: "#1DA1F2",
+                    borderColor: "#1DA1F2",
+                  }}
+                />
+                <FaFacebookF
+                  className="social-icon border border-1 rounded-circle p-2 me-2"
+                  style={{
+                    width: "35px",
+                    height: "35px",
+                    color: "#1877F2",
+                    borderColor: "#1877F2",
+                  }}
+                />
+                <FaLinkedinIn
+                  className="social-icon border border-1 rounded-circle p-2 me-2"
+                  style={{
+                    width: "35px",
+                    height: "35px",
+                    color: "#0A66C2",
+                    borderColor: "#0A66C2",
+                  }}
+                />
+                <FaInstagram
+                  className="social-icon border border-1 rounded-circle p-2 me-2"
+                  style={{
+                    width: "35px",
+                    height: "35px",
+                    color: "#E1306C",
+                    borderColor: "#E1306C",
+                  }}
+                />
+                <IoLogoWhatsapp
+                  className="social-icon border border-1 rounded-circle p-2 me-2"
+                  style={{
+                    width: "35px",
+                    height: "35px",
+                    color: "#25D366",
+                    borderColor: "#25D366",
+                  }}
+                />
               </div>
             </div>
           </Col>
@@ -92,14 +132,7 @@ const Footer = () => {
           <Col md={3} sm={6}>
             <h5>Newsletter</h5>
             <p>Subscribe to our newsletter to stay updated!</p>
-            <form>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="form-control mb-2"
-              />
-              <button className="btn btn-primary w-100">Subscribe</button>
-            </form>
+            
           </Col>
         </Row>
         <hr />

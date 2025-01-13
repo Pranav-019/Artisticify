@@ -89,20 +89,20 @@ const Logo = () => {
     navigate(path);
   };
 
-  const loadMorePackages = () => {
-    if (loading) return;
-    setLoading(true);
-    setTimeout(() => {
-      setPackages((prev) => [
-        ...prev,
-        ...initialPackages.map((pkg) => ({
-          ...pkg,
-          name: `${pkg.name} (New)`,
-        })),
-      ]);
-      setLoading(false);
-    }, 1000); // Simulate loading delay
-  };
+  // const loadMorePackages = () => {
+  //   if (loading) return;
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setPackages((prev) => [
+  //       ...prev,
+  //       ...initialPackages.map((pkg) => ({
+  //         ...pkg,
+  //         name: `${pkg.name} (New)`,
+  //       })),
+  //     ]);
+  //     setLoading(false);
+  //   }, 1000); // Simulate loading delay
+  // };
 
   return (
     <div className="Logo">
@@ -143,40 +143,52 @@ const Logo = () => {
       </nav>
 
       {/* Logo Design Description */}
-      <div className={`logo-description ${isVisible ? "visible" : ""}`}>
-        <div className="description-part description-left">
-          Our logo design services focus on creating unique and memorable brand identities.
-        </div>
-        <div className="description-part description-right">
-          Let us craft a logo that truly represents your business and leaves a lasting impression.
-        </div>
+      <div className={`logo-description  ${isVisible ? "visible" : ""}`}>
+      <div className="description-part description-left">
+  <i className="fas fa-pen-fancy"></i>
+  Our logo design services focus on creating unique and memorable brand identities.
+</div>
+<div className="description-part description-right">
+  <i className="fas fa-briefcase"></i>
+  Let us craft a logo that truly represents your business and leaves a lasting impression.
+</div>
+
       </div>
+      
 
       {/* Scrollable Content */}
-      <div className="scrollable-content">
+      <div className="">
         {/* Logo Image */}
+        
         <div className="logo-image">
           <img src={logos} alt="Artisticify Logo" />
         </div>
 
         {/* Package Section */}
-        <div className="packages" style={{height:"auto"}}>
-          {packages.map((pkg, index) => (
-            <div className="package" key={index}>
-              <h3>{pkg.name}</h3>
-              <p>{pkg.description}</p>
-              <ul>
-                {pkg.features.map((feature, i) => (
-                  <li key={i}>{feature}</li>
-                ))}
-              </ul>
-              <button>Buy Now</button>
-            </div>
-          ))}
-        </div>
-        <div ref={loaderRef} className="loader">
+        {/* <h1 className="text-center mb-3">Our Packages</h1> */}
+        <div className="packages" >
+  {/* Centering the h1 text */}
+  
+
+  {packages.map((pkg, index) => (
+    <div className="package mb-3" key={index}>
+      <h3 className="text-center">{pkg.name}</h3>
+      <p>{pkg.description}</p>
+      <ul>
+        {pkg.features.map((feature, i) => (
+          <li key={i}>{feature}</li>
+        ))}
+      </ul>
+      <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto">
+        Buy Now
+      </button>
+    </div>
+  ))}
+</div>
+
+        {/* <div ref={loaderRef} className="loader">
           {loading ? "Loading more packages..." : "Scroll down for more packages"}
-        </div>
+        </div> */}
       </div>
     </div>
   );
