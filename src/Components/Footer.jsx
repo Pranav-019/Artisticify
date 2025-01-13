@@ -14,7 +14,11 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
+<<<<<<< HEAD
     <div className="py-4 foot text-white">
+=======
+    <div className="  py-4 foot text-dark" style={{paddingTop:"200px"}}>
+>>>>>>> 7c5b665a341abf84103c9d66117114600ba977da
       <Container>
         <Row className="gy-4 py-3 ">
           {/* Office Address */}
