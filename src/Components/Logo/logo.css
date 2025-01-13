@@ -272,15 +272,16 @@
   }
 
   /* Media Query for Responsiveness */
-  @media (max-width: 768px) {
+  /* Media Query for Responsiveness */
+@media (max-width: 1024px) {
     .navbar {
       justify-content: center;
     }
-
+  
     .hamburger {
       display: flex;
     }
-
+  
     .nav-links {
       display: none;
       flex-direction: column;
@@ -292,28 +293,33 @@
       right: 0;
       z-index: 1;
     }
-
+  
     .logo-description {
       font-size: 2rem;
       width: 90%;
     }
-
+  
+    /* Adjust description part for small screens */
     .description-part {
-      width: 90%;
-      padding: 0 20px;
+      width: 100%;
+      padding: 20px;
+      font-size: 18px; /* Reduce font size */
+      box-shadow: 0 4px 8px rgba(13, 62, 114, 0.6);
+      margin: 10px auto;
     }
-
+  
     .packages {
       flex-direction: column;
       align-items: center;
     }
-
+  
     .package {
       width: 90%;
       margin-bottom: 20px;
     }
-
+  
     .description-part i {
       font-size: 50px;
     }
   }
+  
