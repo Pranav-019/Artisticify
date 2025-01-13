@@ -23,6 +23,7 @@ import Exhibition from "./Components/Exibition/exibition";
 import Brochure from "./Components/Brochure/brochure";
 import UIUX from "./Components/UIUX/uiux";
 import Footer from "./Components/Footer";
+import Contact from "./Components/Contact";
 
 const ContactSection = () => (
   <div className="contact-section">
@@ -124,7 +125,7 @@ const App = () => {
           <button onClick={() => navigate("/design")}>Design</button>
           <button onClick={() => navigate("/digitalMarketing")}>Digital Marketing</button>
           <button onClick={() => navigate("/our-work")}>Our Work</button>
-          <button onClick={scrollToContactForm}>Contact</button> {/* Scroll to contact form */}
+          <button onClick={()=>navigate("/Contact")}>Contact</button> {/* Scroll to contact form */}
         </div>
         <div
           className={`hamburger ${menuOpen ? "open" : ""}`}
@@ -276,6 +277,8 @@ const Root = () => (
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/about" element={<About />} />
+      <Route path="/Contact" element={<Contact />} />
+
       <Route path="/home" element={<App />} />
       <Route path="/design" element={<Design />} />
       <Route path="/digitalMarketing" element={<DigitalMarketing />} />
