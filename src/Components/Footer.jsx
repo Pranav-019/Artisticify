@@ -1,123 +1,119 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaHome } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
+import {
+  FaHome,
+  FaPhoneAlt,
+  FaTwitter,
+  FaFacebookF,
+  FaLinkedinIn,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
-import { FaTwitter } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="  py-4 foot text-dark">
+    <div className="py-4 foot text-white">
       <Container>
         <Row className="gy-4 py-3 ">
           {/* Office Address */}
-          <Col md={3} sm={6}>
+          <Col md={3} sm={6} className="px-3">
             <div className="line-h">
               <div>
-              <span className="text">
-                <FaHome /> 3rd Floor, 307
-              </span>
-
-              <p className="">Amanora Chamber, Amanora Mall</p>
-              <p>Hadapsar, Pune - 411028</p>
-              <p>Maharashtra</p>
-              <span className="text">
-                <FaPhoneAlt /> +91-9112452929
-              </span>
-              {/* <p>Phone: +91-9112452929</p> */}
-              <p className="text">
-                <MdEmail /> info@artisticify.com
-              </p>
+                <span className="text">
+                  <FaHome /> 3rd Floor, 307
+                </span>
+                <p>Amanora Chamber, Amanora Mall</p>
+                <p>Hadapsar, Pune - 411028</p>
+                <p>Maharashtra</p>
+                <span className="text">
+                  <FaPhoneAlt /> +91-9112452929
+                </span>
+                <p className="text">
+                  <MdEmail /> info@artisticify.com
+                </p>
               </div>
+
               <div className="mt-2">
                 <FaTwitter
-                  className="border border-1 rounded-circle p-2 me-2"
+                  className="social-icon border border-1 rounded-circle p-2 me-2"
                   style={{
                     width: "35px",
                     height: "35px",
-                    color: "#1DA1F2", // Twitter's original color
-                    borderColor: "#1DA1F2", // Optional: Match the border color with Twitter blue
+                    color: "#1DA1F2",
+                    borderColor: "#1DA1F2",
                   }}
                 />
-
                 <FaFacebookF
-                  className="border border-1 rounded-circle p-2 me-2"
+                  className="social-icon border border-1 rounded-circle p-2 me-2"
                   style={{
                     width: "35px",
                     height: "35px",
-                    color: "#1877F2", // Facebook's official color
-                    borderColor: "#1877F2", // Optional: Match the border color
+                    color: "#1877F2",
+                    borderColor: "#1877F2",
                   }}
                 />
-
                 <FaLinkedinIn
-                  className="border border-1 rounded-circle p-2 me-2"
+                  className="social-icon border border-1 rounded-circle p-2 me-2"
                   style={{
                     width: "35px",
                     height: "35px",
-                    color: "#0A66C2", // LinkedIn's official color
-                    borderColor: "#0A66C2", // Optional: Match the border color
+                    color: "#0A66C2",
+                    borderColor: "#0A66C2",
                   }}
                 />
-
                 <FaInstagram
-                  className="border border-1 rounded-circle p-2 me-2"
+                  className="social-icon border border-1 rounded-circle p-2 me-2"
                   style={{
                     width: "35px",
                     height: "35px",
-                    color: "#E1306C", // Instagram's pink gradient color as the base
-                    borderColor: "#E1306C", // Optional: Match the border color
+                    color: "#E1306C",
+                    borderColor: "#E1306C",
                   }}
                 />
-
-                <FaYoutube
-                  className="border border-1 rounded-circle p-2 me-2"
+                <IoLogoWhatsapp
+                  className="social-icon border border-1 rounded-circle p-2 me-2"
                   style={{
                     width: "35px",
                     height: "35px",
-                    color: "#FF0000", // YouTube's official red
-                    borderColor: "#FF0000", // Optional: Match the border color
+                    color: "#25D366",
+                    borderColor: "#25D366",
                   }}
                 />
               </div>
-              {/* <p>Email: info@artisticify.com</p> */}
             </div>
           </Col>
 
           {/* Quick Links */}
-          <Col md={3} sm={6}>
+          <Col md={2} sm={6} className="px-3">
             <h5>Quick Links</h5>
-
-            <div className="line-h ">
+            <div className="line-h text-white">
               <p>
-                <a href="/" className=" text-decoration-none text-dark">
+                <a href="/" className="text-decoration-none text-white">
                   Home
                 </a>
               </p>
               <p>
-                <a href="/about" className=" text-decoration-none text-dark">
+                <a href="/about" className="text-decoration-none text-white">
                   About
                 </a>
               </p>
               <p>
-                <a href="/design" className=" text-decoration-none text-dark">
+                <a href="/design" className="text-decoration-none text-white">
                   Design
                 </a>
               </p>
               <p>
                 <a
                   href="/digital-marketing"
-                  className=" text-decoration-none text-dark"
+                  className="text-decoration-none text-white"
                 >
                   Digital Marketing
                 </a>
               </p>
               <p>
-                <a href="/our-work" className=" text-decoration-none text-dark">
+                <a href="/our-work" className="text-decoration-none text-white">
                   Our Work
                 </a>
               </p>
@@ -125,7 +121,7 @@ const Footer = () => {
           </Col>
 
           {/* Business Hours */}
-          <Col md={3} sm={6}>
+          <Col md={3} sm={6} className="px-3">
             <div className="line-h">
               <h5 className="pb-2">Business Hours</h5>
               <p>Monday - Saturday</p>
@@ -135,13 +131,15 @@ const Footer = () => {
           </Col>
 
           {/* Newsletter */}
-          <Col md={3} sm={6}>
+          <Col md={3} sm={6} className="px-3">
             <div className="line-h">
               <h5 className="pb-2">Newsletter</h5>
               <p>We are the best</p>
             </div>
           </Col>
         </Row>
+        <hr />
+        <p className="text-center ">Artisticify | 2025 | All Rights Reserved | Digital Marketing | Social Marketing | Web Development | Graphic Design</p>
       </Container>
     </div>
   );

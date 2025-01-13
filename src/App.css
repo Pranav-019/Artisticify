@@ -484,8 +484,15 @@ textarea {
   line-height: inherit; /* Ensures all elements inherit the parent line-height */
 }
 .foot {
-  background: linear-gradient(to bottom, #a6e2f8dc, #3777a1); /* Gradient from light cyan to dark blue */
+  background: linear-gradient(to bottom,#0d3e72, #0d3e72, #0d3e72); /* Gradient from light cyan to the new color and then dark blue */
   color: #fff; /* Adjust text color for better contrast */
   padding: 2rem 0; /* Add padding for better spacing */
-  
+}
+.social-icon {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #fff; /* White background on hover */
+  color: inherit; /* Keep the original icon color */
 }
