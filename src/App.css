@@ -525,3 +525,15 @@ textarea {
   height: 78px;
   background-color: #13357B;
 } */
+
+/* ****************************************Contact****************************** */
+.contact{
+  box-shadow: 0 4px 8px rgba(13, 62, 114, 0.6);
+
+}
+.contact-btn{
+  background-color: #0d3e72 !important;
+}
+.conatct-info{
+  background-color: #0d3e72;
+}

@@ -273,7 +273,7 @@
 
   /* Media Query for Responsiveness */
   /* Media Query for Responsiveness */
-@media (max-width: 1440px) {
+@media (max-width: 1080px) {
     .navbar {
       justify-content: center;
     }

@@ -7,6 +7,7 @@ import Row from 'react-bootstrap/Row';
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { RiMailOpenFill } from "react-icons/ri";
+import Dropdown from 'react-bootstrap/Dropdown';
 
 function Contact() {
   useEffect(() => {
@@ -26,36 +27,59 @@ function Contact() {
         <h4 className="colorBlue pt-5 pb-2 text-center">
           ----- Contact Information -----
         </h4>
-        <h1 className="text-center mt-1 text-center" >Contact for Any Query</h1>
-        <h4>Send us a message</h4>
+        <h1 className="text-center mt-1 text-center " >Contact for Any Query</h1>
+        <h4 className='text-center py-3'>Send us a message</h4>
             <p>The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done.<a href='#' className='text-decoration-none' style={{color:"#13357B"}}> Download Now.</a></p>
 
        <div>
         
-        <Row className='ms-2 pb-5'>
-          <Col lg="4" className='bg-white rounded rounded-4'>
-          <div className=' text-center div-contact pt-2 '>
+        <Row className=' contact ms-2 pb-5 bg-white p-4  rounded rounded-4 '>
+          <Col lg="3" className=' conatct-info rounded rounded-4'>
+          <div className=' text-center div-contact pt-2 text-white'>
               <h6>Conatct information</h6>
           </div>
           </Col>
 
-          <Col lg="8">
+          <Col lg="9">
             
             <Form>
-      <Row className="mb-3">
+      <Row className="mb-3 ">
         <Form.Group as={Col} controlId="formGridEmail">
+          <label>Enter Your Name</label>
           <Form.Control type="email" placeholder="Your Name" className='p-3 ' style={{border:"none"}}/>
         </Form.Group>
 
         <Form.Group as={Col} controlId="formGridPassword">
+        <label>Enter Your Email</label>
+          <Form.Control type="password" placeholder="Your Email" className='p-3 ' style={{border:"none"}}/>
+        </Form.Group>
+      </Row>
+      <Row className="mb-3 ">
+        <Form.Group as={Col} controlId="formGridEmail">
+          <label>Enter Your Phone no.</label>
+          <Form.Control type="email" placeholder="Your Name" className='p-3 ' style={{border:"none"}}/>
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridPassword">
+        <label>Enter Your City</label>
           <Form.Control type="password" placeholder="Your Email" className='p-3 ' style={{border:"none"}}/>
         </Form.Group>
       </Row>
 
      
-      <Form.Group className="mb-2" controlId="exampleForm.ControlTextarea1">
-      <Form.Control type="text" placeholder="subject" className='p-3 ' style={{border:"none"}}/>     
-       </Form.Group>
+      <Dropdown className=''>
+      <label>Select Your Services</label>
+
+      <Dropdown.Toggle variant="" id="dropdown-basic" className='w-100 text-start rounded rounded-4'>
+        Select
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu className='w-100'>
+        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
 
       
       <Form.Group className="mb-3 mt-3" controlId="exampleForm.ControlTextarea1">
@@ -64,7 +88,7 @@ function Contact() {
 
      
 
-      <Button variant="" className=' fw-bold me-5 px-5 py-3   w-100' id='discovernow'>Discover Now</Button> 
+      <Button variant="" className='contact-btn rounded-pill fw-bold me-5 px-5 py-3   w-100 text-white' id='discovernow'>Discover Now</Button> 
     </Form>
           </Col>
         </Row>

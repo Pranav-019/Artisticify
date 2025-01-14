@@ -11,51 +11,8 @@ const Logo = () => {
   const [loading, setLoading] = useState(false);
   const loaderRef = useRef(null);
 
-  // Initial package data
-  const initialPackages = [
-    {
-      name: "Basic",
-      description: "Perfect for startups and small businesses",
-      features: [
-        "Professional logo design",
-        "1 logo concept",
-        "2 rounds of revisions",
-        "High-quality vector files",
-        "Basic brand guidelines",
-        "Fast delivery in 5 business days",
-        "Dedicated support during the process",
-      ],
-    },
-    {
-      name: "Standard",
-      description: "Ideal for growing businesses with more needs",
-      features: [
-        "Custom logo design",
-        "2 logo concepts",
-        "3 rounds of revisions",
-        "High-quality vector files",
-        "Branding guideline booklet",
-        "Delivery in 7 business days",
-        "Priority support during the process",
-      ],
-    },
-    {
-      name: "Premium",
-      description: "For established businesses looking for premium services",
-      features: [
-        "Exclusive logo design",
-        "3 unique logo concepts",
-        "Unlimited revisions",
-        "High-quality vector and raster files",
-        "Complete brand identity guide",
-        "Delivery in 10 business days",
-        "Full support and consultation",
-      ],
-    },
-  ];
-
   useEffect(() => {
-    setPackages(initialPackages); // Load initial packages
+    fetchPackages(); // Fetch package data on component mount
   }, []);
 
   useEffect(() => {
@@ -89,17 +46,26 @@ const Logo = () => {
     navigate(path);
   };
 
+  const fetchPackages = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/api/packages");
+      const data = await response.json();
+
+      // Filter packages where category is 'logo'
+      const logoPackages = data.filter(pkg => pkg.category === 'logo');
+
+      // Limit the packages to 3 (Basic, Standard, Premium)
+      setPackages(logoPackages.slice(0, 3));
+    } catch (error) {
+      console.error("Error fetching packages:", error);
+    }
+  };
+
   const loadMorePackages = () => {
     if (loading) return;
     setLoading(true);
     setTimeout(() => {
-      setPackages((prev) => [
-        ...prev,
-        ...initialPackages.map((pkg) => ({
-          ...pkg,
-          name: `${pkg.name} (New)`,
-        })),
-      ]);
+      fetchPackages(); // Re-fetch packages to simulate loading more
       setLoading(false);
     }, 1000); // Simulate loading delay
   };
@@ -131,41 +97,39 @@ const Logo = () => {
 
       {/* Logo Design Description */}
       <div className={`logo-description ${isVisible ? "visible" : ""}`}>
-  <div className="container">
-    <div className="row">
-      {/* Left Description */}
-      <div className="col-12 col-md-6 description-part description-left py-5">
-        <div>
-          <i className="fas fa-pen-fancy"></i>
-        </div>
-        <p className="p">
-          Our logo design services focus on creating unique and memorable brand
-          identities.
-        </p>
-      </div>
+        <div className="container">
+          <div className="row">
+            {/* Left Description */}
+            <div className="col-12 col-md-6 description-part description-left py-5">
+              <div>
+                <i className="fas fa-pen-fancy"></i>
+              </div>
+              <p className="p">
+                Our logo design services focus on creating unique and memorable brand
+                identities.
+              </p>
+            </div>
 
-      {/* Right Description */}
-      <div className="col-12 col-md-6 description-part description-right py-5">
-        <div>
-          <i className="fas fa-briefcase"></i>
+            {/* Right Description */}
+            <div className="col-12 col-md-6 description-part description-right py-5">
+              <div>
+                <i className="fas fa-briefcase"></i>
+              </div>
+              <p>
+                Let us craft a logo that truly represents your business and leaves a
+                lasting impression.
+              </p>
+            </div>
+          </div>
         </div>
-        <p>
-          Let us craft a logo that truly represents your business and leaves a
-          lasting impression.
-        </p>
       </div>
-    </div>
-  </div>
-</div>
-
 
       {/* Scrollable Content */}
       <div className="content-container">
         {/* Logo Image */}
         {/* <div className="logo-image">
-  <img src={logos} alt="Artisticify Logo" className="img-fluid" />
-</div> */}
-
+          <img src={logos} alt="Artisticify Logo" className="img-fluid" />
+        </div> */}
 
         {/* Package Section */}
         <div className="packages">
@@ -179,7 +143,7 @@ const Logo = () => {
                 ))}
               </ul>
               <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto">
-                Buy Now
+                Enquire Now
               </button>
             </div>
           ))}
