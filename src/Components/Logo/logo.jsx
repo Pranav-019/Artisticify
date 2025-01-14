@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+// import { useNavigate } from "react-router-dom";
 import "./logo.css"; // Ensure your CSS file path is correct
-import logos from "./logo-assets/logos-2.jpeg"; // Ensure your image path is correct
 
 const Logo = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [packages, setPackages] = useState([]);
@@ -41,10 +40,10 @@ const Logo = () => {
     };
   }, []);
 
-  const handleNavigation = (path) => {
-    setMenuOpen(false);
-    navigate(path);
-  };
+  // const handleNavigation = (path) => {
+  //   setMenuOpen(false);
+  //   navigate(path);
+  // };
 
   const fetchPackages = async () => {
     try {
@@ -74,17 +73,7 @@ const Logo = () => {
     <div className="Logo">
       {/* Navbar */}
       <nav className="navbar">
-        <div className="logo-title" onClick={() => handleNavigation("/")}>
-          Artisticify
-        </div>
-        <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <button onClick={() => handleNavigation("/home")} aria-label="Go to Home">Home</button>
-          <button onClick={() => handleNavigation("/about")} aria-label="Learn About Us">About</button>
-          <button onClick={() => handleNavigation("/design")} aria-label="View Designs">Design</button>
-          <button onClick={() => handleNavigation("/digitalMarketing")} aria-label="Explore Digital Marketing">Digital Marketing</button>
-          <button onClick={() => handleNavigation("/our-work")} aria-label="View Our Work">Our Work</button>
-          <button onClick={() => handleNavigation("/contact")} aria-label="Contact Us">Contact</button>
-        </div>
+        
         <div
           className={`hamburger ${menuOpen ? "open" : ""}`}
           onClick={() => setMenuOpen((prev) => !prev)}

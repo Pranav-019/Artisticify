@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./design.css";
 
@@ -16,34 +15,13 @@ const tilesData = [
 
 const Design = () => {
   const navigate = useNavigate();
-  const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleContactClick = () => {
-    navigate("/#contact-form-section"); // Use hash navigation to jump to the contact section
-  };
+  
 
   return (
     <div className="design">
       {/* Navbar */}
-      <nav className="navbar">
-        <div className="logo" onClick={() => navigate("/")}>Artisticify</div>
-        <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <button onClick={() => navigate("/home")}>Home</button>
-          <button onClick={() => navigate("/about")}>About</button>
-          <button onClick={() => navigate("/design")}>Design</button>
-          <button onClick={() => navigate("/digitalMarketing")}>Digital Marketing</button>
-          <button onClick={() => navigate("/our-work")}>Our Work</button>
-          <button onClick={handleContactClick}>Contact</button> {/* Scroll to contact form */}
-        </div>
-        <div
-          className={`hamburger ${menuOpen ? "open" : ""}`}
-          onClick={() => setMenuOpen((prev) => !prev)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
+      
 
       {/* Tiles Section */}
       <div className="tiles-container">

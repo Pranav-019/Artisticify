@@ -24,6 +24,7 @@ import Brochure from "./Components/Brochure/brochure";
 import UIUX from "./Components/UIUX/uiux";
 import Footer from "./Components/Footer";
 import Contact from "./Components/Contact";
+import Navbar from "./Components/Navbar";
 
 const ContactSection = () => (
   <div className="contact-section">
@@ -115,28 +116,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <nav className="navbar">
-        <div className="logo">Artisticify</div>
-        <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-        <div className="">
-  <button onClick={() => navigate("/home")}>Home</button>
-</div>
-          <button onClick={() => navigate("/about")}>About</button>
-          <button onClick={() => navigate("/design")}>Design</button>
-          <button onClick={() => navigate("/digitalMarketing")}>Digital Marketing</button>
-          <button onClick={() => navigate("/our-work")}>Our Work</button>
-          <button onClick={()=>navigate("/Contact")}>Contact</button> {/* Scroll to contact form */}
-        </div>
-        <div
-          className={`hamburger ${menuOpen ? "open" : ""}`}
-          onClick={() => setMenuOpen((prev) => !prev)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
-
+      
       <main className="hero-section">
         <h1 className="hero-title">Bring Your Imagination To Life</h1>
         <div className="hero-image-container">
@@ -274,6 +254,7 @@ const App = () => {
 
 const Root = () => (
   <Router>
+    <Navbar/>
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/about" element={<About />} />
