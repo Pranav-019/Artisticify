@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./design.css";
 
@@ -16,16 +15,18 @@ const tilesData = [
 
 const Design = () => {
   const navigate = useNavigate();
+<<<<<<< HEAD
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+=======
+>>>>>>> bb1905db379d9c55743d28392c16e0f576acb4fd
 
-  const handleContactClick = () => {
-    navigate("/#contact-form-section"); // Use hash navigation to jump to the contact section
-  };
+  
 
   return (
     <div className="design">
       {/* Navbar */}
+<<<<<<< HEAD
       <nav className="navbar">
         <div className="logo" onClick={() => navigate("/")}>Artisticify</div>
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
@@ -67,6 +68,23 @@ const Design = () => {
           <span></span>
         </div>
       </nav>
+=======
+      
+
+      {/* Tiles Section */}
+      <div className="tiles-container">
+        {tilesData.map((tile) => (
+          <div
+            key={tile.id}
+            className={`tile ${tile.color}`}
+            onClick={() => navigate(tile.route)}
+          >
+            <div className="title">{tile.title}</div>
+            <div className="description">{tile.description}</div>
+          </div>
+        ))}
+      </div>
+>>>>>>> bb1905db379d9c55743d28392c16e0f576acb4fd
     </div>
   );
 };

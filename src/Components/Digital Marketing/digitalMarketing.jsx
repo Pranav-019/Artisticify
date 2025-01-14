@@ -59,25 +59,7 @@ const DigitalMarketing = () => {
   return (
     <div className="digitalMarketing">
       {/* Navbar */}
-      <nav className="navbar">
-        <div className="logo" onClick={() => navigate("/")}>Artisticify</div>
-        <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <button onClick={() => navigate("/home")}>Home</button>
-          <button onClick={() => navigate("/about")}>About</button>
-          <button onClick={() => navigate("/design")}>Design</button>
-          <button onClick={() => navigate("/digitalMarketing")}>Digital Marketing</button>
-          <button onClick={() => navigate("/our-work")}>Our Work</button>
-          <button onClick={() => navigate("/contact")}>Contact</button>
-        </div>
-        <div
-          className={`hamburger ${menuOpen ? "open" : ""}`}
-          onClick={() => setMenuOpen((prev) => !prev)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
+      
 
       {/* Tiles Section */}
       <div className="tiles-container">
