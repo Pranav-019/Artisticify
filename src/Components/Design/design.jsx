@@ -3,20 +3,21 @@ import { useNavigate } from "react-router-dom";
 import "./design.css";
 
 const tilesData = [
-  { id: "logo1", title: "Logo Design", color: "golden", route: "/logo", description: "Create a unique and memorable logo representing your brand's identity." },
-  { id: "brochure", title: "Brochure Design", color: "pink", route: "/brochure", description: "Visually appealing brochure designs for marketing and promotional purposes." },
-  { id: "packaging", title: "Packaging Design", color: "orange", route: "/packaging", description: "Custom packaging that enhances product appeal and protects them on the shelves." },
-  { id: "flyer", title: "Flyer Design", color: "rose", route: "/flyer", description: "Design captivating flyers that clearly communicate your message for events or promotions." },
-  { id: "poster", title: "Poster Design", color: "golden", route: "/poster", description: "Design attention-grabbing posters ideal for advertising events, sales, or new products." },
-  { id: "exhibition", title: "Exhibition Design", color: "golden", route: "/exhibition", description: "Create exhibition booths that attract attention and showcase your brand and products." },
-  { id: "uiux", title: "UI/UX Design", color: "orange", route: "/uiux", description: "Craft user-centric interfaces that are intuitive, engaging, and visually appealing." },
-  { id: "icon", title: "Icon Design", color: "pink", route: "/icon", description: "Design custom icons to enhance the user interface and improve navigation." },
-  { id: "stationary", title: "Stationary Design", color: "rose", route: "/stationary", description: "Design professional stationary that reinforces your brand identity across communications." },
+  { id: "logo1", title: "Logo Design", route: "/logo" },
+  { id: "brochure", title: "Brochure Design", route: "/brochure" },
+  { id: "packaging", title: "Packaging Design", route: "/packaging" },
+  { id: "flyer", title: "Flyer Design", route: "/flyer" },
+  { id: "poster", title: "Poster Design", route: "/poster" },
+  { id: "exhibition", title: "Exhibition Design", route: "/exhibition" },
+  { id: "uiux", title: "UI/UX Design", route: "/uiux" },
+  { id: "icon", title: "Icon Design", route: "/icon" },
+  { id: "stationary", title: "Stationary Design", route: "/stationary" },
 ];
 
 const Design = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const handleContactClick = () => {
     navigate("/#contact-form-section"); // Use hash navigation to jump to the contact section
@@ -30,10 +31,32 @@ const Design = () => {
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
           <button onClick={() => navigate("/home")}>Home</button>
           <button onClick={() => navigate("/about")}>About</button>
-          <button onClick={() => navigate("/design")}>Design</button>
+
+          {/* Dropdown for Design */}
+          <div
+            className="nav-item dropdown"
+            onMouseEnter={() => setDropdownOpen(true)}
+            onMouseLeave={() => setDropdownOpen(false)}
+          >
+            <button>Design</button>
+            {dropdownOpen && (
+              <div className="dropdown-menu">
+                {tilesData.map((tile) => (
+                  <div
+                    key={tile.id}
+                    className="dropdown-item"
+                    onClick={() => navigate(tile.route)}
+                  >
+                    {tile.title}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
           <button onClick={() => navigate("/digitalMarketing")}>Digital Marketing</button>
           <button onClick={() => navigate("/our-work")}>Our Work</button>
-          <button onClick={handleContactClick}>Contact</button> {/* Scroll to contact form */}
+          <button onClick={handleContactClick}>Contact</button>
         </div>
         <div
           className={`hamburger ${menuOpen ? "open" : ""}`}
@@ -44,20 +67,6 @@ const Design = () => {
           <span></span>
         </div>
       </nav>
-
-      {/* Tiles Section */}
-      <div className="tiles-container">
-        {tilesData.map((tile) => (
-          <div
-            key={tile.id}
-            className={`tile ${tile.color}`}
-            onClick={() => navigate(tile.route)}
-          >
-            <div className="title">{tile.title}</div>
-            <div className="description">{tile.description}</div>
-          </div>
-        ))}
-      </div>
     </div>
   );
 };

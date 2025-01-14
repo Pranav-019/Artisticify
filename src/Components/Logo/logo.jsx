@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./logo.css"; // Ensure your CSS file path is correct
 import logos from "./logo-assets/logos-2.jpeg"; // Ensure your image path is correct
 
+
 const Logo = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
