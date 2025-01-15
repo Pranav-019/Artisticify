@@ -8,7 +8,8 @@ import { FaPhoneAlt } from "react-icons/fa";
 import Dropdown from 'react-bootstrap/Dropdown';
 import { MdEmail } from "react-icons/md";
 import { useEffect, useState } from 'react';
-import Navbar from './Navbar';
+import MainImg from '../assets/postive-caring-relationships-teachers 1.png' 
+import Newsletter from './Newsletter';
 // import { FaLocationDot } from "react-icons/fa6";
 // import { FaPhoneAlt } from "react-icons/fa";
 
@@ -26,7 +27,15 @@ function Contact() {
   return (
 
     <div>
-     
+      <div className='contact1'>
+       <div className='image-container'>
+         <img src={MainImg} className='main-contact img-fluid '/>
+         <div className='overlay-text1'>
+           <h1 className='fw-bold extra-bold pb-2 text-start'>Contact us...</h1>
+           <h3>Start your project today.</h3>
+         </div>
+       </div>
+     </div>
       <div className='bg-body-tertiary '>
       <div className="div-mainImg">
         <div className="overlay">
@@ -131,6 +140,7 @@ function Contact() {
       </Container>
 
     </div>
+    <Newsletter/>
     </div>
   )
 }

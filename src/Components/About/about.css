@@ -1,8 +1,128 @@
-.about {
+/* .about {
     max-height: 140vh;
     background: radial-gradient(circle at center, #cceeff 10%, #99ddff 30%, #e6f7ff 50%, transparent 70%),
                 linear-gradient(135deg, #e6f7ff 0%, #f0f9ff 100%);
     background-size: cover;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     position: relative;
+  } */
+  .main-about{
+    width: 100%;
+    object-fit: cover;
+   
+    background-size: cover;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    position: relative;
   }
+  .about {
+    position: relative;
+   
+  }
+  
+  .image-container {
+    position: relative;
+    /* height: 50px; */
+  }
+  
+  
+  
+  .overlay-text {
+    position: absolute;
+    top: 40%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+  }
+  
+  h1, h3 {
+    margin: 0;
+  }
+  
+  .about-col {
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(13, 62, 114, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  .about-col:hover {
+    box-shadow: 0 4px 8px rgba(13, 62, 114, 0.6);
+    background-color:#0d3e72;
+    color: white;
+    animation: hoverEffect 0.5s forwards; 
+  }
+  @keyframes hoverEffect {
+    0% {
+      transform: scale(1); /* Start at normal size */
+      box-shadow: 0 4px 8px rgba(13, 62, 114, 0.6);
+    }
+    50% {
+      transform: scale(1.05); /* Scale up slightly */
+      box-shadow: 0 4px 8px rgba(13, 62, 114, 0.6);
+    }
+    100% {
+      transform: scale(1); /* Return to normal size */
+      box-shadow: 0 4px 8px rgba(13, 62, 114, 0.6);
+    }
+  }
+  
+  .animate-heading {
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .blue-line {
+    border: 0;
+    height: 4px;
+    background-color:#0d3e72 !important;
+    
+    width: 10%;
+    margin: 0 auto;  /* This centers the line */
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  @keyframes waveEffect {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(15px);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    75% {
+      transform: translateX(-15px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .why {
+    animation: waveEffect 2s ease-in-out infinite;
+  }
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
