@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import  { useState, useEffect, useRef } from "react";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
 import statueImage from "./assets/homepage-bg.png";
@@ -25,6 +25,7 @@ import UIUX from "./Components/UIUX/uiux";
 import Footer from "./Components/Footer";
 import Contact from "./Components/Contact";
 import Navbar from "./Components/Navbar";
+import Newsletter from "./Components/Newsletter";
 
 const ContactSection = () => (
   <div className="contact-section">
@@ -275,6 +276,7 @@ const Root = () => (
       <Route path="/icon" element={<Icon />} />
       <Route path="/stationary" element={<Stationary />} />
     </Routes>
+    <Newsletter/>
     <Footer/> 
   </Router>
 );
