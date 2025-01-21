@@ -9,7 +9,7 @@ const About = () => {
       <div className='about'>
   <div className='image-container'>
     <img src={MainImg} className='main-about img-fluid '/>
-    <div className='overlay-text'>
+    <div className='overlay-text overlay-text11'>
       <h1 className='fw-bold display-4 pb-2 text-start text-md-start text-center ms-md-5 ps-md-5'>About Artisticify Branding</h1>
       <h3 className='lead  fw-bold text-md-start text-center ms-md-5 ps-md-5'>Logo, Graphics, Brochures and much more ...</h3>
     </div>

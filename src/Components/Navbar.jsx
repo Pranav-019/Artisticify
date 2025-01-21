@@ -20,7 +20,7 @@ function Navbar() {
               Design
             </Dropdown.Toggle>
 
-            <Dropdown.Menu>
+            <Dropdown.Menu  className="dropdown-menu-custom">
               <Dropdown.Item href="/logo">Logo Design</Dropdown.Item>
               <Dropdown.Item href="/Brochure">Brochure Design</Dropdown.Item>
               <Dropdown.Item href="/Packaging">Packaging Design</Dropdown.Item>
@@ -59,8 +59,7 @@ function Navbar() {
               <Dropdown.Item href="/ContentMarketing">Content Marketing</Dropdown.Item>
               <Dropdown.Item href="/PayPer">Pay Per Click</Dropdown.Item>
               <Dropdown.Item href="/SpecialPAckages">Special Packages</Dropdown.Item>
-              <Dropdown.Item href="/GrowBusiness">
-                Grow your business with</Dropdown.Item>
+              
               
             </Dropdown.Menu>
           </Dropdown>
