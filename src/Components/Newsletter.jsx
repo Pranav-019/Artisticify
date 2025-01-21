@@ -35,14 +35,14 @@ function Newsletter() {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/newsletter/subscribe', { email });
+      const response = await axios.post('https://artisticify-backend.vercel.app/api/newsletter/subscribe', { email });
 
-      if (response.status === 201) {
+      if (response.status === 200) {
         setSuccessMessage('Thank you for subscribing to Artisticify!');
         setEmail('');
       }
     } catch (error) {
-      if (error.response && error.response.status === 409) {
+      if (error.response && error.response.status === 400) {
         setErrorMessage('You are already subscribed to our newsletter.');
       } else {
         setErrorMessage('Failed to subscribe. Please try again later.');

@@ -46,7 +46,7 @@ function Calender() {
       const data = await response.json();
 
       // Filter packages where category is 'brochure'
-      const calenderPackages = data.filter(pkg => pkg.category === 'calender');
+      const calenderPackages = data.filter(pkg => pkg.category === 'calendar');
 
       // Limit the packages to 3 (Basic, Standard, Premium)
       setPackages(calenderPackages.slice(0, 3));
@@ -135,22 +135,27 @@ function Calender() {
 
 
           <div className="packages">
-            {packages.map((pkg, index) => (
-              <div className="package mb-3 position-relative" key={index}>
-                <div className="pb-5">
-                  <h3 className="text-center ">{pkg.name}</h3>
-                  <p>{pkg.description}</p>
-                  <ul>
-                    {pkg.features.map((feature, i) => (
-                      <li key={i}>{feature}</li>
-                    ))}
-                  </ul>
-                  <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto">
-                    Enquire Now
-                  </button>
-                </div>
-              </div>
-            ))}
+          {packages.map((pkg, index) => (
+       <div className="package mb-3 position-relative text" key={index}>
+       <div className="pb-5">
+      <h3 className="text-center">{pkg.name}</h3>
+      <p>{pkg.description}</p>
+      <ul className="text">
+        {pkg.features.map((feature, i) => (
+          <li key={i}>{feature}</li>
+        ))}
+       </ul>
+       {pkg.type === "Premium" ? (
+  <h4 className="text-center blue fw-bold">Customizable</h4>
+) : (
+  <h4 className="text-center blue fw-bold">{pkg.price} /-</h4>
+)}
+       <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto">
+        Enquire Now
+       </button>
+       </div>
+      </div>
+       ))}
           </div>
         </div>
       </div>
