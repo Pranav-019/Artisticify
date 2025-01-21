@@ -245,9 +245,13 @@
     transform: translateX(-50%);
 }
 
-  .package:hover .pck-btn {
+
+  .package:hover .pck-btn{
     background-color: white;
     color: black;
+  }
+  .package:hover .price{
+   color: white;
   }
 
   .package button:hover {
