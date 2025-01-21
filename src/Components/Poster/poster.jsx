@@ -79,19 +79,18 @@ const Poster = () => {
          <Row className="mb-5">
            <Col sm={12} md={6}>
              <div className="text-justify">
-               <h4 className="fw-bold blue px-4 me-3 pb-2">Creative Packaging Design Company in India</h4>
+               <h4 className="fw-bold blue px-4 me-3 pb-2">Professional Poster Design Services Agency in India</h4>
    
                <div className="text-secondary text">
-                 <p>Is your product packaging an extension of your brand or just tomorrow&rsquo;s garbage?
+                 <p>Posters are more than just visuals—they’re an impactful storytelling medium that conveys your message and captures attention. Their ability to instantly engage an audience makes them one of the most effective promotional tools, and their relevance continues to grow in offline marketing.
    
    </p>
    
-                 <p>At Artisticify, we are experts at developing innovative, practical, and brand-consistent packaging designs for your products that leave a difference. In this fast-paced marketplace, packaging can be a dynamic marketing tool, helping to heighten brand recall and increase sales.</p>
+                 <p>At Artisticify, we specialize in designing posters that not only stand out but also communicate your message effectively. Whether you&rsquo;re launching a product, promoting an event, or announcing a special offer, our poster design services are tailored to meet your business’s unique needs and objectives.</p>
    
-                 <p>Our team delivers packaging that is functional, consumer-friendly, and aesthetically pleasing, providing a reason for your customers to choose your brand. Whether it is box packaging, food packaging, pharma packaging, or wine bottles, our designs can enhance your brand&rsquo;s identity.</p>
+                 <p>We understand that great design can transform a simple poster into a powerful marketing tool. Our team works closely with you to create posters that reflect your brand identity, while also ensuring they are eye-catching, informative, and impactful. Whether for a corporate campaign or a small event, we provide creative solutions that resonate with your audience.</p>
    
-                 <p>We make sure that the labels and graphics are applied, colors are chosen, fonts are selected, and images are implemented to help represent your brandrsquo;s vision in detail.
-   Cooperate with us for innovative, world-class product packaging design!
+                 <p>Artisticify is committed to delivering high-quality poster designs at affordable rates, making sure that businesses of all sizes can harness the power of visual marketing. Along with design, we offer creative strategies to help your posters effectively reach the public and generate success.
    </p>
    
                  

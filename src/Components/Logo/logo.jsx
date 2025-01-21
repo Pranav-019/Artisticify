@@ -6,8 +6,8 @@ import Teddy from '../../assets/teddy.jpeg'
 import logo1 from '../../assets/logo.png'  // Fixed import for logo1
 
 const Logo = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  // const [menuOpen, setMenuOpen] = useState(false);
+  const [ setIsVisible] = useState(false);
   const [packages, setPackages] = useState([]);
   const [loading, setLoading] = useState(false);
   const loaderRef = useRef(null);

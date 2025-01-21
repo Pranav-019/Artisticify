@@ -66,7 +66,7 @@ const Flyer = () => {
     };
   return (
     <div className='text'>
-      <h2 className="text-center fw-bold text-white my-5 shadow logo-package">Smart packaging designs that connect with your target audience.</h2>
+      <h2 className="text-center fw-bold text-white my-5 shadow logo-package">Standout flyer designs tailored to your needs, with premium options for added creativity.</h2>
 
       <Container>
         <Row className="mb-5">

@@ -102,7 +102,7 @@ Cooperate with us for innovative, world-class product packaging design!
      
        <Container>
               <div className="pt-5">
-                <h3 className="text-center py-3 fw-bold mb-5"> See Our Creative Brochure Design Work</h3>
+                <h3 className="text-center py-3 fw-bold mb-5"> See Our Creative Packaging Design Work</h3>
                
               </div>
               <Row>

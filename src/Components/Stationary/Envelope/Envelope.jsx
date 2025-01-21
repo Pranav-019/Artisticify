@@ -78,7 +78,7 @@ function Envelope() {
    
    </p>
    
-                 <p>At Artisticify, we specialize in designing envelopes that enhance your brand’s identity and elevate your correspondence. Our designs are tailored to reflect your company’s vision, whether it's for business letters, promotional materials, or invitations.</p>
+                 <p>At Artisticify, we specialize in designing envelopes that enhance your brand’s identity and elevate your correspondence. Our designs are tailored to reflect your company’s vision, whether it&rsquo;s for business letters, promotional materials, or invitations.</p>
    
                  <p>We focus on the finer details—using your brand&rsquo;s colors, fonts, and logo to create an envelope that not only protects the contents but also makes your mail stand out in a crowded inbox. Whether you need standard envelopes or custom sizes, our designs are made to be functional, stylish, and impactful.</p>
    
@@ -99,8 +99,10 @@ function Envelope() {
         
           <Container>
                  <div className="pt-5">
-                   <h3 className="text-center py-3 fw-bold">Why Choose a Poster Design Company?</h3>
-                   <p className="text-center w-75 d-flex justify-content-center mx-auto text-secondary mb-5">Creative poster design plays a crucial role in boosting your marketing campaign. We ensure our designs are visually appealing while conveying the right amount of information. Posters remain a timeless and cost-effective solution, effectively showcasing details like products, services, offers, and business profiles.</p>
+                   <h3 className="text-center py-3 fw-bold">Why Choose a Envelope Design Company?</h3>
+                   <p className="text-center w-75 d-flex justify-content-center mx-auto text-secondary mb-5">Creative envelope design is key to making your business communications stand out. It reflects your brand identity and creates a strong first impression.
+
+We specialize in custom envelope designs that align with your brand’s image, adding professionalism to your correspondence and making your marketing materials memorable.</p>
                  </div>
                  <h3 className="text-center  pt-3 fw-bold mb-5">See Our Creative Envelope Design Creation</h3>
                  <Row>

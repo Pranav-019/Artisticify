@@ -73,19 +73,20 @@ function Magazine() {
           <Row className="mb-5">
             <Col sm={12} md={6}>
               <div className="text-justify">
-                <h4 className="fw-bold blue px-4 me-3 pb-2">Creative Packaging Design Company in India</h4>
+                <h4 className="fw-bold blue px-4 me-3 pb-2">Magazine & Newsletter Design  Company in India</h4>
 
                 <div className="text-secondary text">
-                  <p>Is your product packaging an extension of your brand or just tomorrow&rsquo;s garbage?
+                  <p>Local magazines are trusted sources of information, and your ad in one is more than just a promotion—it’s a recommendation from a respected publication. At Artisticify, we specialize in magazine and newsletter designs that engage readers and enhance credibility.
 
                   </p>
 
-                  <p>At Artisticify, we are experts at developing innovative, practical, and brand-consistent packaging designs for your products that leave a difference. In this fast-paced marketplace, packaging can be a dynamic marketing tool, helping to heighten brand recall and increase sales.</p>
+                  <p>Our services include cover page design, page layout, and production, catering to industries like corporate, architecture, interior design, and education. With years of experience in print and advertising design, we offer fixed per-page pricing, ensuring cost-effective, high-quality results.</p>
 
-                  <p>Our team delivers packaging that is functional, consumer-friendly, and aesthetically pleasing, providing a reason for your customers to choose your brand. Whether it is box packaging, food packaging, pharma packaging, or wine bottles, our designs can enhance your brand&rsquo;s identity.</p>
+                  <p>We focus on creating designs that align with your brand&rsquio;s identity while keeping the audience’s experience in mind. Our goal is to help you effectively communicate your message and promote your brand in a visually appealing and professional manner.</p>
 
-                  <p>We make sure that the labels and graphics are applied, colors are chosen, fonts are selected, and images are implemented to help represent your brandrsquo;s vision in detail.
-                    Cooperate with us for innovative, world-class product packaging design!
+                  <p>Let Artisticify help you create impactful magazine designs that build trust and attract attention.
+
+
                   </p>
 
 

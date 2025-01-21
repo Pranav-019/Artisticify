@@ -71,19 +71,20 @@ function VisualAid() {
                 <Row className="mb-5">
                   <Col sm={12} md={6}>
                     <div className="text-justify">
-                      <h4 className="fw-bold blue px-4 me-3 pb-2">Creative Packaging Design Company in India</h4>
+                      <h4 className="fw-bold blue px-4 me-3 pb-2">Pharma Visual Aid Design Services to Boost Brand Awareness</h4>
       
                       <div className="text-secondary text">
-                        <p>Is your product packaging an extension of your brand or just tomorrow&rsquo;s garbage?
+                        <p>Promoting your pharmaceutical product effectively is key to success in the competitive healthcare industry. At Artisticify, we specialize in creating impactful pharma visual aids that help elevate your brand’s presence in the market.
       
                         </p>
       
-                        <p>At Artisticify, we are experts at developing innovative, practical, and brand-consistent packaging designs for your products that leave a difference. In this fast-paced marketplace, packaging can be a dynamic marketing tool, helping to heighten brand recall and increase sales.</p>
+                        <p>Visual aids are one of the most effective promotional tools in the pharmaceutical industry, often taking center stage in product marketing strategies. They convey essential product information clearly and visually, making them an invaluable asset for healthcare professionals and consumers alike.</p>
       
-                        <p>Our team delivers packaging that is functional, consumer-friendly, and aesthetically pleasing, providing a reason for your customers to choose your brand. Whether it is box packaging, food packaging, pharma packaging, or wine bottles, our designs can enhance your brand&rsquo;s identity.</p>
+                        <p>Our Pharma Visual Aid Designs include detailed product information such as brand name, composition, benefits, and usage instructions. We ensure that each visual aid is not only informative but also creatively designed to capture attention and engage viewers. A well-designed visual aid is aesthetically pleasing and easy to understand, providing your target audience with the knowledge they need to make informed decisions.</p>
       
-                        <p>We make sure that the labels and graphics are applied, colors are chosen, fonts are selected, and images are implemented to help represent your brandrsquo;s vision in detail.
-                          Cooperate with us for innovative, world-class product packaging design!
+                        <p>Let Artisticify help you create professional, informative, and visually compelling pharma visual aids that strengthen your brand and enhance product promotion.
+
+
                         </p>
       
       

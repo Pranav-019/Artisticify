@@ -72,20 +72,22 @@ function Calender() {
           <Row className="mb-5">
             <Col sm={12} md={6}>
               <div className="text-justify">
-                <h4 className="fw-bold blue px-4 me-3 pb-2">Creative Packaging Design Company in India</h4>
+                <h4 className="fw-bold blue px-4 me-3 pb-2">Creative Corporate Calendar Design Services in India</h4>
 
                 <div className="text-secondary text">
-                  <p>Is your product packaging an extension of your brand or just tomorrow&rsquo;s garbage?
+                  <p>Looking for a unique and professional calendar design for your business? Artisticify offers stunning, custom calendar designs that elevate your brand and help you stay top of mind throughout the year.
+
+                    Calendars are not only a functional tool but also an excellent marketing asset. They are widely used by individuals and businesses alike, making them a powerful promotional item. A well-designed calendar on a wall or desk becomes a daily reminder of your brand, keeping it visible year-round.
 
                   </p>
 
-                  <p>At Artisticify, we are experts at developing innovative, practical, and brand-consistent packaging designs for your products that leave a difference. In this fast-paced marketplace, packaging can be a dynamic marketing tool, helping to heighten brand recall and increase sales.</p>
+                  <p>At Artisticify, we design calendars that are both practical and visually appealing. Whether it&rsquo;s a desk calendar, wall calendar, photo calendar, or a personalized calendar, we customize each design to match your brand identity and promotional goals. Highlight important dates, special promotions, or upcoming events with a calendar that tells your story while keeping your customers engaged.</p>
 
-                  <p>Our team delivers packaging that is functional, consumer-friendly, and aesthetically pleasing, providing a reason for your customers to choose your brand. Whether it is box packaging, food packaging, pharma packaging, or wine bottles, our designs can enhance your brand&rsquo;s identity.</p>
+                  <p>We offer a range of calendar designs, including die-cut, hardbound, New Year, and festival-themed designs like Diwali calendars, to cater to your specific needs. Our team ensures that each graphic, image, and piece of content aligns with your brand&rsquo;s vision and messaging.
 
-                  <p>We make sure that the labels and graphics are applied, colors are chosen, fonts are selected, and images are implemented to help represent your brandrsquo;s vision in detail.
-                    Cooperate with us for innovative, world-class product packaging design!
-                  </p>
+                    Let Artisticify help you create a functional yet eye-catching calendar that serves as both a marketing tool and a beautiful piece of art in your clients’ spaces.</p>
+
+
 
 
                 </div>
