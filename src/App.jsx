@@ -109,6 +109,7 @@ const App = () => {
     }
   };
 
+
   useEffect(() => {
     const handleScroll = () => {
       const container = document.querySelector(".bottom-images-container");

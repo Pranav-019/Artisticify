@@ -5,7 +5,11 @@ import { Col, Container, Row } from "react-bootstrap";
 import LogoImg from '../../assets/Artboard 1 bhavik logo design.jpg'
 import Teddy from '../../assets/teddy.jpeg'
 
+<<<<<<< HEAD
 import logo1 from '../../assets/logo.png'
+=======
+
+>>>>>>> 1379a185c2c9739f93b676736c81d0c2da01a946
 const Logo = () => {
   // const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
