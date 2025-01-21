@@ -238,6 +238,12 @@
     left: 50%;
     transform: translateX(-50%);
 }
+.price{
+  position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
   .package:hover .pck-btn {
     background-color: white;
