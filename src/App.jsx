@@ -26,6 +26,20 @@ import Footer from "./Components/Footer";
 import Contact from "./Components/Contact";
 import Navbar from "./Components/Navbar";
 import Newsletter from "./Components/Newsletter";
+import SearchEngine from "./Components/SearchEngin/SearchEngine";
+import SocialMedia from "./Components/SocialMedia/SocialMedia";
+import ContentMarketing from "./Components/ContentMarketing/ContentMarketing";
+import PayPer from "./Components/PayPer/PayPer";
+import SpecialPackages from "./Components/SpecialPackages/SpecialPackages";
+import GrowBusiness from "./Components/GrowBusines/GrowBusiness";
+import Magazine from "./Components/Magzine/Magazine";
+import VisualAid from "./Components/VisualAid/VisualAid";
+import Calender from "./Components/Calender/Calender";
+import LetterHead from "./Components/Stationary/LetterHead/LetterHead";
+import Envelope from "./Components/Stationary/Envelope/Envelope";
+import VisitingCard from "./Components/Stationary/VisitingCard/VisitingCard";
+import Certificate from "./Components/Stationary/Certificate/Certificate";
+import MenuCard from "./Components/Stationary/MenuCard/MenuCard";
 
 const ContactSection = () => (
   <div className="contact-section">
@@ -266,7 +280,7 @@ const Root = () => (
       <Route path="/digitalMarketing" element={<DigitalMarketing />} />
       <Route path="/our-work" element={<OurWork />} />
       <Route path="/logo" element={<Logo />} />
-      <Route path="/brochure" element={<Brochure />} />
+      <Route path="/Brochure" element={<Brochure/>} />
       <Route path="/packaging" element={<Packaging />} />
       <Route path="/flyer" element={<Flyer />} />
       <Route path="/poster" element={<Poster />} />
@@ -274,6 +288,35 @@ const Root = () => (
       <Route path="/uiux" element={<UIUX />} />
       <Route path="/icon" element={<Icon />} />
       <Route path="/stationary" element={<Stationary />} />
+
+
+      {/* ************************Degital Marketing*********************** */}
+      <Route path="/SearchEngine" element={<SearchEngine />} />
+      <Route path="/SoacialMedia" element={<SocialMedia />} />
+      <Route path="/ContentMarketing" element={<ContentMarketing />} />
+      <Route path="/PayPer" element={<PayPer />} />
+      <Route path="/SpecialPAckages" element={<SpecialPackages/>} />
+      <Route path="/GrowBusiness" element={<GrowBusiness />} />
+
+      <Route path="/Magazine" element={<Magazine />} />
+      <Route path="/VisualAid" element={<VisualAid />} />
+      <Route path="/Calender" element={<Calender />} />
+
+
+      {/* *********************Stationaary********************* */}
+
+      <Route path="/Stationary/LetterHead" element={<LetterHead/>} />
+      <Route path="/Stationary/Envelope" element={<Envelope/>} />
+      <Route path="/Stationary/VisitingCard" element={<VisitingCard/>} />
+      <Route path="/Stationary/Certificate" element={<Certificate/>} />
+      <Route path="/Stationary/MenuCard" element={<MenuCard/>} />
+
+
+
+
+
+
+
     </Routes>
     <Newsletter/>
     <Footer/> 

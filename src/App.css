@@ -661,3 +661,18 @@ h1, h3 {
     left: -100%;
   }
 }
+
+.drop-item.active {
+  background-color: red !important;
+  color: white !important; /* Optional for better readability */
+}
+
+
+
+@media (max-width: 575.98px) {
+  .text{
+    font-size: 10px;
+
+  }
+  
+}

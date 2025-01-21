@@ -1,12 +1,11 @@
 import  { useEffect, useRef, useState } from 'react';
-import PosterImage from '../../assets/poster.png';
-import flyer1 from '../../assets/flyer3.jpg';
-import flyer2 from '../../assets/flyer3.jpg';
-import flyer3 from '../../assets/flyer3.jpg';
+import PosterImage from '../../../assets/poster.png';
+import flyer1 from '../../../assets/flyer3.jpg';
+import flyer2 from '../../../assets/flyer3.jpg';
+import flyer3 from '../../../assets/flyer3.jpg';
 import { Col, Container, Row } from 'react-bootstrap';
-
-const Icon = () => {
-    const [setIsVisible] = useState(false);
+function Envelope() {
+   const [setIsVisible] = useState(false);
     const [packages, setPackages] = useState([]);
     const [loading, setLoading] = useState(false);
     const loaderRef = useRef(null);
@@ -47,10 +46,10 @@ const Icon = () => {
         const data = await response.json();
   
         // Filter packages where category is 'brochure'
-        const iconPackages = data.filter(pkg => pkg.category === 'icon');
+        const envelopePackages = data.filter(pkg => pkg.category === 'envelope');
   
         // Limit the packages to 3 (Basic, Standard, Premium)
-        setPackages(iconPackages.slice(0, 3));
+        setPackages(envelopePackages.slice(0, 3));
       } catch (error) {
         console.error("Error fetching packages:", error);
       }
@@ -66,26 +65,25 @@ const Icon = () => {
     };
   return (
     <div className='text'>
-       <h2 className="text-center fw-bold text-white my-5 shadow logo-package">Icon Design Packages That Combine Creativity and Usability for Seamless User Interfaces.</h2>
+       <h2 className="text-center fw-bold text-white my-5 shadow logo-package">Stylish envelope design for any budget, with premium options for extra customization.</h2>
    
        <Container>
          <Row className="mb-5">
            <Col sm={12} md={6}>
              <div className="text-justify">
-               <h4 className="fw-bold blue px-4 me-3 pb-2">Creative Icon Design Company in India</h4>
+               <h4 className="fw-bold blue px-4 me-3 pb-2">Custom Envelope Design Services in India</h4>
    
                <div className="text-secondary text">
-                 <p>Icon design involves creating graphical symbols that represent concepts or objects, playing a key role in enhancing user experience and brand identity. Effective icons are clear, functional, and scalable, maintaining their clarity from large to small sizes. Whether for apps, websites, or marketing materials, our custom icons are tailored to fit your brand&rsquo;s aesthetic and ensure intuitive navigation. We focus on simplicity, usability, and consistency, crafting icons that are visually appealing and easy to understand across various platforms. Our icons help elevate your brand’s visual presence, ensuring they communicate effectively with your audience. We ensure that each icon is carefully designed for both aesthetic impact and practical functionality. Let us create icons that reflect your brand’s values and resonate with users.
+                 <p>Your envelope is often the first physical touchpoint a client or partner has with your brand. Make sure it leaves a lasting impression with a custom envelope design that speaks to your professionalism and creativity.
+   
    </p>
-   <p>We focus on factors such as:
-
-<p>Simplicity & Clarity: Ensuring that icons are easily recognizable and meaningful.</p>
-<p>Scalability: Guaranteeing icons retain their details and clarity across different sizes.
-</p>
-<p>Consistency: Maintaining a uniform style that aligns with your brand’s visual identity.
-</p>
-<p>Versatility: Designing icons that work across various digital and print media.</p>
-</p>
+   
+                 <p>At Artisticify, we specialize in designing envelopes that enhance your brand’s identity and elevate your correspondence. Our designs are tailored to reflect your company’s vision, whether it's for business letters, promotional materials, or invitations.</p>
+   
+                 <p>We focus on the finer details—using your brand&rsquo;s colors, fonts, and logo to create an envelope that not only protects the contents but also makes your mail stand out in a crowded inbox. Whether you need standard envelopes or custom sizes, our designs are made to be functional, stylish, and impactful.</p>
+   
+                 <p>Let Artisticify help you send the right message with beautifully crafted envelopes that align with your branding and create a memorable first impression.
+   </p>
    
                  
                </div>
@@ -101,14 +99,10 @@ const Icon = () => {
         
           <Container>
                  <div className="pt-5">
-                   <h3 className="text-center py-3 fw-bold">Pictograms</h3>
-                   <p className="text-center w-75 d-flex justify-content-center mx-auto text-secondary mb-5">Pictograms, also known as pictographs or icons in digital contexts, are visual symbols that represent ideas or objects through their resemblance to the real thing. They are used in various industries like tourism, education, and mining to convey information quickly and universally, often overcoming language barriers. Pictograms are simple, clear, and effective for signage, websites, mobile apps, and educational materials. They help in delivering concise messages, especially in environments where clarity and speed are crucial.</p>
+                   <h3 className="text-center py-3 fw-bold">Why Choose a Poster Design Company?</h3>
+                   <p className="text-center w-75 d-flex justify-content-center mx-auto text-secondary mb-5">Creative poster design plays a crucial role in boosting your marketing campaign. We ensure our designs are visually appealing while conveying the right amount of information. Posters remain a timeless and cost-effective solution, effectively showcasing details like products, services, offers, and business profiles.</p>
                  </div>
-                 <div className="pt-5">
-                   <h3 className="text-center py-3 fw-bold">Illustrations</h3>
-                   <p className="text-center w-75 d-flex justify-content-center mx-auto text-secondary mb-5">Illustrations are graphic representations of concepts or subjects, created through drawings, paintings, sketches, or photographs. The term originates from the Latin word illustra&rsquo;tio, meaning to enlighten. Used to visually explain or decorate stories and products, illustrations are crucial in industries like pharmaceuticals, medicine, and chemical processing. They can be executed in various techniques, including watercolor, ink, charcoal, and oil, offering unique artistic styles.</p>
-                 </div>
-                 <h3 className="text-center  pt-3 fw-bold mb-5">See Our Creative Icon Design Creation</h3>
+                 <h3 className="text-center  pt-3 fw-bold mb-5">See Our Creative Envelope Design Creation</h3>
                  <Row>
                    <Col  xs={12} md={4} className="mb-3">
                   
@@ -128,7 +122,7 @@ const Icon = () => {
        </Container>
        <div className="content-container mt-5 pt-5">
    
-         <h3 className="text-center  pt-3 fw-bold mb-5"> Icon Design Packages</h3>
+         <h3 className="text-center  pt-3 fw-bold mb-5"> Envelope Design Packages</h3>
         
    
          <div className="packages">
@@ -150,8 +144,7 @@ const Icon = () => {
            ))}
          </div>
        </div>
-     </div>
-  );
-};
+     </div>  )
+}
 
-export default Icon;
+export default Envelope

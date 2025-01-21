@@ -1,12 +1,11 @@
 import  { useEffect, useRef, useState } from 'react';
-import PosterImage from '../../assets/poster.png';
-import PosterImg from '../../assets/Artboard 03.jpg';
-
-import flyer1 from '../../assets/flyer3.jpg';
-import flyer2 from '../../assets/flyer3.jpg';
-import flyer3 from '../../assets/flyer3.jpg';
+import PosterImage from '../../../assets/poster.png';
+import flyer1 from '../../../assets/flyer3.jpg';
+import flyer2 from '../../../assets/flyer3.jpg';
+import flyer3 from '../../../assets/flyer3.jpg';
 import { Col, Container, Row } from 'react-bootstrap';
-const Poster = () => {
+
+function LetterHead() {
   const [setIsVisible] = useState(false);
   const [packages, setPackages] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -48,10 +47,10 @@ const Poster = () => {
       const data = await response.json();
 
       // Filter packages where category is 'brochure'
-      const posterPackages = data.filter(pkg => pkg.category === 'poster');
+      const letterheadPackages = data.filter(pkg => pkg.category === 'letterhead');
 
       // Limit the packages to 3 (Basic, Standard, Premium)
-      setPackages(posterPackages.slice(0, 3));
+      setPackages(letterheadPackages.slice(0, 3));
     } catch (error) {
       console.error("Error fetching packages:", error);
     }
@@ -66,32 +65,25 @@ const Poster = () => {
     }, 1000); // Simulate loading delay
   };
   return (
-    <div className='text'>
-       <div className='about'>
-        <div className='image-container mb-5'>
-          <img src={PosterImg} className='main-about img-fluid mb-5'/>
-         
-        </div>
-      </div>
-       <h2 className="text-center fw-bold text-white my-5 shadow logo-package">Eye-catching Poster Design Solutions to Make Your Promotion Stand Out.</h2>
+ <div className='text'>
+       <h2 className="text-center fw-bold text-white my-5 shadow logo-package">Your perfect letterhead, crafted within your budget. Premium packages add more expert design and personalization.</h2>
    
        <Container>
          <Row className="mb-5">
            <Col sm={12} md={6}>
              <div className="text-justify">
-               <h4 className="fw-bold blue px-4 me-3 pb-2">Creative Packaging Design Company in India</h4>
+               <h4 className="fw-bold blue px-4 me-3 pb-2">Professional Letterhead Design Services in India</h4>
    
                <div className="text-secondary text">
-                 <p>Is your product packaging an extension of your brand or just tomorrow&rsquo;s garbage?
+                 <p>A well-designed letterhead is more than just a piece of paper—it’s a powerful branding tool that communicates your company&rsquo;s professionalism and establishes a sense of trust with clients, partners, and customers.
    
    </p>
    
-                 <p>At Artisticify, we are experts at developing innovative, practical, and brand-consistent packaging designs for your products that leave a difference. In this fast-paced marketplace, packaging can be a dynamic marketing tool, helping to heighten brand recall and increase sales.</p>
+                 <p>At Artisticify, we create customized, sleek, and professional letterheads that reflect your brand’s personality. Whether you’re sending a formal letter or a promotional flyer, your letterhead is the first impression you make.</p>
    
-                 <p>Our team delivers packaging that is functional, consumer-friendly, and aesthetically pleasing, providing a reason for your customers to choose your brand. Whether it is box packaging, food packaging, pharma packaging, or wine bottles, our designs can enhance your brand&rsquo;s identity.</p>
+                 <p>Our letterhead designs are crafted with careful attention to detail, from logo placement and color schemes to typography, ensuring every element aligns with your brand&rsquo;s visual identity. We make sure your letterhead is versatile, adaptable, and effective across digital and print formats, helping you leave a lasting impression in all your business communications.</p>
    
-                 <p>We make sure that the labels and graphics are applied, colors are chosen, fonts are selected, and images are implemented to help represent your brandrsquo;s vision in detail.
-   Cooperate with us for innovative, world-class product packaging design!
+                 <p>Work with us to create a polished, memorable letterhead that stands out and reinforces your brand’s credibility.
    </p>
    
                  
@@ -108,10 +100,10 @@ const Poster = () => {
         
           <Container>
                  <div className="pt-5">
-                   <h3 className="text-center py-3 fw-bold">Why Choose a Poster Design Company?</h3>
-                   <p className="text-center w-75 d-flex justify-content-center mx-auto text-secondary mb-5">Creative poster design plays a crucial role in boosting your marketing campaign. We ensure our designs are visually appealing while conveying the right amount of information. Posters remain a timeless and cost-effective solution, effectively showcasing details like products, services, offers, and business profiles.</p>
+                   <h3 className="text-center py-3 fw-bold">Why Choose a Letter Head Design Company?</h3>
+                   <p className="text-center w-75 d-flex justify-content-center mx-auto text-secondary mb-5">A professional letterhead design company ensures your business looks credible and consistent. It creates a strong brand identity, enhances communication, and helps with legal compliance. Custom designs reflect your company’s personality, and experts ensure high-quality, print-ready results, saving you time and effort.</p>
                  </div>
-                 <h3 className="text-center  pt-3 fw-bold mb-5">See Our Creative Poster Design Creation</h3>
+                 <h3 className="text-center  pt-3 fw-bold mb-5">See Our Creative Letter Head Design Creation</h3>
                  <Row>
                    <Col  xs={12} md={4} className="mb-3">
                   
@@ -131,7 +123,7 @@ const Poster = () => {
        </Container>
        <div className="content-container mt-5 pt-5">
    
-         <h3 className="text-center  pt-3 fw-bold mb-5"> Poster Design Packages</h3>
+         <h3 className="text-center  pt-3 fw-bold mb-5"> Letter Head Design Packages</h3>
         
    
          <div className="packages">
@@ -153,8 +145,7 @@ const Poster = () => {
            ))}
          </div>
        </div>
-     </div>
-  );
-};
+     </div>  )
+}
 
-export default Poster;
+export default LetterHead
