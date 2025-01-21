@@ -24,7 +24,7 @@ function Contact() {
     message: '',
   });
 
-  const [selectedService, setSelectedService] = useState('Select');
+  const [ setSelectedService] = useState('Select');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState(''); // State to track success message
@@ -94,12 +94,12 @@ function Contact() {
 
   return (
     <div>
-      <div className='contact1'>
+      <div className='contact1 text'>
         <div className='image-container'>
           <img src={MainImg} className='main-contact img-fluid' alt="Contact Us" />
-          <div className='overlay-text1'>
-            <h1 className="fw-bold display-4 pb-2 text-start text-md-start text-center ms-md-5 ps-md-5">Contact us...</h1>
-            <h3 className="lead fw-bold text-md-start text-center ms-md-5 ps-md-5">Start your project today.</h3>
+          <div className='overlay-text1 overlay-text11'>
+            <h1 className="fw-bold display-4 pb-2 text-start text-md-start text-center ms-md-5 ps-md-5 text">Contact us...</h1>
+            <h3 className="lead fw-bold text-md-start text-center ms-md-5 ps-md-5 text">Start your project today.</h3>
           </div>
         </div>
       </div>
@@ -142,7 +142,7 @@ function Contact() {
                 ) : (
                   <Form onSubmit={handleSubmit}>
                     <Row className="mb-3">
-                      <Form.Group as={Col} controlId="formGridName">
+                      <Form.Group as={Col} sm={12} md={6} controlId="formGridName">
                         <label className='pb-2 ps-2'>Enter Your Name</label>
                         <Form.Control
                           type="text"
@@ -153,10 +153,11 @@ function Contact() {
                           value={formData.name}
                           onChange={handleChange}
                           required
+                          
                         />
                       </Form.Group>
 
-                      <Form.Group as={Col} controlId="formGridEmail">
+                      <Form.Group as={Col} sm={12}  md={6} controlId="formGridEmail">
                         <label className='pb-2 ps-2'>Enter Email</label>
                         <Form.Control
                           type="email"
@@ -172,7 +173,7 @@ function Contact() {
                     </Row>
 
                     <Row className="mb-3">
-                      <Form.Group as={Col} controlId="formGridPhone">
+                      <Form.Group as={Col} sm={12}  md={6} controlId="formGridPhone">
                         <label className='pb-2 ps-2'>Enter Your Phone no.</label>
                         <Form.Control
                           type="number"
@@ -186,7 +187,7 @@ function Contact() {
                         />
                       </Form.Group>
 
-                      <Form.Group as={Col} controlId="formGridCity">
+                      <Form.Group as={Col} sm={12}  md={6} controlId="formGridCity">
                         <label className='pb-2 ps-2'>Enter Your City</label>
                         <Form.Control
                           type="text"

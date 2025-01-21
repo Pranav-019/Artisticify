@@ -54,8 +54,8 @@ const ourWork = () => {
       <div className="ourwork">
         <div className="image-container">
           <img src={MainImg} className="main-ourwork img-fluid" />
-          <div className="overlay mm">
-            <h1 className="fw-bold extra-bold pb-2 text-start">Our Work...</h1>
+          <div className="overlay mm overlay-text11">
+            <h1 className="fw-bold extra-bold pb-2 text-start overlay-text11">Our Work...</h1>
             <h3>&rsquo;Stunning designs that make your brand unforgettable!&rsquo;</h3>
           </div>
         </div>
