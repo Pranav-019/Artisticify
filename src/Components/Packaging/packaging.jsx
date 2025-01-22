@@ -132,15 +132,15 @@ Cooperate with us for innovative, world-class product packaging design!
        <div className="pb-5">
       <h3 className="text-center">{pkg.name}</h3>
       <p>{pkg.description}</p>
-      <ul className="text">
+      <ul className="text pb-4">
         {pkg.features.map((feature, i) => (
           <li key={i}>{feature}</li>
         ))}
        </ul>
        {pkg.type === "Premium" ? (
-  <h4 className="text-center blue fw-bold">Customizable</h4>
+  <h4 className="text-center blue fw-bold price">Customizable</h4>
 ) : (
-  <h4 className="text-center blue fw-bold">{pkg.price} /-</h4>
+  <h4 className="text-center blue fw-bold price">{pkg.price} /-</h4>
 )}
        <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto">
         Enquire Now
