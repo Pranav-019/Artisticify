@@ -1,214 +1,90 @@
 import { Container } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
+import { useNavigate } from "react-router-dom";
 
 function FAQs() {
+  const navigate=useNavigate()
   return (
     <div style={{ paddingTop: "200px" }}>
       <Container>
         <div className="mx-lg-4">
-          <h1 className="fw-bold">Frequently Asked Questions</h1>
-          <div className="mt-5 shadow mb-5 bg-white rounded">
+          <div className="p-5 rounded rounded-4" style={{backgroundColor:"#0d3e72"}}>
+          <h1 className="fw-bold text-white text-center ">Frequently Asked Questions</h1>
+
+          </div>
+          <div className="mt-5  mb-5 bg-white rounded">
             {/* Single Accordion with unique event keys */}
-            <Accordion defaultActiveKey="0" flush className="mainAccor p-3">
               {/* First Accordion Item */}
-              <Accordion.Item eventKey="0" className="accor">
-                <Accordion.Header className="accorhead">
-                  <h3 className="dark fw-bold">General</h3>
-                </Accordion.Header>
-                <Accordion.Body className="ps-1 accor">
+              
                   {/* Nested Accordion for FAQs */}
-                  <Accordion defaultActiveKey="0" className="text-start">
+                  <Accordion defaultActiveKey="" className="text-start ">
                     <Accordion.Item eventKey="0" className="accor">
                       <Accordion.Header>
-                        <h6 className="dark fw-bold">What is Male Fashion?</h6>
+                        <h6 className="dark fw-bold">What services do you offer in graphic design and digital marketing?</h6>
                       </Accordion.Header>
                       <Accordion.Body>
-                        Male fashion refers to the clothing, accessories, and overall style choices designed for men. It includes various types of attire such as casual, formal, streetwear, and luxury fashion, reflecting personal expression, trends, and cultural influences.
+                      We offer a comprehensive range of services to help businesses establish and enhance their visual identity and online presence. Our graphic design services include branding, logo design, packaging design, UI/UX design, brochure design, poster design, exhibition stall design, and more. On the digital marketing side, we provide services such as social media marketing, search engine optimization (SEO), pay-per-click (PPC) advertising, content marketing, and email marketing. Whether you need a stunning visual identity or a strategic online marketing campaign, we have the expertise to deliver impactful solutions tailored to your business goals.
                       </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="1" className="accor">
                       <Accordion.Header>
-                        <h6 className="dark fw-bold">What kind of products does Male Fashion sell?</h6>
+                        <h6 className="dark fw-bold">How much do your services cost?</h6>
                       </Accordion.Header>
                       <Accordion.Body>
-                        Male Fashion offers 5000+ products, including everything from casual and formal clothing to shoes, accessories, grooming products, and outerwear.
+                      The cost of our services depends on several factors, including the complexity of the project, the number of design revisions required, the scope of marketing efforts, and the specific needs of your business. We offer flexible pricing models, including one-time project-based pricing and monthly retainers for ongoing services. Our goal is to provide high-quality services that fit within your budget while delivering maximum value. To get an accurate quote, we recommend discussing your specific requirements with our team, who will provide a customized package based on your objectives and budget.
+
                       </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="2" className="accor">
                       <Accordion.Header>
-                        <h6 className="dark fw-bold">What cities and locations does Male Fashion operate in?</h6>
+                        <h6 className="dark fw-bold">How long does it take to complete a project or see results?</h6>
                       </Accordion.Header>
                       <Accordion.Body>
-                        Male Fashion currently operates in Delhi, Gurgaon, Kolkata, Lucknow, Mumbai, Bengaluru, Goa, Jaipur, Pune, Sangli, Satara, Kolhapur.
-                      </Accordion.Body>
-                    </Accordion.Item>
-                  </Accordion>
-                </Accordion.Body>
-              </Accordion.Item>
+                      The timeline for each project varies based on its complexity and scope. For graphic design projects, simple designs such as logos or business cards can typically be completed within a few days, while more intricate projects like brochures, packaging, or UI/UX designs may take several weeks. On the digital marketing side, SEO campaigns generally take 3 to 6 months to show significant results, while PPC and social media marketing can yield quicker outcomes within a few weeks. We work efficiently to meet deadlines and ensure timely delivery without compromising on quality.
 
-              {/* Second Accordion Item */}
-              <Accordion.Item eventKey="1" className="accor">
-                <Accordion.Header className="accorhead">
-                  <h3 className="dark fw-bold">Delivery</h3>
-                </Accordion.Header>
-                <Accordion.Body className="ps-1 accor">
-                  {/* Nested Accordion for Shipping FAQs */}
-                  <Accordion defaultActiveKey="0" className="text-start">
-                    <Accordion.Item eventKey="0" className="accor">
-                      <Accordion.Header>
-                        <h6 className="dark fw-bold">Do you charge for delivery?</h6>
-                      </Accordion.Header>
-                      <Accordion.Body>
-                      Every store has its own delivery charges. The delivery charges are mentioned on the app and web at the checkout page.
-                      </Accordion.Body>
-                    </Accordion.Item>
-                    <Accordion.Item eventKey="1" className="accor">
-                      <Accordion.Header>
-                        <h6 className="dark fw-bold">What are your delivery timings?</h6>
-                      </Accordion.Header>
-                      <Accordion.Body>
-                      The delivery timings are different for different cities and localities. In some locations, our deliveries begin from 6 AM and the last delivery is completed by 11 PM. 
-                      </Accordion.Body>
-                    </Accordion.Item>
 
-                    <Accordion.Item eventKey="2" className="accor">
-                      <Accordion.Header>
-                        <h6 className="dark fw-bold">Can I change the delivery address of my order?</h6>
-                      </Accordion.Header>
-                      <Accordion.Body>
-                      At this time, we do not offer this option. You can, however, cancel your order and reorder from a different locality
                       </Accordion.Body>
                     </Accordion.Item>
-
                     <Accordion.Item eventKey="3" className="accor">
                       <Accordion.Header>
-                        <h6 className="dark fw-bold">What if I don’t receive my order by the scheduled time?</h6>
+                        <h6 className="dark fw-bold">Can I request revisions for my project?</h6>
                       </Accordion.Header>
                       <Accordion.Body>
-                      Over 70% of our deliveries are honoured within the 15 minute timelines. On rare occasions, due to unforeseen circumstances, your order might be delayed. In case of imminent delay, our customer support executive will keep you updated about the delivery time of your order
+                      Yes, we understand that your satisfaction is our top priority, and we include a set number of revisions in all our design and marketing packages. Our revision process allows you to provide feedback, request adjustments, and ensure the final deliverables align with your vision. Additional revisions beyond the agreed limit can be accommodated for an extra fee. We believe in a collaborative approach to fine-tune designs and strategies until you are completely satisfied with the results.
+
                       </Accordion.Body>
                     </Accordion.Item>
-
                     <Accordion.Item eventKey="4" className="accor">
                       <Accordion.Header>
-                        <h6 className="dark fw-bold">Can I change the delivery address of my order?</h6>
+                        <h6 className="dark fw-bold">What file formats will I receive for graphic design projects?</h6>
                       </Accordion.Header>
                       <Accordion.Body>
-                      At this time, we do not offer this option. You can, however, cancel your order and reorder from a different locality
+                      We provide design files in various formats to ensure compatibility with different platforms and uses. You will receive high-resolution files suitable for both digital and print purposes, including commonly used formats such as JPEG and PNG for web use, as well as PDF, AI (Adobe Illustrator), PSD (Adobe Photoshop), and EPS for professional printing and editing purposes. Our team ensures that all files are organized and delivered in a format that is easy to use, whether you need them for online marketing, printing, or further modifications.
                       </Accordion.Body>
                     </Accordion.Item>
+                    <Accordion.Item eventKey="5" className="accor">
+                      <Accordion.Header>
+                        <h6 className="dark fw-bold">Do you provide print-ready designs and optimized marketing materials?</h6>
+                      </Accordion.Header>
+                      <Accordion.Body>
+                      Absolutely! All our graphic design work is optimized for printing to ensure perfect color accuracy, resolution, and quality. We take care of aspects such as bleed, margins, and color profiles (CMYK for print, RGB for digital) to guarantee flawless print output. Similarly, our digital marketing materials, such as social media graphics, website banners, and email templates, are optimized for various platforms to ensure high engagement and professional presentation. Our goal is to provide you with files that are ready to use without any technical issues.
+                      </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="6" className="accor">
+                      <Accordion.Header>
+                        <h6 className="dark fw-bold">Can you handle my business&rsquo;s branding and online presence from scratch?</h6>
+                      </Accordion.Header>
+                      <Accordion.Body>
+                      Yes, we offer complete branding and digital marketing solutions to help businesses establish a strong presence from the ground up. Our team can work with you to create a unique brand identity, starting with logo design, brand guidelines, color schemes, typography, and other visual elements. Once your brand identity is in place, we implement effective digital marketing strategies to build your online presence, including website development, social media management, SEO, and targeted advertising campaigns. We ensure consistency across all platforms to strengthen your brand image and connect with your audience effectively.
+                      </Accordion.Body>
+                    </Accordion.Item>
+                   
+                    
+                    <p className="text-danger text-end fw-bold animate-text mt-2" onClick={() => navigate('/contact')}>If you have any questions, feel free to contact us.....</p>
                   </Accordion>
-                </Accordion.Body>
-              </Accordion.Item>
+                
 
-
-              <Accordion.Item eventKey="2" className="accor">
-                <Accordion.Header className="accorhead">
-                  <h3 className="dark fw-bold">Cancellation and return</h3>
-                </Accordion.Header>
-                <Accordion.Body className="ps-1 accor">
-                  {/* Nested Accordion for Shipping FAQs */}
-                  <Accordion defaultActiveKey="0" className="text-start">
-                    <Accordion.Item eventKey="0" className="accor">
-                      <Accordion.Header>
-                        <h6 className="dark fw-bold">How can I cancel my order?</h6>
-                      </Accordion.Header>
-                      <Accordion.Body>
-                      Male Fashoin provides easy and hassle-free cancellation. You can cancel your order via the app or web on the order details page while it is still in the packing stage.
-                      </Accordion.Body>
-                    </Accordion.Item>
-                    <Accordion.Item eventKey="1" className="accor">
-                      <Accordion.Header>
-                        <h6 className="dark fw-bold">What If I want to return something?</h6>
-                      </Accordion.Header>
-                      <Accordion.Body>
-                      The timeline to raise a complaint depends on the category in which the product falls into: Consumable Perishables – meats, seafood, frozen food and FnV, dairy category including milk, eggs and bread, etc. (72 hours); Consumable Non-perishables – groceries, etc. (72 hours); General Merchandise – Electronics, home furnishings, fashion, etc. (24 hours); Freebie missing issue (72 hours); Entire wrong order and MDND (24 hours); boAt products (24 hours); book products (24 hours); and Other issues – insect, fungus or foreign material, expired products, etc. (no restriction). 
-                      </Accordion.Body>
-                    </Accordion.Item>
-
-                    <Accordion.Item eventKey="2" className="accor">
-                      <Accordion.Header>
-                        <h6 className="dark fw-bold">Can I reschedule my order?</h6>
-                      </Accordion.Header>
-                      <Accordion.Body>
-                      We deliver your order in 10 minutes during all times the store in your area is operational. Hence we request you to order when you are available. It is not possible to reschedule an order.
-                      </Accordion.Body>
-                    </Accordion.Item>
-
-                    <Accordion.Item eventKey="3" className="accor">
-                      <Accordion.Header>
-                        <h6 className="dark fw-bold">What if I have a complaint regarding my order?</h6>
-                      </Accordion.Header>
-                      <Accordion.Body>
-                      Please reach out to us via the “Customer Support” section on the app/web. Our customer care team is more than happy to help
-                      </Accordion.Body>
-                    </Accordion.Item>
-
-                    <Accordion.Item eventKey="4" className="accor">
-                      <Accordion.Header>
-                        <h6 className="dark fw-bold">Can I change the delivery address of my order?</h6>
-                      </Accordion.Header>
-                      <Accordion.Body>
-                      At this time, we do not offer this option. You can, however, cancel your order and reorder from a different locality
-                      </Accordion.Body>
-                    </Accordion.Item>
-                  </Accordion>
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="3" className="accor">
-                <Accordion.Header className="accorhead">
-                  <h3 className="dark fw-bold">Miscellaneous</h3>
-                </Accordion.Header>
-                <Accordion.Body className="ps-1 accor">
-                  {/* Nested Accordion for Shipping FAQs */}
-                  <Accordion defaultActiveKey="0" className="text-start">
-                    <Accordion.Item eventKey="0" className="accor">
-                      <Accordion.Header>
-                        <h6 className="dark fw-bold">What are some essential wardrobe pieces every man should own?</h6>
-                      </Accordion.Header>
-                      <Accordion.Body>
-                      Every man should have a few key items: a well-fitting white t-shirt, a classic button-down shirt, a pair of dark jeans, versatile chinos, a blazer, and a pair of white sneakers. These basics can be mixed and matched for both casual and semi-formal looks.
-                      </Accordion.Body>
-                    </Accordion.Item>
-                    <Accordion.Item eventKey="1" className="accor">
-                      <Accordion.Header>
-                        <h6 className="dark fw-bold">How can I find my personal style?</h6>
-                      </Accordion.Header>
-                      <Accordion.Body>
-                      Start by observing outfits you naturally gravitate toward, whether in magazines, on social media, or on the street. Experiment with different styles in affordable ways and see what feels most comfortable. Keep what makes you feel confident and aligns with your lifestyle. 
-                      </Accordion.Body>
-                    </Accordion.Item>
-
-                    <Accordion.Item eventKey="2" className="accor">
-                      <Accordion.Header>
-                        <h6 className="dark fw-bold">How do I determine the best fit for shirts, jeans, and suits?</h6>
-                      </Accordion.Header>
-                      <Accordion.Body>
-                      For shirts, ensure that the shoulder seams align with your shoulders and that the length doesn’t go past mid-fly. Jeans should fit snugly around the waist without needing a belt and should have a slight break at the ankle. Suits should be fitted but not tight, with jacket sleeves ending at the wrist and pants sitting just above the shoe.
-                      </Accordion.Body>
-                    </Accordion.Item>
-
-                    <Accordion.Item eventKey="3" className="accor">
-                      <Accordion.Header>
-                        <h6 className="dark fw-bold">What’s the best way to layer clothing for different weather conditions?</h6>
-                      </Accordion.Header>
-                      <Accordion.Body>
-                      Start with a light base layer like a t-shirt or shirt, add a sweater or lightweight jacket for warmth, and top it off with a coat for insulation if needed. Layering allows you to adjust to temperature changes and adds depth to your outfit. Stick to complementary colors to keep it looking cohesive.
-                      </Accordion.Body>
-                    </Accordion.Item>
-
-                    <Accordion.Item eventKey="4" className="accor">
-                      <Accordion.Header>
-                        <h6 className="dark fw-bold">How should I match my shoes with my outfit?</h6>
-                      </Accordion.Header>
-                      <Accordion.Body>
-                      For formal outfits, match black shoes with black or gray suits, and brown shoes with navy or brown outfits. For casual looks, white sneakers go well with almost everything. Consider the color and style of your belt, as it should generally coordinate with your shoes.
-                      </Accordion.Body>
-                    </Accordion.Item>
-                  </Accordion>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
+            
           </div>
         </div>
       </Container>

@@ -1,5 +1,5 @@
-import  { useState, useEffect, useRef } from "react";
-import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
+import  {  useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import "./App.css";
 import statueImage from "./assets/homepage-bg.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -9,7 +9,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Design from "./Components/Design/design";
 import About from "./Components/About/about";
 import OurWork from "./Components/Our - Work/our_work";
-import Home from "./Components/Home/home";
 import DigitalMarketing from "./Components/Digital Marketing/digitalMarketing";
 
 // Tiles
@@ -41,74 +40,19 @@ import VisitingCard from "./Components/Stationary/VisitingCard/VisitingCard";
 import Certificate from "./Components/Stationary/Certificate/Certificate";
 import MenuCard from "./Components/Stationary/MenuCard/MenuCard";
 import OurService from "./Components/OurService/OurService";
+import FAQs from "./Components/FAQs";
+import Collection from "./Components/Collection";
 
-const ContactSection = () => (
-  <div className="contact-section">
-    <div className="contact-bar phone-bar">
-      <i className="fa fa-phone contact-icon"></i>
-      <span className="bar-text">+1-234-567-890</span>
-    </div>
-    <div className="contact-bar email-bar">
-      <i className="fa fa-envelope contact-icon"></i>
-      <span className="bar-text">dummy@example.com</span>
-    </div>
-  </div>
-);
+
 
 const App = () => {
-  const navigate = useNavigate();
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    address: "",
-    city: "",
-    phone: "",
-    serviceSelected: "",
-    message: ""
-  });
-  const [acknowledgmentMessage, setAcknowledgmentMessage] = useState(""); // New state for acknowledgment message
+  
 
   // Create a reference to the contact form section
-  const contactFormRef = useRef(null);
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch("http://localhost:5000/api/contact/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-      });
-
-      if (response.ok) {
-        setAcknowledgmentMessage("Message sent successfully!"); // Set acknowledgment message
-        setFormData({ // Reset form fields
-          name: "",
-          email: "",
-          address: "",
-          city: "",
-          phone: "",
-          serviceSelected: "",
-          message: "Pl let me know about the design services."
-        });
-      } else {
-        setAcknowledgmentMessage("Error sending message. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      setAcknowledgmentMessage("Error sending message. Please try again.");
-    }
-  };
+  
 
 
   useEffect(() => {
@@ -125,11 +69,7 @@ const App = () => {
   }, []);
 
   // Function to scroll to the contact form section
-  const scrollToContactForm = () => {
-    if (contactFormRef.current) {
-      contactFormRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+ 
 
   return (
    <div>
@@ -241,7 +181,9 @@ const App = () => {
       </main>
 
     </div>
+    <Collection/>
     <OurService/>
+    <FAQs/>
    </div>
     
   );
@@ -268,6 +210,8 @@ const Root = () => (
       <Route path="/uiux" element={<UIUX />} />
       <Route path="/icon" element={<Icon />} />
       <Route path="/stationary" element={<Stationary />} />
+      <Route path="/FAQs" element={<FAQs/>} />
+
 
 
       {/* ************************Degital Marketing*********************** */}

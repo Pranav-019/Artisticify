@@ -96,18 +96,11 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/design" className="text-decoration-none text-white">
-                  Design
+                <a href="/FAQs" className="text-decoration-none text-white">
+                 FAQs
                 </a>
               </li>
-              <li>
-                <a
-                  href="/digital-marketing"
-                  className="text-decoration-none text-white"
-                >
-                  Digital Marketing
-                </a>
-              </li>
+             
               <li>
                 <a
                   href="/our-work"
