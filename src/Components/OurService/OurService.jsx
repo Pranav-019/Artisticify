@@ -8,6 +8,7 @@ import { Col, Container, Row } from "react-bootstrap";
 function OurService() {
   return (
     <div style={{ backgroundColor: "#f0f9ff" }} className="py-5">
+      <h1 className="text-center py-2">Our Services</h1>
       <h2 className="text-center pb-5">Take Your Business to the Next Level</h2>
       <Container>
         <Row className="gap-4">
