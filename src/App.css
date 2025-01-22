@@ -1,4 +1,15 @@
 
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+.text-light {
+  overflow: hidden; /* Prevent vertical overflow */
+}
+
 .app {
   max-height: 140vh;
   background: radial-gradient(circle at center, #cceeff 10%, #99ddff 30%, #e6f7ff 50%, transparent 70%),
@@ -10,6 +21,9 @@
 }
 .blue{
   color: #0d3e72;
+}
+.gray{
+  background-color: #4c4c4d;
 }
 .blue1{
   background-color: #094167;

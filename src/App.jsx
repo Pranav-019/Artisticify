@@ -40,7 +40,7 @@ import Envelope from "./Components/Stationary/Envelope/Envelope";
 import VisitingCard from "./Components/Stationary/VisitingCard/VisitingCard";
 import Certificate from "./Components/Stationary/Certificate/Certificate";
 import MenuCard from "./Components/Stationary/MenuCard/MenuCard";
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import OurService from "./Components/OurService/OurService";
 
 const ContactSection = () => (
   <div className="contact-section">
@@ -132,7 +132,8 @@ const App = () => {
   };
 
   return (
-    <div className="app">
+   <div>
+     <div className="app">
       
       <main className="hero-section">
         <h1 className="hero-title">Bring Your Imagination To Life</h1>
@@ -239,38 +240,14 @@ const App = () => {
         </section> */}
       </main>
 
-      {/* Footer */}
-      {/* <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-section">
-            <h4>About Artisticify</h4>
-            <p>We bring your creative ideas to life with professional design and development services.</p>
-          </div>
-          <div className="footer-section">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="/home">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/design">Design</a></li>
-              <li><a href="/contact">Contact</a></li>
-            </ul>
-          </div>
-          <div className="footer-section">
-            <h4>Contact</h4>
-            <p>Email: dummy@example.com</p>
-            <p>Phone: +1-234-567-890</p>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>&copy; 2025 Artisticify. All Rights Reserved.</p>
-        </div>
-      </footer> */}
     </div>
+    <OurService/>
+   </div>
+    
   );
 };
 
 const Root = () => (
-  <HelmetProvider>
   <Router>
     <Navbar/>
     <Routes>
@@ -324,7 +301,6 @@ const Root = () => (
     <Newsletter/>
     <Footer/> 
   </Router>
-  </HelmetProvider>    
 );
 
 export default Root;
