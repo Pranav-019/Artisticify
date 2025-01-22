@@ -20,7 +20,8 @@ body, html {
   position: relative;
 }
 .blue{
-  color: #0d3e72;
+  /* color: #0d3e72; */
+  color: #094167;
 }
 .gray{
   background-color: #4c4c4d;
@@ -74,6 +75,9 @@ body, html {
   
 }
 
+.ourWork{
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
 
 
 /* Hamburger Menu */
