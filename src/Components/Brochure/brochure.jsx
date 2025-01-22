@@ -4,6 +4,7 @@ import brochure1 from '../../assets/brochre1.png';
 import brochure2 from '../../assets/brochre1.png';
 import brochure3 from '../../assets/brochre1.png';
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Brochure() {  // Change "brochure" to "Brochure"
   // const [menuOpen, setMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ function Brochure() {  // Change "brochure" to "Brochure"
   const [packages, setPackages] = useState([]);
   const [loading, setLoading] = useState(false);
   const loaderRef = useRef(null);
-
+  const navigate=useNavigate();
   useEffect(() => {
     fetchPackages(); // Fetch package data on component mount
   }, []);
@@ -165,7 +166,8 @@ function Brochure() {  // Change "brochure" to "Brochure"
 ) : (
   <h4 className="text-center blue fw-bold">{pkg.price} /-</h4>
 )}
-       <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto">
+       <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto"  
+  onClick={() => navigate('/contact')}>
         Enquire Now
        </button>
        </div>

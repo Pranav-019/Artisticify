@@ -5,12 +5,15 @@ import flyer2 from '../../assets/flyer3.jpg';
 import flyer3 from '../../assets/flyer3.jpg';
 import { Col, Container, Row } from 'react-bootstrap';
 import './Packaging.css';
+import { useNavigate } from 'react-router-dom';
 
 const Packaging = () => {
   const [setIsVisible] = useState(false);
   const [packages, setPackages] = useState([]);
   const [loading, setLoading] = useState(false);
   const loaderRef = useRef(null);
+
+  const navigate=useNavigate();
 
   useEffect(() => {
     fetchPackages(); // Fetch package data on component mount
@@ -142,7 +145,7 @@ Cooperate with us for innovative, world-class product packaging design!
 ) : (
   <h4 className="text-center blue fw-bold">{pkg.price} /-</h4>
 )}
-       <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto">
+       <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={() => navigate('/contact')}>
         Enquire Now
        </button>
        </div>

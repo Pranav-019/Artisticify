@@ -4,6 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import LogoImg from '../../assets/Artboard 1 bhavik logo design.jpg'
 import Teddy from '../../assets/teddy.jpeg'
 import logo1 from '../../assets/logo.png'  // Fixed import for logo1
+import { useNavigate } from "react-router-dom";
 
 const Logo = () => {
   // const [menuOpen, setMenuOpen] = useState(false);
@@ -11,6 +12,9 @@ const Logo = () => {
   const [packages, setPackages] = useState([]);
   const [loading, setLoading] = useState(false);
   const loaderRef = useRef(null);
+
+  const navigate=useNavigate();
+  
 
   useEffect(() => {
     fetchPackages(); // Fetch package data on component mount
@@ -149,7 +153,7 @@ const Logo = () => {
 ) : (
   <h4 className="text-center blue fw-bold price">{pkg.price} /-</h4>
 )}
-       <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto">
+       <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto"  onClick={() => navigate('/contact')}>
         Enquire Now
        </button>
        </div>

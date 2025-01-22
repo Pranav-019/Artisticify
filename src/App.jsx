@@ -40,6 +40,7 @@ import Envelope from "./Components/Stationary/Envelope/Envelope";
 import VisitingCard from "./Components/Stationary/VisitingCard/VisitingCard";
 import Certificate from "./Components/Stationary/Certificate/Certificate";
 import MenuCard from "./Components/Stationary/MenuCard/MenuCard";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const ContactSection = () => (
   <div className="contact-section">
@@ -269,6 +270,7 @@ const App = () => {
 };
 
 const Root = () => (
+  <HelmetProvider>
   <Router>
     <Navbar/>
     <Routes>
@@ -322,6 +324,7 @@ const Root = () => (
     <Newsletter/>
     <Footer/> 
   </Router>
+  </HelmetProvider>    
 );
 
 export default Root;
