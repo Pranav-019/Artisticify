@@ -41,7 +41,6 @@ function OurService() {
           </Col>
         </Row>
 
-        {/* Second Row with 2 columns for medium screens */}
         <Row className="gap-4 mt-4">
           <Col  className="ourWork bg-white rounded rounded-3">
             <div className="p-4">
