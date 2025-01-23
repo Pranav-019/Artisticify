@@ -42,6 +42,7 @@ import MenuCard from "./Components/Stationary/MenuCard/MenuCard";
 import OurService from "./Components/OurService/OurService";
 import FAQs from "./Components/FAQs";
 import Collection from "./Components/Collection";
+import Graphicpanel from "./Components/Graphicpanel";
 
 
 
@@ -181,6 +182,7 @@ const App = () => {
       </main>
 
     </div>
+    <Graphicpanel/>
     <Collection/>
     <OurService/>
     <FAQs/>
