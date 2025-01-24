@@ -232,7 +232,7 @@ body, html {
   border-radius: 40px; /* Adjusted for proportion */
   width: 160px; /* Increased width */
   height: 350px; /* Increased height */
-  z-index: 1;
+  /*z-index: 1; */
   animation: moveUpDown 3s ease-in-out infinite alternate;
 }
 
