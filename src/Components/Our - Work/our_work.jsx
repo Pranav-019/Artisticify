@@ -163,12 +163,17 @@ const OurWork = () => {
         <div className="image-container">
           <img src={MainImg} className="main-ourwork img-fluid" />
           <div className="overlay mm overlay-text11">
+<<<<<<< HEAD
+            <h1 className="fw-bold extra-bold pb-2 text-start overlay-text11">Our Work...</h1>
+            <h3>Designs that make your brand unforgettable!</h3>
+=======
             <h1 className="fw-bold extra-bold pb-2 text-start overlay-text11">
               Our Work...
             </h1>
             <h3>
               &rsquo;Stunning designs that make your brand unforgettable!&rsquo;
             </h3>
+>>>>>>> 0fa603dec995a3acd6991cbfedc366929724ccf7
           </div>
         </div>
       </div>
