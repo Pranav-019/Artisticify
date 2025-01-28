@@ -10,6 +10,7 @@ const uiux = () => {
   const [setIsVisible] = useState(false);
   const [packages, setPackages] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [logoImages, setLogoImages] = useState([]);
   const loaderRef = useRef(null);
 const navigate=useNavigate()
   useEffect(() => {
@@ -40,6 +41,26 @@ const navigate=useNavigate()
         observer.unobserve(loaderRef.current);
       }
     };
+  }, []);
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const response = await fetch("https://artisticify-backend.vercel.app/api/design/get");
+        const data = await response.json();
+  
+        // Filter images by category (logo)
+        const logoImages = data.filter(img => img.category === 'uiux');
+  
+        // Set images to state (ensure we're accessing the correct URLs)
+        setLogoImages(logoImages.map(img => img.images).flat()); // Assuming 'images' is an array in the response
+  
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      }
+    };
+  
+    fetchImages(); // Fetch images when the component mounts
   }, []);
 
   const fetchPackages = async () => {
@@ -110,18 +131,14 @@ const navigate=useNavigate()
                  </div>
                  <h3 className="text-center  pt-3 fw-bold mb-5">See Our Craetive UI/UX Design Creations</h3>
                  <Row>
-                   <Col  xs={12} md={4} className="mb-3">
-                     <div className="image-container1">
-                       <img src={flyer1} className="w-100 image-hover" />
-                     </div>
-                   </Col>
-                   <Col  xs={12} md={4} className="mb-3"><div className="image-container1">
-                     <img src={flyer2} className="w-100 image-hover" />
-                   </div></Col>
-                   <Col  xs={12} md={4} className="mb-3"><div className="image-container1">
-                     <img src={flyer3} className="w-100 image-hover" />
-                   </div></Col>
-                 </Row>
+          {logoImages.map((image, index) => (
+            <Col xs={12} md={4} className="mb-3" key={index}>
+              <div className="image-container1">
+                <img src={image} className="w-100 image-hover" alt={`logo-${index}`} />
+              </div>
+            </Col>
+          ))}
+        </Row>
                </Container>
          
        </Container>
