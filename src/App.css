@@ -3,7 +3,9 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrollbar */
+  overflow-x: hidden; 
+  position: relative;
+  z-index: auto;/* Prevent horizontal scrollbar */
 }
 
 .text-light {
@@ -225,7 +227,7 @@ body, html {
   background: none;
   box-shadow: none;
   position: relative;
-  z-index: 3;
+  z-index: 3; /* Hero image still above accents */
 }
 
 .yellow-accent {
@@ -233,10 +235,9 @@ body, html {
   border-radius: 40px; /* Adjusted for proportion */
   width: 160px; /* Increased width */
   height: 350px; /* Increased height */
-  z-index: 1;
+  z-index: 1; /* Explicitly lower than dropdown menu */
   animation: moveUpDown 3s ease-in-out infinite alternate;
 }
-
 .yellow-accent-1 {
   background-color: #ffe082;
   left: 10%; /* Adjusted for central alignment */
@@ -709,8 +710,11 @@ h1, h3 {
   animation: slideBg 4s linear infinite;
   z-index: -1;
 }
+
+
 .dropdown-menu-custom {
-  z-index: 6050; /* You can adjust the value as needed */
+  z-index: 100;
+  position: absolute; /* You can adjust the value as needed */
 }
 
 /* Sliding background animation */
@@ -987,7 +991,7 @@ h1, h3 {
     font-size: 20px;
   }
 }
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .text{
     font-size: 11px;
 

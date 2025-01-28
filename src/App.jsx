@@ -43,11 +43,15 @@ import OurService from "./Components/OurService/OurService";
 import FAQs from "./Components/FAQs";
 import Collection from "./Components/Collection";
 import Graphicpanel from "./Components/Graphicpanel";
+<<<<<<< HEAD
 import Awesome from "./Components/Awesome";
 import ReverseCara from "./Components/ReverseCara";
 
 
 
+=======
+import Testimonial from "./Components/Testimonial/Testinonial";
+>>>>>>> 0722f6d6f92350ecd4fd303166e85192bdf9de8a
 const App = () => {
   
 
@@ -88,99 +92,6 @@ const App = () => {
           <div className="yellow-accent yellow-accent-5"></div>
           <img src={statueImage} alt="Artistic statue with sunglasses" className="hero-image" />
         </div>
-
-        {/* <section className="form-section" ref={contactFormRef}>
-          <h2 className="form-title">Let's Get in Touch</h2>
-
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your name"
-                value={formData.name}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                value={formData.email}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="address">Address</label>
-              <input
-                type="text"
-                id="address"
-                name="address"
-                placeholder="Enter your address"
-                value={formData.address}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="city">City</label>
-              <input
-                type="text"
-                id="city"
-                name="city"
-                placeholder="Enter your city"
-                value={formData.city}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="phone">Phone</label>
-              <input
-                type="text"
-                id="phone"
-                name="phone"
-                placeholder="Enter your phone number"
-                value={formData.phone}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="serviceSelected">Service Selected</label>
-              <input
-                type="text"
-                id="serviceSelected"
-                name="serviceSelected"
-                placeholder="Enter the service selected"
-                value={formData.serviceSelected}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Enter your message"
-                value={formData.message}
-                onChange={handleChange}
-              />
-            </div>
-
-            <button type="submit" className="submit-button">Send Message</button>
-          </form>
-
-          {acknowledgmentMessage && <div className="acknowledgment-message">{acknowledgmentMessage}</div>} {/* Show acknowledgment message 
-        </section> */}
       </main>
 
     </div>

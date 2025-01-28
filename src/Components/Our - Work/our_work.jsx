@@ -52,18 +52,28 @@ const OurWork = () => {
 
   const fetchOurWork = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/ourwork/fetch");
+      const response = await fetch("https://artisticify-backend.vercel.app/api/ourwork/fetch");
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
       const data = await response.json();
-
       console.log("Our work data:", data);
-
-      if (data && data.ourWorks) {
-        setWorks(data.ourWorks);
+  
+      // Assuming the API sends a 'data' field for the works array
+      if (data && data.data && Array.isArray(data.data)) {
+        setWorks(data.data); // Update the state with fetched works
+      } else {
+        console.warn("Unexpected API response structure:", data);
+        setWorks([]); // Set empty if unexpected structure
       }
     } catch (error) {
-      console.error("Error fetching packages:", error);
+      console.error("Error fetching Our Work data:", error);
+      setWorks([]); // Fallback to empty array if fetch fails
     }
   };
+  
 
   useEffect(() => {
     fetchOurWork();
@@ -158,6 +168,7 @@ const OurWork = () => {
     // </div>
     <div className="text">
       <div className="ourwork">
+<<<<<<< HEAD
         <div className="image-container">
           <img src={MainImg} className="main-ourwork img-fluid" />
           <div className="overlay mm overlay-text11">
@@ -167,6 +178,20 @@ const OurWork = () => {
           </div>
         </div>
       </div>
+=======
+  <div className="image-container">
+    <img src={MainImg} className="main-ourwork img-fluid" />
+    <div className="overlay mm overlay-text11">
+      <h1 className="fw-bold extra-bold pb-2 text-start overlay-text11">
+        Our Work...
+      </h1>
+      <h3>
+        Stunning designs that make your brand unforgettable!
+      </h3>
+    </div>
+  </div>
+</div>
+>>>>>>> 0722f6d6f92350ecd4fd303166e85192bdf9de8a
 
       <div className="d-flex justify-content-center align-items-center">
         <div className="text-center p-5 my-4 w-75 ">
@@ -209,23 +234,24 @@ const OurWork = () => {
           {works.length > 0 ? (
                <Carousel>
                {works
-                 .filter((work) => work.category === "logo") // Only show items where category is 'logo'
-                 .map((work) => (
-                   <Carousel.Item
-                     key={work.id}
-                     style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
-                   >
-                     {work.images && work.images.length > 0 && (
+                 .filter((work) => work.category === "logo") // Filter by category 'logo'
+                 .map((work) =>
+                   work.images.map((imageUrl, index) => (
+                     <Carousel.Item
+                       key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
+                       style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
+                     >
                        <img
                          className="d-block our-img"
-                         src={`data:${work.images[0].contentType};base64,${work.images[0].data}`}
-                         alt={work.category}
-                         
+                         src={imageUrl} // Use the image URLs provided by the API
+                         alt={`${work.category}-${index}`} // Add a descriptive alt tag
+                         style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
                        />
-                     )}
-                   </Carousel.Item>
-                 ))}
+                     </Carousel.Item>
+                   ))
+                 )}
              </Carousel>
+             
             ) : (
               <p>Loading images or no images available...</p>
             )}
@@ -241,22 +267,22 @@ const OurWork = () => {
           {works.length > 0 ? (
                <Carousel>
                {works
-                 .filter((work) => work.category === "brochure") 
-                 .map((work) => (
-                   <Carousel.Item
-                     key={work.id}
-                     style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
-                   >
-                     {work.images && work.images.length > 0 && (
+                 .filter((work) => work.category === "brochure") // Filter by category 'logo'
+                 .map((work) =>
+                   work.images.map((imageUrl, index) => (
+                     <Carousel.Item
+                       key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
+                       style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
+                     >
                        <img
                          className="d-block our-img"
-                         src={`data:${work.images[0].contentType};base64,${work.images[0].data}`}
-                         alt={work.category}
-                         
+                         src={imageUrl} // Use the image URLs provided by the API
+                         alt={`${work.category}-${index}`} // Add a descriptive alt tag
+                         style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
                        />
-                     )}
-                   </Carousel.Item>
-                 ))}
+                     </Carousel.Item>
+                   ))
+                 )}
              </Carousel>
             ) : (
               <p>Loading images or no images available...</p>
@@ -296,22 +322,22 @@ const OurWork = () => {
           {works.length > 0 ? (
                <Carousel>
                {works
-                 .filter((work) => work.category === "flyer") // Only show items where category is 'logo'
-                 .map((work) => (
-                   <Carousel.Item
-                     key={work.id}
-                     style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
-                   >
-                     {work.images && work.images.length > 0 && (
+                 .filter((work) => work.category === "flyer") // Filter by category 'logo'
+                 .map((work) =>
+                   work.images.map((imageUrl, index) => (
+                     <Carousel.Item
+                       key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
+                       style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
+                     >
                        <img
                          className="d-block our-img"
-                         src={`data:${work.images[0].contentType};base64,${work.images[0].data}`}
-                         alt={work.category}
-                         
+                         src={imageUrl} // Use the image URLs provided by the API
+                         alt={`${work.category}-${index}`} // Add a descriptive alt tag
+                         style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
                        />
-                     )}
-                   </Carousel.Item>
-                 ))}
+                     </Carousel.Item>
+                   ))
+                 )}
              </Carousel>
             ) : (
               <p>Loading images or no images available...</p>
@@ -328,22 +354,22 @@ const OurWork = () => {
           {works.length > 0 ? (
                <Carousel>
                {works
-                 .filter((work) => work.category === "package") // Only show items where category is 'logo'
-                 .map((work) => (
-                   <Carousel.Item
-                     key={work.id}
-                     style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
-                   >
-                     {work.images && work.images.length > 0 && (
+                 .filter((work) => work.category === "package") // Filter by category 'logo'
+                 .map((work) =>
+                   work.images.map((imageUrl, index) => (
+                     <Carousel.Item
+                       key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
+                       style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
+                     >
                        <img
                          className="d-block our-img"
-                         src={`data:${work.images[0].contentType};base64,${work.images[0].data}`}
-                         alt={work.category}
-                         
+                         src={imageUrl} // Use the image URLs provided by the API
+                         alt={`${work.category}-${index}`} // Add a descriptive alt tag
+                         style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
                        />
-                     )}
-                   </Carousel.Item>
-                 ))}
+                     </Carousel.Item>
+                   ))
+                 )}
              </Carousel>
             ) : (
               <p>Loading images or no images available...</p>
@@ -380,25 +406,25 @@ const OurWork = () => {
           </Col>
           <Col md={6}>
           {works.length > 0 ? (
-               <Carousel>
-               {works
-                 .filter((work) => work.category === "icon") // Only show items where category is 'logo'
-                 .map((work) => (
-                   <Carousel.Item
-                     key={work.id}
-                     style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
-                   >
-                     {work.images && work.images.length > 0 && (
-                       <img
-                         className="d-block our-img"
-                         src={`data:${work.images[0].contentType};base64,${work.images[0].data}`}
-                         alt={work.category}
-                         
-                       />
-                     )}
-                   </Carousel.Item>
-                 ))}
-             </Carousel>
+              <Carousel>
+              {works
+                .filter((work) => work.category === "icon")
+                .map((work) =>
+                  work.images.map((imageUrl, index) => (
+                    <Carousel.Item
+                      key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
+                      style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
+                    >
+                      <img
+                        className="d-block our-img"
+                        src={imageUrl} // Use the image URLs provided by the API
+                        alt={`${work.category}-${index}`} // Add a descriptive alt tag
+                        style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
+                      />
+                    </Carousel.Item>
+                  ))
+                )}
+            </Carousel>
             ) : (
               <p>Loading images or no images available...</p>
             )}
@@ -414,22 +440,22 @@ const OurWork = () => {
           {works.length > 0 ? (
                <Carousel>
                {works
-                 .filter((work) => work.category === "ui-ux") // Only show items where category is 'logo'
-                 .map((work) => (
-                   <Carousel.Item
-                     key={work.id}
-                     style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
-                   >
-                     {work.images && work.images.length > 0 && (
+                 .filter((work) => work.category === "ui-ux") // Filter by category 'logo'
+                 .map((work) =>
+                   work.images.map((imageUrl, index) => (
+                     <Carousel.Item
+                       key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
+                       style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
+                     >
                        <img
                          className="d-block our-img"
-                         src={`data:${work.images[0].contentType};base64,${work.images[0].data}`}
-                         alt={work.category}
-                         
+                         src={imageUrl} // Use the image URLs provided by the API
+                         alt={`${work.category}-${index}`} // Add a descriptive alt tag
+                         style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
                        />
-                     )}
-                   </Carousel.Item>
-                 ))}
+                     </Carousel.Item>
+                   ))
+                 )}
              </Carousel>
             ) : (
               <p>Loading images or no images available...</p>
@@ -468,22 +494,22 @@ const OurWork = () => {
           {works.length > 0 ? (
                <Carousel>
                {works
-                 .filter((work) => work.category === "stationary") // Only show items where category is 'logo'
-                 .map((work) => (
-                   <Carousel.Item
-                     key={work.id}
-                     style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
-                   >
-                     {work.images && work.images.length > 0 && (
+                 .filter((work) => work.category === "stationary") // Filter by category 'logo'
+                 .map((work) =>
+                   work.images.map((imageUrl, index) => (
+                     <Carousel.Item
+                       key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
+                       style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
+                     >
                        <img
                          className="d-block our-img"
-                         src={`data:${work.images[0].contentType};base64,${work.images[0].data}`}
-                         alt={work.category}
-                         
+                         src={imageUrl} // Use the image URLs provided by the API
+                         alt={`${work.category}-${index}`} // Add a descriptive alt tag
+                         style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
                        />
-                     )}
-                   </Carousel.Item>
-                 ))}
+                     </Carousel.Item>
+                   ))
+                 )}
              </Carousel>
             ) : (
               <p>Loading images or no images available...</p>
@@ -500,22 +526,22 @@ const OurWork = () => {
           {works.length > 0 ? (
                <Carousel>
                {works
-                 .filter((work) => work.category === "magazine") // Only show items where category is 'logo'
-                 .map((work) => (
-                   <Carousel.Item
-                     key={work.id}
-                     style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
-                   >
-                     {work.images && work.images.length > 0 && (
+                 .filter((work) => work.category === "magazine") // Filter by category 'logo'
+                 .map((work) =>
+                   work.images.map((imageUrl, index) => (
+                     <Carousel.Item
+                       key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
+                       style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
+                     >
                        <img
                          className="d-block our-img"
-                         src={`data:${work.images[0].contentType};base64,${work.images[0].data}`}
-                         alt={work.category}
-                         
+                         src={imageUrl} // Use the image URLs provided by the API
+                         alt={`${work.category}-${index}`} // Add a descriptive alt tag
+                         style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
                        />
-                     )}
-                   </Carousel.Item>
-                 ))}
+                     </Carousel.Item>
+                   ))
+                 )}
              </Carousel>
             ) : (
               <p>Loading images or no images available...</p>
@@ -554,22 +580,22 @@ const OurWork = () => {
           {works.length > 0 ? (
                <Carousel>
                {works
-                 .filter((work) => work.category === "visual-aid") // Only show items where category is 'logo'
-                 .map((work) => (
-                   <Carousel.Item
-                     key={work.id}
-                     style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
-                   >
-                     {work.images && work.images.length > 0 && (
+                 .filter((work) => work.category === "visual-aid") // Filter by category 'logo'
+                 .map((work) =>
+                   work.images.map((imageUrl, index) => (
+                     <Carousel.Item
+                       key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
+                       style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
+                     >
                        <img
                          className="d-block our-img"
-                         src={`data:${work.images[0].contentType};base64,${work.images[0].data}`}
-                         alt={work.category}
-                         
+                         src={imageUrl} // Use the image URLs provided by the API
+                         alt={`${work.category}-${index}`} // Add a descriptive alt tag
+                         style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
                        />
-                     )}
-                   </Carousel.Item>
-                 ))}
+                     </Carousel.Item>
+                   ))
+                 )}
              </Carousel>
             ) : (
               <p>Loading images or no images available...</p>
@@ -584,25 +610,25 @@ const OurWork = () => {
         <Row className="mb-5 pb-5">
           <Col md={6}>
           {works.length > 0 ? (
-               <Carousel>
-               {works
-                 .filter((work) => work.category === "poster") // Only show items where category is 'logo'
-                 .map((work) => (
-                   <Carousel.Item
-                     key={work.id}
-                     style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
-                   >
-                     {work.images && work.images.length > 0 && (
-                       <img
-                         className="d-block our-img"
-                         src={`data:${work.images[0].contentType};base64,${work.images[0].data}`}
-                         alt={work.category}
-                         
-                       />
-                     )}
-                   </Carousel.Item>
-                 ))}
-             </Carousel>
+              <Carousel>
+              {works
+                .filter((work) => work.category === "poster") // Filter by category 'logo'
+                .map((work) =>
+                  work.images.map((imageUrl, index) => (
+                    <Carousel.Item
+                      key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
+                      style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
+                    >
+                      <img
+                        className="d-block our-img"
+                        src={imageUrl} // Use the image URLs provided by the API
+                        alt={`${work.category}-${index}`} // Add a descriptive alt tag
+                        style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
+                      />
+                    </Carousel.Item>
+                  ))
+                )}
+            </Carousel>
             ) : (
               <p>Loading images or no images available...</p>
             )}

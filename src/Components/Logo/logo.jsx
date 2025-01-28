@@ -1,20 +1,23 @@
 import { useState, useEffect, useRef } from "react";
 import "./logo.css"; // Ensure your CSS file path is correct
 import { Col, Container, Row } from "react-bootstrap";
+<<<<<<< HEAD
 import LogoImg from '../../assets/logo design 2.jpg'
 import Teddy from '../../assets/istockphoto-1421037079-612x612-removebg-preview.png'
 import logo1 from '../../assets/logo.png'  // Fixed import for logo1
+=======
+import LogoImg from '../../assets/Artboard 1 bhavik logo design.jpg'
+import Teddy from '../../assets/teddy.jpeg'
+>>>>>>> 0722f6d6f92350ecd4fd303166e85192bdf9de8a
 import { useNavigate } from "react-router-dom";
 
 const Logo = () => {
-  // const [menuOpen, setMenuOpen] = useState(false);
-  const [ setIsVisible] = useState(false);
+  const [setIsVisible] = useState(false);
   const [packages, setPackages] = useState([]);
   const [loading, setLoading] = useState(false);
   const loaderRef = useRef(null);
-
-  const navigate=useNavigate();
-  
+  const [logoImages, setLogoImages] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchPackages(); // Fetch package data on component mount
@@ -61,6 +64,26 @@ const Logo = () => {
     }
   };
 
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const response = await fetch("https://artisticify-backend.vercel.app/api/design/get");
+        const data = await response.json();
+  
+        // Filter images by category (logo)
+        const logoImages = data.filter(img => img.category === 'logo');
+  
+        // Set images to state (ensure we're accessing the correct URLs)
+        setLogoImages(logoImages.map(img => img.images).flat()); // Assuming 'images' is an array in the response
+  
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      }
+    };
+  
+    fetchImages(); // Fetch images when the component mounts
+  }, []);
+
   const loadMorePackages = () => {
     if (loading) return;
     setLoading(true);
@@ -74,7 +97,7 @@ const Logo = () => {
     <div className="Logo text">
       <div className='about'>
         <div className='image-container'>
-          <img src={LogoImg} className='main-about img-fluid '/>
+          <img src={LogoImg} className='main-about img-fluid ' />
         </div>
       </div>
 
@@ -112,6 +135,7 @@ const Logo = () => {
           </p>
         </div>
         <Row>
+<<<<<<< HEAD
           <Col xs={12} md={4} className="mb-3">
             <div className="image-container1">
               <img src={logo1} className="w-100 image-hover" />
@@ -127,6 +151,15 @@ const Logo = () => {
               <img src={logo1} className="w-100 image-hover" />
             </div>
           </Col>
+=======
+          {logoImages.map((image, index) => (
+            <Col xs={12} md={4} className="mb-3" key={index}>
+              <div className="image-container1">
+                <img src={image} className="w-100 image-hover" alt={`logo-${index}`} />
+              </div>
+            </Col>
+          ))}
+>>>>>>> 0722f6d6f92350ecd4fd303166e85192bdf9de8a
         </Row>
       </Container>
 
@@ -138,27 +171,27 @@ const Logo = () => {
         </p>
 
         <div className="packages text">
-        {packages.map((pkg, index) => (
-       <div className="package mb-3 position-relative text" key={index}>
-       <div className="pb-5">
-      <h3 className="text-center">{pkg.name}</h3>
-      <p>{pkg.description}</p>
-      <ul className="text pb-4">
-        {pkg.features.map((feature, i) => (
-          <li key={i}>{feature}</li>
-        ))}
-       </ul>
-       {pkg.type === "Premium" ? (
-  <h4 className="text-center blue fw-bold price">Customizable</h4>
-) : (
-  <h4 className="text-center blue fw-bold price">{pkg.price} /-</h4>
-)}
-       <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto"  onClick={() => navigate('/contact')}>
-        Enquire Now
-       </button>
-       </div>
-      </div>
-       ))}
+          {packages.map((pkg, index) => (
+            <div className="package mb-3 position-relative text" key={index}>
+              <div className="pb-5">
+                <h3 className="text-center">{pkg.name}</h3>
+                <p>{pkg.description}</p>
+                <ul className="text pb-4">
+                  {pkg.features.map((feature, i) => (
+                    <li key={i}>{feature}</li>
+                  ))}
+                </ul>
+                {pkg.type === "Premium" ? (
+                  <h4 className="text-center blue fw-bold price">Customizable</h4>
+                ) : (
+                  <h4 className="text-center blue fw-bold price">{pkg.price} /-</h4>
+                )}
+                <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={() => navigate('/contact')}>
+                  Enquire Now
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
