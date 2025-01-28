@@ -3,8 +3,6 @@ import MainImg from '../../assets/postive-caring-relationships-teachers 1.png';
 import { Col, Container, Row } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import { useEffect, useState } from "react";
-import logo from '../../assets/logo.jpg'; 
-import logo1  from '../../assets/main.png'; 
 
 const OurWork = () => {
   const [works, setWorks] = useState([]);
@@ -158,28 +156,20 @@ const OurWork = () => {
     //   </Container>
 
     // </div>
-    <div>
+    <div className="text">
       <div className="ourwork">
         <div className="image-container">
           <img src={MainImg} className="main-ourwork img-fluid" />
           <div className="overlay mm overlay-text11">
-<<<<<<< HEAD
             <h1 className="fw-bold extra-bold pb-2 text-start overlay-text11">Our Work...</h1>
             <h3>Designs that make your brand unforgettable!</h3>
-=======
-            <h1 className="fw-bold extra-bold pb-2 text-start overlay-text11">
-              Our Work...
-            </h1>
-            <h3>
-              &rsquo;Stunning designs that make your brand unforgettable!&rsquo;
-            </h3>
->>>>>>> 0fa603dec995a3acd6991cbfedc366929724ccf7
+           
           </div>
         </div>
       </div>
 
       <div className="d-flex justify-content-center align-items-center">
-        <div className="text-center p-5 my-4 w-75">
+        <div className="text-center p-5 my-4 w-75 ">
           <h1 className="fw-bold extra-bold heading my-3">
             Graphic Design Packages
           </h1>

@@ -3,10 +3,10 @@ import logo1 from '../assets/logo.png'
 
 function Collection() {
   return (
-    <div>
+    <div className="text">
         <Container className="my-5">
             <div className="collection-container">
-            <h1 className="text-center collection-title">Collections</h1>
+            <h1 className="text-center collection-title ">Collections</h1>
 
             </div>
         <Row className="mt-5 mb-5">

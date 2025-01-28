@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import PackagingImage from '../../assets/packaging.jpg';
+import visualidImg from '../../assets/Visuals ads Design_1.jpg';
+
 import flyer1 from '../../assets/flyer3.jpg';
 import flyer2 from '../../assets/flyer3.jpg';
 import flyer3 from '../../assets/flyer3.jpg';
@@ -66,6 +68,11 @@ function VisualAid() {
   return (
     <div>
        <div className='text'>
+        <div className='about'>
+                <div className='image-container'>
+                  <img src={visualidImg} className='main-about img-fluid '/>
+                </div>
+              </div>
               <h2 className="text-center1 fw-bold text-white my-5 shadow logo-package">Creative Visual Aid Design Services to Make Your Presentations Clear and Impactful.</h2>
       
               <Container>

@@ -1,5 +1,7 @@
 import  { useEffect, useRef, useState } from 'react';
 import PosterImage from '../../assets/poster.png';
+import iconImg from '../../assets/Icon Design Serivces.jpg';
+
 import flyer1 from '../../assets/flyer3.jpg';
 import flyer2 from '../../assets/flyer3.jpg';
 import flyer3 from '../../assets/flyer3.jpg';
@@ -68,6 +70,11 @@ const Icon = () => {
     };
   return (
     <div className='text'>
+      <div className='about'>
+              <div className='image-container'>
+                <img src={iconImg} className='main-about img-fluid '/>
+              </div>
+            </div>
        <h2 className="text-center fw-bold text-white my-5 shadow logo-package">Icon Design Packages That Combine Creativity and Usability for Seamless User Interfaces.</h2>
    
        <Container>

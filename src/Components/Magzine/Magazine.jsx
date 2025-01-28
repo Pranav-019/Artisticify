@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import PackagingImage from '../../assets/packaging.jpg';
+import magzineImg from '../../assets/Magazine Design Servics.jpg';
+
 import flyer1 from '../../assets/flyer3.jpg';
 import flyer2 from '../../assets/flyer3.jpg';
 import flyer3 from '../../assets/flyer3.jpg';
@@ -68,6 +70,11 @@ function Magazine() {
   return (
     <div>
       <div className='text'>
+         <div className='about'>
+                <div className='image-container'>
+                  <img src={magzineImg} className='main-about img-fluid '/>
+                </div>
+              </div>
         <h2 className="text-center fw-bold text-white my-5 shadow logo-package">Creative Magazine Design Services That Elevate Your Publication’s Visual Appeal.</h2>
 
         <Container>

@@ -42,11 +42,9 @@ import MenuCard from "./Components/Stationary/MenuCard/MenuCard";
 import OurService from "./Components/OurService/OurService";
 import FAQs from "./Components/FAQs";
 import Collection from "./Components/Collection";
-<<<<<<< HEAD
 import Graphicpanel from "./Components/Graphicpanel";
-=======
-import Testimonial from "./Components/Testimonial/Testinonial";
->>>>>>> 0fa603dec995a3acd6991cbfedc366929724ccf7
+import Awesome from "./Components/Awesome";
+import ReverseCara from "./Components/ReverseCara";
 
 
 
@@ -186,10 +184,12 @@ const App = () => {
       </main>
 
     </div>
+    <Awesome/>
     <Graphicpanel/>
-    <Collection/>
+    <ReverseCara/>
+        <Collection/>
     <OurService/>
-    <Testimonial />
+    
     <FAQs/>
    </div>
     

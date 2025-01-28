@@ -23,6 +23,7 @@ body, html {
   /* color: #0d3e72; */
   color: #094167;
 }
+
 .gray{
   background-color: #4c4c4d;
 }
@@ -800,7 +801,7 @@ h1, h3 {
 
 .collection-container h1 {
   color: white; /* White text color */
-  font-size: 3rem;
+  font-size: 40px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -891,6 +892,74 @@ h1, h3 {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* *********************************************************GRaphic*********************************** */
+.animated-image {
+  animation: floatAndPulse 3s infinite ease-in-out;
+}
+/* *******************************************Awesome************************************ */
+.card-img {
+  position: relative;
+  width: 100%; /* Adjust as needed */
+  height: 100%; /* Adjust as needed */
+  overflow: hidden; /* Ensure child elements don't overflow */
+}
+
+.card-img img{
+  object-fit: cover;
+  transition: transform 0.8s;
+  height: 100%;
+  display: block;
+}
+.opaci1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0; 
+  height: 0; 
+  background-color: #13357b;
+  opacity: 0;
+  transform: translate(-50%, -50%); 
+  transition: all 0.5s ease; 
+  border-radius: 0; /* No border radius for a rectangle */
+}
+
+.card-img:hover .opaci1 {
+  width: 100%; /* Expand to full width */
+  height: 100%; /* Expand to full height */
+  opacity: 0.4; /* Set the desired opacity */
+}
+.card-img:hover img{
+  transform: scale(1.1);
+}
+.packCard{
+  flex: 0 0 400px;
+  /* padding: 10px; */
+  height: 150px;
+}
+
+@keyframes floatAndPulse {
+  0% {
+    transform: translateY(0);
+    filter: brightness(100%) saturate(100%);
+  }
+  25% {
+    transform: translateY(-10px);
+    filter: brightness(110%) saturate(120%);
+  }
+  50% {
+    transform: translateY(0);
+    filter: brightness(100%) saturate(100%);
+  }
+  75% {
+    transform: translateY(10px);
+    filter: brightness(80%) saturate(80%);
+  }
+  100% {
+    transform: translateY(0);
+    filter: brightness(100%) saturate(100%);
+  }
+}
+
 
 
 @media (max-width: 575.98px) {
@@ -906,7 +975,17 @@ h1, h3 {
     margin-left: 10px;
     font-size: 7px; /* Adjust font size for h3 on small screens */
   }
-  
+  .collection-container h1 {
+    color: white; /* White text color */
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInText 3s ease-in-out infinite alternate;
+  }
+  .heading{
+    font-size: 20px;
+  }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   .text{
@@ -921,5 +1000,23 @@ h1, h3 {
     margin-left: 10px;
     font-size: 10px; /* Adjust font size for h3 on small screens */
   }
+  .text1{
+    font-size: 10px;
+  }
   
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .text{
+    font-size: 11px;
+
+  }
+  .overlay-text11 h1 {
+    font-size: 20px; /* Adjust font size for h1 on small screens */
+  }
+
+  .overlay-text11 h3 {
+    margin-left: 10px;
+    font-size: 10px; /* Adjust font size for h3 on small screens */
+  }
 }

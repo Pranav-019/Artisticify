@@ -1,5 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import BrochureImage from '../../assets/brochre.png';
+import brochureImg from '../../assets/brochure Design.jpg';
 import brochure1 from '../../assets/brochre1.png';
 import brochure2 from '../../assets/brochre1.png';
 import brochure3 from '../../assets/brochre1.png';
@@ -69,6 +70,11 @@ function Brochure() {  // Change "brochure" to "Brochure"
 
   return (
     <div className="text">
+       <div className='about'>
+              <div className='image-container'>
+                <img src={brochureImg} className='main-about img-fluid '/>
+              </div>
+            </div>
       <h2 className="text-center fw-bold text-white my-5 shadow logo-package">Brochure Design and Branding Services</h2>
 
       <Container>

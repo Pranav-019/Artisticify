@@ -5,7 +5,7 @@ import MainImg from '../../assets/postive-caring-relationships-teachers 1.png'
 
 const About = () => {
   return (
-    <div className="">
+    <div className="text">
       <div className='about'>
   <div className='image-container'>
     <img src={MainImg} className='main-about img-fluid '/>
@@ -17,7 +17,7 @@ const About = () => {
 </div>
 
 
-      <div className="d-flex justify-content-center align-items-center ">
+      <div className="d-flex justify-content-center align-items-center text">
         <div className="text-center p-5 my-4 w-75">
           <h2 className='fw-bold extra-bold animate-heading '>Who we are.</h2>
           <div className="blue-line"></div>
@@ -36,7 +36,7 @@ const About = () => {
 
         <Container>
           <Row className='mb-5'>
-            <Col className=''>
+            <Col className='' sm={12} md={4}>
               <div className='about-col p-5 h-100'>
                 <h2 className='text-center pb-2'>Our History</h2>
                 <p className='text-start'>
@@ -44,7 +44,7 @@ const About = () => {
                 </p>
               </div>
             </Col>
-            <Col>
+            <Col sm={12} md={4}>
               <div className='about-col p-5 h-100'>
                 <h2 className='text-center pb-2'>Our Present</h2>
                 <p>
@@ -53,7 +53,7 @@ const About = () => {
               </div>
             </Col>
 
-            <Col>
+            <Col sm={12} md={4}>
               <div className='about-col p-5 h-100'>
                 <h2 className='text-center pb-2'>Our Future</h2>
                 <p>
