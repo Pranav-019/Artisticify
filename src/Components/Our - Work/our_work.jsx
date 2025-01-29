@@ -166,19 +166,9 @@ const OurWork = () => {
     //   </Container>
 
     // </div>
+    <div>
     <div className="text">
-      <div className="ourwork">
-<<<<<<< HEAD
-        <div className="image-container">
-          <img src={MainImg} className="main-ourwork img-fluid" />
-          <div className="overlay mm overlay-text11">
-            <h1 className="fw-bold extra-bold pb-2 text-start overlay-text11">Our Work...</h1>
-            <h3>Designs that make your brand unforgettable!</h3>
-           
-          </div>
-        </div>
-      </div>
-=======
+      
   <div className="image-container">
     <img src={MainImg} className="main-ourwork img-fluid" />
     <div className="overlay mm overlay-text11">
@@ -191,7 +181,6 @@ const OurWork = () => {
     </div>
   </div>
 </div>
->>>>>>> 0722f6d6f92350ecd4fd303166e85192bdf9de8a
 
       <div className="d-flex justify-content-center align-items-center">
         <div className="text-center p-5 my-4 w-75 ">

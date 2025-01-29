@@ -1,14 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import "./logo.css"; // Ensure your CSS file path is correct
 import { Col, Container, Row } from "react-bootstrap";
-<<<<<<< HEAD
 import LogoImg from '../../assets/logo design 2.jpg'
 import Teddy from '../../assets/istockphoto-1421037079-612x612-removebg-preview.png'
 import logo1 from '../../assets/logo.png'  // Fixed import for logo1
-=======
-import LogoImg from '../../assets/Artboard 1 bhavik logo design.jpg'
-import Teddy from '../../assets/teddy.jpeg'
->>>>>>> 0722f6d6f92350ecd4fd303166e85192bdf9de8a
 import { useNavigate } from "react-router-dom";
 
 const Logo = () => {
@@ -135,7 +130,6 @@ const Logo = () => {
           </p>
         </div>
         <Row>
-<<<<<<< HEAD
           <Col xs={12} md={4} className="mb-3">
             <div className="image-container1">
               <img src={logo1} className="w-100 image-hover" />
@@ -151,7 +145,6 @@ const Logo = () => {
               <img src={logo1} className="w-100 image-hover" />
             </div>
           </Col>
-=======
           {logoImages.map((image, index) => (
             <Col xs={12} md={4} className="mb-3" key={index}>
               <div className="image-container1">
@@ -159,7 +152,6 @@ const Logo = () => {
               </div>
             </Col>
           ))}
->>>>>>> 0722f6d6f92350ecd4fd303166e85192bdf9de8a
         </Row>
       </Container>
 

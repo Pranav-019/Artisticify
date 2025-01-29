@@ -2,9 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import PackagingImage from '../../assets/packaging.jpg';
 import visualidImg from '../../assets/Visuals ads Design_1.jpg';
 
-import flyer1 from '../../assets/flyer3.jpg';
-import flyer2 from '../../assets/flyer3.jpg';
-import flyer3 from '../../assets/flyer3.jpg';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 function VisualAid() {

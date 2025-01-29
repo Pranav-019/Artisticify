@@ -1,10 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import PosterImage from '../../assets/poster.png';
-import flyer1 from '../../assets/flyer3.jpg';
 import calenderImg from '../../assets/Calender Design Services.jpg';
 
-import flyer2 from '../../assets/flyer3.jpg';
-import flyer3 from '../../assets/flyer3.jpg';
 import { Col, Container, Row } from 'react-bootstrap';
 function Calender() {
   const [setIsVisible] = useState(false);

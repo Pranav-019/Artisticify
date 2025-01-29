@@ -43,15 +43,11 @@ import OurService from "./Components/OurService/OurService";
 import FAQs from "./Components/FAQs";
 import Collection from "./Components/Collection";
 import Graphicpanel from "./Components/Graphicpanel";
-<<<<<<< HEAD
 import Awesome from "./Components/Awesome";
 import ReverseCara from "./Components/ReverseCara";
 
 
 
-=======
-import Testimonial from "./Components/Testimonial/Testinonial";
->>>>>>> 0722f6d6f92350ecd4fd303166e85192bdf9de8a
 const App = () => {
   
 

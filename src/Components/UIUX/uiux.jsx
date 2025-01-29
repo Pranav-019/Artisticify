@@ -1,10 +1,8 @@
 import  { useEffect, useRef, useState } from 'react';
-import PackagingImage from '../../assets/packaging.jpg';
-import flyer1 from '../../assets/flyer3.jpg';
+import PackagingImage from '../../assets/ui-ux.png';
 import uiuxImg from '../../assets/ui ux design 01.jpg';
 
-import flyer2 from '../../assets/flyer3.jpg';
-import flyer3 from '../../assets/flyer3.jpg';
+
 import { Col, Container, Row } from 'react-bootstrap';
 import './uiux.css';
 import { useNavigate } from 'react-router-dom';

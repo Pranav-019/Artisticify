@@ -5,6 +5,10 @@ import { Dropdown } from 'react-bootstrap'; // Importing react-bootstrap dropdow
 function Navbar() {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showNested, setShowNested] = useState(false);
+  const handleNestedToggle = () => {
+    setShowNested(!showNested);
+  };
 
   return (
     <div>
@@ -48,15 +52,28 @@ function Navbar() {
             <Dropdown.Item href="/Calender">Calendar Design</Dropdown.Item>
             <Dropdown.Item href="/Icon">Icon Design</Dropdown.Item>
 
-<<<<<<< HEAD
+            {/* Custom Nested Dropdown for Stationary Design */}
+            <div
+              className="dropdown-item position-relative"
+              onClick={handleNestedToggle} // Toggle visibility on click
+              style={{ cursor: "pointer" }}
+            >
+              Stationary Design ➤
+            </div>
 
-=======
-            {/* Nested Dropdown for Stationary Design */}
-            <Dropdown drop="end">
-              <Dropdown.Toggle as="a" className="dropdown-item">
-                Stationary Design
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
+            {/* Nested Dropdown Menu (Rendered Outside) */}
+            {showNested && (
+              <div
+                className="nested-dropdown position-absolute bg-white shadow border border-1 rounded"
+                style={{
+                  top: "70%",
+                  left: "100%",
+                  width: "220px",
+                  zIndex: 1050,
+                  padding: "10px",
+                  margin:"5px"
+                }}
+              >
                 <Dropdown.Item href="/Stationary/LetterHead">
                   Letter Head Design
                 </Dropdown.Item>
@@ -72,13 +89,12 @@ function Navbar() {
                 <Dropdown.Item href="/Stationary/MenuCard">
                   Menu Card Design
                 </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+              </div>
+            )}
           </div>
         </div>
       </Dropdown.Menu>
     </Dropdown>
->>>>>>> 0722f6d6f92350ecd4fd303166e85192bdf9de8a
           <Dropdown>
             <Dropdown.Toggle variant="" id="dropdown-basic">
               Digital Marketing
