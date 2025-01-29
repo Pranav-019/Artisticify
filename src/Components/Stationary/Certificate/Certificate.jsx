@@ -52,7 +52,7 @@ function Certificate() {
         const data = await response.json();
   
         // Filter images by category (logo)
-        const logoImages = data.filter(img => img.category === 'logo');
+        const logoImages = data.filter(img => img.category === 'certificate');
   
         // Set images to state (ensure we're accessing the correct URLs)
         setLogoImages(logoImages.map(img => img.images).flat()); // Assuming 'images' is an array in the response
