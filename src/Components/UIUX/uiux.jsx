@@ -1,8 +1,8 @@
 import  { useEffect, useRef, useState } from 'react';
-import PackagingImage from '../../assets/packaging.jpg';
-import flyer1 from '../../assets/flyer3.jpg';
-import flyer2 from '../../assets/flyer3.jpg';
-import flyer3 from '../../assets/flyer3.jpg';
+import PackagingImage from '../../assets/ui-ux.png';
+import uiuxImg from '../../assets/ui ux design 01.jpg';
+
+
 import { Col, Container, Row } from 'react-bootstrap';
 import './uiux.css';
 import { useNavigate } from 'react-router-dom';
@@ -88,6 +88,11 @@ const navigate=useNavigate()
   };
   return (
     <div className='text'>
+       <div className='about'>
+              <div className='image-container'>
+                <img src={uiuxImg} className='main-about img-fluid '/>
+              </div>
+            </div>
        <h2 className="text-center fw-bold text-white my-5 shadow logo-package">Expert UI/UX Design Solutions Tailored to Enhance User Interaction and Satisfaction.</h2>
    
        <Container>

@@ -3,8 +3,6 @@ import MainImg from '../../assets/postive-caring-relationships-teachers 1.png';
 import { Col, Container, Row } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import { useEffect, useState } from "react";
-import logo from '../../assets/logo.jpg'; 
-import logo1  from '../../assets/main.png'; 
 
 const OurWork = () => {
   const [works, setWorks] = useState([]);
@@ -169,7 +167,8 @@ const OurWork = () => {
 
     // </div>
     <div>
-      <div className="ourwork">
+    <div className="text">
+      
   <div className="image-container">
     <img src={MainImg} className="main-ourwork img-fluid" />
     <div className="overlay mm overlay-text11">
@@ -184,7 +183,7 @@ const OurWork = () => {
 </div>
 
       <div className="d-flex justify-content-center align-items-center">
-        <div className="text-center p-5 my-4 w-75">
+        <div className="text-center p-5 my-4 w-75 ">
           <h1 className="fw-bold extra-bold heading my-3">
             Graphic Design Packages
           </h1>

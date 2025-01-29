@@ -1,13 +1,11 @@
 import { FaBullhorn } from "react-icons/fa6";
 import { MdDesignServices } from "react-icons/md";
-import { FaLaptopCode } from "react-icons/fa";
 import { MdCorporateFare } from "react-icons/md";
 import { PiBandaidsFill } from "react-icons/pi";
-import { MdOutlineMenuBook } from "react-icons/md";
 import { Col, Container, Row } from "react-bootstrap";
 function OurService() {
   return (
-    <div style={{ backgroundColor: "#f0f9ff" }} className="py-5">
+    <div style={{ backgroundColor: "#f0f9ff" }} className="py-5 text">
       <h1 className="text-center py-2">Our Services</h1>
       <h2 className="text-center pb-5">Take Your Business to the Next Level</h2>
       <Container>
@@ -41,36 +39,7 @@ function OurService() {
           </Col>
         </Row>
 
-        <Row className="gap-4 mt-4">
-          <Col  className="ourWork bg-white rounded rounded-3">
-            <div className="p-4">
-              <MdOutlineMenuBook className="fs-2 my-2 blue" />
-              <h4 className="my-2">Creative Brochure Design Agency</h4>
-              <p>
-              While digital marketing is essential, offline brochures still
-                play a key role in reaching clients and promoting your business
-                locally. Artisticify creates stunning brochures that capture
-                attention and effectively communicate your brand&rsquo;s
-                message. Let us help you create the perfect marketing material
-                for your business!
-              </p>
-            </div>
-          </Col>
-          <Col  className="ourWork bg-white rounded rounded-3">
-            <div className="p-4">
-              <FaLaptopCode className="fs-2 my-2 blue" />
-              <h4 className="my-2">Advertisement Design Solutions</h4>
-              <p>
-              Already have a website and ad campaigns running? Let Artisticify
-                take your designs to the next level! Whether it&rsquo;s
-                customizing your theme, or creating stunning banners and on-page
-                graphics, we&rsquo;re here to bring your vision to life. Our
-                skilled design team, will deliver results even better than you
-                imagined!
-              </p>
-            </div>
-          </Col>
-        </Row>
+        
 
         <Row className="gap-4 mt-4">
           <Col  className="ourWork bg-white rounded rounded-3">
@@ -101,6 +70,7 @@ function OurService() {
             </div>
           </Col>
         </Row>
+        
       </Container>
     </div>
   );

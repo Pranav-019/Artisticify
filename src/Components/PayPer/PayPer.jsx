@@ -1,5 +1,5 @@
 import  { useEffect, useRef, useState } from 'react';
-import PosterImage from '../../assets/poster.png';
+import PosterImage from '../../assets/PPC.png';
 // import PosterImg from '../../assets/Artboard 03.jpg';
 
 import flyer1 from '../../assets/flyer3.jpg';
@@ -102,7 +102,7 @@ function PayPer() {
            </Col>
            <Col  xs={12} md={6} className="d-flex justify-content-center">
              <div className="curve">
-               <img src={PosterImage} className="p-5 rounded rounded-pill img-fluid" style={{width:"500px", height:"500px"}}/>
+               <img src={PosterImage} className="p-5 rounded rounded-pill img-fluid" style={{width:"auto", height:"400px"}}/>
              </div>
            </Col>
          </Row>

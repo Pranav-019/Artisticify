@@ -1,5 +1,7 @@
 import  { useEffect, useRef, useState } from 'react';
 import PackagingImage from '../../assets/packaging.jpg';
+import packImg from '../../assets/Packaging design newww.jpg';
+
 import flyer1 from '../../assets/flyer3.jpg';
 import flyer2 from '../../assets/flyer3.jpg';
 import flyer3 from '../../assets/flyer3.jpg';
@@ -91,6 +93,11 @@ const Packaging = () => {
   };
 return (
   <div className='text'>
+     <div className='about'>
+            <div className='image-container'>
+              <img src={packImg} className='main-about img-fluid '/>
+            </div>
+          </div>
     <h2 className="text-center fw-bold text-white my-5 shadow logo-package">Unique packaging designs that make your products stand out.</h2>
 
     <Container>

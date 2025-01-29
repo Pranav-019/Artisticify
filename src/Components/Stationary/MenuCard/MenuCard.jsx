@@ -1,6 +1,6 @@
 import  { useEffect, useRef, useState } from 'react';
-import PosterImage from '../../../assets/poster.png';
-// import PosterImg from '../../../assets/Artboard 03.jpg';
+// import PosterImage from '../../../assets/poster.png';
+import PosterImg from '../../../assets/Menu Card Design Services (1).jpg';
 
 import flyer1 from '../../../assets/flyer3.jpg';
 import flyer2 from '../../../assets/flyer3.jpg';
@@ -70,7 +70,7 @@ function MenuCard() {
 <div className='text'>
        <div className='about'>
         <div className='image-container mb-5'>
-          {/* <img src={PosterImg} className='main-about img-fluid mb-5'/> */}
+          <img src={PosterImg} className='main-about img-fluid mb-5'/>
          
         </div>
       </div>
@@ -102,7 +102,7 @@ function MenuCard() {
            </Col>
            <Col  xs={12} md={6} className="d-flex justify-content-center">
              <div className="curve">
-               <img src={PosterImage} className="p-5 rounded rounded-pill img-fluid" style={{width:"500px", height:"500px"}}/>
+               {/* <img src={PosterImage} className="p-5 rounded rounded-pill img-fluid" style={{width:"500px", height:"500px"}}/> */}
              </div>
            </Col>
          </Row>

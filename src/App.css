@@ -5,11 +5,11 @@ body, html {
   height: 100%;
   overflow-x: hidden; 
   position: relative;
-  z-index: auto;/* Prevent horizontal scrollbar */
+  z-index: auto;
 }
 
 .text-light {
-  overflow: hidden; /* Prevent vertical overflow */
+  overflow: hidden; 
 }
 
 .app {
@@ -22,9 +22,9 @@ body, html {
   position: relative;
 }
 .blue{
-  /* color: #0d3e72; */
   color: #094167;
 }
+
 .gray{
   background-color: #4c4c4d;
 }
@@ -38,17 +38,17 @@ body, html {
   padding: 1.5rem 2rem;
   position: relative;
   z-index: 2;
-  max-width: 1200px; /* Constrain the width for large screens */
-  margin: 0 auto; /* Center the navbar */
+  max-width: 1200px; 
+  margin: 0 auto; 
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: 600;
   color: #333;
-  position: relative; /* Keep it relative for small adjustments */
-  margin-left: 0; /* Remove any left margin */
-  padding: 0; /* Reset padding */
+  position: relative;  
+  margin-left: 0; 
+  padding: 0; 
 }
 
 
@@ -99,7 +99,6 @@ body, html {
 }
 .packCard1{
   flex: 0 0 400px;
-  /* padding: 10px; */
   height: 200px;
 }
 .center-background {
@@ -129,52 +128,52 @@ body, html {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 25px; /* Hamburger width */
-  height: 20px; /* Hamburger height */
+  width: 25px; 
+  height: 20px; 
   cursor: pointer;
-  position: absolute; /* Position the hamburger absolutely */
-  right: 2rem; /* Align the hamburger to the right */
+  position: absolute;
+  right: 2rem; 
 }
 
 .hamburger span {
-  background: rgba(51, 51, 51, 0.2); /* More transparent */
-  height: 1.5px; /* Make the span smaller */
-  width: 100%; /* Ensure the span covers the width of the hamburger */
+  background: rgba(51, 51, 51, 0.2); 
+  height: 1.5px; 
+  width: 100%; 
   border-radius: 2px;
-  transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+  transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease; 
 }
 
 .hamburger.open span:nth-child(1) {
-  transform: rotate(45deg) translateY(6px); /* Adjusted the translateY to make the top span closer */
+  transform: rotate(45deg) translateY(6px); 
 }
 
 .hamburger.open span:nth-child(2) {
-  opacity: 0; /* Hide the middle span */
+  opacity: 0; 
 }
 
 .hamburger.open span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-6px); /* Adjusted the translateY to make the bottom span closer */
+  transform: rotate(-45deg) translateY(-6px); 
 }
 
 @media (max-width: 768px) {
   .navbar {
-    justify-content: center; /* Center the logo and hamburger in the navbar */
+    justify-content: center; 
   }
 
   .hamburger {
-    display: flex; /* Display the hamburger on mobile */
+    display: flex; 
   }
 
   .hamburger span {
-    background: rgba(51, 51, 51, 0.3); /* Make the span more transparent on smaller screens */
-    height: 1.5px; /* Smaller span size */
+    background: rgba(51, 51, 51, 0.3); 
+    height: 1.5px; 
   }
 
   .logo {
-    position: absolute; /* Keep the logo absolute so it stays centered */
-    left: 50%; /* Move the logo to the center */
+    position: absolute; 
+    left: 50%; 
     transform: translateX(-50%);
-    margin-right: auto; /* Center the logo exactly */
+    margin-right: auto; 
   }
 
   .nav-links {
@@ -197,21 +196,21 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 4rem; /* Increased padding for better spacing */
+  padding-top: 4rem; 
 }
 
 .hero-title {
-  font-size: 4.5rem; /* Slightly bigger title */
+  font-size: 4.5rem; 
   color: #4c4949;
-  margin-bottom: 2.5rem; /* Adjusted spacing */
+  margin-bottom: 2.5rem; 
   font-weight: 600;
   text-align: center;
 }
 
 .hero-image-container {
   position: relative;
-  width: 700px; /* Increased size */
-  height: 700px; /* Increased size */
+  width: 700px; 
+  height: 700px; 
   z-index: 2;
   display: flex;
   justify-content: center;
@@ -220,28 +219,28 @@ body, html {
 }
 
 .hero-image {
-  width: 90%; /* Slightly reduced for better alignment with accents */
+  width: 90%; 
   height: 90%;
   object-fit: contain;
   background: none;
   box-shadow: none;
   position: relative;
-  z-index: 3; /* Hero image still above accents */
+  z-index: 3; 
 }
 
 .yellow-accent {
   position: absolute;
-  border-radius: 40px; /* Adjusted for proportion */
-  width: 160px; /* Increased width */
-  height: 350px; /* Increased height */
-  z-index: 1; /* Explicitly lower than dropdown menu */
+  border-radius: 40px; 
+  width: 160px; 
+  height: 350px; 
+  z-index: 1; 
   animation: moveUpDown 3s ease-in-out infinite alternate;
 }
 .yellow-accent-1 {
   background-color: #ffe082;
-  left: 10%; /* Adjusted for central alignment */
+  left: 10%; 
   top: -20px;
-  animation: moveUpDown 1.5s ease-in-out infinite alternate; /* Faster animation */
+  animation: moveUpDown 1.5s ease-in-out infinite alternate; 
 }
 
 .yellow-accent-2 {
@@ -270,7 +269,7 @@ body, html {
 
 .yellow-accent-5 {
   background-color: #FD6907;
-  left: 70%; /* Adjusted position for symmetry */
+  left: 70%; 
   top: -20px;
   animation: moveUpDown 1.5s ease-in-out infinite alternate;
   animation-delay: 0s;
@@ -281,7 +280,7 @@ body, html {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(20px); /* Reduced translateY value */
+    transform: translateY(20px); 
   }
 }
 
@@ -298,54 +297,53 @@ body, html {
   }
 
   .hero-title {
-    font-size: 3.5rem; /* Adjusted for smaller screens */
+    font-size: 3.5rem; 
   }
 
   .hero-image-container {
     width: 90%;
-    max-width: 500px; /* Slightly bigger for mobile */
+    max-width: 500px; 
     height: auto;
   }
 
   .yellow-accent {
-    width: 100px; /* Adjusted for smaller screens */
-    height: 250px; /* Adjusted for smaller screens */
+    width: 100px; 
+    height: 250px; 
   }
 
-  /* Adjusting each yellow-accent element based on screen size */
+  
   .yellow-accent-1 {
-    top: -10px; /* Adjusted position for small screens */
+    top: -10px; 
   }
 
   .yellow-accent-2 {
-    top: 50px; /* Adjusted position for small screens */
+    top: 50px; 
   }
 
   .yellow-accent-3 {
-    top: 30px; /* Adjusted position for small screens */
+    top: 30px; 
   }
 
   .yellow-accent-4 {
-    top: 60px; /* Adjusted position for small screens */
+    top: 60px; 
   }
 
   .yellow-accent-5 {
-    top: -10px; /* Adjusted position for small screens */
+    top: -10px; 
   }
 }
 
-/* Form Section Styling */
 .form-section {
   background: radial-gradient(circle at center, #cceeff 10%, #99ddff 30%, #e6f7ff 50%, transparent 70%),
               linear-gradient(135deg, #e6f7ff 0%, #f0f9ff 100%);
   padding: 40px 20px;
   text-align: center;
   border-top: 3px solid #e0e0e0;
-  width: 100%; /* Full-width container */
-  max-width: 1200px; /* Adjust this to make the container bigger */
-  margin: 80px auto; /* Centers the container and moves it lower */
-  border-radius: 20px; /* Creates the rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a soft shadow for depth */
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 80px auto; 
+  border-radius: 20px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .form-title {
@@ -355,9 +353,9 @@ body, html {
 }
 
 .contact-form {
-  width: 95%; /* Increased width for larger screens */
-  max-width: 1200px; /* Increased maximum width for a wider form box */
-  margin: 0 auto; /* Keeps the form centered */
+  width: 95%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -365,7 +363,7 @@ body, html {
 }
 
 .form-group {
-  width: 48%; /* Each form group takes up half the width */
+  width: 48%; 
   text-align: left;
 }
 
@@ -398,17 +396,17 @@ textarea {
 }
 
 .submit-button {
-  width: 100%; /* Make the button full width */
+  width: 100%;
   padding: 10px 20px;
   font-size: 1.2rem;
   color: #120c0c;
   background-color: radial-gradient(circle at center, #cceeff 10%, #99ddff 30%, #e6f7ff 50%, transparent 70%),
   linear-gradient(135deg, #e6f7ff 0%, #f0f9ff 100%);
   border: none;
-  border-radius: 25px; /* More rounded corners to make it a rounded rectangle */
+  border-radius: 25px; 
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-top: 20px; /* Space above the button */
+  margin-top: 20px; 
 }
 
 .submit-button:hover {
@@ -418,26 +416,26 @@ textarea {
 /* Responsive design for medium screens (tablets) */
 @media (max-width: 1024px) {
   .form-group {
-    width: 48%; /* Keep the form groups side by side but with more space */
+    width: 48%; 
   }
 }
 
 /* Responsive design for smaller screens (below 768px) */
 @media (max-width: 768px) {
   .form-group {
-    width: 100%; /* Stacks the form groups vertically on smaller screens */
+    width: 100%; 
   }
 
   .submit-button {
-    width: auto; /* Button width adjusts to its content */
-    margin: 20px auto 0 auto; /* Centers the button */
+    width: auto; 
+    margin: 20px auto 0 auto; 
   }
 }
 
 /* Extra small screens (Mobile view) */
 @media (max-width: 480px) {
   .form-title {
-    font-size: 1.5rem; /* Reduces the font size for smaller screens */
+    font-size: 1.5rem; 
   }
 
   .contact-form {
@@ -446,31 +444,31 @@ textarea {
 
   .form-group input,
   .form-group textarea {
-    font-size: 0.9rem; /* Reduces font size for better readability on small screens */
+    font-size: 0.9rem; 
   }
 
   .form-group label {
-    font-size: 0.9rem; /* Adjust label font size for mobile */
+    font-size: 0.9rem; 
   }
 
   .submit-button {
-    padding: 12px 20px; /* Adjust button padding for mobile */
-    font-size: 1rem; /* Make font size of button smaller for mobile */
+    padding: 12px 20px; 
+    font-size: 1rem; 
   }
 }
 
 /* Extra large screens (for better layout on large monitors) */
 @media (min-width: 1440px) {
   .form-section {
-    max-width: 1300px; /* Increased width for larger screens */
+    max-width: 1300px; 
   }
   
   .contact-form {
-    width: 90%; /* Adjust the form width for larger screens */
+    width: 90%; 
   }
 
   .form-group {
-    width: 45%; /* Make form fields take up slightly less space for larger screens */
+    width: 45%; 
   }
 }
 
@@ -542,58 +540,29 @@ textarea {
 
 /* **********************************Footer******************************** */
 .line-h {
-  line-height: 1.3; /* Adjusted to 1.3 for consistent spacing */
+  line-height: 1.3; 
 }
 
 .line-h h5,
 .line-h p,
 .line-h span {
   margin: 0; 
-  line-height: inherit; /* Ensures all elements inherit the parent line-height */
+  line-height: inherit; 
 }
 .foot {
-  background: linear-gradient(to bottom,#0d3e72, #0d3e72, #0d3e72); /* Gradient from light cyan to the new color and then dark blue */
-  color: #fff; /* Adjust text color for better contrast */
-  padding: 2rem 0; /* Add padding for better spacing */
+  background: linear-gradient(to bottom,#0d3e72, #0d3e72, #0d3e72); 
+  color: #fff; 
+  padding: 2rem 0; 
 }
 .social-icon {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
-  background-color: #fff; /* White background on hover */
-  color: inherit; /* Keep the original icon color */
+  background-color: #fff; 
+  color: inherit; 
 }
-/* ********************nav******************************** */
-/* .blue1{
-  font-family: 'Roboto', sans-serif;
-  position: relative;
-  padding: 35px 15px;
-  color: var(--bs-white) !important;
-  font-size: 17px;
-  font-weight: 400;
-  outline: none;
-  transition: .5s;
-  z-index: 203;
-  height: 50px;
-}
-.blue1::before{
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100px;
-  bottom: 13px;
-  left: 0;
-  background:#13357B;
-  transition: .5s;
-  z-index: -203;
-}
-.blue1:hover::before{
-  height: 78px;
-  background-color: #13357B;
-} */
-
-/* ****************************************Contact****************************** */
+/*****************************************Contact****************************** */
 .contact{
   box-shadow: 0 4px 8px rgba(13, 62, 114, 0.6);
   
@@ -642,8 +611,7 @@ h1, h3 {
 
 /* **********************************Newletter***************************** */
 .news-container{
-  /* background-color: rgba(13, 62, 114, 0.8);
-  box-shadow: 0px 4px 6px #0d3e72; */
+  
   border-radius: 50px 5px 0 0;
   border-bottom-right-radius: 50px;
   width: 100%;
@@ -655,8 +623,7 @@ h1, h3 {
   width: 550px;
   height: 300px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);}
-/* Styling for the div */
-/* Styling for the div */
+
 
 
 
@@ -674,20 +641,17 @@ h1, h3 {
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
-/* Add hover effect for interactivity */
 .logo-package:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
-/* Add an animation to the content */
 .logo-package h1 {
   font-size: 2rem;
   position: relative;
   animation: bounceIn 1.5s ease-in-out infinite;
 }
 
-/* Bounce animation for text */
 @keyframes bounceIn {
   0%, 100% {
     transform: translateY(0);
@@ -697,7 +661,6 @@ h1, h3 {
   }
 }
 
-/* Unique background animation */
 .logo-package::after {
   content: '';
   position: absolute;
@@ -713,10 +676,9 @@ h1, h3 {
 
 .dropdown-menu-custom {
   z-index: 100;
-  position: absolute; /* You can adjust the value as needed */
+  position: absolute;
 }
 
-/* Sliding background animation */
 @keyframes slideBg {
   0% {
     left: -100%;
@@ -731,7 +693,7 @@ h1, h3 {
 /* **************************FAQs**************************** */
 .drop-item.active {
   background-color: red !important;
-  color: white !important; /* Optional for better readability */
+  color: white !important; 
 }
 
 .accordion-button {
@@ -752,7 +714,7 @@ h1, h3 {
 }
 
 .accor{
-  /* border: 1px solid rgba(202, 202, 202, 0.177)!important; */
+ 
 
   border-left: none !important;
   border-right: none !important;
@@ -803,8 +765,8 @@ h1, h3 {
 }
 
 .collection-container h1 {
-  color: white; /* White text color */
-  font-size: 3rem;
+  color: white; 
+  font-size: 40px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -895,6 +857,74 @@ h1, h3 {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* *********************************************************GRaphic*********************************** */
+.animated-image {
+  animation: floatAndPulse 3s infinite ease-in-out;
+}
+/* *******************************************Awesome************************************ */
+.card-img {
+  position: relative;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden; 
+}
+
+.card-img img{
+  object-fit: cover;
+  transition: transform 0.8s;
+  height: 100%;
+  display: block;
+}
+.opaci1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0; 
+  height: 0; 
+  background-color: #13357b;
+  opacity: 0;
+  transform: translate(-50%, -50%); 
+  transition: all 0.5s ease; 
+  border-radius: 0; 
+}
+
+.card-img:hover .opaci1 {
+  width: 100%; 
+  height: 100%; 
+  opacity: 0.4; 
+}
+.card-img:hover img{
+  transform: scale(1.1);
+}
+.packCard{
+  flex: 0 0 400px;
+  /* padding: 10px; */
+  height: 150px;
+}
+
+@keyframes floatAndPulse {
+  0% {
+    transform: translateY(0);
+    filter: brightness(100%) saturate(100%);
+  }
+  25% {
+    transform: translateY(-10px);
+    filter: brightness(110%) saturate(120%);
+  }
+  50% {
+    transform: translateY(0);
+    filter: brightness(100%) saturate(100%);
+  }
+  75% {
+    transform: translateY(10px);
+    filter: brightness(80%) saturate(80%);
+  }
+  100% {
+    transform: translateY(0);
+    filter: brightness(100%) saturate(100%);
+  }
+}
+
 
 
 @media (max-width: 575.98px) {
@@ -903,14 +933,24 @@ h1, h3 {
 
   }
   .overlay-text11 h1 {
-    font-size: 10px; /* Adjust font size for h1 on small screens */
+    font-size: 10px; 
   }
 
   .overlay-text11 h3 {
     margin-left: 10px;
-    font-size: 7px; /* Adjust font size for h3 on small screens */
+    font-size: 7px; 
   }
-  
+  .collection-container h1 {
+    color: white; 
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInText 3s ease-in-out infinite alternate;
+  }
+  .heading{
+    font-size: 20px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .text{
@@ -918,12 +958,30 @@ h1, h3 {
 
   }
   .overlay-text11 h1 {
-    font-size: 20px; /* Adjust font size for h1 on small screens */
+    font-size: 20px; 
   }
 
   .overlay-text11 h3 {
     margin-left: 10px;
-    font-size: 10px; /* Adjust font size for h3 on small screens */
+    font-size: 10px; 
+  }
+  .text1{
+    font-size: 10px;
   }
   
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .text{
+    font-size: 11px;
+
+  }
+  .overlay-text11 h1 {
+    font-size: 20px; 
+  }
+
+  .overlay-text11 h3 {
+    margin-left: 10px;
+    font-size: 10px;   
+  }
 }

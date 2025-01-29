@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import PosterImage from '../../assets/poster.png';
-import flyer1 from '../../assets/flyer3.jpg';
-import flyer2 from '../../assets/flyer3.jpg';
-import flyer3 from '../../assets/flyer3.jpg';
+import calenderImg from '../../assets/Calender Design Services.jpg';
+
 import { Col, Container, Row } from 'react-bootstrap';
 function Calender() {
   const [setIsVisible] = useState(false);
@@ -87,6 +86,11 @@ function Calender() {
   return (
     <div>
       <div className='text'>
+         <div className='about'>
+                <div className='image-container'>
+                  <img src={calenderImg} className='main-about img-fluid '/>
+                </div>
+              </div>
         <h2 className="text-center fw-bold text-white my-5 shadow logo-package">Creative and Functional Calendar Design Packages for Every Business or Event.</h2>
 
         <Container>
