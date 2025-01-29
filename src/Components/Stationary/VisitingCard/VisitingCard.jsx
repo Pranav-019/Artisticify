@@ -1,10 +1,8 @@
 import  { useEffect, useRef, useState } from 'react';
 import PosterImage from '../../../assets/poster.png';
-// import PosterImg from '../../../assets/Artboard 03.jpg';
+import PosterImg from '../../../assets/Visiting Card Design Serivces.jpg';
 
-import flyer1 from '../../../assets/flyer3.jpg';
-import flyer2 from '../../../assets/flyer3.jpg';
-import flyer3 from '../../../assets/flyer3.jpg';
+
 import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 function VisitingCard() {
@@ -91,7 +89,7 @@ const navigate=useNavigate()
  <div className='text'>
        <div className='about'>
         <div className='image-container mb-5'>
-          {/* <img src={} className='main-about img-fluid mb-5'/> */}
+          <img src={PosterImg} className='main-about img-fluid mb-5'/>
          
         </div>
       </div>
