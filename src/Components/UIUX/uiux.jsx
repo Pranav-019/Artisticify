@@ -1,5 +1,5 @@
 import  { useEffect, useRef, useState } from 'react';
-import PackagingImage from '../../assets/ui-ux.png';
+import PackagingImage from '../../assets/ui-ux (1).png';
 import uiuxImg from '../../assets/ui ux design 01.jpg';
 
 

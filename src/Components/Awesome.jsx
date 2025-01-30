@@ -3,11 +3,11 @@ import Container from 'react-bootstrap/esm/Container';
 import Button from 'react-bootstrap/Button';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Card from 'react-bootstrap/Card';
-import a1 from '../assets/a1.png'
-import a2 from '../assets/a2.png'
-import a3 from '../assets/a3.png'
-import a4 from '../assets/a4.png'
-import a5 from '../assets/a5.png'
+import a1 from '../assets/Page 1 Logo Design (1).jpg'
+import a2 from '../assets/Page 2 Packeging.jpg'
+import a3 from '../assets/Page 3 UI_UX.jpg'
+import a4 from '../assets/Page 4_Packeging.jpg'
+import a5 from '../assets/Page 5_ Visual Ads.jpg'
 
 
 function Awesome() {

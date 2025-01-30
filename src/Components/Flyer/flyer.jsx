@@ -1,10 +1,8 @@
 import  { useEffect, useRef, useState } from 'react';
-import FlyerImage from '../../assets/flyer.jpg';
+import FlyerImage from '../../assets/flyer 500-500.png';
 import flyerImg from '../../assets/Flyer Design Services.jpg';
 
-import flyer1 from '../../assets/flyer3.jpg';
-import flyer2 from '../../assets/flyer3.jpg';
-import flyer3 from '../../assets/flyer3.jpg';
+
 import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 

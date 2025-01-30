@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import "./logo.css"; // Ensure your CSS file path is correct
 import { Col, Container, Row } from "react-bootstrap";
-import LogoImg from '../../assets/logo design 2.jpg'
-import Teddy from '../../assets/istockphoto-1421037079-612x612-removebg-preview.png'
+import LogoImg from '../../assets/Logo Design Serivces.jpg'
+import logo from '../../assets/Page 1 Logo Design.jpg'
 import logo1 from '../../assets/logo.png'  // Fixed import for logo1
 import { useNavigate } from "react-router-dom";
 
@@ -116,7 +116,7 @@ const Logo = () => {
           </Col>
           <Col xs={12} md={6} className="d-flex justify-content-center">
             <div className="curve">
-              <img src={Teddy} className="p-5  rounded rounded-pill img-fluid" />
+              <img src={logo} className="p-5  rounded rounded-pill img-fluid"  style={{width:"500px", height:"500px"}}/>
             </div>
           </Col>
         </Row>

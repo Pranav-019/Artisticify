@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import PackagingImage from '../../assets/packaging.jpg';
+import PackagingImage from '../../assets/visual aid.png';
 import visualidImg from '../../assets/Visuals ads Design_1.jpg';
 
 import { Col, Container, Row } from 'react-bootstrap';

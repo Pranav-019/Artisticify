@@ -1,8 +1,7 @@
 import  { useEffect, useRef, useState } from 'react';
-import PosterImage from '../../../assets/poster.png';
-import flyer1 from '../../../assets/flyer3.jpg';
-import flyer2 from '../../../assets/flyer3.jpg';
-import flyer3 from '../../../assets/flyer3.jpg';
+import PosterImage from '../../../assets/letter head.png';
+import bannerImg from '../../../assets/Letterhead Design Serivces.jpg';
+
 import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
@@ -89,6 +88,11 @@ const navigate=useNavigate()
   };
   return (
  <div className='text'>
+  <div className='about'>
+          <div className='image-container'>
+            <img src={bannerImg} className='main-about img-fluid ' />
+          </div>
+        </div>
        <h2 className="text-center fw-bold text-white my-5 shadow logo-package">Your perfect letterhead, crafted within your budget. Premium packages add more expert design and personalization.</h2>
    
        <Container>

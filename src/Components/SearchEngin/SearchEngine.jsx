@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import PosterImage from '../../assets/poster.png';
-// import PosterImg from '../../assets/Artboard 03.jpg';
+import PosterImage from '../../assets/seo (1).png';
+import PosterImg from '../../assets/Search Engine Optimization.jpg';
 
 import flyer1 from '../../assets/flyer3.jpg';
 import flyer2 from '../../assets/flyer3.jpg';
@@ -70,7 +70,7 @@ function SearchEngine() {
     <div className='text'>
       <div className='about'>
         <div className='image-container mb-5'>
-          {/* <img src={PosterImg} className='main-about img-fluid mb-5'/> */}
+          <img src={PosterImg} className='main-about img-fluid mb-5'/>
 
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import PosterImage from '../../assets/poster.png';
+import PosterImage from '../../assets/calendar.png';
 import calenderImg from '../../assets/Calender Design Services.jpg';
 
 import { Col, Container, Row } from 'react-bootstrap';

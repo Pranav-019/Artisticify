@@ -1,6 +1,6 @@
 import  { useEffect, useRef, useState } from 'react';
-import PosterImage from '../../assets/PPC.png';
-// import PosterImg from '../../assets/Artboard 03.jpg';
+import PosterImage from '../../assets/ppc (1).png';
+import PosterImg from '../../assets/Pay Per Click Services.jpg';
 
 import flyer1 from '../../assets/flyer3.jpg';
 import flyer2 from '../../assets/flyer3.jpg';
@@ -71,7 +71,7 @@ function PayPer() {
 <div className='text'>
        <div className='about'>
         <div className='image-container mb-5'>
-          {/* <img src={PosterImg} className='main-about img-fluid mb-5'/> */}
+          <img src={PosterImg} className='main-about img-fluid mb-5'/>
          
         </div>
       </div>
@@ -102,7 +102,7 @@ function PayPer() {
            </Col>
            <Col  xs={12} md={6} className="d-flex justify-content-center">
              <div className="curve">
-               <img src={PosterImage} className="p-5 rounded rounded-pill img-fluid" style={{width:"auto", height:"400px"}}/>
+               <img src={PosterImage} className="p-5 rounded rounded-pill img-fluid" style={{width:"500", height:"500px"}}/>
              </div>
            </Col>
          </Row>
