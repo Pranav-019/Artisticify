@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import BrochureImage from '../../assets/brochre.png';
+import BrochureImage from '../../assets/brochure.png';
 import brochureImg from '../../assets/brochure Design.jpg';
 import brochure1 from '../../assets/brochre1.png';
 import brochure2 from '../../assets/brochre1.png';

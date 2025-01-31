@@ -1,5 +1,5 @@
 import  { useEffect, useRef, useState } from 'react';
-import PosterImage from '../../../assets/poster.png';
+import PosterImage from '../../../assets/menu card,.png';
 import PosterImg from '../../../assets/Menu Card Design Services (1).jpg';
 
 import flyer1 from '../../../assets/flyer3.jpg';

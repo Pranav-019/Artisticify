@@ -1,5 +1,5 @@
 import  { useEffect, useRef, useState } from 'react';
-import PosterImage from '../../assets/poster.png';
+import PosterImage from '../../assets/icon 1.png';
 import iconImg from '../../assets/Icon Design Serivces.jpg';
 
 
