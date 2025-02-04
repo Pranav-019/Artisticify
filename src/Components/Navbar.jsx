@@ -32,11 +32,8 @@ function Navbar() {
       <nav className="navbar">
         <div className="logo">
           {/* Replacing text with logo image */}
-<<<<<<< HEAD
           <img src="artisticify-logo.svg" alt="Artisticify Logo" style={{ height: '42.5px' }} />
-=======
-          <img src={logo} alt="Artisticify Logo" style={{ height: '42.5px' }} />
->>>>>>> 5524b1baed0ee913fe8589cc54476a562c34ba45
+          
         </div>
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
           <button onClick={() => navigate("/home")}>Home</button>

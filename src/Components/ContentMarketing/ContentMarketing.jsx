@@ -73,14 +73,14 @@ function ContentMarketing() {
     }, 1000); // Simulate loading delay
   };
   return (
-<<<<<<< HEAD
+
 <div className='text'>
   <SEO title="Content Marketing Services in India" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
        <div className='about'>
-=======
+
     <div className='text'>
       <div className='about'>
->>>>>>> 5524b1baed0ee913fe8589cc54476a562c34ba45
+
         <div className='image-container mb-5'>
           <img src={PosterImg} className='main-about img-fluid mb-5' />
 
@@ -313,7 +313,10 @@ function ContentMarketing() {
           ))}
         </div>
       </div>
-    </div>)
+    </div>
+    </div>
+    </div>
+  )
 }
 
 export default ContentMarketing

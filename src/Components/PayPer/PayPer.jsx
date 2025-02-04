@@ -7,9 +7,9 @@ import flyer2 from '../../assets/flyer3.jpg';
 import flyer3 from '../../assets/flyer3.jpg';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-<<<<<<< HEAD
+
 import { SEO } from '../SEO';
-=======
+
 import { FaTags } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
 import { FaUserDoctor } from "react-icons/fa6";
@@ -17,7 +17,6 @@ import { GiTakeMyMoney } from "react-icons/gi";
 import { GiNotebook } from "react-icons/gi";
 import { MdOutlineRealEstateAgent } from "react-icons/md";
 import { FaBusSimple } from "react-icons/fa6";
->>>>>>> 5524b1baed0ee913fe8589cc54476a562c34ba45
 function PayPer() {
   const [setIsVisible] = useState(false);
   const [packages, setPackages] = useState([]);
@@ -79,14 +78,13 @@ function PayPer() {
     }, 1000); // Simulate loading delay
   };
   return (
-<<<<<<< HEAD
+
 <div className='text'>
     <SEO title="Pay Per Click Marketing Services in India" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
        <div className='about'>
-=======
     <div className='text'>
       <div className='about'>
->>>>>>> 5524b1baed0ee913fe8589cc54476a562c34ba45
+
         <div className='image-container mb-5'>
           <img src={PosterImg} className='main-about img-fluid mb-5' />
 
@@ -298,7 +296,11 @@ PPC offers measurable ROI, allowing you to track performance metrics like click-
           ))}
         </div>
       </div>
-    </div>)
+    </div>
+    </div>
+    </div>
+    
+    )
 }
 
 export default PayPer
