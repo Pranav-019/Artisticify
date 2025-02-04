@@ -104,7 +104,7 @@ function Contact() {
         </div>
       </div>
       <div className='bg-body-tertiary'>
-        <div className="div-mainImg">
+        <div className="">
           <div className="overlay">
             <h1 className="mainFontSize fw-bold text-light">Contact us</h1>
           </div>

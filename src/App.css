@@ -924,8 +924,189 @@ h1, h3 {
     filter: brightness(100%) saturate(100%);
   }
 }
+ /* ******************************Socail Media********************************** */
+/* Right-bottom curved effect */
+.curved-image {
+  border-bottom-right-radius: 50px;
+}
+
+/* Continuous floating animation */
+.floating {
+  animation: floatAnimation 3s ease-in-out infinite;
+}
+/* Curved image with border */
+/* Curved image container with border on the right side */
+/* Curved image container with border on the right and bottom sides */
+/* Container around the image with padding */
+/* Container around the image with padding */
+/* Container around the image with padding */
+/* Container around the image */
+.curved-image-container {
+  display: inline-block; /* Keep layout consistent */
+  padding: 15px; /* Padding around the image and border */
+  border-right: 2px solid #0d3e72; /* Border on the right */
+  border-bottom: 2px solid #0d3e72; /* Border on the bottom */
+  border-bottom-right-radius: 50px; /* Curved border on the bottom-right */
+}
+
+/* Wrapper that holds the image with padding to create space between image and border */
+.image-wrapper {
+  padding: 10px; /* Padding between the border and the image */
+}
+
+/* Curved image with no border */
+.curved-image {
+  width: 100%; /* Image takes full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  border-bottom-right-radius: 50px; /* Curved border on the bottom-right */
+  border-bottom-left-radius: 0px; /* No curve on the bottom-left */
+  border-top-right-radius: 0px; /* No curve on the top-right */
+}
 
 
+
+
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.custom-button {
+  border-color: #0d3e72 !important; /* Set border color */
+  color: #13357b !important; /* Ensure text color */
+  transition: all 0.3s ease-in-out;
+  background-color: white !important;
+}
+
+.custom-button:hover {
+  background-color: #0d3e72 !important; /* Change background on hover */
+  color: white !important;
+}
+
+/* **********************************SEO****************************** */
+
+.seo-success {
+  position: relative;
+}
+
+.increse-visi {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 350px;  /* Height to match the image */
+  width: 0%;  /* Initially hidden with width 0 */
+  z-index: 2;
+  color: white;
+  text-align: center;
+  margin: auto;
+  background-color: rgba(233, 233, 233, 0.8); /* Slight background color with transparency */
+  opacity: 0;  /* Initially hidden */
+  display: block;  /* Ensure the div is part of the document flow */
+  transition: width 0.7s ease, opacity 0.5s ease;  /* Transition for width and opacity */
+  box-shadow: inset 10px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  color: white;
+  text-align: center;
+
+  transition: opacity 0.5s ease;  /* Transition for opacity */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(48, 32, 32, 0.4);
+  z-index: 1;
+}
+
+.seo-img {
+  height: 350px;
+  width: 100%;
+}
+
+.seo-success:hover .increse-visi {
+  width: 100%;  /* On hover, set width to 100% */
+  opacity: 1;  /* Make it fully visible */
+}
+
+.seo-success:hover .icon-heading {
+  opacity: 0;  /* Make the icon and heading visible on hover */
+}
+
+
+
+
+.seo-success1 {
+  position: relative;
+}
+
+.increse-visi1 {
+  position: absolute;
+  bottom: 1; /* Start from the bottom */
+  left: 0;
+  height: 0%;  /* Initially hidden, with height 0 */
+  width: 100%;  /* Full width */
+  z-index: 2;
+  color: white;
+  text-align: center;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.8); /* Slight background color with transparency */
+  opacity: 0;  /* Initially hidden */
+  display: block;  /* Ensure the div is part of the document flow */
+  transition: height 0.7s ease, opacity 0.5s ease;  /* Transition for height and opacity */
+  box-shadow: inset 10px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon-heading1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  color: white;
+  text-align: center;
+  transition: opacity 0.5s ease;  /* Transition for opacity */
+}
+
+.overlay1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(48, 32, 32, 0.4);
+  z-index: 1;
+}
+
+.seo-img1 {
+  height: 350px;
+  width: 100%;
+}
+
+.seo-success1:hover .increse-visi1 {
+  height: 100%;  /* Increase the height to 100% */
+  opacity: 1;  /* Make it fully visible */
+}
+
+.seo-success1:hover .icon-heading1 {
+  opacity: 0;  /* Make the icon and heading disappear on hover */
+}
 
 @media (max-width: 575.98px) {
   .text{

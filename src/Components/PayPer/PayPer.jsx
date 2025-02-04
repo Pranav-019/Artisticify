@@ -112,8 +112,8 @@ function PayPer() {
                    <h3 className="text-center py-3 fw-bold">Why Choose a Pay-Per-Click marketing Company?</h3>
                    <p className="text-center w-75 d-flex justify-content-center mx-auto text-secondary mb-5">Effective PPC marketing plays a crucial role in driving targeted traffic to your business. We ensure our campaigns are strategically crafted while delivering measurable results. PPC remains a powerful and cost-effective solution, effectively promoting products, services, offers, and business goals.</p>
                  </div>
-                 <h3 className="text-center  pt-3 fw-bold mb-5">See Our Creative Pay-Per-Click marketing Creation</h3>
-                 <Row>
+                
+                 {/* <Row>
                    <Col  xs={12} md={4} className="mb-3">
                   
                      <div className="image-container1">
@@ -126,9 +126,20 @@ function PayPer() {
                    <Col  xs={12} md={4} className="mb-3"><div className="image-container1">
                      <img src={flyer3} className="w-100 image-hover" />
                    </div></Col>
-                 </Row>
+                 </Row> */}
                </Container>
-         
+         <Container>
+          <div>
+          <h4 className='text-center'>Benefits of PPC Services</h4>
+          <Row>
+            <Col md={6}>1</Col>
+            <Col md={6}>1</Col>
+            <Col md={6}>1</Col>
+            <Col md={6}>1</Col>
+
+          </Row>
+          </div>
+         </Container>
        </Container>
        <div className="content-container mt-5 pt-5">
    
