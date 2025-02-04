@@ -1108,6 +1108,41 @@ h1, h3 {
   opacity: 0;  /* Make the icon and heading disappear on hover */
 }
 
+/* ******************************PPC******************************** */
+.tag{
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); 
+}
+/* styles.css */
+.ppc-column {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ppc-column:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ppc-column h5 {
+  transition: color 0.3s ease;
+}
+
+.ppc-column:hover h5 {
+  color: #007bff; /* Change to any color you prefer */
+}
+
+/* *************************ContentMarketing************************* */
+/* styles.css */
+.role-div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow with slight blur */
+  transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.role-div:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker and more pronounced shadow on hover */
+}
+
 @media (max-width: 575.98px) {
   .text{
     font-size: 10px;
