@@ -13,7 +13,7 @@ function VisitingCard() {
   const loaderRef = useRef(null);
 const navigate=useNavigate()
   useEffect(() => {
-    fetchPackages(); // Fetch package data on component mount
+    fetchPackages(); 
   }, []);
 
   useEffect(() => {
