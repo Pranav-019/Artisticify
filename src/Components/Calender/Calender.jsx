@@ -85,7 +85,7 @@ function Calender() {
   };
   return (
     <div>
-      <SEO title="Creative and Functional Calendar Design Packages for Every Business or Event." description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+      <SEO title="Calendar." description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       <div className='text'>
          <div className='about'>
                 <div className='image-container'>
@@ -142,7 +142,7 @@ function Calender() {
           {logoImages.map((image, index) => (
             <Col xs={12} md={4} className="mb-3" key={index}>
               <div className="image-container1">
-                <img src={image} className="w-100 image-hover" alt={`logo-${index}`} />
+                <img src={image} className="w-100 image-hover" alt={`logo-${index}`} style={{width:"500px", height:"400px"}}/>
               </div>
             </Col>
           ))}

@@ -32,7 +32,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="logo">
           {/* Replacing text with logo image */}
-          <img src="artisticify-logo.svg" alt="Artisticify Logo" style={{ height: '42.5px' }} />
+          <img src={logo} alt="Artisticify Logo" style={{ height: '42.5px' }} />
           
         </div>
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>

@@ -88,7 +88,7 @@ const navigate=useNavigate()
   };
   return (
  <div className='text'>
-  <SEO title="Professional Letterhead Design Company in India" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+  <SEO title="Letterhead" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
   <div className='about'>
           <div className='image-container'>
             <img src={bannerImg} className='main-about img-fluid ' />
@@ -136,7 +136,7 @@ const navigate=useNavigate()
           {logoImages.map((image, index) => (
             <Col xs={12} md={4} className="mb-3" key={index}>
               <div className="image-container1">
-                <img src={image} className="w-100 image-hover" alt={`logo-${index}`} />
+                <img src={image} className="w-100 image-hover" alt={`logo-${index}`} style={{width:"500px", height:"400px"}}/>
               </div>
             </Col>
           ))}

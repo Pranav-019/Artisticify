@@ -90,7 +90,7 @@ const Logo = () => {
 
   return (
     <div className="Logo text">
-      <SEO title="Professional Logo Design Agency Dedicated to Crafting Memorable Brands" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+      <SEO title="Logo Design" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       <div className='about'>
         <div className='image-container'>
           <img src={LogoImg} className='main-about img-fluid ' />
@@ -135,7 +135,7 @@ const Logo = () => {
           {logoImages.map((image, index) => (
             <Col xs={12} md={4} className="mb-3" key={index}>
               <div className="image-container1">
-                <img src={image} className="w-100 image-hover" alt={`logo-${index}`} />
+                <img src={image} className="w-100 image-hover" alt={`logo-${index}`} style={{width:"500px", height:"400px"}}/>
               </div>
             </Col>
           ))}

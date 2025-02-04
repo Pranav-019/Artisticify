@@ -80,7 +80,7 @@ function PayPer() {
   return (
 
 <div className='text'>
-    <SEO title="Pay Per Click Marketing Services in India" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+    <SEO title="Pay Per Click" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
        <div className='about'>
     <div className='text'>
       <div className='about'>
@@ -299,7 +299,7 @@ PPC offers measurable ROI, allowing you to track performance metrics like click-
     </div>
     </div>
     </div>
-    
+
     )
 }
 

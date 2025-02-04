@@ -167,7 +167,7 @@ const OurWork = () => {
 
     // </div>
     <div>
-    <SEO title="Graphic Design Packages" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+    <SEO title="Our Work" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
     <div className="text">
       
   <div className="image-container">

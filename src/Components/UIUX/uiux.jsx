@@ -89,7 +89,7 @@ const navigate=useNavigate()
   };
   return (
     <div className='text'>
-      <SEO title="Creative UI/UX Design Company in India" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+      <SEO title="UI/UX" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
        <div className='about'>
               <div className='image-container'>
                 <img src={uiuxImg} className='main-about img-fluid '/>
@@ -122,7 +122,7 @@ const navigate=useNavigate()
            </Col>
            <Col  xs={12} md={6} className="d-flex justify-content-center">
              <div className="curve">
-               <img src={PackagingImage} className="p-5 rounded rounded-pill img-fluid" style={{width:"500px", height:"500px"}}/>
+               <img src={PackagingImage} className="p-5 rounded rounded-pill img-fluid" style={{width:"500px", height:"400px"}}/>
              </div>
            </Col>
          </Row>
@@ -141,7 +141,7 @@ const navigate=useNavigate()
           {logoImages.map((image, index) => (
             <Col xs={12} md={4} className="mb-3" key={index}>
               <div className="image-container1">
-                <img src={image} className="w-100 image-hover" alt={`logo-${index}`} />
+                <img src={image} className="w-100 image-hover" alt={`logo-${index}`} style={{width:"500px", height:"400px"}} />
               </div>
             </Col>
           ))}

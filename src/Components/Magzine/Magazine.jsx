@@ -126,7 +126,7 @@ function Magazine() {
             </Col>
             <Col xs={12} md={6} className="d-flex justify-content-center">
               <div className="curve">
-                <img src={PackagingImage} className="p-5 rounded rounded-pill img-fluid" style={{ width: "500px", height: "500px" }} />
+                <img src={PackagingImage} className="p-5 rounded rounded-pill img-fluid" style={{width:"500px", height:"400px"}}/>
               </div>
             </Col>
           </Row>
