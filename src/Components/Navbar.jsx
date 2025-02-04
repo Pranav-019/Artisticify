@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Dropdown } from 'react-bootstrap'; // Importing react-bootstrap dropdown
 import { useEffect } from 'react';
+import logo from '../assets/artisticify-logo.png'; 
 import '../App.css';
 
 function Navbar() {
@@ -28,7 +29,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="logo">
           {/* Replacing text with logo image */}
-          <img src="artisticify-logo.png" alt="Artisticify Logo" style={{ height: '42.5px' }} />
+          <img src={logo} alt="Artisticify Logo" style={{ height: '42.5px' }} />
         </div>
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
           <button onClick={() => navigate("/home")}>Home</button>
