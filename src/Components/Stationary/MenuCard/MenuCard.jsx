@@ -90,7 +90,7 @@ function MenuCard() {
     };
   return (
 <div className='text'>
-  <SEO title="Creative Menu Card Design Company in India" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+  <SEO title="Menu Card" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
        <div className='about'>
         <div className='image-container mb-5'>
           <img src={PosterImg} className='main-about img-fluid mb-5'/>

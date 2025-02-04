@@ -87,7 +87,7 @@ function VisualAid() {
   };
   return (
     <div>
-      <SEO title="Creative Visual Aid Design Services to Make Your Presentations Clear and Impactful." description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+      <SEO title="Visual Aid" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       <div className='text'>
         <div className='about'>
           <div className='image-container'>

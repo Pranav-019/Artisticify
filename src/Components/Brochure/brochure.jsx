@@ -6,6 +6,7 @@ import brochure2 from '../../assets/brochre1.png';
 import brochure3 from '../../assets/brochre1.png';
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { SEO } from '../SEO';
 
 function Brochure() {  // Change "brochure" to "Brochure"
   // const [menuOpen, setMenuOpen] = useState(false);
@@ -111,6 +112,7 @@ function Brochure() {  // Change "brochure" to "Brochure"
 
   return (
     <div className="text">
+      <SEO title="Brochure" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
        <div className='about'>
               <div className='image-container'>
                 <img src={brochureImg} className='main-about img-fluid '/>

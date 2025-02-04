@@ -90,7 +90,7 @@ const Logo = () => {
 
   return (
     <div className="Logo text">
-      <SEO title="Professional Logo Design Agency Dedicated to Crafting Memorable Brands" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+      <SEO title="Logo Design" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       <div className='about'>
         <div className='image-container'>
           <img src={LogoImg} className='main-about img-fluid ' />

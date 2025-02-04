@@ -88,7 +88,7 @@ const navigate=useNavigate()
   };
   return (
  <div className='text'>
-  <SEO title="Professional Letterhead Design Company in India" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+  <SEO title="Letterhead" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
   <div className='about'>
           <div className='image-container'>
             <img src={bannerImg} className='main-about img-fluid ' />

@@ -85,7 +85,7 @@ function Calender() {
   };
   return (
     <div>
-      <SEO title="Creative and Functional Calendar Design Packages for Every Business or Event." description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+      <SEO title="Calendar." description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       <div className='text'>
          <div className='about'>
                 <div className='image-container'>

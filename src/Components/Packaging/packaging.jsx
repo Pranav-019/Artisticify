@@ -93,7 +93,7 @@ const Packaging = () => {
   };
 return (
   <div className='text'>
-    <SEO title="Creative Packaging Design Company in India" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+    <SEO title="Packaging" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
      <div className='about'>
             <div className='image-container'>
               <img src={packImg} className='main-about img-fluid '/>

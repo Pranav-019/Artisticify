@@ -75,7 +75,7 @@ function ContentMarketing() {
   return (
 
 <div className='text'>
-  <SEO title="Content Marketing Services in India" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+  <SEO title="Content Marketing" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
        <div className='about'>
 
     <div className='text'>

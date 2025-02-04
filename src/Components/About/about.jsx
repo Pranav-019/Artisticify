@@ -6,7 +6,7 @@ import { SEO } from '../SEO';
 const About = () => {
   return (
     <div className="text">
-       <SEO title="About Artisticify Branding" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+       <SEO title="Artisticify" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       <div className='about'>
   <div className='image-container'>
     <img src={MainImg} className='main-about img-fluid '/>

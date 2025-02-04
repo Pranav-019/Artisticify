@@ -90,7 +90,7 @@ const Icon = () => {
     };
   return (
     <div className='text'>
-      <SEO title="Icon Design Services in India" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+      <SEO title="Icon" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       <div className='about'>
               <div className='image-container'>
                 <img src={iconImg} className='main-about img-fluid '/>
