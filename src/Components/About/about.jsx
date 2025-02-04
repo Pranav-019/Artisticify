@@ -2,10 +2,11 @@ import './about.css';
 import { Col, Container, Row } from 'react-bootstrap';
 import Why from "../About/aaa.png";
 import MainImg from '../../assets/postive-caring-relationships-teachers 1.png' 
-
+import { SEO } from '../SEO';
 const About = () => {
   return (
     <div className="text">
+       <SEO title="About Artisticify Branding" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       <div className='about'>
   <div className='image-container'>
     <img src={MainImg} className='main-about img-fluid '/>

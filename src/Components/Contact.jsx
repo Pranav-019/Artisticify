@@ -105,9 +105,9 @@ function Contact() {
       </div>
       <div className='bg-body-tertiary'>
         <div className="">
-          <div className="overlay">
+          {/* <div className="overlay">
             <h1 className="mainFontSize fw-bold text-light">Contact us</h1>
-          </div>
+          </div> */}
         </div>
         <Container>
           <h4 className="colorBlue pt-5 pb-2 text-center">----- Contact Information -----</h4>

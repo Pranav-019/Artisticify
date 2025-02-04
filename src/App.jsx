@@ -10,7 +10,7 @@ import Design from "./Components/Design/design";
 import About from "./Components/About/about";
 import OurWork from "./Components/Our - Work/our_work";
 import DigitalMarketing from "./Components/Digital Marketing/digitalMarketing";
-import { Helmet } from 'react-helmet-async';
+import { HelmetProvider } from "react-helmet-async";
 
 // Tiles
 import Logo from "./Components/Logo/logo";
@@ -105,6 +105,7 @@ const App = () => {
 };
 
 const Root = () => (
+  <HelmetProvider>
   <Router>
     <Navbar/>
     <Routes>
@@ -160,6 +161,7 @@ const Root = () => (
     <Newsletter/>
     <Footer/> 
   </Router>
+  </HelmetProvider>
 );
 
 export default Root;

@@ -6,6 +6,7 @@ import uiuxImg from '../../assets/ui ux design 01.jpg';
 import { Col, Container, Row } from 'react-bootstrap';
 import './uiux.css';
 import { useNavigate } from 'react-router-dom';
+import { SEO } from '../SEO';
 const uiux = () => {
   const [setIsVisible] = useState(false);
   const [packages, setPackages] = useState([]);
@@ -88,6 +89,7 @@ const navigate=useNavigate()
   };
   return (
     <div className='text'>
+      <SEO title="Creative UI/UX Design Company in India" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
        <div className='about'>
               <div className='image-container'>
                 <img src={uiuxImg} className='main-about img-fluid '/>

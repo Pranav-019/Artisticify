@@ -16,6 +16,7 @@ import youtube from '../../assets/youtube.jpg'
 import { Button, Col, Container, Fade, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import FAQs from '../FAQs';
+import { SEO } from '../SEO';
 function SocialMedia() {
   const [setIsVisible] = useState(false);
   const [packages, setPackages] = useState([]);
@@ -78,6 +79,7 @@ function SocialMedia() {
   };
   return (
     <div className='text'>
+      <SEO title="Social Media Marketing Services in India" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       <div className='about'>
         <div className='image-container mb-5'>
           <img src={PosterImg} className='main-about img-fluid mb-5' />

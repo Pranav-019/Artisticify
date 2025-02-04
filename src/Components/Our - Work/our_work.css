@@ -20,15 +20,21 @@
   
   
   
-  .mm{
+   .mm{
     position: absolute;
     top: 40%;
     left: 28%;
     transform: translate(-50%, -50%);
     color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  } 
+
+  /* .mm{
+    color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-    z-index: 1;
-  }
+  } */
+
+  
   
   h1, h3 {
     margin: 0;

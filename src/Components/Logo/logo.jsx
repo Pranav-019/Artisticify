@@ -5,7 +5,7 @@ import LogoImg from '../../assets/Logo Design Serivces.jpg'
 import logo from '../../assets/istockphoto-1421037079-612x612-removebg-preview.png'
 import logo1 from '../../assets/logo.png'  // Fixed import for logo1
 import { useNavigate } from "react-router-dom";
-
+import { SEO } from '../SEO';
 const Logo = () => {
   const [setIsVisible] = useState(false);
   const [packages, setPackages] = useState([]);
@@ -90,6 +90,7 @@ const Logo = () => {
 
   return (
     <div className="Logo text">
+      <SEO title="Professional Logo Design Agency Dedicated to Crafting Memorable Brands" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       <div className='about'>
         <div className='image-container'>
           <img src={LogoImg} className='main-about img-fluid ' />

@@ -3,7 +3,7 @@ import MainImg from '../../assets/postive-caring-relationships-teachers 1.png';
 import { Col, Container, Row } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import { useEffect, useState } from "react";
-
+import { SEO } from '../SEO';
 const OurWork = () => {
   const [works, setWorks] = useState([]);
 
@@ -167,11 +167,12 @@ const OurWork = () => {
 
     // </div>
     <div>
+    <SEO title="Graphic Design Packages" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
     <div className="text">
       
   <div className="image-container">
     <img src={MainImg} className="main-ourwork img-fluid" />
-    <div className="overlay mm overlay-text11">
+    <div className="mm overlay-text11">
       <h1 className="fw-bold extra-bold pb-2 text-start overlay-text11">
         Our Work...
       </h1>
@@ -230,12 +231,26 @@ const OurWork = () => {
                        key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
                        style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
                      >
-                       <img
-                         className="d-block our-img"
-                         src={imageUrl} // Use the image URLs provided by the API
-                         alt={`${work.category}-${index}`} // Add a descriptive alt tag
-                         style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
-                       />
+                       <div style={{ 
+              width: "100%",
+              paddingTop: "75%", // 4:3 aspect ratio - adjust as needed
+              position: "relative" 
+            }}>
+              <img
+                className="d-block our-img"
+                src={imageUrl}
+                alt={`${work.category}-${index}`}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  backgroundColor: "#f8f9fa" // Light background for transparent images
+                }}
+              />
+            </div>
                      </Carousel.Item>
                    ))
                  )}
@@ -263,12 +278,26 @@ const OurWork = () => {
                        key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
                        style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
                      >
-                       <img
-                         className="d-block our-img"
-                         src={imageUrl} // Use the image URLs provided by the API
-                         alt={`${work.category}-${index}`} // Add a descriptive alt tag
-                         style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
-                       />
+                       <div style={{ 
+              width: "100%",
+              paddingTop: "75%", // 4:3 aspect ratio - adjust as needed
+              position: "relative" 
+            }}>
+              <img
+                className="d-block our-img"
+                src={imageUrl}
+                alt={`${work.category}-${index}`}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  backgroundColor: "#f8f9fa" // Light background for transparent images
+                }}
+              />
+            </div>
                      </Carousel.Item>
                    ))
                  )}
@@ -318,12 +347,26 @@ const OurWork = () => {
                        key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
                        style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
                      >
-                       <img
-                         className="d-block our-img"
-                         src={imageUrl} // Use the image URLs provided by the API
-                         alt={`${work.category}-${index}`} // Add a descriptive alt tag
-                         style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
-                       />
+                        <div style={{ 
+              width: "100%",
+              paddingTop: "75%", // 4:3 aspect ratio - adjust as needed
+              position: "relative" 
+            }}>
+              <img
+                className="d-block our-img"
+                src={imageUrl}
+                alt={`${work.category}-${index}`}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  backgroundColor: "#f8f9fa" // Light background for transparent images
+                }}
+              />
+            </div>
                      </Carousel.Item>
                    ))
                  )}
@@ -343,19 +386,33 @@ const OurWork = () => {
           {works.length > 0 ? (
                <Carousel>
                {works
-                 .filter((work) => work.category === "package") // Filter by category 'logo'
+                 .filter((work) => work.category === "packaging") // Filter by category 'logo'
                  .map((work) =>
                    work.images.map((imageUrl, index) => (
                      <Carousel.Item
                        key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
                        style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
                      >
-                       <img
-                         className="d-block our-img"
-                         src={imageUrl} // Use the image URLs provided by the API
-                         alt={`${work.category}-${index}`} // Add a descriptive alt tag
-                         style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
-                       />
+                       <div style={{ 
+              width: "100%",
+              paddingTop: "75%", // 4:3 aspect ratio - adjust as needed
+              position: "relative" 
+            }}>
+              <img
+                className="d-block our-img"
+                src={imageUrl}
+                alt={`${work.category}-${index}`}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  backgroundColor: "#f8f9fa" // Light background for transparent images
+                }}
+              />
+            </div>
                      </Carousel.Item>
                    ))
                  )}
@@ -404,12 +461,26 @@ const OurWork = () => {
                       key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
                       style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
                     >
-                      <img
-                        className="d-block our-img"
-                        src={imageUrl} // Use the image URLs provided by the API
-                        alt={`${work.category}-${index}`} // Add a descriptive alt tag
-                        style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
-                      />
+                       <div style={{ 
+              width: "100%",
+              paddingTop: "75%", // 4:3 aspect ratio - adjust as needed
+              position: "relative" 
+            }}>
+              <img
+                className="d-block our-img"
+                src={imageUrl}
+                alt={`${work.category}-${index}`}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  backgroundColor: "#f8f9fa" // Light background for transparent images
+                }}
+              />
+            </div>
                     </Carousel.Item>
                   ))
                 )}
@@ -429,19 +500,33 @@ const OurWork = () => {
           {works.length > 0 ? (
                <Carousel>
                {works
-                 .filter((work) => work.category === "ui-ux") // Filter by category 'logo'
+                 .filter((work) => work.category === "ui/ux") // Filter by category 'logo'
                  .map((work) =>
                    work.images.map((imageUrl, index) => (
                      <Carousel.Item
                        key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
                        style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
                      >
-                       <img
-                         className="d-block our-img"
-                         src={imageUrl} // Use the image URLs provided by the API
-                         alt={`${work.category}-${index}`} // Add a descriptive alt tag
-                         style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
-                       />
+                       <div style={{ 
+              width: "100%",
+              paddingTop: "75%", // 4:3 aspect ratio - adjust as needed
+              position: "relative" 
+            }}>
+              <img
+                className="d-block our-img"
+                src={imageUrl}
+                alt={`${work.category}-${index}`}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  backgroundColor: "#f8f9fa" // Light background for transparent images
+                }}
+              />
+            </div>
                      </Carousel.Item>
                    ))
                  )}
@@ -490,12 +575,26 @@ const OurWork = () => {
                        key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
                        style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
                      >
-                       <img
-                         className="d-block our-img"
-                         src={imageUrl} // Use the image URLs provided by the API
-                         alt={`${work.category}-${index}`} // Add a descriptive alt tag
-                         style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
-                       />
+                       <div style={{ 
+              width: "100%",
+              paddingTop: "75%", // 4:3 aspect ratio - adjust as needed
+              position: "relative" 
+            }}>
+              <img
+                className="d-block our-img"
+                src={imageUrl}
+                alt={`${work.category}-${index}`}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  backgroundColor: "#f8f9fa" // Light background for transparent images
+                }}
+              />
+            </div>
                      </Carousel.Item>
                    ))
                  )}
@@ -522,12 +621,26 @@ const OurWork = () => {
                        key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
                        style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
                      >
-                       <img
-                         className="d-block our-img"
-                         src={imageUrl} // Use the image URLs provided by the API
-                         alt={`${work.category}-${index}`} // Add a descriptive alt tag
-                         style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
-                       />
+                       <div style={{ 
+              width: "100%",
+              paddingTop: "75%", // 4:3 aspect ratio - adjust as needed
+              position: "relative" 
+            }}>
+              <img
+                className="d-block our-img"
+                src={imageUrl}
+                alt={`${work.category}-${index}`}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  backgroundColor: "#f8f9fa" // Light background for transparent images
+                }}
+              />
+            </div>
                      </Carousel.Item>
                    ))
                  )}
@@ -569,19 +682,33 @@ const OurWork = () => {
           {works.length > 0 ? (
                <Carousel>
                {works
-                 .filter((work) => work.category === "visual-aid") // Filter by category 'logo'
+                 .filter((work) => work.category === "visual aid") // Filter by category 'logo'
                  .map((work) =>
                    work.images.map((imageUrl, index) => (
                      <Carousel.Item
                        key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
                        style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
                      >
-                       <img
-                         className="d-block our-img"
-                         src={imageUrl} // Use the image URLs provided by the API
-                         alt={`${work.category}-${index}`} // Add a descriptive alt tag
-                         style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
-                       />
+                       <div style={{ 
+              width: "100%",
+              paddingTop: "75%", // 4:3 aspect ratio - adjust as needed
+              position: "relative" 
+            }}>
+              <img
+                className="d-block our-img"
+                src={imageUrl}
+                alt={`${work.category}-${index}`}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  backgroundColor: "#f8f9fa" // Light background for transparent images
+                }}
+              />
+            </div>
                      </Carousel.Item>
                    ))
                  )}
@@ -608,12 +735,27 @@ const OurWork = () => {
                       key={`${work._id}-${index}`} // Use `_id` from your API as the unique identifier
                       style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}
                     >
-                      <img
-                        className="d-block our-img"
-                        src={imageUrl} // Use the image URLs provided by the API
-                        alt={`${work.category}-${index}`} // Add a descriptive alt tag
-                        style={{ width: "100%", objectFit: "cover" }} // Ensure the image fits properly
-                      />
+                      
+                      <div style={{ 
+              width: "100%",
+              paddingTop: "75%", // 4:3 aspect ratio - adjust as needed
+              position: "relative" 
+            }}>
+              <img
+                className="d-block our-img"
+                src={imageUrl}
+                alt={`${work.category}-${index}`}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  backgroundColor: "#f8f9fa" // Light background for transparent images
+                }}
+              />
+            </div>
                     </Carousel.Item>
                   ))
                 )}

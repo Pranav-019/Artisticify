@@ -1,7 +1,7 @@
 import  { useEffect, useRef, useState } from 'react';
 import FlyerImage from '../../assets/flyer 500-500.png';
 import flyerImg from '../../assets/Flyer Design Services.jpg';
-
+import { SEO } from '../SEO';
 
 import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -88,6 +88,7 @@ const Flyer = () => {
     };
   return (
     <div className='text'>
+      <SEO title="Creative Flyer Design Company in India" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
        <div className='about'>
               <div className='image-container'>
                 <img src={flyerImg} className='main-about img-fluid '/>

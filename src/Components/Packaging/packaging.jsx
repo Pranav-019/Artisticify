@@ -8,7 +8,7 @@ import flyer3 from '../../assets/flyer3.jpg';
 import { Col, Container, Row } from 'react-bootstrap';
 import './Packaging.css';
 import { useNavigate } from 'react-router-dom';
-
+import { SEO } from '../SEO';
 const Packaging = () => {
   const [setIsVisible] = useState(false);
   const [packages, setPackages] = useState([]);
@@ -93,6 +93,7 @@ const Packaging = () => {
   };
 return (
   <div className='text'>
+    <SEO title="Creative Packaging Design Company in India" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
      <div className='about'>
             <div className='image-container'>
               <img src={packImg} className='main-about img-fluid '/>

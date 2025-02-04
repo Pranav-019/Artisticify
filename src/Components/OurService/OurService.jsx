@@ -3,9 +3,11 @@ import { MdDesignServices } from "react-icons/md";
 import { MdCorporateFare } from "react-icons/md";
 import { PiBandaidsFill } from "react-icons/pi";
 import { Col, Container, Row } from "react-bootstrap";
+import { SEO } from '../SEO';
 function OurService() {
   return (
     <div style={{ backgroundColor: "#f0f9ff" }} className="py-5 text">
+      <SEO title="Our Services" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       <h1 className="text-center py-2">Our Services</h1>
       <h2 className="text-center pb-5">Take Your Business to the Next Level</h2>
       <Container>

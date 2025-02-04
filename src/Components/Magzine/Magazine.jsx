@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import PackagingImage from '../../assets/magazine (1).png';
 import magzineImg from '../../assets/Magazine Design Servics.jpg';
-
+import { SEO } from '../SEO';
 
 import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -90,6 +90,7 @@ function Magazine() {
   };
   return (
     <div>
+      <SEO title="Creative Magazine Design Services That Elevate Your Publication’s Visual Appeal." description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       <div className='text'>
          <div className='about'>
                 <div className='image-container'>

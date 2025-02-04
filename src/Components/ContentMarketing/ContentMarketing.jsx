@@ -7,6 +7,7 @@ import flyer2 from '../../assets/flyer3.jpg';
 import flyer3 from '../../assets/flyer3.jpg';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { SEO } from '../SEO';
 function ContentMarketing() {
   const [setIsVisible] = useState(false);
   const [packages, setPackages] = useState([]);
@@ -68,6 +69,7 @@ function ContentMarketing() {
   };
   return (
 <div className='text'>
+  <SEO title="Content Marketing Services in India" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
        <div className='about'>
         <div className='image-container mb-5'>
           <img src={PosterImg} className='main-about img-fluid mb-5'/>

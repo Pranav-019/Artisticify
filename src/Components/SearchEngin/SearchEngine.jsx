@@ -35,7 +35,7 @@ import Success1 from '../../assets/Group-56-1.png'
 import Success2 from '../../assets/Group-57-1.png'
 import Success3 from '../../assets/Group-58.png'
 import Success4 from '../../assets/Group-61.png'
-
+import { SEO } from '../SEO';
 function SearchEngine() {
   const [setIsVisible] = useState(false);
   const [packages, setPackages] = useState([]);
@@ -97,6 +97,7 @@ function SearchEngine() {
   };
   return (
     <div className='text'>
+      <SEO title="SEO Services in India" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       <div className='about'>
         <div className='image-container mb-5'>
           <img src={PosterImg} className='main-about img-fluid mb-5' />

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import PackagingImage from '../../assets/visual aid.png';
 import visualidImg from '../../assets/Visuals ads Design_1.jpg';
-
+import { SEO } from '../SEO';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 function VisualAid() {
@@ -87,6 +87,7 @@ function VisualAid() {
   };
   return (
     <div>
+      <SEO title="Creative Visual Aid Design Services to Make Your Presentations Clear and Impactful." description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       <div className='text'>
         <div className='about'>
           <div className='image-container'>

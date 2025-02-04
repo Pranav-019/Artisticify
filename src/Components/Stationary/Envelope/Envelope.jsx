@@ -4,6 +4,7 @@ import bannerImg from '../../../assets/Envelope Design Serivces.jpg';
 
 import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { SEO } from '../../SEO';
 function Envelope() {
    const [setIsVisible] = useState(false);
     const [packages, setPackages] = useState([]);
@@ -86,6 +87,7 @@ function Envelope() {
     };
   return (
     <div className='text'>
+    <SEO title="Creative Envelope Design Company in India" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
             <div className='about'>
               <div className='image-container'>
                 <img src={bannerImg} className='main-about img-fluid ' />
