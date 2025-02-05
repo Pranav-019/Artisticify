@@ -137,14 +137,14 @@ function Brochure() {  // Change "brochure" to "Brochure"
 
 <p>Our professional designers carefully choose colors, fonts, and concepts to create unique and impactful designs for various products.</p>
 
-<Col xs={12} md={6}>
+<Col xs={6} md={6}>
   <p>• Mailers</p>
   <p>• Flyers</p>
   <p>• Tri-fold brochures</p>
   <p>• Catalogs</p>
   <p>• Sales brochures</p>
 </Col>
-<Col xs={12} md={6}>
+<Col xs={6} md={6}>
   <p>• Business brochures</p>
   <p>• Marketing brochures</p>
   <p>• Corporate brochures</p>
@@ -169,10 +169,12 @@ function Brochure() {  // Change "brochure" to "Brochure"
 
  
   <Container>
-    <div className="pt-5">
-      <h3 className="text-center py-3 fw-bold">How Much does it Cost to Design a Brochure?</h3>
-      <p className="text-center w-50 d-flex justify-content-center mx-auto text-secondary mb-5">No matter your budget, we guarantee a stunning brochure design that meets your needs. Our premium packages provide expert design services and personalized attention to elevate your brand’s presence..</p>
-    </div>
+  <div className="">
+          <h3 className="text-center py-3 fw-bold">Our Creative Brochure Design Works</h3>
+          <p className="text-center w-75 d-flex justify-content-center mx-auto text-secondary mb-5">
+          At Artisticify, we create visually stunning brochures that effectively showcase your brand. Our designs are tailored to engage your audience, with creative layouts and compelling content that leave a lasting impression.
+          </p>
+        </div>
     <Row>
     {logoImages.map((image, index) => (
             <Col xs={12} md={4} className="mb-3" key={index}>
@@ -182,6 +184,10 @@ function Brochure() {  // Change "brochure" to "Brochure"
             </Col>
           ))}
         </Row>
+        <div className="pt-5">
+      <h3 className="text-center py-3 fw-bold">How Much does it Cost to Design a Brochure?</h3>
+      <p className="text-center w-50 d-flex justify-content-center mx-auto text-secondary mb-5">No matter your budget, we guarantee a stunning brochure design that meets your needs. Our premium packages provide expert design services and personalized attention to elevate your brand’s presence..</p>
+    </div>
   </Container>
 
 </Container>

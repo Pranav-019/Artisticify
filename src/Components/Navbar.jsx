@@ -1,138 +1,120 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Dropdown } from 'react-bootstrap'; // Importing react-bootstrap dropdown
-import { useEffect } from 'react';
+import { Navbar, Nav, NavDropdown, Offcanvas, Container } from 'react-bootstrap';
 import logo from '../assets/artisticify-logo.png'; 
 import '../App.css';
 import SEO from './SEO';
 
-function Navbar() {
+function ArtisticifyNavbar() {
   const navigate = useNavigate();
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [showNested, setShowNested] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-  const handleNestedToggle = () => {
-    setShowNested(!showNested);
-  };
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   return (
-    
-    <div>
+    <>
       <SEO title="Artisticify" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
-      <nav className="navbar">
-        <div className="logo">
-          {/* Replacing text with logo image */}
-          <img src={logo} alt="Artisticify Logo" style={{ height: '42.5px' }} />
-          
-        </div>
-        <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <button onClick={() => navigate("/home")}>Home</button>
-          <button onClick={() => navigate("/about")}>About</button>
-
-          {/* Design Dropdown using react-bootstrap */}
-          <Dropdown className="drop">
-      <Dropdown.Toggle variant="" id="dropdown-basic">
-        Design
-      </Dropdown.Toggle>
-      <Dropdown.Menu
-  className="dropdown-menu-custom"
-  style={{ width: "250px", padding: "10px" }}
->
-  <div
-    style={{ maxHeight: "300px", overflowY: "auto" }}
-  >
-    <Dropdown.Item href="/logo">Logo Design</Dropdown.Item>
-    <Dropdown.Item href="/Brochure">Brochure Design</Dropdown.Item>
-    <Dropdown.Item href="/Packaging">Packaging Design</Dropdown.Item>
-    <Dropdown.Item href="/Flyer">Flyer Design</Dropdown.Item>
-    <Dropdown.Item href="/Poster">Poster Design</Dropdown.Item>
-    <Dropdown.Item href="/UIUX">UI/UX Design</Dropdown.Item>
-    <Dropdown.Item href="/Magazine">Magazine Design</Dropdown.Item>
-    <Dropdown.Item href="/VisualAid">Visual Aid Design</Dropdown.Item>
-    <Dropdown.Item href="/Calender">Calendar Design</Dropdown.Item>
-    <Dropdown.Item href="/Icon">Icon Design</Dropdown.Item>
-
-    {/* Custom Nested Dropdown for Stationary Design */}
-    <div
-      className="dropdown-item position-relative"
-      onClick={handleNestedToggle}
-      style={{ cursor: "pointer" }}
-    >
-      Stationary Design ➤
-    </div>
-
-    {/* Responsive Nested Dropdown Menu */}
-    {showNested && (
-      <div
-        className="nested-dropdown position-absolute bg-white shadow border rounded"
-        style={{
-          [isMobile ? 'top' : 'left']: isMobile ? '100%' : '100%',
-          [isMobile ? 'left' : 'top']: '0',
-          width: isMobile ? '100%' : '220px',
-          zIndex: 1050,
-          padding: "10px",
-          margin: isMobile ? '5px 0' : '0 5px'
-        }}
-      >
-        <Dropdown.Item href="/Stationary/LetterHead">
-          Letter Head Design
-        </Dropdown.Item>
-        <Dropdown.Item href="/Stationary/Envelope">
-          Envelope Design
-        </Dropdown.Item>
-        <Dropdown.Item href="/Stationary/VisitingCard">
-          Visiting Card Design
-        </Dropdown.Item>
-        <Dropdown.Item href="/Stationary/Certificate">
-          Certificate Design
-        </Dropdown.Item>
-        <Dropdown.Item href="/Stationary/MenuCard">
-          Menu Card Design
-        </Dropdown.Item>
+      
+      <div className="bg-body-tertiary">
+        <Navbar expand="lg" sticky="top" className="bg-body-tertiary">
+          <Container>
+            <Navbar.Brand href="/">
+              <img src={logo} alt="Artisticify Logo" style={{ height: '42.5px' }} />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="offcanvasNavbar" />
+            <Navbar.Offcanvas
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+              placement="end"
+              className="custom-offcanvas"
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id="offcanvasNavbarLabel"></Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className="justify-content-end flex-grow-1 pe-3">
+                  <Nav.Link className="nav-link-custom" onClick={() => navigate('/home')}>Home</Nav.Link>
+                  <Nav.Link className="nav-link-custom" onClick={() => navigate('/about')}>About</Nav.Link>
+                  
+                  <NavDropdown title="Design" id="designDropdown" className="nav-link-custom custom-dropdown">
+                    <div className="dropdown-scroll">
+                      <NavDropdown.Item className="dropdown-item-custom" href="/logo">Logo Design</NavDropdown.Item>
+                      <NavDropdown.Item className="dropdown-item-custom" href="/Brochure">Brochure Design</NavDropdown.Item>
+                      <NavDropdown.Item className="dropdown-item-custom" href="/Packaging">Packaging Design</NavDropdown.Item>
+                      <NavDropdown.Item className="dropdown-item-custom" href="/Flyer">Flyer Design</NavDropdown.Item>
+                      <NavDropdown.Item className="dropdown-item-custom" href="/Poster">Poster Design</NavDropdown.Item>
+                      <NavDropdown.Item className="dropdown-item-custom" href="/UIUX">UI/UX Design</NavDropdown.Item>
+                      <NavDropdown.Item className="dropdown-item-custom" href="/Magazine">Magazine Design</NavDropdown.Item>
+                      <NavDropdown.Item className="dropdown-item-custom" href="/VisualAid">Visual Aid Design</NavDropdown.Item>
+                      <NavDropdown.Item className="dropdown-item-custom" href="/Calender">Calendar Design</NavDropdown.Item>
+                      <NavDropdown.Item className="dropdown-item-custom" href="/Icon">Icon Design</NavDropdown.Item>
+                      
+                      <NavDropdown.Divider />
+                      <NavDropdown.Item className="text-danger dropdown-item-custom">Stationary Design 🡇</NavDropdown.Item>
+                      <NavDropdown.Item className="dropdown-item-custom" href="/Stationary/LetterHead">Letter Head Design</NavDropdown.Item>
+                      <NavDropdown.Item className="dropdown-item-custom" href="/Stationary/Envelope">Envelope Design</NavDropdown.Item>
+                      <NavDropdown.Item className="dropdown-item-custom" href="/Stationary/VisitingCard">Visiting Card Design</NavDropdown.Item>
+                      <NavDropdown.Item className="dropdown-item-custom" href="/Stationary/Certificate">Certificate Design</NavDropdown.Item>
+                      <NavDropdown.Item className="dropdown-item-custom" href="/Stationary/MenuCard">Menu Card Design</NavDropdown.Item>
+                    </div>
+                  </NavDropdown>
+                  
+                  <NavDropdown title="Digital Marketing" id="marketingDropdown" className="nav-link-custom custom-dropdown">
+                    <NavDropdown.Item className="dropdown-item-custom" href="/SearchEngine">Search Engine Optimization</NavDropdown.Item>
+                    <NavDropdown.Item className="dropdown-item-custom" href="/SoacialMedia">Social Media Marketing</NavDropdown.Item>
+                    <NavDropdown.Item className="dropdown-item-custom" href="/ContentMarketing">Content Marketing</NavDropdown.Item>
+                    <NavDropdown.Item className="dropdown-item-custom" href="/PayPer">Pay Per Click</NavDropdown.Item>
+                    <NavDropdown.Item className="dropdown-item-custom" href="/SpecialPAckages">Special Packages</NavDropdown.Item>
+                  </NavDropdown>
+                  
+                  <Nav.Link className="nav-link-custom" onClick={() => navigate('/our-work')}>Our Work</Nav.Link>
+                  <Nav.Link className="nav-link-custom" onClick={() => navigate('/Contact')}>Contact</Nav.Link>
+                </Nav>
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+          </Container>
+        </Navbar>
       </div>
-    )}
-  </div>
-</Dropdown.Menu>
-    </Dropdown>
-          <Dropdown>
-            <Dropdown.Toggle variant="" id="dropdown-basic">
-              Digital Marketing
-            </Dropdown.Toggle>
 
-            <Dropdown.Menu>
-              <Dropdown.Item href="/SearchEngine">Search Engine Optimization</Dropdown.Item>
-              <Dropdown.Item href="/SoacialMedia">Social Media Marketing</Dropdown.Item>
-              <Dropdown.Item href="/ContentMarketing">Content Marketing</Dropdown.Item>
-              <Dropdown.Item href="/PayPer">Pay Per Click</Dropdown.Item>
-              <Dropdown.Item href="/SpecialPAckages">Special Packages</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-          <button onClick={() => navigate("/our-work")}>Our Work</button>
-          <button onClick={() => navigate("/Contact")}>Contact</button>
-        </div>
+      {/* Padding to prevent content overlap */}
+      <div style={{ paddingTop: "" }}>
+        {/* Your main page content goes here */}
+      </div>
 
-        <div
-          className={`hamburger ${menuOpen ? "open" : ""}`}
-          onClick={() => setMenuOpen((prev) => !prev)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
+      {/* Custom CSS */}
+      <style>
+        {`
+          .nav-link-custom {
+            padding-left: 50px !important;
+            font-size: 18px;
+            font-weight: bold;
+              
+          }
 
-    </div>
+          .dropdown-scroll {
+            max-height: 300px;
+            overflow-y: auto;
+          }
+
+          .dropdown-item-custom {
+            font-size: 16px;
+            font-weight: bold;
+            color: black !important; /* Dropdown text is black */
+          }
+
+          .dropdown-item-custom:hover {
+            background-color: #f1f1f1 !important;
+          }
+
+          .dropdown-item-custom.text-danger {
+            color: red !important;
+          }
+
+          /* Custom Offcanvas Styles */
+           .offcanvas .btn-close {
+            filter: invert(1); /* Makes close button white */
+          }
+        `}
+      </style>
+    </>
   );
 }
 
-export default Navbar;
+export default ArtisticifyNavbar;

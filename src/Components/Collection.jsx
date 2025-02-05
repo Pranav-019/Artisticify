@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap"
 import logo1 from '../assets/visiting card.jpg' 
 import logo2 from '../assets/Visual Aid 1.jpeg' 
-import logo3 from '../assets/icon 1.jpeg' 
+import logo3 from '../assets/icon 1 (1).jpeg' 
 import logo4 from '../assets/icon.jpeg' 
 import logo5 from '../assets/ui 1.jpg' 
 import logo6 from '../assets/Calendar.jpeg' 

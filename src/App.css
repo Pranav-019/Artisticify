@@ -1167,6 +1167,44 @@ h1, h3 {
   .heading{
     font-size: 20px;
   }
+  .logo-package{
+    font-size: 13px;
+    width: 75%;
+  }
+  .custom-offcanvas {
+    width: 250px !important; /* Reduced width */
+    background-color: #094167 !important; /* Dark blue background */
+    color: white !important; /* White text */
+  }
+
+  .custom-offcanvas .nav-link-custom {
+    color: white !important;
+  }
+
+  .custom-offcanvas .dropdown-item-custom {
+    color: black !important; /* Dropdown text remains black */
+  }
+
+  .custom-offcanvas .offcanvas-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Fix for Dropdown inside Offcanvas */
+  .custom-dropdown .dropdown-menu {
+    background-color: white !important; /* Dropdown background is white */
+  }
+
+  .custom-dropdown .dropdown-item {
+    color: black !important; /* Dropdown text is black */
+  }
+
+  .custom-dropdown .dropdown-item:hover {
+    background-color: #f1f1f1 !important;
+  }
+  .image-container.img{
+      height: 800px !important;
+  }
+
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .text{
