@@ -1145,7 +1145,7 @@ h1, h3 {
 
 @media (max-width: 575.98px) {
   .text{
-    font-size: 10px;
+    font-size: 13px;
 
   }
   .overlay-text11 h1 {
@@ -1172,7 +1172,7 @@ h1, h3 {
     width: 75%;
   }
   .custom-offcanvas {
-    width: 250px !important; /* Reduced width */
+    width: 350px !important; /* Reduced width */
     background-color: #094167 !important; /* Dark blue background */
     color: white !important; /* White text */
   }
