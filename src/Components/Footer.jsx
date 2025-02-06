@@ -168,7 +168,7 @@ const Footer = () => {
         </Row>
         <hr />
         <p className="text-center">
-          Artisticify | 2025 | All Rights Reserved | Digital Marketing | Social
+          FTFL | 2025 | All Rights Reserved | Digital Marketing | Social
           Marketing | Web Development | Graphic Design
         </p>
       </Container>
