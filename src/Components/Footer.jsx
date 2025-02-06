@@ -168,7 +168,7 @@ const Footer = () => {
         </Row>
         <hr />
         <p className="text-center">
-          FTFL | 2025 | All Rights Reserved | Digital Marketing | Social
+          FTFL Technologies | 2025 | All Rights Reserved | Digital Marketing | Social
           Marketing | Web Development | Graphic Design
         </p>
       </Container>
