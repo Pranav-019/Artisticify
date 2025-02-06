@@ -212,9 +212,9 @@ function Contact() {
                       onChange={handleChange}
                     >
                       <option value="Select">Select</option>
-                      <option value="Poster">Poster</option>
-                      <option value="Brochure">Brochure</option>
-                      <option value="Menu-Card">Menu-Card</option>
+                      <option value="Design Services">Design Services</option>
+                      <option value="Digital Marketing Services">Digital Marketing Services</option>
+                      <option value="Special Package (combined services)">Special Package (combined services)</option>
                     </Form.Control>
 
                     <Form.Group className="mb-2 mt-2" controlId="exampleForm.ControlTextarea1">
