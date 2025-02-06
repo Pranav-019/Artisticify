@@ -29,7 +29,7 @@ function ArtisticifyNavbar() {
                 <Offcanvas.Title id="offcanvasNavbarLabel"></Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Nav className="justify-content-end flex-grow-1 pe-2">
                   <Nav.Link className="nav-link-custom" onClick={() => navigate('/home')}>Home</Nav.Link>
                   <Nav.Link className="nav-link-custom" onClick={() => navigate('/about')}>About</Nav.Link>
                   
@@ -57,8 +57,8 @@ function ArtisticifyNavbar() {
                   </NavDropdown>
                   
                   <NavDropdown title="Digital Marketing" id="marketingDropdown" className="nav-link-custom custom-dropdown">
-                    <NavDropdown.Item className="dropdown-item-custom" href="/SearchEngine">Search Engine Optimization</NavDropdown.Item>
-                    <NavDropdown.Item className="dropdown-item-custom" href="/SoacialMedia">Social Media Marketing</NavDropdown.Item>
+                    <NavDropdown.Item className="dropdown-item-custom" href="/SearchEngine">SEO</NavDropdown.Item>
+                    <NavDropdown.Item className="dropdown-item-custom" href="/SoacialMedia">Social Media</NavDropdown.Item>
                     <NavDropdown.Item className="dropdown-item-custom" href="/ContentMarketing">Content Marketing</NavDropdown.Item>
                     <NavDropdown.Item className="dropdown-item-custom" href="/PayPer">Pay Per Click</NavDropdown.Item>
                     <NavDropdown.Item className="dropdown-item-custom" href="/SpecialPAckages">Special Packages</NavDropdown.Item>

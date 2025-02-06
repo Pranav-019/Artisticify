@@ -12,6 +12,7 @@ function SpecialPackages() {
   const [setIsVisible] = useState(false);
   const [packages, setPackages] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [logoImages, setLogoImages] = useState([]);
   const loaderRef = useRef(null);
 
   const navigate=useNavigate()
@@ -45,6 +46,27 @@ function SpecialPackages() {
       }
     };
   }, []);
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const response = await fetch("https://artisticify-backend.vercel.app/api/design/get");
+        const data = await response.json();
+  
+        // Filter images by category (logo)
+        const logoImages = data.filter(img => img.category === 'specialpackages');
+  
+        // Set images to state (ensure we're accessing the correct URLs)
+        setLogoImages(logoImages.map(img => img.images).flat()); // Assuming 'images' is an array in the response
+  
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      }
+    };
+  
+    fetchImages(); // Fetch images when the component mounts
+  }, []);
+
 
   const fetchPackages = async () => {
     try {
@@ -87,7 +109,7 @@ function SpecialPackages() {
                <h4 className="fw-bold blue px-4 me-3 pb-2">Exclusive Special Packages Tailored for Your Business Needs</h4>
    
                <div className="text-secondary text">
-                 <p>At Artisticify, we understand that every business has unique goals and budget constraints. That’s why we offer special packages designed to provide comprehensive solutions for all your digital marketing and graphic design needs—without breaking the bank.
+                 <p>At Artisticify, we understand that every business has unique goals and budget constraints. That's why we offer special packages designed to provide comprehensive solutions for all your digital marketing and graphic design needs—without breaking the bank.
    
    </p>
    
@@ -119,27 +141,23 @@ function SpecialPackages() {
                  <div className="pt-5">
                    
                  </div>
-                 <h3 className="text-center  pt-3 fw-bold mb-5">See Our Creative Special Packages Creation</h3>
+                 <h3 className="text-center  pt-3 fw-bold mb-5">See Our Creative Special Package to tailored exclusively to your business needs</h3>
                  <Row>
-                   <Col  xs={12} md={4} className="mb-3">
-                  
-                     <div className="image-container1">
-                       <img src={flyer1} className="w-100 image-hover" />
-                     </div>
-                   </Col>
-                   <Col  xs={12} md={4} className="mb-3"><div className="image-container1">
-                     <img src={flyer2} className="w-100 image-hover" />
-                   </div></Col>
-                   <Col  xs={12} md={4} className="mb-3"><div className="image-container1">
-                     <img src={flyer3} className="w-100 image-hover" />
-                   </div></Col>
-                 </Row>
+         
+          {logoImages.map((image, index) => (
+            <Col xs={12} md={4} className="mb-3" key={index}>
+              <div className="image-container1">
+                <img src={image} className="w-100 image-hover" alt={`logo-${index}`} style={{width:"500px", height:"400px"}}/>
+              </div>
+            </Col>
+          ))}
+        </Row>
                </Container>
          
        </Container>
        <div className="content-container mt-5 pt-5">
    
-         <h3 className="text-center  pt-3 fw-bold mb-5"> Special Packages Packages</h3>
+         {/* <h3 className="text-center  pt-3 fw-bold mb-5"> Special Packages</h3> */}
         
    
          <div className="packages">
@@ -150,7 +168,19 @@ function SpecialPackages() {
       <p>{pkg.description}</p>
       <ul className="text pb-4">
         {pkg.features.map((feature, i) => (
-          <li key={i}>{feature}</li>
+          <li 
+            key={i} 
+            style={i === pkg.features.length - 1 ? {
+              fontWeight: 'bold',
+              color: '#31c031',
+              // backgroundColor: 'rgba(0, 123, 255, 0.1)',
+              padding: '5px',
+              borderRadius: '4px',
+              listStyleType: 'none',
+            } : {}}
+          >
+            {i === pkg.features.length - 1 ? '★' : ''}{feature}
+          </li>
         ))}
        </ul>
        {pkg.type === "Premium" ? (
