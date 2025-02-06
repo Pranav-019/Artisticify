@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import PosterImage from '../../assets/social media.png';
 import PosterImg from '../../assets/special package for marketing.jpg';
 import social1 from '../../assets/azwyxexsop.jpg'
-import social2 from '../../assets/istockphoto-1281819457-612x612.jpg'
 import social3 from '../../assets/bigstock-Web-Traffic-business-Technol-166581227.4b2ff768.jpg'
 import social4 from '../../assets/images.jpg'
 import fb from '../../assets/Facebook-marketing-strategy-that-works-in-2021-1.jpg'
@@ -13,7 +12,7 @@ import youtube from '../../assets/youtube.jpg'
 
 
 
-import { Button, Col, Container, Fade, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import FAQs from '../FAQs';
 import { SEO } from '../SEO';
@@ -125,7 +124,7 @@ function SocialMedia() {
               <Col md={6} className='my-5 p-5 m-auto'>
                 <h3>Develop Brand Awareness (Followers)</h3>
                 <h5 className='blue my-2'>Expand Your Reach & Grow Your Brand!</h5>
-                <p className='text-secondary mt-3'>Maximize your social media presence with our expert marketing services! We help you attract real, engaged followers by targeting the right audience based on demographics, interests, and behavior. With our strategic approach, you'll see increased brand awareness, higher engagement, and more referrals.
+                <p className='text-secondary mt-3'>Maximize your social media presence with our expert marketing services! We help you attract real, engaged followers by targeting the right audience based on demographics, interests, and behavior. With our strategic approach, you will see increased brand awareness, higher engagement, and more referrals.
 
                 </p>
                 <p className='text-secondary'>Let’s build your success—start growing today!</p>
@@ -160,7 +159,7 @@ function SocialMedia() {
               <Col md={6} className='p-5 m-auto'>
                 <h3>Increase Website Exposure (Traffic & Conversions)</h3>
                 <h5 className='blue my-2'>Boost Your Website Traffic & Drive More Sales!</h5>
-                <p className='text-secondary mt-3'>Increasing website traffic can be tough, but it directly impacts your leads and sales. That's where we come in! We design tailored social media campaigns with a clear focus on driving traffic. Through strategic retargeting, we re-engage recent website visitors, turning them into loyal customers.
+                <p className='text-secondary mt-3'>Increasing website traffic can be tough, but it directly impacts your leads and sales. That is where we come in! We design tailored social media campaigns with a clear focus on driving traffic. Through strategic retargeting, we re-engage recent website visitors, turning them into loyal customers.
 
                 </p>
                 <p className='text-secondary'>Let us help you increase conversions and grow your brand’s visibility with our proven strategies!</p>
@@ -334,8 +333,11 @@ function SocialMedia() {
 
       <div className="content-container mt-5 pt-5">
 
-        <h3 className="text-center  pt-3 fw-bold mb-5"> Social Media Packages</h3>
 
+      <div className='text-center fw-bold text-white my-5 shadow logo-package w-50 sm-w-75'>
+         <h3 className="text-center  fw-bold  pkcg"> Social Media Packages</h3>
+         </div>
+      
 
         <div className="packages">
           {packages.map((pkg, index) => (

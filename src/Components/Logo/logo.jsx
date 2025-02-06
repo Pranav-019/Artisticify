@@ -3,7 +3,6 @@ import "./logo.css"; // Ensure your CSS file path is correct
 import { Col, Container, Row } from "react-bootstrap";
 import LogoImg from '../../assets/Logo Design Serivces.jpg'
 import logo from '../../assets/istockphoto-1421037079-612x612-removebg-preview.png'
-import logo1 from '../../assets/logo.png'  // Fixed import for logo1
 import { useNavigate } from "react-router-dom";
 import { SEO } from '../SEO';
 const Logo = () => {
@@ -149,6 +148,9 @@ const Logo = () => {
           We assure you that you&rsquo;ll receive an outstanding logo design regardless of your budget. Our premium packages provide access to highly experienced designers and personalized support.
         </p>
 
+        <div className='text-center fw-bold text-white my-5 shadow logo-package w-50 sm-w-75'>
+         <h3 className="text-center  fw-bold  pkcg">  Logo Design Packages</h3>
+         </div>
         <div className="packages text">
           {packages.map((pkg, index) => (
             <div className="package mb-3 position-relative text" key={index}>

@@ -2,9 +2,7 @@ import  { useEffect, useRef, useState } from 'react';
 import PosterImage from '../../assets/packaging.png';
 // import PosterImg from '../../assets/Artboard 03.jpg';
 
-import flyer1 from '../../assets/flyer3.jpg';
-import flyer2 from '../../assets/flyer3.jpg';
-import flyer3 from '../../assets/flyer3.jpg';
+
 import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { SEO } from '../SEO';
@@ -109,7 +107,7 @@ function SpecialPackages() {
                <h4 className="fw-bold blue px-4 me-3 pb-2">Exclusive Special Packages Tailored for Your Business Needs</h4>
    
                <div className="text-secondary text">
-                 <p>At Artisticify, we understand that every business has unique goals and budget constraints. That's why we offer special packages designed to provide comprehensive solutions for all your digital marketing and graphic design needs—without breaking the bank.
+                 <p>At Artisticify, we understand that every business has unique goals and budget constraints. That is why we offer special packages designed to provide comprehensive solutions for all your digital marketing and graphic design needs—without breaking the bank.
    
    </p>
    
@@ -157,7 +155,9 @@ function SpecialPackages() {
        </Container>
        <div className="content-container mt-5 pt-5">
    
-         {/* <h3 className="text-center  pt-3 fw-bold mb-5"> Special Packages</h3> */}
+         <div className='text-center fw-bold text-white my-5 shadow logo-package w-50 '>
+         <h3 className="text-center  fw-bold  pkcg"> Special Packages</h3>
+         </div>
         
    
          <div className="packages">

@@ -194,7 +194,7 @@ function SearchEngine() {
                   <div className='increse-visi p-5 text-dark' id="text-block">
                     <div className='visibility '>
                       <h4 className='mt-5 fw-bold'>Desired Results</h4>
-                      <p className='mt-3'>We don't make false promises! With our expert SEO strategies, you can expect real, measurable results for all your business promotions, ensuring your campaigns achieve the success you desire.</p>
+                      <p className='mt-3'>We don&rsquo;t make false promises! With our expert SEO strategies, you can expect real, measurable results for all your business promotions, ensuring your campaigns achieve the success you desire.</p>
                     </div>
                   </div>
 
@@ -471,8 +471,11 @@ function SearchEngine() {
       </Container>
       <div className="content-container mt-5 pt-5">
 
-        <h3 className="text-center  pt-3 fw-bold mb-5"> SEO Services     Packages</h3>
+       
 
+        <div className='text-center fw-bold text-white my-5 shadow logo-package w-50 sm-w-75'>
+         <h3 className="text-center  fw-bold  pkcg">  SEO Services Packages</h3>
+         </div>
 
         <div className="packages">
           {packages.map((pkg, index) => (

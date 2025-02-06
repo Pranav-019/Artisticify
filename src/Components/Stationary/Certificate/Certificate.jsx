@@ -150,8 +150,11 @@ function Certificate() {
        </Container>
        <div className="content-container mt-5 pt-5">
    
-         <h3 className="text-center  pt-3 fw-bold mb-5"> Certificate Design Packages</h3>
+         
         
+      <div className='text-center fw-bold text-white my-5 shadow logo-package w-50 sm-w-75'>
+         <h3 className="text-center  fw-bold  pkcg">  Certificate Design Packages</h3>
+         </div>
    
          <div className="packages">
          {packages.map((pkg, index) => (

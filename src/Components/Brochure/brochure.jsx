@@ -1,9 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import BrochureImage from '../../assets/brochure.png';
 import brochureImg from '../../assets/brochure Design.jpg';
-import brochure1 from '../../assets/brochre1.png';
-import brochure2 from '../../assets/brochre1.png';
-import brochure3 from '../../assets/brochre1.png';
+
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SEO } from '../SEO';
@@ -193,8 +191,10 @@ function Brochure() {  // Change "brochure" to "Brochure"
 </Container>
 
       <div className="content-container mt-5 pt-5">
-
-        <h3 className="text-center  pt-3 fw-bold mb-5"> Brochure Design Packages</h3>
+      <div className='text-center fw-bold text-white my-5 shadow logo-package w-50 sm-w-75'>
+         <h3 className="text-center  fw-bold  pkcg"> Brochure Design Packages</h3>
+         </div>
+       
        
 
         <div className="packages">

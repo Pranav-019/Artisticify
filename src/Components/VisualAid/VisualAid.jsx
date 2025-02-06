@@ -151,9 +151,11 @@ function VisualAid() {
         </Container>
         <div className="content-container mt-5 pt-5">
 
-          <h3 className="text-center  pt-3 fw-bold mb-5">Visual Aid Design Packages</h3>
+        
 
-
+          <div className='text-center fw-bold text-white my-5 shadow logo-package w-50 sm-w-75'>
+         <h3 className="text-center  fw-bold  pkcg"> Visual Aid Design Packages</h3>
+         </div>
           <div className="packages">
             {packages.map((pkg, index) => (
               <div className="package mb-3 position-relative text" key={index}>

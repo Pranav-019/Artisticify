@@ -1,4 +1,4 @@
-import { useState } from 'react';
+
 import { useNavigate } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown, Offcanvas, Container } from 'react-bootstrap';
 import logo from '../assets/artisticify-logo.png'; 

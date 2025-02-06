@@ -8,61 +8,63 @@ import './uiux.css';
 import { useNavigate } from 'react-router-dom';
 import { SEO } from '../SEO';
 const uiux = () => {
-  const [setIsVisible] = useState(false);
-  const [packages, setPackages] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [logoImages, setLogoImages] = useState([]);
-  const loaderRef = useRef(null);
-const navigate=useNavigate()
-  useEffect(() => {
-    fetchPackages(); // Fetch package data on component mount
-  }, []);
+ const [isVisible, setIsVisible] = useState(false);
+const [packages, setPackages] = useState([]);
+const [loading, setLoading] = useState(false);
+const [logoImages, setLogoImages] = useState([]);
+const loaderRef = useRef(null);
+const navigate = useNavigate();
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 500);
-    return () => clearTimeout(timer);
-  }, []);
+useEffect(() => {
+  fetchPackages(); // Fetch package data on component mount
+}, []);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          loadMorePackages();
-        }
-      },
-      { threshold: 1.0 }
-    );
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setIsVisible(true);
+  }, 500);
+  return () => clearTimeout(timer);
+}, []);
+
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        loadMorePackages();
+      }
+    },
+    { threshold: 1.0 }
+  );
+  if (loaderRef.current) {
+    observer.observe(loaderRef.current);
+  }
+  return () => {
     if (loaderRef.current) {
-      observer.observe(loaderRef.current);
+      observer.unobserve(loaderRef.current);
     }
-    return () => {
-      if (loaderRef.current) {
-        observer.unobserve(loaderRef.current);
-      }
-    };
-  }, []);
+  };
+}, []);
 
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const response = await fetch("https://artisticify-backend.vercel.app/api/design/get");
-        const data = await response.json();
-  
-        // Filter images by category (logo)
-        const logoImages = data.filter(img => img.category === 'uiux');
-  
-        // Set images to state (ensure we're accessing the correct URLs)
-        setLogoImages(logoImages.map(img => img.images).flat()); // Assuming 'images' is an array in the response
-  
-      } catch (error) {
-        console.error("Error fetching images:", error);
-      }
-    };
-  
-    fetchImages(); // Fetch images when the component mounts
-  }, []);
+useEffect(() => {
+  const fetchImages = async () => {
+    try {
+      const response = await fetch(
+        "https://artisticify-backend.vercel.app/api/design/get"
+      );
+      const data = await response.json();
+
+      // Filter images by category (uiux)
+      const logoImages = data.filter((img) => img.category === "uiux");
+
+      // Set images to state (ensure we're accessing the correct URLs)
+      setLogoImages(logoImages.map((img) => img.images).flat()); // Assuming 'images' is an array in the response
+    } catch (error) {
+      console.error("Error fetching images:", error);
+    }
+  };
+
+  fetchImages(); // Fetch images when the component mounts
+}, []);
 
   const fetchPackages = async () => {
     try {
@@ -151,8 +153,11 @@ const navigate=useNavigate()
        </Container>
        <div className="content-container mt-5 pt-5">
    
-         <h3 className="text-center  pt-3 fw-bold mb-5"> UI/UX Design Packages</h3>
+        
          
+      <div className='text-center fw-bold text-white my-5 shadow logo-package w-50 sm-w-75'>
+         <h3 className="text-center  fw-bold  pkcg">  UI/UX Design Packages</h3>
+         </div>
    
          <div className="packages">
          {packages.map((pkg, index) => (

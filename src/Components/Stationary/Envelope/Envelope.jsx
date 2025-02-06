@@ -147,8 +147,11 @@ We specialize in custom envelope designs that align with your brand’s image, a
        </Container>
        <div className="content-container mt-5 pt-5">
    
-         <h3 className="text-center  pt-3 fw-bold mb-5"> Envelope Design Packages</h3>
+       
         
+      <div className='text-center fw-bold text-white my-5 shadow logo-package w-50 sm-w-75'>
+         <h3 className="text-center  fw-bold  pkcg">  Envelope Design Packages</h3>
+         </div>
    
          <div className="packages">
          {packages.map((pkg, index) => (

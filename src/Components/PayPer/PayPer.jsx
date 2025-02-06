@@ -2,9 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import PosterImage from '../../assets/ppc (1).png';
 import PosterImg from '../../assets/Pay Per Click Services.jpg';
 
-import flyer1 from '../../assets/flyer3.jpg';
-import flyer2 from '../../assets/flyer3.jpg';
-import flyer3 from '../../assets/flyer3.jpg';
+
 import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
@@ -158,7 +156,7 @@ function PayPer() {
                   <div className='my-4 shadow-none'>
                     <h3 className='mb-2'>Immediate Results</h3>
                     <p className='text-secondary'>
-                      It looks like you're comparing PPC with SEO. Do you want to add more examples of marketing strategies that provide immediate results, like social media ads or influencer marketing? 
+                      It looks like you&rsquo;re comparing PPC with SEO. Do you want to add more examples of marketing strategies that provide immediate results, like social media ads or influencer marketing? 
                     </p>
                   </div>
                 </div>
@@ -269,8 +267,10 @@ PPC offers measurable ROI, allowing you to track performance metrics like click-
       </Container>
       <div className="content-container mt-5 pt-5">
 
-        <h3 className="text-center  pt-3 fw-bold mb-5"> Pay-Per-Click marketing Packages</h3>
-
+       
+        <div className='text-center fw-bold text-white my-5 shadow logo-package w-50 sm-w-75'>
+         <h3 className="text-center  fw-bold  pkcg">  Pay-Per-Click marketing Packages</h3>
+         </div>
 
         <div className="packages">
           {packages.map((pkg, index) => (

@@ -2,9 +2,7 @@ import  { useEffect, useRef, useState } from 'react';
 import PosterImage from '../../../assets/menu card,.png';
 import PosterImg from '../../../assets/Menu Card Design Services (1).jpg';
 
-import flyer1 from '../../../assets/flyer3.jpg';
-import flyer2 from '../../../assets/flyer3.jpg';
-import flyer3 from '../../../assets/flyer3.jpg';
+
 import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { SEO } from '../../SEO';
@@ -177,8 +175,11 @@ function MenuCard() {
        </Container>
        <div className="content-container mt-5 pt-5">
    
-         <h3 className="text-center  pt-3 fw-bold mb-5"> Menu Card Design Packages</h3>
         
+        
+      <div className='text-center fw-bold text-white my-5 shadow logo-package w-50 sm-w-75'>
+         <h3 className="text-center  fw-bold  pkcg">  Menu Card Design Packages</h3>
+         </div>
    
          <div className="packages">
          {packages.map((pkg, index) => (

@@ -2,9 +2,7 @@ import  { useEffect, useRef, useState } from 'react';
 import PackagingImage from '../../assets/packaging.jpg';
 import packImg from '../../assets/Packaging design newww.jpg';
 
-import flyer1 from '../../assets/flyer3.jpg';
-import flyer2 from '../../assets/flyer3.jpg';
-import flyer3 from '../../assets/flyer3.jpg';
+
 import { Col, Container, Row } from 'react-bootstrap';
 import './Packaging.css';
 import { useNavigate } from 'react-router-dom';
@@ -151,8 +149,10 @@ Cooperate with us for innovative, world-class product packaging design!
     </Container>
     <div className="content-container mt-5 pt-5">
 
-      <h3 className="text-center  pt-3 fw-bold mb-5">Packaging Design Packages</h3>
-     
+      
+      <div className='text-center fw-bold text-white my-5 shadow logo-package w-50 sm-w-75'>
+         <h3 className="text-center  fw-bold  pkcg">  Packaging Design Packages</h3>
+         </div>
 
       <div className="packages">
       {packages.map((pkg, index) => (
