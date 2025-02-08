@@ -121,7 +121,7 @@ const Footer = () => {
           </Col>
 
           {/* Quick Links */}
-          <Col md={2} sm={6}>
+          <Col xs={6} sm={6} md={2} >
             <h5>Quick Links</h5>
             <ul className="list-unstyled">
               <li>
@@ -152,7 +152,7 @@ const Footer = () => {
           </Col>
 
           {/* Business Hours */}
-          <Col md={3} sm={6}>
+          <Col xs={6} sm={6} md={3} >
             <h5>Business Hours</h5>
             <p>Monday - Saturday</p>
             <p>09:00 AM - 07:00 PM</p>
