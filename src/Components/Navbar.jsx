@@ -1,7 +1,7 @@
 
-import { useNavigate } from 'react-router-dom';
+import { parsePath, useNavigate } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown, Offcanvas, Container } from 'react-bootstrap';
-import logo from '../assets/artisticify-logo.png'; 
+import logo from '../assets/artisticify-logo-tagline.png'; 
 import '../App.css';
 import SEO from './SEO';
 
@@ -13,10 +13,10 @@ function ArtisticifyNavbar() {
       <SEO title="Artisticify" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       
       <div className="bg-body-tertiary">
-        <Navbar expand="lg" sticky="top" className="bg-body-tertiary">
+      <Navbar expand="lg" fixed="top" className="bg-body-tertiary" >
           <Container>
             <Navbar.Brand href="/">
-              <img src={logo} alt="Artisticify Logo" style={{ height: '42.5px' }} />
+              <img src={logo} alt="Artisticify Logo" style={{ height: '60px' }} />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="offcanvasNavbar" />
             <Navbar.Offcanvas

@@ -75,7 +75,7 @@ function SpecialPackages() {
       const specialpackagesPackages = data.filter(pkg => pkg.category === 'specialpackages');
 
       // Limit the packages to 3 (Basic, Standard, Premium)
-      setPackages(specialpackagesPackages.slice(0, 3));
+      setPackages(specialpackagesPackages);
     } catch (error) {
       console.error("Error fetching packages:", error);
     }
@@ -104,7 +104,7 @@ function SpecialPackages() {
          <Row className="mb-5">
            <Col sm={12} md={6}>
              <div className="text-justify">
-               <h4 className="fw-bold blue px-4 me-3 pb-2">Exclusive Special Packages Tailored for Your Business Needs</h4>
+               <h4 className="fw-bold blue px-4 me-4 pb-2">Exclusive Special Packages Tailored for Your Business Needs</h4>
    
                <div className="text-secondary text">
                  <p>At Artisticify, we understand that every business has unique goals and budget constraints. That is why we offer special packages designed to provide comprehensive solutions for all your digital marketing and graphic design needs—without breaking the bank.
@@ -161,36 +161,30 @@ function SpecialPackages() {
         
    
          <div className="packages">
-         {packages.map((pkg, index) => (
-       <div className="package mb-3 position-relative text" key={index}>
-       <div className="pb-5">
-      <h3 className="text-center">{pkg.name}</h3>
-      <p>{pkg.description}</p>
-      <ul className="text pb-4">
-        {pkg.features.map((feature, i) => (
-          <li 
-            key={i} 
-            style={i === pkg.features.length - 1 ? {
-              fontWeight: 'bold',
-              color: '#31c031',
-              // backgroundColor: 'rgba(0, 123, 255, 0.1)',
-              padding: '5px',
-              borderRadius: '4px',
-              listStyleType: 'none',
-            } : {}}
-          >
-            {i === pkg.features.length - 1 ? '★' : ''}{feature}
-          </li>
-        ))}
-       </ul>
-       {pkg.type === "Premium" ? (
-  <h4 className="text-center blue fw-bold price">Customizable</h4>
-) : (
-  <h4 className="text-center blue fw-bold price">{pkg.price} /-</h4>
-)}
-       <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={() => navigate('/contact')}>
-        Enquire Now
-       </button>
+  {packages.map((pkg, index) => (
+    <div className="package mb-3 position-relative text" key={index} style={{width:"325px"}}>
+      <div className="pb-5">
+        <h3 className="text-center">{pkg.name}</h3>
+        <p>{pkg.description}</p>
+        <ul className="text pb-5" style={{ marginBottom: '70px' }}>
+  {pkg.features.map((feature, i) => (
+    <li key={i}>
+      {feature}
+    </li>
+  ))}
+</ul>
+        {pkg.type.toLowerCase() === "premium" ? (
+          <h4 className="text-center blue fw-bold price "style={{marginTop:"20px"}} >
+            Starting From Rs {pkg.price}/- Per month
+          </h4>
+        ) : (
+          <h4 className="text-center blue fw-bold price">
+            {pkg.price} /-
+          </h4>
+        )}
+        <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={() => navigate('/contact')}>
+          Enquire Now
+        </button>
        </div>
       </div>
        ))}

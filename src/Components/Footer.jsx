@@ -148,6 +148,39 @@ const Footer = () => {
                   Our Work
                 </a>
               </li>
+
+              <li>
+                <a
+                  href="/Terms.pdf"
+                  className="text-decoration-none text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                 Terms of use
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="/Privacy.pdf"
+                  className="text-decoration-none text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="/Refund.pdf"
+                  className="text-decoration-none text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Refund Policy
+                </a>
+              </li>
             </ul>
           </Col>
 
