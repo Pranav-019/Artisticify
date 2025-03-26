@@ -212,9 +212,28 @@ function Contact() {
                       onChange={handleChange}
                     >
                       <option value="Select">Select</option>
-                      <option value="Design Services">Design Services</option>
-                      <option value="Digital Marketing Services">Digital Marketing Services</option>
-                      <option value="Special Package (combined services)">Special Package (combined services)</option>
+  <option value="Logo Design">Logo Design</option>
+  <option value="Brochure Design"> Brochure Design</option>
+  <option value="Packaging Design">Packaging Design</option>
+  <option value="Flyer Design">Flyer Design</option>
+  <option value="Poster Design">Poster Design</option>
+  <option value="UI/UX Design">UI/UX Design</option>
+  <option value="Magazine Design">Magazine Design</option>
+  <option value="Visual Aid Design"> Visual Aid Design</option>
+  <option value="Calendar Design"> Calendar Design</option>
+  <option value="Icon Design">Icon Design</option>
+  <option value="Stationary Design"> Stationary Design</option>
+  <option value="Letter Head Design"> Letter Head Design</option>
+  <option value="Envelope Design"> Envelope Design</option>
+  <option value="Visiting Card Design"> Visiting Card Design</option>
+  <option value="Certificate Design"> Certificate Design</option>
+  <option value="Menu Card Design"> Menu Card Design</option>
+  <option value="SEO"> SEO</option>
+  <option value="Social Media"> Social Media</option>
+  <option value="Content Marketing"> Content Marketing</option>
+  <option value="Pay Per Click"> Pay Per Click</option>
+
+  <option value="Special Package (combined services)">Special Package (combined services)</option>
                     </Form.Control>
 
                     <Form.Group className="mb-2 mt-2" controlId="exampleForm.ControlTextarea1">
