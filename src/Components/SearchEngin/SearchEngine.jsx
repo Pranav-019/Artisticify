@@ -97,7 +97,27 @@ function SearchEngine() {
   };
   return (
     <div className='text'>
-      <SEO title="SEO" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+      <SEO title="SEO" description="digital marketing
+marketing digital marketing
+digital marketing marketing
+digital marketing digital marketing
+a digital marketing
+digital marketing service
+performance marketing
+digital marketing company
+digital marketing agency
+top digital marketing companies
+services for digital marketing
+digital marketing near me
+digital marketing agency near me
+digital marketing and advertising companies
+best digital marketing agencies
+best digital marketing companies
+top digital marketing agency
+marketing agency digital
+digital agency marketing
+network marketer
+digital marketing and advertising agency." />
       <div className='about'>
         <div className='image-container mb-5'>
           <img src={PosterImg} className='main-about img-fluid mb-5' />

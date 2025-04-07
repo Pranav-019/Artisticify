@@ -13,7 +13,7 @@ function ArtisticifyNavbar() {
       <SEO title="Artisticify" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       
       <div className="bg-body-tertiary">
-      <Navbar expand="lg" fixed="top" className="bg-body-tertiary" >
+      <Navbar expand="lg" sticky="top" className="bg-body-tertiary" >
           <Container>
             <Navbar.Brand href="/">
               <img src={logo} alt="Artisticify Logo" style={{ height: '60px' }} />
@@ -41,6 +41,7 @@ function ArtisticifyNavbar() {
                       <NavDropdown.Item className="dropdown-item-custom" href="/Flyer">Flyer Design</NavDropdown.Item>
                       <NavDropdown.Item className="dropdown-item-custom" href="/Poster">Poster Design</NavDropdown.Item>
                       <NavDropdown.Item className="dropdown-item-custom" href="/UIUX">UI/UX Design</NavDropdown.Item>
+                      <NavDropdown.Item className="dropdown-item-custom" href="/Websitedesign">Website Design</NavDropdown.Item>
                       <NavDropdown.Item className="dropdown-item-custom" href="/Magazine">Magazine Design</NavDropdown.Item>
                       <NavDropdown.Item className="dropdown-item-custom" href="/VisualAid">Visual Aid Design</NavDropdown.Item>
                       <NavDropdown.Item className="dropdown-item-custom" href="/Calender">Calendar Design</NavDropdown.Item>
@@ -61,6 +62,7 @@ function ArtisticifyNavbar() {
                     <NavDropdown.Item className="dropdown-item-custom" href="/SoacialMedia">Social Media</NavDropdown.Item>
                     <NavDropdown.Item className="dropdown-item-custom" href="/ContentMarketing">Content Marketing</NavDropdown.Item>
                     <NavDropdown.Item className="dropdown-item-custom" href="/PayPer">Pay Per Click</NavDropdown.Item>
+                    <NavDropdown.Item className="dropdown-item-custom" href="/Googlemybusiness">Google My Business</NavDropdown.Item>
                     <NavDropdown.Item className="dropdown-item-custom" href="/SpecialPAckages">Special Packages</NavDropdown.Item>
                   </NavDropdown>
                   
