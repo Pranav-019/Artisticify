@@ -1,10 +1,7 @@
 import  { useEffect, useRef, useState } from 'react';
 import PackagingImage from '../../assets/packaging.jpg';
 import packImg from '../../assets/Packaging design newww.jpg';
-
-
 import { Col, Container, Row } from 'react-bootstrap';
-// import './Packaging.css';
 import { useNavigate } from 'react-router-dom';
 import { SEO } from '../SEO';
 const Packaging = () => {
