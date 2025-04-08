@@ -4,7 +4,7 @@ import packImg from '../../assets/Packaging design newww.jpg';
 
 
 import { Col, Container, Row } from 'react-bootstrap';
-import './Packaging.css';
+// import './Packaging.css';
 import { useNavigate } from 'react-router-dom';
 import { SEO } from '../SEO';
 const Packaging = () => {
