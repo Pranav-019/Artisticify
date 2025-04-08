@@ -60,7 +60,7 @@ const Packaging = () => {
       }
     };
   
-    fetchImages(); // Fetch images when the component mounts
+    fetchImages(); // Fetch images when the component mounts.
   }, []);
 
   const fetchPackages = async () => {
@@ -179,4 +179,4 @@ Cooperate with us for innovative, world-class product packaging design!
  );
 };
   
-  export default Packaging;
+  export default Packaging; 
