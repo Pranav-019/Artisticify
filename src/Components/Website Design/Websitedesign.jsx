@@ -56,13 +56,13 @@ useEffect(() => {
       const logoImages = data.filter((img) => img.category === "uiux");
 
       // Set images to state (ensure we're accessing the correct URLs)
-      setLogoImages(logoImages.map((img) => img.images).flat()); // Assuming 'images' is an array in the response
+      setLogoImages(logoImages.map((img) => img.images).flat());
     } catch (error) {
       console.error("Error fetching images:", error);
     }
   };
 
-  fetchImages(); // Fetch images when the component mounts
+  fetchImages();
 }, []);
 
   const fetchPackages = async () => {
