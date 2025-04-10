@@ -1,6 +1,6 @@
 import  { useEffect, useRef, useState } from 'react';
 import PackagingImage from '../../assets/websitedesign.png';
-import uiuxImg from '../../assets/ui ux design 01.jpg';
+import uiuxImg from '../../assets/websitedesign1.png';
 
 
 import { Col, Container, Row } from 'react-bootstrap';
