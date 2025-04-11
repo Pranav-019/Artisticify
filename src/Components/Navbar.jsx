@@ -59,7 +59,7 @@ function ArtisticifyNavbar() {
                   
                   <NavDropdown title="Digital Marketing" id="marketingDropdown" className="nav-link-custom custom-dropdown">
                     <NavDropdown.Item className="dropdown-item-custom" href="/SearchEngine">SEO</NavDropdown.Item>
-                    <NavDropdown.Item className="dropdown-item-custom" href="/SoacialMedia">Social Media</NavDropdown.Item>
+                    <NavDropdown.Item className="dropdown-item-custom" href="/SocialMedia">Social Media</NavDropdown.Item>
                     <NavDropdown.Item className="dropdown-item-custom" href="/ContentMarketing">Content Marketing</NavDropdown.Item>
                     <NavDropdown.Item className="dropdown-item-custom" href="/PayPer">Pay Per Click</NavDropdown.Item>
                     <NavDropdown.Item className="dropdown-item-custom" href="/Googlemybusiness">Google My Business</NavDropdown.Item>
