@@ -15,9 +15,8 @@ import { RiCustomerService2Fill } from 'react-icons/ri';
 
 import PosterImg from '../../assets/gmbbanner.jpg';
 import gmbDashboard from '../../assets/gmb-dashboard.jpg';
-// import localSearch from '../../assets/local-search.jpg';
 import reviewsImg from '../../assets/reviews.jpg';
-import postsImg from '../../assets/gmb-posts.jpg'; // Added new image for posts section
+import postsImg from '../../assets/gmb-posts.jpg';
 
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -25,22 +24,13 @@ import FAQs from '../FAQs';
 import { SEO } from '../SEO';
 
 function Googlemybusiness() {
-  const [setIsVisible] = useState(false);
   const [packages, setPackages] = useState([]);
   const [loading, setLoading] = useState(false);
   const loaderRef = useRef(null);
-
   const navigate = useNavigate();
   
   useEffect(() => {
     fetchPackages();
-  }, []);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 500);
-    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -116,7 +106,6 @@ function Googlemybusiness() {
       </div>
       
       <h2 className="text-center fw-bold text-white my-5 shadow logo-package">
-        {/* <FaGoogle className="me-3" /> */}
         Get Found Locally – Attract More Customers with Google
       </h2>
 
@@ -190,12 +179,6 @@ function Googlemybusiness() {
             <Col md={6}>
               <div className="p-4 text-center">
                 <FaSearchLocation size={150} className="text-primary mb-3" />
-                {/* <img 
-                  src={localSearch} 
-                  className="img-fluid rounded shadow-sm mt-3" 
-                  alt="Local search results" 
-                  style={{ maxHeight: '250px' }}
-                /> */}
               </div>
             </Col>
           </Row>
@@ -338,7 +321,6 @@ function Googlemybusiness() {
       <div className="content-container mt-5 pt-5">
         <div className='text-center fw-bold text-white my-5 shadow logo-package w-50 sm-w-75'>
           <h3 className="text-center fw-bold pkcg">
-            {/* <FaGoogle className="me-3" /> */}
             Google My Business Packages
           </h3>
         </div>
@@ -368,7 +350,6 @@ function Googlemybusiness() {
                   className="pck-btn rounded-pill d-flex justify-content-center mx-auto" 
                   onClick={() => navigate('/contact')}
                 >
-                  {/* <RiCustomerService2Fill className="me-2" /> */}
                   Enquire Now
                 </button>
               </div>

@@ -53,7 +53,7 @@ useEffect(() => {
       const data = await response.json();
 
       // Filter images by category (uiux)
-      const logoImages = data.filter((img) => img.category === "uiux");
+      const logoImages = data.filter((img) => img.category === "website");
 
       // Set images to state (ensure we're accessing the correct URLs)
       setLogoImages(logoImages.map((img) => img.images).flat());
