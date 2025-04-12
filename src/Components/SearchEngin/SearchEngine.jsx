@@ -29,7 +29,7 @@ import seo9 from '../../assets/report.jpg';
 
   
 import { Col, Container, Row } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import Success1 from '../../assets/Group-56-1.png'
 import Success2 from '../../assets/Group-57-1.png'
@@ -52,7 +52,7 @@ function SearchEngine() {
     }, 500);
     return () => clearTimeout(timer);
   }, []);
-
+ 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -95,9 +95,32 @@ function SearchEngine() {
       setLoading(false);
     }, 1000); // Simulate loading delay
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className='text'>
-      <SEO title="SEO" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+      <SEO title="SEO" description="digital marketing
+marketing digital marketing
+digital marketing marketing
+digital marketing digital marketing
+a digital marketing
+digital marketing service
+performance marketing
+digital marketing company
+digital marketing agency
+top digital marketing companies
+services for digital marketing
+digital marketing near me
+digital marketing agency near me
+digital marketing and advertising companies
+best digital marketing agencies
+best digital marketing companies
+top digital marketing agency
+marketing agency digital
+digital agency marketing
+network marketer
+digital marketing and advertising agency." />
       <div className='about'>
         <div className='image-container mb-5'>
           <img src={PosterImg} className='main-about img-fluid mb-5' />

@@ -46,6 +46,8 @@ import Collection from "./Components/Collection";
 import Graphicpanel from "./Components/Graphicpanel";
 import Awesome from "./Components/Awesome";
 import ReverseCara from "./Components/ReverseCara";
+import Googlemybusiness from "./Components/Google My Business/Googlemybusiness";
+import Websitedesign from "./Components/Website Design/Websitedesign";
 
 
 
@@ -92,11 +94,13 @@ const App = () => {
       </main>
 
     </div>
+    <OurService/>
     <Awesome/>
+    
     <Graphicpanel/>
     <ReverseCara/>
         <Collection/>
-    <OurService/>
+    
     
     <FAQs/>
    </div>
@@ -124,6 +128,7 @@ const Root = () => (
       <Route path="/poster" element={<Poster />} />
       <Route path="/exhibition" element={<Exhibition />} />
       <Route path="/uiux" element={<UIUX />} />
+      <Route path="/Websitedesign" element={<Websitedesign />} />
       <Route path="/icon" element={<Icon />} />
       <Route path="/stationary" element={<Stationary />} />
       <Route path="/FAQs" element={<FAQs/>} />
@@ -132,10 +137,11 @@ const Root = () => (
 
       {/* ************************Degital Marketing*********************** */}
       <Route path="/SearchEngine" element={<SearchEngine />} />
-      <Route path="/SoacialMedia" element={<SocialMedia />} />
+      <Route path="/SocialMedia" element={<SocialMedia />} />
       <Route path="/ContentMarketing" element={<ContentMarketing />} />
       <Route path="/PayPer" element={<PayPer />} />
       <Route path="/SpecialPAckages" element={<SpecialPackages/>} />
+      <Route path="/Googlemybusiness" element={<Googlemybusiness/>} />
       <Route path="/GrowBusiness" element={<GrowBusiness />} />
 
       <Route path="/Magazine" element={<Magazine />} />

@@ -1,7 +1,7 @@
 
-import { useNavigate } from 'react-router-dom';
+import { parsePath, useNavigate } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown, Offcanvas, Container } from 'react-bootstrap';
-import logo from '../assets/artisticify-logo.png'; 
+import logo from '../assets/artisticify-logo-tagline.png'; 
 import '../App.css';
 import SEO from './SEO';
 
@@ -13,10 +13,10 @@ function ArtisticifyNavbar() {
       <SEO title="Artisticify" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       
       <div className="bg-body-tertiary">
-        <Navbar expand="lg" sticky="top" className="bg-body-tertiary">
+      <Navbar expand="lg" sticky="top" className="bg-body-tertiary" >
           <Container>
             <Navbar.Brand href="/">
-              <img src={logo} alt="Artisticify Logo" style={{ height: '42.5px' }} />
+              <img src={logo} alt="Artisticify Logo" style={{ height: '60px' }} />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="offcanvasNavbar" />
             <Navbar.Offcanvas
@@ -41,6 +41,7 @@ function ArtisticifyNavbar() {
                       <NavDropdown.Item className="dropdown-item-custom" href="/Flyer">Flyer Design</NavDropdown.Item>
                       <NavDropdown.Item className="dropdown-item-custom" href="/Poster">Poster Design</NavDropdown.Item>
                       <NavDropdown.Item className="dropdown-item-custom" href="/UIUX">UI/UX Design</NavDropdown.Item>
+                      <NavDropdown.Item className="dropdown-item-custom" href="/Websitedesign">Website Design</NavDropdown.Item>
                       <NavDropdown.Item className="dropdown-item-custom" href="/Magazine">Magazine Design</NavDropdown.Item>
                       <NavDropdown.Item className="dropdown-item-custom" href="/VisualAid">Visual Aid Design</NavDropdown.Item>
                       <NavDropdown.Item className="dropdown-item-custom" href="/Calender">Calendar Design</NavDropdown.Item>
@@ -58,9 +59,10 @@ function ArtisticifyNavbar() {
                   
                   <NavDropdown title="Digital Marketing" id="marketingDropdown" className="nav-link-custom custom-dropdown">
                     <NavDropdown.Item className="dropdown-item-custom" href="/SearchEngine">SEO</NavDropdown.Item>
-                    <NavDropdown.Item className="dropdown-item-custom" href="/SoacialMedia">Social Media</NavDropdown.Item>
+                    <NavDropdown.Item className="dropdown-item-custom" href="/SocialMedia">Social Media</NavDropdown.Item>
                     <NavDropdown.Item className="dropdown-item-custom" href="/ContentMarketing">Content Marketing</NavDropdown.Item>
                     <NavDropdown.Item className="dropdown-item-custom" href="/PayPer">Pay Per Click</NavDropdown.Item>
+                    <NavDropdown.Item className="dropdown-item-custom" href="/Googlemybusiness">Google My Business</NavDropdown.Item>
                     <NavDropdown.Item className="dropdown-item-custom" href="/SpecialPAckages">Special Packages</NavDropdown.Item>
                   </NavDropdown>
                   

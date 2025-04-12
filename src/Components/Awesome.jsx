@@ -88,19 +88,7 @@ function Awesome() {
   return (
     <div className='' style={{ marginTop: '120px' }}>
       <Container>
-      <div className='text-center my-5'>
-          <h2 className='fw-bold' style={{ color: "#094167" }}>Creative Graphic Design & Digital Marketing Company in India</h2>
-          <h4 className='py-3 fw-semibold d-flex justify-content-center text-center w-75 mx-auto'>
-            Unlock Creativity with Our Comprehensive Design & Digital Marketing Solutions—All Under One Roof!
-          </h4>
-
-          <p className='text-secondary'>
-            From stunning web designs to impactful print materials and result-driven digital marketing strategies, we provide quality solutions tailored to elevate your brand.
-            Since 2024, our expertise has spanned diverse industries, delivering innovative designs and strategic marketing campaigns that leave a lasting impression. Whether you need branding, marketing collateral, social media promotions, or digital assets, we ensure precision, creativity, and performance-driven results.
-            Let’s bring your ideas to life with designs that captivate and marketing strategies that convert!
-          </p>
-        </div>
-
+      
         <div className='d-flex justify-content-between py-5'>
           <Button
             variant=""
