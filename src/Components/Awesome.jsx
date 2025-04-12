@@ -62,6 +62,31 @@ function Awesome() {
     }
   }, [visibleIndex, extendedCards.length]);
 
+<<<<<<< HEAD
+  return (
+    <div className='' style={{ marginTop: '120px' }}>
+      <Container>
+      
+        <div className='d-flex justify-content-between py-5'>
+          <Button
+            variant=""
+            className={`destiBtn rounded-pill py-3 mx-1 ${activeButton === 'LeftArrow' ? 'active-btn' : ''}`}
+            onClick={() => handleButtonClick('LeftArrow')}
+          >
+            <FaArrowLeft />
+          </Button>
+
+          <Button
+            variant=""
+            className={`destiBtn rounded-pill py-3 mx-1 ${activeButton === 'RightArrow' ? 'active-btn' : ''}`}
+            onClick={() => handleButtonClick('RightArrow')}
+          >
+            <FaArrowRight />
+          </Button>
+        </div>
+
+        <div className="overflow-hidden">
+=======
   const [cardsPerView, setCardsPerView] = useState(3);
 
   useEffect(() => {
@@ -112,6 +137,7 @@ function Awesome() {
 
         {/* Carousel */}
         <div className="overflow-hidden" style={{ width: "80%" }}>
+>>>>>>> 0d7799c9943632cddc39b6d02bf5432c0b375816
           <div
             className="card-container"
             style={{

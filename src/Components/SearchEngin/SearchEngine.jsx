@@ -29,7 +29,7 @@ import seo9 from '../../assets/report.jpg';
 
   
 import { Col, Container, Row } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import Success1 from '../../assets/Group-56-1.png'
 import Success2 from '../../assets/Group-57-1.png'
@@ -52,7 +52,7 @@ function SearchEngine() {
     }, 500);
     return () => clearTimeout(timer);
   }, []);
-
+ 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -95,6 +95,9 @@ function SearchEngine() {
       setLoading(false);
     }, 1000); // Simulate loading delay
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className='text'>
       <SEO title="SEO" description="digital marketing
