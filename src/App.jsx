@@ -49,6 +49,8 @@ import Googlemybusiness from "./Components/Google My Business/Googlemybusiness";
 import Websitedesign from "./Components/Website Design/Websitedesign";
 import Count from "./Components/Counter/counter";
 import StepsDiagram from "./Components/StepsDiagram/StepsDiagram";
+import Blog from "./Components/Blog/blog";
+import BlogDetail from "./Components/Blog/blogdescription";
 
 const App = () => {
   // Create a reference to the contact form section
@@ -118,6 +120,8 @@ const Root = () => (
         <Route path="/" element={<App />} />
         <Route path="/about" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blogdescription" element={<BlogDetail />} />
 
         <Route path="/home" element={<App />} />
         <Route path="/design" element={<Design />} />
