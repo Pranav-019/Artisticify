@@ -8,13 +8,13 @@ import {
 
 const steps = [
   {
-    title: "01. Conduct ",
+    title: "01. Research ",
     icon: <FaSearchengin   size={40} color="white" />,
     bgColor: "#f9c74f",
     textColor: "#f59e0b",
   },
   {
-    title: "02. Execute",
+    title: "02. Execution",
     icon: <FaLaptopCode size={40} color="white" />,
     bgColor: "#90e0ef",
     textColor: "#3cb4ac",
@@ -26,7 +26,7 @@ const steps = [
     textColor: "#ef4444",
   },
   {
-    title: "04. Achieve",
+    title: "04. +ROI",
     icon: <FaChartLine size={40} color="white" />,
     bgColor: "#adb5bd",
     textColor: "#333",
@@ -196,6 +196,7 @@ const StepsDiagram = () => {
                 marginTop: "15px",
                 color: step.textColor,
                 fontWeight: "600",
+                fontSize:"20px",
                 textAlign: "center",
               }}
             >

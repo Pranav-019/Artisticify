@@ -1,9 +1,9 @@
-
 import { parsePath, useNavigate } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown, Offcanvas, Container } from 'react-bootstrap';
-import logo from '../assets/artisticify-logo-tagline.png'; 
+import logo from '../assets/artisticify-logo-tagline.png';
 import '../App.css';
 import SEO from './SEO';
+import { FaArrowRight } from 'react-icons/fa6';
 
 function ArtisticifyNavbar() {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ function ArtisticifyNavbar() {
       <SEO title="Artisticify" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       
       <div className="bg-body-tertiary">
-      <Navbar expand="lg" sticky="top" className="bg-body-tertiary" >
+        <Navbar expand="lg" sticky="top" className="bg-body-tertiary">
           <Container>
             <Navbar.Brand href="/">
               <img src={logo} alt="Artisticify Logo" style={{ height: '60px' }} />
@@ -29,10 +29,10 @@ function ArtisticifyNavbar() {
                 <Offcanvas.Title id="offcanvasNavbarLabel"></Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-2">
+                <Nav className=" justify-content-end flex-grow-1 pe-2">
                   <Nav.Link className="nav-link-custom" onClick={() => navigate('/home')}>Home</Nav.Link>
                   <Nav.Link className="nav-link-custom" onClick={() => navigate('/about')}>About</Nav.Link>
-                  
+
                   <NavDropdown title="Design" id="designDropdown" className="nav-link-custom custom-dropdown">
                     <div className="dropdown-scroll">
                       <NavDropdown.Item className="dropdown-item-custom" href="/logo">Logo Design</NavDropdown.Item>
@@ -46,7 +46,6 @@ function ArtisticifyNavbar() {
                       <NavDropdown.Item className="dropdown-item-custom" href="/VisualAid">Visual Aid Design</NavDropdown.Item>
                       <NavDropdown.Item className="dropdown-item-custom" href="/Calender">Calendar Design</NavDropdown.Item>
                       <NavDropdown.Item className="dropdown-item-custom" href="/Icon">Icon Design</NavDropdown.Item>
-                      
                       <NavDropdown.Divider />
                       <NavDropdown.Item className="text-danger dropdown-item-custom">Stationary Design 🡇</NavDropdown.Item>
                       <NavDropdown.Item className="dropdown-item-custom" href="/Stationary/LetterHead">Letter Head Design</NavDropdown.Item>
@@ -56,7 +55,7 @@ function ArtisticifyNavbar() {
                       <NavDropdown.Item className="dropdown-item-custom" href="/Stationary/MenuCard">Menu Card Design</NavDropdown.Item>
                     </div>
                   </NavDropdown>
-                  
+
                   <NavDropdown title="Digital Marketing" id="marketingDropdown" className="nav-link-custom custom-dropdown">
                     <NavDropdown.Item className="dropdown-item-custom" href="/SearchEngine">SEO</NavDropdown.Item>
                     <NavDropdown.Item className="dropdown-item-custom" href="/SocialMedia">Social Media</NavDropdown.Item>
@@ -65,9 +64,11 @@ function ArtisticifyNavbar() {
                     <NavDropdown.Item className="dropdown-item-custom" href="/Googlemybusiness">Google My Business</NavDropdown.Item>
                     <NavDropdown.Item className="dropdown-item-custom" href="/SpecialPAckages">Special Packages</NavDropdown.Item>
                   </NavDropdown>
-                  
+
+                  <Nav.Link className="nav-link-custom" onClick={() => navigate('/blog')}>Blog</Nav.Link>
                   <Nav.Link className="nav-link-custom" onClick={() => navigate('/our-work')}>Our Work</Nav.Link>
                   <Nav.Link className="nav-link-custom" onClick={() => navigate('/Contact')}>Contact</Nav.Link>
+                  <Nav.Link className="nav-link-custom " style={{color:"#13357B"}}  onClick={() => navigate('/our-work')}>Let's Talk<FaArrowRight /></Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
@@ -84,10 +85,10 @@ function ArtisticifyNavbar() {
       <style>
         {`
           .nav-link-custom {
-            padding-left: 50px !important;
+            padding-left: 30px !important;  /* Reduced padding to fit all links in one line */
             font-size: 18px;
             font-weight: bold;
-              
+            white-space: nowrap;  /* Prevent text from wrapping */
           }
 
           .dropdown-scroll {
@@ -110,8 +111,16 @@ function ArtisticifyNavbar() {
           }
 
           /* Custom Offcanvas Styles */
-           .offcanvas .btn-close {
+          .offcanvas .btn-close {
             filter: invert(1); /* Makes close button white */
+          }
+
+          /* Navbar Links on the same line */
+          .navbar-nav {
+            display: flex;
+            align-items: center;  /* Ensures vertical alignment */
+            justify-content: space-between; /* Distribute items evenly */
+            flex-wrap: nowrap;  /* Prevent line breaks */
           }
         `}
       </style>

@@ -1215,7 +1215,7 @@ h2.text-center {
 }
 
 /* Match height for all columns */
-.row > div {
+.custom-col {
   display: flex;
 }
 

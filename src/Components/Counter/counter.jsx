@@ -76,16 +76,16 @@ function Count() {
           <div className="count-text py-3">
             <Row>
               {boxData.map((box, index) => (
-                <Col key={index} xs={12} sm={12} md={6} lg={3} xl={3} xxl={3} className="my-2">
+                <Col key={index} xs={12} sm={12} md={6} lg={3} xl={3} xxl={3} className="my-2 custom-col">
                   <motion.div
                     initial="hidden"
                     whileInView="visible"
                     variants={scrollVariants}
                     transition={{ duration: 1 }}
                     viewport={{ once: false }}
-                    className="w-100"
+                    className="w-100 "
                   >
-                    <div className="blue-bg-transpernt text-center my-3 custom-responsive-div">
+                    <div className="blue-bg-transpernt text-center my-3 custom-responsive-div ">
                       <Counter
                         endValue={parseInt((box.count || "0").replace("+", ""))}
                       />
