@@ -7,7 +7,6 @@ import a2 from "../assets/Page 2 Packeging.jpg";
 import a3 from "../assets/Page 3 UI_UX.jpg";
 import a4 from "../assets/Page 4_Packeging.jpg";
 import a5 from "../assets/Page 5_ Visual Ads.jpg";
-import { Container } from "react-bootstrap";
 
 function Awesome() {
   const [activeButton, setActiveButton] = useState("");
@@ -83,22 +82,10 @@ function Awesome() {
   
  
 
-  return (
-    <div style={{ marginTop: "100px" }}>
-      <Container>
-        <div className="text-center my-3">
-          <h2 className="fw-bold py-2" style={{ color: "#094167" }}>
-            Digital Success Starts Here
-          </h2>
 
-          <p className="text-secondary mx-3">
-            Digital marketing uses targeted strategies like SEO, PPC, email
-            marketing, and social media to help businesses grow online, increase
-            brand visibility, generate leads, and build lasting relationships
-            with customers in an ever-evolving digital environment.
-          </p>
-        </div>
-      </Container>
+  return (
+    <div style={{ marginTop: "120px" }}>
+     
       <div className="d-flex align-items-center justify-content-center py-5">
         {/* Left Arrow Button with margin-end */}
         <Button

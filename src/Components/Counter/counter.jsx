@@ -35,7 +35,7 @@ function Count() {
   const [boxData, setBoxData] = useState([]);
 
   useEffect(() => {
-    fetch("https://biz-booster-landingpage-backend.vercel.app/api/box/get")
+    fetch("https://artisticify-backend.vercel.app/api/counter/get")
       .then((response) => response.json())
       .then((response) => {
         const dataArray = response.data;
@@ -89,7 +89,7 @@ function Count() {
                       <Counter
                         endValue={parseInt((box.count || "0").replace("+", ""))}
                       />
-                      <p className="text">{box.title || "N/A"}</p>
+                      <h4 className="">{box.title || "N/A"}</h4>
                       <p className="text">{box.description || "N/A"}</p>
                     </div>
                   </motion.div>

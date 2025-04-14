@@ -48,6 +48,7 @@ import ReverseCara from "./Components/ReverseCara";
 import Googlemybusiness from "./Components/Google My Business/Googlemybusiness";
 import Websitedesign from "./Components/Website Design/Websitedesign";
 import Count from "./Components/Counter/counter";
+import StepsDiagram from "./Components/StepsDiagram/StepsDiagram";
 
 const App = () => {
   // Create a reference to the contact form section
@@ -60,7 +61,7 @@ const App = () => {
         container.classList.toggle(
           "scrolled",
           containerPosition.top <= window.innerHeight &&
-            containerPosition.bottom >= 0
+          containerPosition.bottom >= 0
         );
       }
     };
@@ -91,6 +92,7 @@ const App = () => {
         </main>
       </div>
       <OurService />   
+      <StepsDiagram />
       <Awesome />
       <Graphicpanel />
       <ReverseCara />
@@ -102,6 +104,9 @@ const App = () => {
     </div>
     
     
+
+   
+
   );
 };
 
