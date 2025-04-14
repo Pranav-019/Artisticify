@@ -12,10 +12,13 @@ import MainImg from '../assets/postive-caring-relationships-teachers 1.png';
 import { useLocation } from 'react-router-dom';
 
 function Contact() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+
+  
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location.pathname]);
 
   const [formData, setFormData] = useState({
     name: '',

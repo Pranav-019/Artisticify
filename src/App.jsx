@@ -91,22 +91,15 @@ const App = () => {
           </div>
         </main>
       </div>
-      <OurService />   
+      <OurService />
       <StepsDiagram />
       <Awesome />
       <Graphicpanel />
       <ReverseCara />
-      <Count/>
+      <Count />
       <Collection />
-   
-
       <FAQs />
     </div>
-    
-    
-
-   
-
   );
 };
 
