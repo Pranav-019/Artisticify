@@ -47,6 +47,7 @@ import Awesome from "./Components/Awesome";
 import ReverseCara from "./Components/ReverseCara";
 import Googlemybusiness from "./Components/Google My Business/Googlemybusiness";
 import Websitedesign from "./Components/Website Design/Websitedesign";
+import Count from "./Components/Counter/counter";
 import StepsDiagram from "./Components/StepsDiagram/StepsDiagram";
 
 const App = () => {
@@ -90,16 +91,21 @@ const App = () => {
           </div>
         </main>
       </div>
+      <OurService />   
       <StepsDiagram />
       <Awesome />
       <Graphicpanel />
       <ReverseCara />
+      <Count/>
       <Collection />
-      <OurService />
+   
 
       <FAQs />
+    </div>
+    
+    
 
-    </div >
+   
 
   );
 };

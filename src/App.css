@@ -1144,6 +1144,95 @@ h1, h3 {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker and more pronounced shadow on hover */
 }
 
+
+/* Count.css */
+
+.count-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.count-background {
+  background-color: #0d3e72;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.count-overlay {
+  position: relative;
+  z-index: 1;
+}
+
+.count-text .blue-bg-transpernt {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 2px solid #ffffff33;
+  border-radius: 16px;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.count-text .blue-bg-transpernt:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.count-text .text {
+  font-size: 1rem;
+
+  color: white;
+  margin: 5px 0;
+}
+
+.count-text h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h2.text-center {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.custom-responsive-div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Match height for all columns */
+.row > div {
+  display: flex;
+}
+
+@media (max-width: 576px) {
+  .count-text .blue-bg-transpernt {
+    padding: 15px;
+  }
+
+  .count-text h1 {
+    font-size: 2rem;
+  }
+
+  .count-text .text {
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 575.98px) {
   .text{
     font-size: 16px;

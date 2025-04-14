@@ -12,7 +12,25 @@ function Awesome() {
   const [activeButton, setActiveButton] = useState("");
   const [visibleIndex, setVisibleIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
+  const [cardsPerView, setCardsPerView] = useState(3);
 
+  useEffect(() => {
+    const updateCardsPerView = () => {
+      const width = window.innerWidth;
+      if (width < 768) {
+        setCardsPerView(1); // Mobile
+      } else if (width < 992) {
+        setCardsPerView(2); // Tablet
+      } else {
+        setCardsPerView(3); // Desktop
+      }
+    };
+
+    updateCardsPerView(); // Call on load
+    window.addEventListener("resize", updateCardsPerView);
+
+    return () => window.removeEventListener("resize", updateCardsPerView);
+  }, []);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -61,25 +79,9 @@ function Awesome() {
     }
   }, [visibleIndex, extendedCards.length]);
 
-  const [cardsPerView, setCardsPerView] = useState(3);
+  
+ 
 
-  useEffect(() => {
-    const updateCardsPerView = () => {
-      const width = window.innerWidth;
-      if (width < 768) {
-        setCardsPerView(1); // Mobile
-      } else if (width < 992) {
-        setCardsPerView(2); // Tablet
-      } else {
-        setCardsPerView(3); // Desktop
-      }
-    };
-
-    updateCardsPerView(); // Call on load
-    window.addEventListener("resize", updateCardsPerView);
-
-    return () => window.removeEventListener("resize", updateCardsPerView);
-  }, []);
 
   return (
     <div style={{ marginTop: "120px" }}>
