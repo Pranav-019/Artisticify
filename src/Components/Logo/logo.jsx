@@ -14,8 +14,14 @@ const Logo = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetchPackages(); // Fetch package data on component mount
+    fetchPackages(); 
   }, []);
+
+  const handleEnquire = () => {
+    navigate('/contact', {
+      state: { selectedService: 'Logo Design' }
+    });
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -167,7 +173,7 @@ const Logo = () => {
                 ) : (
                   <h4 className="text-center blue fw-bold price">{pkg.price} /-</h4>
                 )}
-                <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={() => navigate('/contact')}>
+                <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={handleEnquire}>
                   Enquire Now
                 </button>
               </div>

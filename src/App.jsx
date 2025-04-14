@@ -134,7 +134,7 @@ const Root = () => (
         <Route path="/SocialMedia" element={<SocialMedia />} />
         <Route path="/ContentMarketing" element={<ContentMarketing />} />
         <Route path="/PayPer" element={<PayPer />} />
-        <Route path="/SpecialPAckages" element={<SpecialPackages />} />
+        <Route path="/SpecialPackages" element={<SpecialPackages />} />
         <Route path="/Googlemybusiness" element={<Googlemybusiness />} />
         <Route path="/GrowBusiness" element={<GrowBusiness />} />
 

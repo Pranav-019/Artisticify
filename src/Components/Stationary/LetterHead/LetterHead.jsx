@@ -16,6 +16,12 @@ const navigate=useNavigate()
     fetchPackages(); // Fetch package data on component mount
   }, []);
 
+  const handleEnquire = () => {
+    navigate('/contact', {
+      state: { selectedService: 'Letter Head Design' }
+    });
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
@@ -168,7 +174,7 @@ const navigate=useNavigate()
 ) : (
   <h4 className="text-center blue fw-bold price">{pkg.price} /-</h4>
 )}
-       <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={() => navigate('/contact')}>
+       <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={handleEnquire}>
         Enquire Now
        </button>
        </div>

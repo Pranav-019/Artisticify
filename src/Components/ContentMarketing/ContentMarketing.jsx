@@ -23,6 +23,12 @@ function ContentMarketing() {
     fetchPackages(); // Fetch package data on component mount
   }, []);
 
+  const handleEnquire = () => {
+    navigate('/contact', {
+      state: { selectedService: 'Content Marketing' }
+    });
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
@@ -328,7 +334,7 @@ digital marketing and advertising agency" />
                 ) : (
                   <h4 className="text-center blue fw-bold price">{pkg.price} /-</h4>
                 )}
-                <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={() => navigate('/contact')}>
+                <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={handleEnquire}>
                   Enquire Now
                 </button>
               </div>

@@ -101,7 +101,7 @@ function OurService() {
       icon: <div style={iconStyle}><FaGift /></div>,
       description:
         'Affordable, customized marketing packages tailored to your goals. Choose from flexible plans combining SEO, ads, content, and social media support to elevate your digital strategy.',
-         route:"/SpecialPAckages"
+         route:"/SpecialPackages"
     },
   ];
   
