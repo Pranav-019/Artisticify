@@ -19,6 +19,12 @@ function SpecialPackages() {
     fetchPackages(); // Fetch package data on component mount
   }, []);
 
+  const handleEnquire = () => {
+    navigate('/contact', {
+      state: { selectedService: 'Special Package (combined services)' }
+    });
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
@@ -202,7 +208,7 @@ digital marketing and advertising agency" />
             {pkg.price} /-
           </h4>
         )}
-        <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={() => navigate('/contact')}>
+        <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={handleEnquire}>
           Enquire Now
         </button>
        </div>

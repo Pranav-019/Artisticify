@@ -17,6 +17,12 @@ const Icon = () => {
     useEffect(() => {
       fetchPackages(); // Fetch package data on component mount
     }, []);
+
+    const handleEnquire = () => {
+      navigate('/contact', {
+        state: { selectedService: 'Icon Design' }
+      });
+    };
   
     useEffect(() => {
       const timer = setTimeout(() => {
@@ -175,7 +181,7 @@ const Icon = () => {
 ) : (
   <h4 className="text-center blue fw-bold price">{pkg.price} /-</h4>
 )}
-       <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={() => navigate('/contact')}>
+       <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={handleEnquire}>
         Enquire Now
        </button>
        </div>
