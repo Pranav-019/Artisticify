@@ -47,6 +47,7 @@ import Awesome from "./Components/Awesome";
 import ReverseCara from "./Components/ReverseCara";
 import Googlemybusiness from "./Components/Google My Business/Googlemybusiness";
 import Websitedesign from "./Components/Website Design/Websitedesign";
+import Count from "./Components/Counter/counter";
 
 const App = () => {
   // Create a reference to the contact form section
@@ -89,28 +90,18 @@ const App = () => {
           </div>
         </main>
       </div>
+      <OurService />   
       <Awesome />
       <Graphicpanel />
       <ReverseCara />
+      <Count/>
       <Collection />
-      <OurService />
+   
 
       <FAQs />
     </div>
-<<<<<<< HEAD
-    <OurService/>
-    <Awesome/>
-    
-    <Graphicpanel/>
-    <ReverseCara/>
-        <Collection/>
     
     
-    <FAQs/>
-   </div>
-    
-=======
->>>>>>> 0d7799c9943632cddc39b6d02bf5432c0b375816
   );
 };
 
