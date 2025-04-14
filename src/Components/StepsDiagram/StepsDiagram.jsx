@@ -3,13 +3,13 @@ import {
   FaChartLine,
   FaLaptopCode,
   FaBullseye,
-  FaChartBar,
+  FaSearchengin ,
 } from "react-icons/fa6";
 
 const steps = [
   {
     title: "01. Conduct ",
-    icon: <FaChartLine size={40} color="white" />,
+    icon: <FaSearchengin   size={40} color="white" />,
     bgColor: "#f9c74f",
     textColor: "#f59e0b",
   },
@@ -27,7 +27,7 @@ const steps = [
   },
   {
     title: "04. Achieve",
-    icon: <FaChartBar size={40} color="white" />,
+    icon: <FaChartLine size={40} color="white" />,
     bgColor: "#adb5bd",
     textColor: "#333",
   },
