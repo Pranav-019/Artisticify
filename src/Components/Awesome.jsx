@@ -7,7 +7,6 @@ import a2 from "../assets/Page 2 Packeging.jpg";
 import a3 from "../assets/Page 3 UI_UX.jpg";
 import a4 from "../assets/Page 4_Packeging.jpg";
 import a5 from "../assets/Page 5_ Visual Ads.jpg";
-import { Container } from "react-bootstrap";
 
 function Awesome() {
   const [activeButton, setActiveButton] = useState("");
@@ -62,31 +61,6 @@ function Awesome() {
     }
   }, [visibleIndex, extendedCards.length]);
 
-<<<<<<< HEAD
-  return (
-    <div className='' style={{ marginTop: '120px' }}>
-      <Container>
-      
-        <div className='d-flex justify-content-between py-5'>
-          <Button
-            variant=""
-            className={`destiBtn rounded-pill py-3 mx-1 ${activeButton === 'LeftArrow' ? 'active-btn' : ''}`}
-            onClick={() => handleButtonClick('LeftArrow')}
-          >
-            <FaArrowLeft />
-          </Button>
-
-          <Button
-            variant=""
-            className={`destiBtn rounded-pill py-3 mx-1 ${activeButton === 'RightArrow' ? 'active-btn' : ''}`}
-            onClick={() => handleButtonClick('RightArrow')}
-          >
-            <FaArrowRight />
-          </Button>
-        </div>
-
-        <div className="overflow-hidden">
-=======
   const [cardsPerView, setCardsPerView] = useState(3);
 
   useEffect(() => {
@@ -108,21 +82,8 @@ function Awesome() {
   }, []);
 
   return (
-    <div style={{ marginTop: "100px" }}>
-      <Container>
-        <div className="text-center my-3">
-          <h2 className="fw-bold py-2" style={{ color: "#094167" }}>
-            Digital Success Starts Here
-          </h2>
-
-          <p className="text-secondary mx-3">
-            Digital marketing uses targeted strategies like SEO, PPC, email
-            marketing, and social media to help businesses grow online, increase
-            brand visibility, generate leads, and build lasting relationships
-            with customers in an ever-evolving digital environment.
-          </p>
-        </div>
-      </Container>
+    <div style={{ marginTop: "120px" }}>
+     
       <div className="d-flex align-items-center justify-content-center py-5">
         {/* Left Arrow Button with margin-end */}
         <Button
@@ -137,7 +98,6 @@ function Awesome() {
 
         {/* Carousel */}
         <div className="overflow-hidden" style={{ width: "80%" }}>
->>>>>>> 0d7799c9943632cddc39b6d02bf5432c0b375816
           <div
             className="card-container"
             style={{
