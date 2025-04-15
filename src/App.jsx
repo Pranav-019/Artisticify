@@ -51,6 +51,7 @@ import Count from "./Components/Counter/counter";
 import StepsDiagram from "./Components/StepsDiagram/StepsDiagram";
 import Blog from "./Components/Blog/blog";
 import BlogDetail from "./Components/Blog/blogdescription";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 
 const App = () => {
   // Create a reference to the contact form section
@@ -75,7 +76,7 @@ const App = () => {
   // Function to scroll to the contact form section
 
   return (
-    <div>
+    <div >
       <div className="app">
         <main className="hero-section">
           <h1 className="hero-title">Bring Your Imagination To Life</h1>
@@ -109,6 +110,7 @@ const Root = () => (
   <HelmetProvider>
     <Router>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/about" element={<About />} />

@@ -17,8 +17,13 @@ function Contact() {
   const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const scrollTimeout = setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100); // small delay to allow DOM/layout to settle
+  
+    return () => clearTimeout(scrollTimeout); // cleanup
   }, [location.pathname]);
+  
 
   const [formData, setFormData] = useState({
     name: '',
@@ -107,7 +112,7 @@ function Contact() {
   };
 
   return (
-    <div>
+    <div >
       <div className='contact1 text'>
         <div className='image-container'>
           <img src={MainImg} className='main-contact img-fluid' alt="Contact Us" />
