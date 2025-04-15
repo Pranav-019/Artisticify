@@ -91,7 +91,7 @@ function ReverseCara() {
             Your Vision, Our Design
           </h2>
 
-          <p className="text-secondary mx-3">
+          <p className="text-secondary mx-3 text">
             Design shapes the way people perceive your brand—through thoughtful
             visuals, seamless user experiences, and creative storytelling, it
             builds trust, communicates purpose, and leaves a lasting impression

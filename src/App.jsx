@@ -52,6 +52,7 @@ import StepsDiagram from "./Components/StepsDiagram/StepsDiagram";
 import Blog from "./Components/Blog/blog";
 import BlogDetail from "./Components/Blog/blogdescription";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+import heroImage from './assets/calendar.png'
 
 const App = () => {
   // Create a reference to the contact form section
@@ -77,7 +78,7 @@ const App = () => {
 
   return (
     <div >
-      <div className="app">
+      {/* <div className="app">
         <main className="hero-section">
           <h1 className="hero-title">Bring Your Imagination To Life</h1>
           <div className="hero-image-container">
@@ -93,7 +94,22 @@ const App = () => {
             />
           </div>
         </main>
-      </div>
+      </div> */}
+     <section className="hero-wrapper">
+  <div className="hero">
+    <div className="hero-content">
+      <h1>BEST SEO AND WEB DEVELOPMENT COMPANY IN INDIA</h1>
+      <p>
+        We Grow Your Revenue with Results-driven SEO. <br />
+        We are a leading award-winning digital marketing agency and inbound marketing experts since 2016.
+      </p>
+      <button>Get Started</button>
+    </div>
+    <div className="hero-image">
+      <img src={heroImage} alt="Digital Agency" />
+    </div>
+  </div>
+</section>
       <OurService />
       <StepsDiagram />
       <Awesome />

@@ -160,7 +160,16 @@ const StepsDiagram = () => {
         `}
       </style>
 
-      <Row className="justify-content-center align-items-center gx-4 gy-5">
+      <Row className="justify-content-center align-items-center gx-4 gy-5 my-5">
+      <div className="text-center my-3">
+          <h2 className="fw-bold py-2" style={{ color: "#094167" }}>
+           Growth flow
+          </h2>
+
+          <p className="text-secondary mx-3 text">
+          The growth flow starts with conducting research to gather market insights and competitor analysis, followed by executing strategic implementation based on these findings. It then focuses on targeting the right audience segments to maximize effectiveness, ultimately aiming to achieve a positive return on investment (ROI) through optimized efforts.
+          </p>
+        </div>
         {steps.map((step, index) => (
           <Col
             key={index}
