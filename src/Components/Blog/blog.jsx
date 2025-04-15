@@ -2,25 +2,26 @@ import React from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
+import img1 from '../../assets/brand.jpg'
 
 const blogs = [
   {
     id: 1,
     title: 'The Future of Office Spaces',
     description: 'Explore how modern offices are transforming the way we work with remote-friendly and hybrid spaces.',
-    image: 'https://source.unsplash.com/400x250/?office,workspace',
+    image: img1,
   },
   {
     id: 2,
     title: 'Boosting Productivity at Work',
     description: 'Learn effective techniques to stay focused and increase your productivity at the office.',
-    image: 'https://source.unsplash.com/400x250/?productivity,work',
+    image: img1,
   },
   {
     id: 3,
     title: 'Office Design Trends in 2025',
     description: 'Discover the latest trends in office interior design that enhance employee well-being.',
-    image: 'https://source.unsplash.com/400x250/?interiordesign,office',
+    image: img1,
   },
 ];
 
