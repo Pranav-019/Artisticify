@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
 import statueImage from "./assets/homepage-bg.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -52,11 +52,15 @@ import StepsDiagram from "./Components/StepsDiagram/StepsDiagram";
 import Blog from "./Components/Blog/blog";
 import BlogDetail from "./Components/Blog/blogdescription";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
-import heroImage from './assets/calendar.png'
-
+import heroImage from './assets/poster_500-500-removebg-preview.png'
+import star from './assets/star.png'
+import { Carousel } from 'react-bootstrap';
+import img1 from './assets/poster_500-500-removebg-preview.png';
+import img2 from './assets/istockphoto-1281819457-612x612-removebg-preview.png';
+import img3 from './assets/letter_head-removebg-preview.png';
 const App = () => {
   // Create a reference to the contact form section
-
+  const navigate = useNavigate()
   useEffect(() => {
     const handleScroll = () => {
       const container = document.querySelector(".bottom-images-container");
@@ -95,21 +99,39 @@ const App = () => {
           </div>
         </main>
       </div> */}
-     <section className="hero-wrapper">
-  <div className="hero">
-    <div className="hero-content">
-      <h1>BEST SEO AND WEB DEVELOPMENT COMPANY IN INDIA</h1>
-      <p>
-        We Grow Your Revenue with Results-driven SEO. <br />
-        We are a leading award-winning digital marketing agency and inbound marketing experts since 2016.
-      </p>
-      <button>Get Started</button>
-    </div>
-    <div className="hero-image">
-      <img src={heroImage} alt="Digital Agency" />
-    </div>
-  </div>
-</section>
+      <section className="hero-wrapper">
+        {/* SVG symbols */}
+        <img src={star} alt="symbol" className="symbol symbol-1 " />
+        <img src="/assets/chart.svg" alt="symbol" className="symbol symbol-2" />
+        <img src="/assets/pencil.svg" alt="symbol" className="symbol symbol-3" />
+
+        {/* Main content */}
+        <div className="hero">
+          <div className="hero-content">
+            <h5 className="fw-bold pb-3">We Elevate Your Brand with Impactful Design & Strategy.</h5>
+            <h1>CREATIVE DESIGN & DIGITAL MARKETING COMPANY IN INDIA</h1>
+            <p>
+              We specialize in graphic design, branding, and digital marketing to help businesses grow, engage, and stand out in the digital world.
+            </p>
+            <button className="" onClick={() => navigate("/Contact")}> Get Started</button>
+          </div>
+          <div className="hero-image">
+            <Carousel interval={1000} controls={false} indicators={false} fade>
+              <Carousel.Item>
+                <img className="d-block w-100" src={img1} alt="Slide 1" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="d-block w-100" src={img2} alt="Slide 2" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="d-block w-100" src={img3} alt="Slide 3" />
+              </Carousel.Item>
+            </Carousel>
+          </div>
+
+        </div>
+      </section>
+
       <OurService />
       <StepsDiagram />
       <Awesome />

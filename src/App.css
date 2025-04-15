@@ -14,6 +14,18 @@ body, html {
   animation: gradientMove 10s ease infinite;
   padding: 4rem 0;
 }
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.hero-image .carousel-item img {
+  height: 400px;         /* Set your desired height */
+  object-fit: cover;     /* Keeps aspect ratio and fills the container */
+  width: 100%;
+  border-radius: 1rem;
+}
 
 .hero {
   max-width: 1200px;       /* You can adjust width */
@@ -88,6 +100,90 @@ body, html {
   .hero-image {
     margin-top: 2rem;
   }
+}
+.hero-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, #13357B, #3a6eb8, #6bb7be);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  padding: 4rem 0;
+}
+
+/* Floating blurred shapes for depth */
+.hero-wrapper::before,
+.hero-wrapper::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.hero-wrapper::before {
+  width: 250px;
+  height: 250px;
+  background: #ffffff33;
+  top: -60px;
+  left: -80px;
+  animation: float1 10s ease-in-out infinite;
+}
+
+.hero-wrapper::after {
+  width: 200px;
+  height: 200px;
+  background: #00fff229;
+  bottom: -80px;
+  right: -60px;
+  animation: float2 14s ease-in-out infinite;
+}
+
+/* Animated SVG symbols */
+.symbol {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  opacity: 0.09;
+  z-index: 0;
+  animation: symbolFloat 12s infinite ease-in-out alternate;
+  color: white;
+}
+
+.symbol-1 {
+  top: 50px;
+  left: 80px;
+}
+
+.symbol-2 {
+  bottom: 100px;
+  right: 100px;
+}
+
+.symbol-3 {
+  top: 200px;
+  right: 50%;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(20px); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(30px); }
+}
+
+@keyframes symbolFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
 }
 
 
