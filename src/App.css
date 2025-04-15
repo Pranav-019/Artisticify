@@ -77,6 +77,24 @@ body, html {
   color: #FD3765;
   
 }
+.nav-link-custom.talk-link {
+  background-color: #13357B;
+  color: #ffffff !important;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-link-custom.talk-link:hover {
+  background-color: #0f2b66;
+  color: #ffffff !important;
+  text-decoration: none;
+}
 
 .ourWork{
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
@@ -93,7 +111,9 @@ body, html {
    top:43%;
    left: 38%;  
 }
-
+.text{
+  font-size: 18px;
+}
 .testi-i{
   color: #13357B;
   line-height: 5px;
