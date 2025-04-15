@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
-import img1 from '../../assets/brand.jpg'
+import img1 from '../../assets/seoblog.jpg'
 
 const blogs = [
   {

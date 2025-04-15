@@ -12,10 +12,18 @@ import MainImg from '../assets/postive-caring-relationships-teachers 1.png';
 import { useLocation } from 'react-router-dom';
 
 function Contact() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+
+  
   const location = useLocation();
+
+  useEffect(() => {
+    const scrollTimeout = setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100); // small delay to allow DOM/layout to settle
+  
+    return () => clearTimeout(scrollTimeout); // cleanup
+  }, [location.pathname]);
+  
 
   const [formData, setFormData] = useState({
     name: '',
@@ -104,7 +112,7 @@ function Contact() {
   };
 
   return (
-    <div>
+    <div >
       <div className='contact1 text'>
         <div className='image-container'>
           <img src={MainImg} className='main-contact img-fluid' alt="Contact Us" />
