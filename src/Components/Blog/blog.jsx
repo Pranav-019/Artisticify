@@ -31,7 +31,7 @@ const Blog = () => {
   return (
     <div style={{ backgroundColor: '#f8f9fa' }}>
       <Container className="py-5">
-        <h1 className="text-center text-primary mb-4" style={{ color: '#13357b' }}>
+        <h1 className="text-center  mb-4" style={{ color: '#13357b' }}>
           Our Blog
         </h1>
         <Row>
