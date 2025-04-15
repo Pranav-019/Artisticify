@@ -102,8 +102,8 @@ const App = () => {
       <section className="hero-wrapper">
         {/* SVG symbols */}
         <img src={star} alt="symbol" className="symbol symbol-1 " />
-        <img src="/assets/chart.svg" alt="symbol" className="symbol symbol-2" />
-        <img src="/assets/pencil.svg" alt="symbol" className="symbol symbol-3" />
+        <img src={star} alt="symbol" className="symbol symbol-2" />
+        <img src={star} alt="symbol" className="symbol symbol-3" />
 
         {/* Main content */}
         <div className="hero">
@@ -116,7 +116,7 @@ const App = () => {
             <button className="" onClick={() => navigate("/Contact")}> Get Started</button>
           </div>
           <div className="hero-image">
-            <Carousel interval={1000} controls={false} indicators={false} fade>
+            <Carousel interval={2000} controls={false} indicators={false} fade>
               <Carousel.Item>
                 <img className="d-block w-100" src={img1} alt="Slide 1" />
               </Carousel.Item>
