@@ -3,13 +3,13 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  /* overflow-x: hidden;  */
+  overflow-x: hidden; 
   position: relative;
   z-index: auto;
 }
 
 .text-light {
-  overflow-x: hidden; 
+  overflow: hidden; 
 }
 
 .app {
@@ -637,7 +637,7 @@ h1, h3 {
   border-radius: 10px;
   background: radial-gradient(circle, rgba(13, 62, 114, 0.9), rgba(13, 62, 114, 0.5), rgba(13, 62, 114, 0.1));
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  overflow-x: hidden;
+  overflow: hidden;
   transform: translateY(0);
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
@@ -759,7 +759,7 @@ h1, h3 {
   border-radius: 10px;
   background: radial-gradient(circle, rgba(13, 62, 114, 0.9), rgba(13, 62, 114, 0.5), rgba(13, 62, 114, 0.1));
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  overflow-x: hidden;
+  overflow: hidden;
   transform: translateY(0);
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
   animation: floating 3s ease-in-out infinite;
@@ -867,7 +867,7 @@ h1, h3 {
   position: relative;
   width: 100%;
   height: 100%; 
-  overflow-x: hidden; 
+  overflow: hidden; 
 }
 
 .card-img img{
@@ -1150,7 +1150,7 @@ h1, h3 {
 .count-container {
   position: relative;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .count-background {
@@ -1355,7 +1355,7 @@ h2.text-center {
 
 @media (min-width: 1440px) and (max-width: 1600px) {
   .packCard{
-    flex: 0 0 350px;
+    flex: 0 0 375px;
     /* padding: 10px; */
     height: 200px;
   }
