@@ -58,6 +58,7 @@ import { Carousel } from 'react-bootstrap';
 import img1 from './assets/poster_500-500-removebg-preview.png';
 import img2 from './assets/istockphoto-1281819457-612x612-removebg-preview.png';
 import img3 from './assets/letter_head-removebg-preview.png';
+import TestimonialSection from "./Components/Testimonial";
 const App = () => {
   // Create a reference to the contact form section
   const navigate = useNavigate()
@@ -99,7 +100,7 @@ const App = () => {
           </div>
         </main>
       </div> */}
-      <section className="hero-wrapper">
+      <section className="hero-wrapper ">
         {/* SVG symbols */}
         <img src={star} alt="symbol" className="symbol symbol-1 " />
         <img src={star} alt="symbol" className="symbol symbol-2" />
@@ -108,10 +109,10 @@ const App = () => {
         {/* Main content */}
         <div className="hero">
           <div className="hero-content">
-            <h5 className="fw-bold pb-3">We Elevate Your Brand with Impactful Design & Strategy.</h5>
-            <h1>CREATIVE DESIGN & DIGITAL MARKETING COMPANY IN INDIA</h1>
+            <h5 className="fw-bold pb-3">CREATIVE DESIGN & DIGITAL MARKETING COMPANY IN INDIA</h5>
+            <h1>YOUR GROWTH PARTNER IN THE DIGITAL WORLD</h1>
             <p>
-              We specialize in graphic design, branding, and digital marketing to help businesses grow, engage, and stand out in the digital world.
+            Artisticify empowers brands with impactful digital strategies, creative excellence, and smart innovation—building strong foundations for lasting visibility, engagement, and success.
             </p>
             <button className="" onClick={() => navigate("/Contact")}> Get Started</button>
           </div>
@@ -139,6 +140,7 @@ const App = () => {
       <ReverseCara />
       <Count />
       <Collection />
+      <TestimonialSection/>
       <FAQs />
     </div>
   );
