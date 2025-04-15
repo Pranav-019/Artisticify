@@ -3,7 +3,7 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  /* overflow-x: hidden;  */
+  overflow-x: hidden; 
   position: relative;
   z-index: auto;
 }
@@ -1339,7 +1339,7 @@ h2.text-center {
 
 @media  (max-width:426px){
   .packCard{
-    flex: 0 0 260px;
+    flex: 0 0 300px;
     /* padding: 10px; */
     height: 200px;
   }
@@ -1370,5 +1370,12 @@ h2.text-center {
     /* padding: 10px; */
     height: 200px;
   }}
+
+  @media (max-width: 376px)  {
+    .packCard{
+      flex: 0 0 250px;
+      /* padding: 10px; */
+      height: 200px;
+    }}
 
   
