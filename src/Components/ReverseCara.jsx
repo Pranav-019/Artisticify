@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { MdArrowForwardIos,MdArrowBackIos  } from "react-icons/md";
 import Card from "react-bootstrap/Card";
 import a1 from "../assets/Page 1 Logo Design (1).jpg";
 import a2 from "../assets/Page 2 Packeging.jpg";
@@ -102,12 +103,12 @@ function ReverseCara() {
         {/* Left Arrow Button with margin-end */}
         <Button
           variant=""
-          className={`destiBtn rounded-pill py-3 me-4 ${
+          className={`destiBtn rounded-pill py-3 me-1 me-md-4 ${
             activeButton === "LeftArrow" ? "active-btn" : ""
           }`}
           onClick={() => handleButtonClick("LeftArrow")}
         >
-          <FaArrowLeft />
+          <MdArrowBackIos  />
         </Button>
 
         {/* Carousel */}
@@ -135,12 +136,12 @@ function ReverseCara() {
         {/* Right Arrow Button with margin-start */}
         <Button
           variant=""
-          className={`destiBtn rounded-pill py-3 ms-4 ${
+          className={`destiBtn rounded-pill py-3 ms-1 ms-md-4 ${
             activeButton === "RightArrow" ? "active-btn" : ""
           }`}
           onClick={() => handleButtonClick("RightArrow")}
         >
-          <FaArrowRight />
+          <MdArrowForwardIos  />
         </Button>
       </div>
     </div>
