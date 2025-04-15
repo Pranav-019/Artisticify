@@ -93,7 +93,7 @@ function Awesome() {
             Digital Success Starts Here
           </h2>
 
-          <p className="text-secondary mx-3">
+          <p className="text-secondary mx-3 text">
             Digital marketing uses targeted strategies like SEO, PPC, email
             marketing, and social media to help businesses grow online, increase
             brand visibility, generate leads, and build lasting relationships

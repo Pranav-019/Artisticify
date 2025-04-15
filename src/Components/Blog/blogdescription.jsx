@@ -89,7 +89,7 @@ const BlogDescription = () => {
                     >
                       {item.icon}
                     </span>
-                    <span>{item.text}</span>
+                    <span className='text text-secondary'>{item.text}</span>
                   </li>
                 ))}
               </ul>
