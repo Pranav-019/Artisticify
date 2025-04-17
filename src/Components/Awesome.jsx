@@ -6,7 +6,9 @@ import a1 from "../assets/Page 1 Logo Design (1).jpg";
 import a2 from "../assets/Page 2 Packeging.jpg";
 import a3 from "../assets/Page 3 UI_UX.jpg";
 import a4 from "../assets/Page 4_Packeging.jpg";
+import { MdArrowForwardIos,MdArrowBackIos  } from "react-icons/md";
 import a5 from "../assets/Page 5_ Visual Ads.jpg";
+import { Container } from "react-bootstrap";
 
 function Awesome() {
   const [activeButton, setActiveButton] = useState("");
@@ -79,23 +81,36 @@ function Awesome() {
     }
   }, [visibleIndex, extendedCards.length]);
 
-  
- 
+
+
 
 
   return (
     <div style={{ marginTop: "120px" }}>
-     
+      <Container>
+        <div className="text-center my-3">
+          <h2 className="fw-bold py-2" style={{ color: "#094167" }}>
+            Digital Success Starts Here
+          </h2>
+
+          <p className="text-secondary mx-3 text">
+            Digital marketing uses targeted strategies like SEO, PPC, email
+            marketing, and social media to help businesses grow online, increase
+            brand visibility, generate leads, and build lasting relationships
+            with customers in an ever-evolving digital environment.
+          </p>
+        </div>
+      </Container>
+
       <div className="d-flex align-items-center justify-content-center py-5">
         {/* Left Arrow Button with margin-end */}
         <Button
           variant=""
-          className={`destiBtn rounded-pill py-3 me-4 ${
-            activeButton === "LeftArrow" ? "active-btn" : ""
-          }`}
+          className={`destiBtn rounded-pill py-3 me-1 me-md-4 ${activeButton === "LeftArrow" ? "active-btn" : ""
+            }`}
           onClick={() => handleButtonClick("LeftArrow")}
         >
-          <FaArrowLeft />
+          <MdArrowBackIos />
         </Button>
 
         {/* Carousel */}
@@ -123,12 +138,11 @@ function Awesome() {
         {/* Right Arrow Button with margin-start */}
         <Button
           variant=""
-          className={`destiBtn rounded-pill py-3 ms-4 ${
-            activeButton === "RightArrow" ? "active-btn" : ""
-          }`}
+          className={`destiBtn rounded-pill py-3 ms-1 ms-md-4 ${activeButton === "RightArrow" ? "active-btn" : ""
+            }`}
           onClick={() => handleButtonClick("RightArrow")}
         >
-          <FaArrowRight />
+          <MdArrowForwardIos />
         </Button>
       </div>
     </div>
@@ -136,3 +150,4 @@ function Awesome() {
 }
 
 export default Awesome;
+ 

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
 import statueImage from "./assets/homepage-bg.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -52,10 +52,18 @@ import StepsDiagram from "./Components/StepsDiagram/StepsDiagram";
 import Blog from "./Components/Blog/blog";
 import BlogDetail from "./Components/Blog/blogdescription";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
-
+import heroImage from './assets/poster_500-500-removebg-preview.png'
+import star from './assets/star.png'
+import world from './assets/images-removebg-preview (1).png'
+import { Carousel } from 'react-bootstrap';
+import img1 from './assets/poster_500-500-removebg-preview.png';
+import img2 from './assets/istockphoto-1281819457-612x612-removebg-preview.png';
+import img3 from './assets/letter_head-removebg-preview.png';
+import TestimonialSection from "./Components/Testimonial";
 const App = () => {
   // Create a reference to the contact form section
-
+  const navigate = useNavigate()
+  const totalSymbols = 30;
   useEffect(() => {
     const handleScroll = () => {
       const container = document.querySelector(".bottom-images-container");
@@ -74,10 +82,10 @@ const App = () => {
   }, []);
 
   // Function to scroll to the contact form section
-
+  const symbols = [star, world];
   return (
     <div >
-      <div className="app">
+      {/* <div className="app">
         <main className="hero-section">
           <h1 className="hero-title">Bring Your Imagination To Life</h1>
           <div className="hero-image-container">
@@ -93,7 +101,61 @@ const App = () => {
             />
           </div>
         </main>
-      </div>
+      </div> */}
+      <section className="hero-wrapper ">
+      {Array.from({ length: totalSymbols }, (_, i) => {
+  const top = Math.random() * 100; // vh
+  const left = Math.random() * 100; // vw
+  const animationName = `move-${Math.floor(Math.random() * 4) + 1}`;
+  const duration = `${10 + Math.random() * 10}s`;
+  const delay = `${Math.random() * 5}s`;
+  const randomSymbol = symbols[Math.floor(Math.random() * symbols.length)];
+
+  return (
+    <img
+      key={i}
+      src={randomSymbol}
+      alt="symbol"
+      className={`floating-symbol ${animationName}`}
+      style={{
+        top: `${top}vh`,
+        left: `${left}vw`,
+        animationDuration: duration,
+        animationDelay: delay,
+      }}
+    />
+  );
+})}
+
+
+        {/* Main content */}
+        <div className="hero">
+          <div className="hero-content">
+            <h5 className="fw-bold pb-3">CREATIVE DESIGN & DIGITAL MARKETING COMPANY IN INDIA</h5>
+            <h1>YOUR GROWTH PARTNER IN THE DIGITAL WORLD</h1>
+            <p>
+            Artisticify empowers brands with impactful digital strategies, creative excellence, and smart innovation—building strong foundations for lasting visibility, engagement, and success.
+            </p>
+            <button className="" onClick={() => navigate("/Contact")}> Get Started</button>
+          </div>
+          <div className="hero-image">
+            <Carousel interval={2000} controls={false} indicators={false} fade>
+              <Carousel.Item>
+                <img className="d-block w-100" src={img1} alt="Slide 1" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="d-block w-100" src={img2} alt="Slide 2" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="d-block w-100" src={img3} alt="Slide 3" />
+              </Carousel.Item>
+            </Carousel>
+          </div>
+
+        </div>
+        
+      </section>
+
       <OurService />
       <StepsDiagram />
       <Awesome />
@@ -101,6 +163,7 @@ const App = () => {
       <ReverseCara />
       <Count />
       <Collection />
+      <TestimonialSection/>
       <FAQs />
     </div>
   );

@@ -38,7 +38,7 @@ import iconImg from '../../assets/icondesign.jpg';
 function OurService() {
   const navigate=useNavigate()
   const iconStyle = {
-    backgroundColor: '#094167',
+    backgroundColor: '#13357b',
     color: '#fff',
     borderRadius: '50%',
     padding: '15px',
@@ -252,7 +252,7 @@ function OurService() {
             Unlock Creativity with Our Comprehensive Design & Digital Marketing Solutions—All Under One Roof!
           </h4>
 
-          <p className='text-secondary'>
+          <p className='text-secondary text'>
             From stunning web designs to impactful print materials and result-driven digital marketing strategies, we provide quality solutions tailored to elevate your brand.
             Since 2024, our expertise has spanned diverse industries, delivering innovative designs and strategic marketing campaigns that leave a lasting impression. Whether you need branding, marketing collateral, social media promotions, or digital assets, we ensure precision, creativity, and performance-driven results.
             Let’s bring your ideas to life with designs that captivate and marketing strategies that convert!
@@ -354,7 +354,7 @@ function OurService() {
         }
 
         .custom-tabs .nav-link.active {
-          background-color: #094167;
+          background-color: #13357b;
           color: #fff;
         }
 

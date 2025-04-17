@@ -11,7 +11,7 @@ function ArtisticifyNavbar() {
   return (
     <>
       <SEO title="Artisticify" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
-      
+
       <div className="bg-body-tertiary">
         <Navbar expand="lg" sticky="top" className="bg-body-tertiary">
           <Container>
@@ -67,8 +67,9 @@ function ArtisticifyNavbar() {
 
                   <Nav.Link className="nav-link-custom" onClick={() => navigate('/blog')}>Blog</Nav.Link>
                   <Nav.Link className="nav-link-custom" onClick={() => navigate('/our-work')}>Our Work</Nav.Link>
-                  <Nav.Link className="nav-link-custom" onClick={() => navigate('/Contact')}>Contact</Nav.Link>
-                  <Nav.Link className="nav-link-custom " style={{color:"#13357B"}}  onClick={() => navigate('/our-work')}>Let's Talk<FaArrowRight /></Nav.Link>
+                  <Nav.Link className="nav-link-custom talk-link ms-lg-4" onClick={() => navigate('/Contact')}>
+                    Let's Talk <FaArrowRight />
+                  </Nav.Link>               
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
