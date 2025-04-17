@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import PosterImage from '../../assets/content writing.png';
-import PosterImg from '../../assets/Content Marketing Serivces.jpg';
+import PosterImg from '../../assets/Content Marketing Serivces (1).jpg';
 import cm11 from '../../assets/istockphoto-1320095004-612x612-removebg-preview.png';
 import cm21 from '../../assets/keywords-writer-illustration-download-in-svg-png-gif-file-formats--analyzing-campaign-business-and-seo-pack-web-illustrations-1819860.png';
 import cm31 from '../../assets/media-player-software-computer-application-geolocation-app-location-determination-function-male-implementor-programmer-cartoon-character_335657-2579-removebg-preview.png';

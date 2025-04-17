@@ -13,7 +13,7 @@ import { GiPositionMarker } from 'react-icons/gi';
 import { MdManageAccounts, MdLocalOffer } from 'react-icons/md';
 import { RiCustomerService2Fill } from 'react-icons/ri';
 
-import PosterImg from '../../assets/gmbbanner.jpg';
+import PosterImg from '../../assets/google my business.jpg';
 import gmbDashboard from '../../assets/gmb-dashboard.jpg';
 import reviewsImg from '../../assets/reviews.jpg';
 import postsImg from '../../assets/gmb-posts.jpg';

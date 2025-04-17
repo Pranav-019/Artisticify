@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "./logo.css"; // Ensure your CSS file path is correct
 import { Col, Container, Row } from "react-bootstrap";
-import LogoImg from '../../assets/Logo Design Serivces.jpg'
+import LogoImg from '../../assets/Logo Design Serivces (1).jpg'
 import logo from '../../assets/istockphoto-1421037079-612x612-removebg-preview.png'
 import { useNavigate } from "react-router-dom";
 import { SEO } from '../SEO';

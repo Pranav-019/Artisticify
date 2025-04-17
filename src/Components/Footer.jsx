@@ -74,212 +74,172 @@ const Footer = () => {
 
   return (
     <div className="py-4 foot text-white" style={{ backgroundColor: "#333" }}>
-      <Container>
-        <Row className="gy-4 py-3">
-          <Col md={3} sm={6}>
-            <div className="line-h">
-              <h5>Office Address</h5>
-              <p><FaHome /> 3rd Floor, 307</p>
-              <p>Amanora Chamber, Amanora Mall</p>
-              <p>Hadapsar, Pune - 411028</p>
-              <p>Maharashtra</p>
-              <p><FaPhoneAlt /> +91-9112452929</p>
-              <p><MdEmail /> info@artisticify.com</p>
-              <div className="mt-2">
-                {/* Twitter */}
-                <div
-                  className="social-icon-container"
-                  style={{
-                    position: "relative",
-                    display: "inline-block",
-                    cursor: socialLinks.twitter ? "pointer" : "not-allowed",
-                    opacity: socialLinks.twitter ? 1 : 0.5,
-                  }}
-                  onClick={() => socialLinks.twitter && handleSocialClick(socialLinks.twitter, "Twitter")}
-                >
-                  <p
-                    style={{
-                      position: "absolute",
-                      top: "-20px",
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                      fontSize: "12px",
-                      color: "#1DA1F2",
-                    }}
-                  ></p>
-                  <FaTwitter
-                    className="social-icon border border-1 rounded-circle p-2 me-2"
-                    style={{
-                      width: "35px",
-                      height: "35px",
-                      color: "#1DA1F2",
-                      borderColor: "#1DA1F2",
-                    }}
-                  />
-                </div>
+      <Container fluid className="px-4">
+  <Row className="gy-4 py-4">
+    {/* Office Address */}
+    <Col xs={12} sm={6} md={6} lg={3}>
+      <div className="line-h">
+        <h5>Office Address</h5>
+        <p><FaHome /> 3rd Floor, 307</p>
+        <p>Amanora Chamber, Amanora Mall</p>
+        <p>Hadapsar, Pune - 411028</p>
+        <p>Maharashtra</p>
+        <p><FaPhoneAlt /> +91-9112452929</p>
+        <p><MdEmail /> info@artisticify.com</p>
+        <div className="mt-3 d-flex flex-wrap">
+          {/* Twitter */}
+          <div
+            className="social-icon-container me-2 mb-2"
+            style={{
+              cursor: socialLinks.twitter ? "pointer" : "not-allowed",
+              opacity: socialLinks.twitter ? 1 : 0.5,
+            }}
+            onClick={() => socialLinks.twitter && handleSocialClick(socialLinks.twitter, "Twitter")}
+          >
+            <FaTwitter
+              className="social-icon border border-1 rounded-circle p-2"
+              style={{
+                width: "35px",
+                height: "35px",
+                color: "#1DA1F2",
+                borderColor: "#1DA1F2",
+              }}
+            />
+          </div>
 
-                {/* Facebook */}
-                <div
-                  className="social-icon-container"
-                  style={{
-                    position: "relative",
-                    display: "inline-block",
-                    cursor: socialLinks.facebook ? "pointer" : "not-allowed",
-                    opacity: socialLinks.facebook ? 1 : 0.5,
-                  }}
-                  onClick={() => socialLinks.facebook && handleSocialClick(socialLinks.facebook, "Facebook")}
-                >
-                  <p
-                    style={{
-                      position: "absolute",
-                      top: "-20px",
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                      fontSize: "12px",
-                      color: "#1877F2",
-                    }}
-                  ></p>
-                  <FaFacebookF
-                    className="social-icon border border-1 rounded-circle p-2 me-2"
-                    style={{
-                      width: "35px",
-                      height: "35px",
-                      color: "#1877F2",
-                      borderColor: "#1877F2",
-                    }}
-                  />
-                </div>
+          {/* Facebook */}
+          <div
+            className="social-icon-container me-2 mb-2"
+            style={{
+              cursor: socialLinks.facebook ? "pointer" : "not-allowed",
+              opacity: socialLinks.facebook ? 1 : 0.5,
+            }}
+            onClick={() => socialLinks.facebook && handleSocialClick(socialLinks.facebook, "Facebook")}
+          >
+            <FaFacebookF
+              className="social-icon border border-1 rounded-circle p-2"
+              style={{
+                width: "35px",
+                height: "35px",
+                color: "#1877F2",
+                borderColor: "#1877F2",
+              }}
+            />
+          </div>
 
-                {/* LinkedIn */}
-                <div
-                  className="social-icon-container"
-                  style={{
-                    position: "relative",
-                    display: "inline-block",
-                    cursor: socialLinks.linkedin ? "pointer" : "not-allowed",
-                    opacity: socialLinks.linkedin ? 1 : 0.5,
-                  }}
-                  onClick={() => socialLinks.linkedin && handleSocialClick(socialLinks.linkedin, "LinkedIn")}
-                >
-                  <p
-                    style={{
-                      position: "absolute",
-                      top: "-20px",
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                      fontSize: "12px",
-                      color: "#0A66C2",
-                    }}
-                  ></p>
-                  <FaLinkedinIn
-                    className="social-icon border border-1 rounded-circle p-2 me-2"
-                    style={{
-                      width: "35px",
-                      height: "35px",
-                      color: "#0A66C2",
-                      borderColor: "#0A66C2",
-                    }}
-                  />
-                </div>
+          {/* LinkedIn */}
+          <div
+            className="social-icon-container me-2 mb-2"
+            style={{
+              cursor: socialLinks.linkedin ? "pointer" : "not-allowed",
+              opacity: socialLinks.linkedin ? 1 : 0.5,
+            }}
+            onClick={() => socialLinks.linkedin && handleSocialClick(socialLinks.linkedin, "LinkedIn")}
+          >
+            <FaLinkedinIn
+              className="social-icon border border-1 rounded-circle p-2"
+              style={{
+                width: "35px",
+                height: "35px",
+                color: "#0A66C2",
+                borderColor: "#0A66C2",
+              }}
+            />
+          </div>
 
-                {/* Instagram */}
-                <div
-                  className="social-icon-container"
-                  style={{
-                    position: "relative",
-                    display: "inline-block",
-                    cursor: socialLinks.instagram ? "pointer" : "not-allowed",
-                    opacity: socialLinks.instagram ? 1 : 0.5,
-                  }}
-                  onClick={() => socialLinks.instagram && handleSocialClick(socialLinks.instagram, "Instagram")}
-                >
-                  <p
-                    style={{
-                      position: "absolute",
-                      top: "-20px",
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                      fontSize: "12px",
-                      color: "#E1306C",
-                    }}
-                  ></p>
-                  <FaInstagram
-                    className="social-icon border border-1 rounded-circle p-2 me-2"
-                    style={{
-                      width: "35px",
-                      height: "35px",
-                      color: "#E1306C",
-                      borderColor: "#E1306C",
-                    }}
-                  />
-                </div>
+          {/* Instagram */}
+          <div
+            className="social-icon-container me-2 mb-2"
+            style={{
+              cursor: socialLinks.instagram ? "pointer" : "not-allowed",
+              opacity: socialLinks.instagram ? 1 : 0.5,
+            }}
+            onClick={() => socialLinks.instagram && handleSocialClick(socialLinks.instagram, "Instagram")}
+          >
+            <FaInstagram
+              className="social-icon border border-1 rounded-circle p-2"
+              style={{
+                width: "35px",
+                height: "35px",
+                color: "#E1306C",
+                borderColor: "#E1306C",
+              }}
+            />
+          </div>
 
-                {/* WhatsApp */}
-                <div
-                  className="social-icon-container"
-                  style={{
-                    position: "relative",
-                    display: "inline-block",
-                    cursor: socialLinks.whatsapp ? "pointer" : "not-allowed",
-                    opacity: socialLinks.whatsapp ? 1 : 0.5,
-                  }}
-                  onClick={() => socialLinks.whatsapp && handleSocialClick(socialLinks.whatsapp, "WhatsApp")}
-                >
-                  <p
-                    style={{
-                      position: "absolute",
-                      top: "-20px",
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                      fontSize: "12px",
-                      color: "#25D366",
-                    }}
-                  ></p>
-                  <IoLogoWhatsapp
-                    className="social-icon border border-1 rounded-circle p-2 me-2"
-                    style={{
-                      width: "35px",
-                      height: "35px",
-                      color: "#25D366",
-                      borderColor: "#25D366",
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-          </Col>
+          {/* WhatsApp */}
+          <div
+            className="social-icon-container me-2 mb-2"
+            style={{
+              cursor: socialLinks.whatsapp ? "pointer" : "not-allowed",
+              opacity: socialLinks.whatsapp ? 1 : 0.5,
+            }}
+            onClick={() => socialLinks.whatsapp && handleSocialClick(socialLinks.whatsapp, "WhatsApp")}
+          >
+            <IoLogoWhatsapp
+              className="social-icon border border-1 rounded-circle p-2"
+              style={{
+                width: "35px",
+                height: "35px",
+                color: "#25D366",
+                borderColor: "#25D366",
+              }}
+            />
+          </div>
+        </div>
+      </div>
+    </Col>
 
-          <Col xs={6} sm={6} md={2}>
-            <h5>Quick Links</h5>
-            <ul className="list-unstyled">
-              <li><a href="/" className="text-decoration-none text-white">Home</a></li>
-              <li><a href="/about" className="text-decoration-none text-white">About</a></li>
-              <li><a href="/FAQs" className="text-decoration-none text-white">FAQs</a></li>
-              <li><a href="/our-work" className="text-decoration-none text-white">Our Work</a></li>
-              <li><a href="/Terms.pdf" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">Terms of use</a></li>
-              <li><a href="/Privacy.pdf" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
-              <li><a href="/Refund.pdf" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">Refund Policy</a></li>
-            </ul>
-          </Col>
+    {/* Quick Links 1 */}
+    <Col xs={6} sm={6} md={3} lg={2}>
+      <h5>Quick Links</h5>
+      <ul className="list-unstyled">
+        <li><a href="/" className="text-decoration-none text-white">Home</a></li>
+        <li><a href="/about" className="text-decoration-none text-white">About</a></li>
+        <li><a href="/FAQs" className="text-decoration-none text-white">FAQs</a></li>
+        <li><a href="/our-work" className="text-decoration-none text-white">Our Work</a></li>
+        <li><a href="/Terms.pdf" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-white">Terms of use</a></li>
+        <li><a href="/Privacy.pdf" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-white">Privacy Policy</a></li>
+        <li><a href="/Refund.pdf" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-white">Refund Policy</a></li>
+      </ul>
+    </Col>
 
-          <Col xs={6} sm={6} md={3}>
-            <h5>Business Hours</h5>
-            <p>Monday - Saturday</p>
-            <p>09:00 AM - 07:00 PM</p>
-            <p>Sunday: Closed</p>
-          </Col>
+    {/* Quick Links 2 */}
+    <Col xs={6} sm={6} md={3} lg={2}>
+      <h5>Services</h5>
+      <ul className="list-unstyled">
+        <li><a href="/SearchEngine" className="text-decoration-none text-white">SEO</a></li>
+        <li><a href="/SocialMedia" className="text-decoration-none text-white">Social Media</a></li>
+        <li><a href="/ContentMarketing" className="text-decoration-none text-white">Content Marketing</a></li>
+        <li><a href="/PayPer" className="text-decoration-none text-white">Pay Per Click</a></li>
+        <li><a href="/Googlemybusiness" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-white">Google My Business</a></li>
+        <li><a href="/SpecialPAckages" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-white">Special Packages</a></li>
+       
+      </ul>
+    </Col>
 
-          <Col md={3} sm={6}>
-            <h5>Newsletter</h5>
-            <p>Subscribe to our newsletter to stay updated!</p>
-          </Col>
-        </Row>
-        <hr />
-        <p className="text-center">
-          FTFL Technologies | 2025 | All Rights Reserved | Digital Marketing | Social
-          Marketing | Web Development | Graphic Design
-        </p>
-      </Container>
+    {/* Business Hours */}
+    <Col xs={12} sm={6} md={6} lg={2}>
+      <h5>Business Hours</h5>
+      <p>Monday - Saturday</p>
+      <p>09:00 AM - 07:00 PM</p>
+      <p>Sunday: Closed</p>
+    </Col>
+
+    {/* Newsletter */}
+    <Col xs={12} sm={6} md={6} lg={3}>
+      <h5>Newsletter</h5>
+      <p>Subscribe to our newsletter to stay updated!</p>
+      {/* Optional: You can add an input and button here for email subscription */}
+    </Col>
+  </Row>
+  <hr />
+  <p className="text-center mt-3">
+    FTFL Technologies | 2025 | All Rights Reserved | Digital Marketing | Social
+    Marketing | Web Development | Graphic Design
+  </p>
+</Container>
+
     </div>
   );
 };
