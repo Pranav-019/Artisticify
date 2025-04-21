@@ -13,14 +13,13 @@ import { GiPositionMarker } from 'react-icons/gi';
 import { MdManageAccounts, MdLocalOffer } from 'react-icons/md';
 import { RiCustomerService2Fill } from 'react-icons/ri';
 
-import PosterImg from '../../assets/gmbbanner.jpg';
+import PosterImg from '../../assets/google my business.jpg';
 import gmbDashboard from '../../assets/gmb-dashboard.jpg';
 import reviewsImg from '../../assets/reviews.jpg';
 import postsImg from '../../assets/gmb-posts.jpg';
 
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import FAQs from '../FAQs';
 import { SEO } from '../SEO';
 
 function Googlemybusiness() {
@@ -32,6 +31,12 @@ function Googlemybusiness() {
   useEffect(() => {
     fetchPackages();
   }, []);
+
+  const handleEnquire = () => {
+    navigate('/contact', {
+      state: { selectedService: 'Google My Business' }
+    });
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -128,7 +133,7 @@ function Googlemybusiness() {
                 <Button 
                   variant="primary" 
                   className="mt-3 fw-bold"
-                  onClick={() => navigate('/contact')}
+                  onClick={handleEnquire}
                 >
                   <RiCustomerService2Fill className="me-2" />
                   Get Started Today
@@ -170,7 +175,7 @@ function Googlemybusiness() {
                 <Button 
                   variant="outline-primary" 
                   className="mt-2"
-                  onClick={() => navigate('/contact')}
+                  onClick={handleEnquire}
                 >
                   Get Your Business Listed
                 </Button>
@@ -207,7 +212,7 @@ function Googlemybusiness() {
                   <Button 
                     variant="outline-primary" 
                     className="mt-2"
-                    onClick={() => navigate('/contact')}
+                    onClick={handleEnquire}
                   >
                     Optimize Your Profile
                   </Button>
@@ -314,8 +319,6 @@ function Googlemybusiness() {
         </Container>
       </div>
 
-      {/* FAQs */}
-      <FAQs />
 
       {/* Packages */}
       <div className="content-container mt-5 pt-5">
@@ -348,7 +351,7 @@ function Googlemybusiness() {
                 )}
                 <button 
                   className="pck-btn rounded-pill d-flex justify-content-center mx-auto" 
-                  onClick={() => navigate('/contact')}
+                  onClick={handleEnquire}
                 >
                   Enquire Now
                 </button>

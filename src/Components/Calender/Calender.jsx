@@ -14,6 +14,12 @@ function Calender() {
     fetchPackages(); // Fetch package data on component mount
   }, []);
 
+  const handleEnquire = () => {
+    navigate('/contact', {
+      state: { selectedService: 'Calendar Design' }
+    });
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
@@ -45,18 +51,18 @@ function Calender() {
       try {
         const response = await fetch("https://artisticify-backend.vercel.app/api/design/get");
         const data = await response.json();
-  
+
         // Filter images by category (logo)
         const logoImages = data.filter(img => img.category === 'calendar');
-  
+
         // Set images to state (ensure we're accessing the correct URLs)
         setLogoImages(logoImages.map(img => img.images).flat()); // Assuming 'images' is an array in the response
-  
+
       } catch (error) {
         console.error("Error fetching images:", error);
       }
     };
-  
+
     fetchImages(); // Fetch images when the component mounts
   }, []);
 
@@ -87,11 +93,11 @@ function Calender() {
     <div>
       <SEO title="Calendar." description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       <div className='text'>
-         <div className='about'>
-                <div className='image-container'>
-                  <img src={calenderImg} className='main-about img-fluid '/>
-                </div>
-              </div>
+        <div className='about'>
+          <div className='image-container'>
+            <img src={calenderImg} className='main-about img-fluid ' />
+          </div>
+        </div>
         <h2 className="text-center fw-bold text-white my-5 shadow logo-package">Creative and Functional Calendar Design Packages for Every Business or Event.</h2>
 
         <Container>
@@ -139,46 +145,46 @@ function Calender() {
             </div>
             <h3 className="text-center  pt-3 fw-bold mb-5">See Our Creative Calender Design Creation</h3>
             <Row>
-          {logoImages.map((image, index) => (
-            <Col xs={12} md={4} className="mb-3" key={index}>
-              <div className="image-container1">
-                <img src={image} className="w-100 image-hover" alt={`logo-${index}`} style={{width:"500px", height:"400px"}}/>
-              </div>
-            </Col>
-          ))}
-        </Row>
+              {logoImages.map((image, index) => (
+                <Col xs={12} md={4} className="mb-3" key={index}>
+                  <div className="image-container1">
+                    <img src={image} className="w-100 image-hover" alt={`logo-${index}`} style={{ width: "500px", height: "400px" }} />
+                  </div>
+                </Col>
+              ))}
+            </Row>
           </Container>
 
         </Container>
         <div className="content-container mt-5 pt-5">
 
-        <div className='text-center fw-bold text-white my-5 shadow logo-package w-50 sm-w-75'>
-         <h3 className="text-center  fw-bold  pkcg"> Calender Design Packages</h3>
-         </div>
-        
+          <div className='text-center fw-bold text-white my-5 shadow logo-package w-50 sm-w-75'>
+            <h3 className="text-center  fw-bold  pkcg"> Calender Design Packages</h3>
+          </div>
+
 
           <div className="packages">
-          {packages.map((pkg, index) => (
-       <div className="package mb-3 position-relative text" key={index}>
-       <div className="pb-5">
-      <h3 className="text-center">{pkg.name}</h3>
-      <p>{pkg.description}</p>
-      <ul className="text pb-4">
-        {pkg.features.map((feature, i) => (
-          <li key={i}>{feature}</li>
-        ))}
-       </ul>
-       {pkg.type === "Premium" ? (
-  <h4 className="text-center blue fw-bold price">Customizable</h4>
-) : (
-  <h4 className="text-center blue fw-bold price">{pkg.price} /-</h4>
-)}
-       <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto">
-        Enquire Now
-       </button>
-       </div>
-      </div>
-       ))}
+            {packages.map((pkg, index) => (
+              <div className="package mb-3 position-relative text" key={index}>
+                <div className="pb-5">
+                  <h3 className="text-center">{pkg.name}</h3>
+                  <p>{pkg.description}</p>
+                  <ul className="text pb-4">
+                    {pkg.features.map((feature, i) => (
+                      <li key={i}>{feature}</li>
+                    ))}
+                  </ul>
+                  {pkg.type === "Premium" ? (
+                    <h4 className="text-center blue fw-bold price">Customizable</h4>
+                  ) : (
+                    <h4 className="text-center blue fw-bold price">{pkg.price} /-</h4>
+                  )}
+                  <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={handleEnquire}>
+                    Enquire Now
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

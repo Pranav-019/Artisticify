@@ -14,7 +14,6 @@ import youtube from '../../assets/youtube.jpg'
 
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import FAQs from '../FAQs';
 import { SEO } from '../SEO';
 function SocialMedia() {
   const [setIsVisible] = useState(false);
@@ -26,6 +25,12 @@ function SocialMedia() {
   useEffect(() => {
     fetchPackages(); // Fetch package data on component mount
   }, []);
+
+  const handleEnquire = () => {
+    navigate('/contact', {
+      state: { selectedService: 'Social Media' }
+    });
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -149,7 +154,7 @@ digital marketing and advertising agency" />
                 </p>
                 <p className='text-secondary'>Let’s build your success—start growing today!</p>
 
-                <Button className=' bg-whitw boreder blue custom-button fw-bold p-3 my-3 img-fluid' style={{ color: "#13357b" }} onClick={() => navigate('/contact')}>Find Out More</Button>
+                <Button className=' bg-whitw boreder blue custom-button fw-bold p-3 my-3 img-fluid' style={{ color: "#13357b" }} onClick={handleEnquire}>Find Out More</Button>
               </Col>
               <Col md={6}>
 
@@ -184,7 +189,7 @@ digital marketing and advertising agency" />
                 </p>
                 <p className='text-secondary'>Let us help you increase conversions and grow your brand’s visibility with our proven strategies!</p>
 
-                <Button className=' bg-whitw boreder blue custom-button fw-bold p-3 my-3 img-fluid' style={{ color: "#13357b" }} onClick={() => navigate('/contact')}>Get More Traffic & More Engagement</Button>
+                <Button className=' bg-whitw boreder blue custom-button fw-bold p-3 my-3 img-fluid' style={{ color: "#13357b" }} onClick={handleEnquire}>Get More Traffic & More Engagement</Button>
               </Col>
 
             </Row>
@@ -349,7 +354,6 @@ digital marketing and advertising agency" />
           </Row>
         </Container>
       </div>
-      <FAQs />
 
       <div className="content-container mt-5 pt-5">
 
@@ -375,7 +379,7 @@ digital marketing and advertising agency" />
                 ) : (
                   <h4 className="text-center blue fw-bold price">{pkg.price} /-</h4>
                 )}
-                <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={() => navigate('/contact')}>
+                <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={handleEnquire}>
                   Enquire Now
                 </button>
               </div>

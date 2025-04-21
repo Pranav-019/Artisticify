@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "./logo.css"; // Ensure your CSS file path is correct
 import { Col, Container, Row } from "react-bootstrap";
-import LogoImg from '../../assets/Logo Design Serivces.jpg'
+import LogoImg from '../../assets/Logo Design Serivces (1).jpg'
 import logo from '../../assets/istockphoto-1421037079-612x612-removebg-preview.png'
 import { useNavigate } from "react-router-dom";
 import { SEO } from '../SEO';
@@ -14,8 +14,14 @@ const Logo = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetchPackages(); // Fetch package data on component mount
+    fetchPackages(); 
   }, []);
+
+  const handleEnquire = () => {
+    navigate('/contact', {
+      state: { selectedService: 'Logo Design' }
+    });
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -167,7 +173,7 @@ const Logo = () => {
                 ) : (
                   <h4 className="text-center blue fw-bold price">{pkg.price} /-</h4>
                 )}
-                <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={() => navigate('/contact')}>
+                <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={handleEnquire}>
                   Enquire Now
                 </button>
               </div>

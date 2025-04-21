@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Card from "react-bootstrap/Card";
 import a1 from "../assets/Page 1 Logo Design (1).jpg";
 import a2 from "../assets/Page 2 Packeging.jpg";
 import a3 from "../assets/Page 3 UI_UX.jpg";
 import a4 from "../assets/Page 4_Packeging.jpg";
+import { MdArrowForwardIos,MdArrowBackIos  } from "react-icons/md";
 import a5 from "../assets/Page 5_ Visual Ads.jpg";
 import { Container } from "react-bootstrap";
 
@@ -34,6 +34,23 @@ function Awesome() {
   }, []);
 
 
+  useEffect(() => {
+    const updateCardsPerView = () => {
+      const width = window.innerWidth;
+      if (width < 768) {
+        setCardsPerView(1); // Mobile
+      } else if (width < 992) {
+        setCardsPerView(2); // Tablet
+      } else {
+        setCardsPerView(3); // Desktop
+      }
+    };
+
+    updateCardsPerView(); // Call on load
+    window.addEventListener("resize", updateCardsPerView);
+
+    return () => window.removeEventListener("resize", updateCardsPerView);
+  }, []);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -84,14 +101,14 @@ function Awesome() {
 
  
   return (
-    <div style={{ marginTop: "100px" }}>
+    <div style={{ marginTop: "120px" }}>
       <Container>
         <div className="text-center my-3">
           <h2 className="fw-bold py-2" style={{ color: "#094167" }}>
             Digital Success Starts Here
           </h2>
 
-          <p className="text-secondary mx-3">
+          <p className="text-secondary mx-3 text">
             Digital marketing uses targeted strategies like SEO, PPC, email
             marketing, and social media to help businesses grow online, increase
             brand visibility, generate leads, and build lasting relationships
@@ -99,16 +116,16 @@ function Awesome() {
           </p>
         </div>
       </Container>
+
       <div className="d-flex align-items-center justify-content-center py-5">
         {/* Left Arrow Button with margin-end */}
         <Button
           variant=""
-          className={`destiBtn rounded-pill py-3 me-4 ${
-            activeButton === "LeftArrow" ? "active-btn" : ""
-          }`}
+          className={`destiBtn rounded-pill py-3 me-1 me-md-4 ${activeButton === "LeftArrow" ? "active-btn" : ""
+            }`}
           onClick={() => handleButtonClick("LeftArrow")}
         >
-          <FaArrowLeft />
+          <MdArrowBackIos />
         </Button>
 
         {/* Carousel */}
@@ -136,12 +153,11 @@ function Awesome() {
         {/* Right Arrow Button with margin-start */}
         <Button
           variant=""
-          className={`destiBtn rounded-pill py-3 ms-4 ${
-            activeButton === "RightArrow" ? "active-btn" : ""
-          }`}
+          className={`destiBtn rounded-pill py-3 ms-1 ms-md-4 ${activeButton === "RightArrow" ? "active-btn" : ""
+            }`}
           onClick={() => handleButtonClick("RightArrow")}
         >
-          <FaArrowRight />
+          <MdArrowForwardIos />
         </Button>
       </div>
     </div>
@@ -149,3 +165,4 @@ function Awesome() {
 }
 
 export default Awesome;
+ 

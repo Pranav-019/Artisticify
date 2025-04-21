@@ -9,11 +9,21 @@ import { MdEmail } from "react-icons/md";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import MainImg from '../assets/postive-caring-relationships-teachers 1.png';
+import { useLocation } from 'react-router-dom';
 
 function Contact() {
+
+  
+  const location = useLocation();
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    const scrollTimeout = setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100); // small delay to allow DOM/layout to settle
+  
+    return () => clearTimeout(scrollTimeout); // cleanup
+  }, [location.pathname]);
+  
 
   const [formData, setFormData] = useState({
     name: '',
@@ -24,7 +34,16 @@ function Contact() {
     message: '',
   });
 
-  const [ setSelectedService] = useState('Select');
+  useEffect(() => {
+    if (location.state?.selectedService) {
+      setFormData(prev => ({
+        ...prev,
+        serviceSelected: location.state.selectedService
+      }));
+    }
+  }, [location.state]);
+
+  const [setSelectedService] = useState('Select');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState(''); // State to track success message
@@ -83,7 +102,7 @@ function Contact() {
       if (response.status === 201) {
         setSuccessMessage('Message sent successfully!'); // Show success message
         setFormData({ name: '', email: '', phone: '', city: '', serviceSelected: 'Select', message: '' });
-        setSelectedService('Select');
+        // setSelectedService('Select');
       }
     } catch (error) {
       setErrorMessage(error.response?.data?.message || 'Failed to send message. Please try again later.');
@@ -93,7 +112,7 @@ function Contact() {
   };
 
   return (
-    <div>
+    <div >
       <div className='contact1 text'>
         <div className='image-container'>
           <img src={MainImg} className='main-contact img-fluid' alt="Contact Us" />
@@ -153,11 +172,11 @@ function Contact() {
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          
+
                         />
                       </Form.Group>
 
-                      <Form.Group as={Col} sm={12}  md={6} controlId="formGridEmail">
+                      <Form.Group as={Col} sm={12} md={6} controlId="formGridEmail">
                         <label className='pb-2 ps-2'>Enter Email</label>
                         <Form.Control
                           type="email"
@@ -173,7 +192,7 @@ function Contact() {
                     </Row>
 
                     <Row className="mb-3">
-                      <Form.Group as={Col} sm={12}  md={6} controlId="formGridPhone">
+                      <Form.Group as={Col} sm={12} md={6} controlId="formGridPhone">
                         <label className='pb-2 ps-2'>Enter Your Phone no.</label>
                         <Form.Control
                           type="number"
@@ -187,7 +206,7 @@ function Contact() {
                         />
                       </Form.Group>
 
-                      <Form.Group as={Col} sm={12}  md={6} controlId="formGridCity">
+                      <Form.Group as={Col} sm={12} md={6} controlId="formGridCity">
                         <label className='pb-2 ps-2'>Enter Your City</label>
                         <Form.Control
                           type="text"
@@ -212,31 +231,31 @@ function Contact() {
                       onChange={handleChange}
                     >
                       <option value="Select">Select</option>
-  <option value="Logo Design">Logo Design</option>
-  <option value="Brochure Design"> Brochure Design</option>
-  <option value="Packaging Design">Packaging Design</option>
-  <option value="Flyer Design">Flyer Design</option>
-  <option value="Poster Design">Poster Design</option>
-  <option value="UI/UX Design">UI/UX Design</option>
-  <option value="Magazine Design">Magazine Design</option>
-  <option value="Visual Aid Design"> Visual Aid Design</option>
-  <option value="Calendar Design"> Calendar Design</option>
-  <option value="Icon Design">Icon Design</option>
-  <option value="Stationary Design"> Stationary Design</option>
-  <option value="Letter Head Design"> Letter Head Design</option>
-  <option value="Envelope Design"> Envelope Design</option>
-  <option value="Visiting Card Design"> Visiting Card Design</option>
-  <option value="Certificate Design"> Certificate Design</option>
-  <option value="Menu Card Design"> Menu Card Design</option>
-  <option value="SEO"> SEO</option>
-  <option value="Social Media"> Social Media</option>
-  <option value="Content Marketing"> Content Marketing</option>
-  <option value="Pay Per Click"> Pay Per Click</option>
-
-  <option value="Special Package (combined services)">Special Package (combined services)</option>
+                      <option value="Logo Design">Logo Design</option>
+                      <option value="Brochure Design">Brochure Design</option>
+                      <option value="Packaging Design">Packaging Design</option>
+                      <option value="Flyer Design">Flyer Design</option>
+                      <option value="Poster Design">Poster Design</option>
+                      <option value="UI/UX Design">UI/UX Design</option>
+                      <option value="Magazine Design">Magazine Design</option>
+                      <option value="Visual Aid Design">Visual Aid Design</option>
+                      <option value="Calendar Design">Calendar Design</option>
+                      <option value="Icon Design">Icon Design</option>
+                      <option value="Stationary Design"> Stationary Design</option>
+                      <option value="Letter Head Design">Letter Head Design</option>
+                      <option value="Envelope Design">Envelope Design</option>
+                      <option value="Visiting Card Design">Visiting Card Design</option>
+                      <option value="Certificate Design">Certificate Design</option>
+                      <option value="Menu Card Design">Menu Card Design</option>
+                      <option value="SEO">SEO</option>
+                      <option value="Social Media">Social Media</option>
+                      <option value="Content Marketing">Content Marketing</option>
+                      <option value="Pay Per Click">Pay Per Click</option>
+                      <option value="Google My Business">Google My Business</option>
+                      <option value="Special Package (combined services)">Special Package (combined services)</option>
                     </Form.Control>
 
-                    <Form.Group className="mb-2 mt-2" controlId="exampleForm.ControlTextarea1">
+                    <Form.Group className="mb-2 mt-3" controlId="exampleForm.ControlTextarea1">
                       <Form.Control
                         as="textarea"
                         rows={3}

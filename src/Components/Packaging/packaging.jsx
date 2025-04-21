@@ -17,6 +17,12 @@ const Packaging = () => {
     fetchPackages(); // Fetch package data on component mount
   }, []);
 
+  const handleEnquire = () => {
+    navigate('/contact', {
+      state: { selectedService: 'Packaging Design' }
+    });
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
@@ -167,7 +173,7 @@ Cooperate with us for innovative, world-class product packaging design!
 ) : (
   <h4 className="text-center blue fw-bold price">{pkg.price} /-</h4>
 )}
-       <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={() => navigate('/contact')}>
+       <button className="pck-btn rounded-pill d-flex justify-content-center mx-auto" onClick={handleEnquire}>
         Enquire Now
        </button>
        </div>
