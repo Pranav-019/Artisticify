@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function FAQs() {
   const navigate=useNavigate()
   return (
-    <div style={{ paddingTop: "200px" }}>
+    <div style={{ paddingTop: "50px" }}>
       <Container>
         <div className="mx-lg-4">
           <div className="p-5 rounded rounded-4" style={{backgroundColor:"#0d3e72"}}>

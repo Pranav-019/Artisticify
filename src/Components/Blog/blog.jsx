@@ -1,8 +1,9 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 import img1 from '../../assets/seoblog.jpg';
+import axios from 'axios';
 
 const blogs = [
   {
@@ -25,8 +26,29 @@ const blogs = [
   },
 ];
 
+
+
 const Blog = () => {
   const navigate = useNavigate();
+
+  const [blog, setBlog] = useState([]);
+  const fetchBlogs = async () => {
+    try {
+      const res = await axios.get(
+        "https://artisticify-backend.vercel.app/api/blogs/allBlogs"
+      );
+      setBlog(res.data.blogs);
+    } catch (error) {
+      console.error("Error fetching blogs:", error);
+    }
+  };
+
+
+  useEffect(() => {
+    fetchBlogs();
+  }, []);
+
+  console.log("all blogs : ", blog)
 
   return (
     <div style={{ backgroundColor: '#f8f9fa' }}>
@@ -35,18 +57,26 @@ const Blog = () => {
           Our Blog
         </h1>
         <Row>
-          {blogs.map((blog) => (
-            <Col xs={12} md={6} lg={4} key={blog.id} className="mb-4">
+          {blog.map((blog) => (
+            <Col xs={12} md={6} lg={4} key={blog._id} className="mb-4">
               <Card className="shadow-sm h-100 d-flex flex-column">
-                <Card.Img variant="top" src={blog.image} />
+                <Card.Img
+                  variant="top"
+                  src={blog.image || "default-image.jpg"}
+                  style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+                />
                 <Card.Body className="d-flex flex-column">
-                  <Card.Title style={{ color: '#13357b' }}>{blog.title}</Card.Title>
-                  <Card.Text>{blog.description}</Card.Text>
+                  <Card.Title style={{ color: '#13357b' }}>
+                    {blog.mainTitle}
+                  </Card.Title>
+                  <Card.Text>
+                    {blog.shortDescription || blog.description.slice(0, 100)}...
+                  </Card.Text>
                   <Button
                     variant="primary"
                     style={{ backgroundColor: '#13357b', borderColor: '#13357b' }}
                     className="mt-auto"
-                    onClick={() => navigate("/blogdescription")}
+                    onClick={() => navigate(`/blogdescription/${blog._id}`)}
                   >
                     Read More
                   </Button>
