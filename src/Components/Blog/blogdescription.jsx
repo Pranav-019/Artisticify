@@ -118,9 +118,9 @@ const BlogDescription = () => {
       {!blogDetails ? (
         <p>Loading blog details...</p>
       ) : (
-        <Row className="p-4 border-none">
+        <Row className="py-4 border-none">
           <Col md={12}>
-            <Card className="p-4 border-0">
+            <Card className="py-4 border-0">
               <Card.Text>
                 <h3 className="fw-bold pb-3">{blogDetails.mainTitle}</h3>
                 <p className="text text-secondary">{blogDetails.description}</p>
