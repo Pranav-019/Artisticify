@@ -13,6 +13,26 @@ function Awesome() {
   const [activeButton, setActiveButton] = useState("");
   const [visibleIndex, setVisibleIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
+  const [cardsPerView, setCardsPerView] = useState(3);
+
+  useEffect(() => {
+    const updateCardsPerView = () => {
+      const width = window.innerWidth;
+      if (width < 768) {
+        setCardsPerView(1); // Mobile
+      } else if (width < 992) {
+        setCardsPerView(2); // Tablet
+      } else {
+        setCardsPerView(3); // Desktop
+      }
+    };
+
+    updateCardsPerView(); // Call on load
+    window.addEventListener("resize", updateCardsPerView);
+
+    return () => window.removeEventListener("resize", updateCardsPerView);
+  }, []);
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -62,51 +82,7 @@ function Awesome() {
     }
   }, [visibleIndex, extendedCards.length]);
 
-<<<<<<< HEAD
-  return (
-    <div className='' style={{ marginTop: '120px' }}>
-      <Container>
-      
-        <div className='d-flex justify-content-between py-5'>
-          <Button
-            variant=""
-            className={`destiBtn rounded-pill py-3 mx-1 ${activeButton === 'LeftArrow' ? 'active-btn' : ''}`}
-            onClick={() => handleButtonClick('LeftArrow')}
-          >
-            <FaArrowLeft />
-          </Button>
-
-          <Button
-            variant=""
-            className={`destiBtn rounded-pill py-3 mx-1 ${activeButton === 'RightArrow' ? 'active-btn' : ''}`}
-            onClick={() => handleButtonClick('RightArrow')}
-          >
-            <FaArrowRight />
-          </Button>
-        </div>
-
-        <div className="overflow-hidden">
-=======
-  const [cardsPerView, setCardsPerView] = useState(3);
-
-  useEffect(() => {
-    const updateCardsPerView = () => {
-      const width = window.innerWidth;
-      if (width < 768) {
-        setCardsPerView(1); // Mobile
-      } else if (width < 992) {
-        setCardsPerView(2); // Tablet
-      } else {
-        setCardsPerView(3); // Desktop
-      }
-    };
-
-    updateCardsPerView(); // Call on load
-    window.addEventListener("resize", updateCardsPerView);
-
-    return () => window.removeEventListener("resize", updateCardsPerView);
-  }, []);
-
+ 
   return (
     <div style={{ marginTop: "100px" }}>
       <Container>
@@ -137,7 +113,6 @@ function Awesome() {
 
         {/* Carousel */}
         <div className="overflow-hidden" style={{ width: "80%" }}>
->>>>>>> 0d7799c9943632cddc39b6d02bf5432c0b375816
           <div
             className="card-container"
             style={{

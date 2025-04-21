@@ -96,23 +96,9 @@ const App = () => {
       <ReverseCara />
       <Collection />
       <OurService />
-      
+
       <FAQs />
     </div>
-<<<<<<< HEAD
-    <OurService/>
-    <Awesome/>
-    
-    <Graphicpanel/>
-    <ReverseCara/>
-        <Collection/>
-    
-    
-    <FAQs/>
-   </div>
-    
-=======
->>>>>>> 0d7799c9943632cddc39b6d02bf5432c0b375816
   );
 };
 
