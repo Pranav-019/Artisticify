@@ -7,7 +7,7 @@ function Collection() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/collection/fetchCollection")
+      .get("https://artisticify-backend.vercel.app/api/collection/fetchCollection")
       .then((res) => {
         setImages(res.data);
       })
