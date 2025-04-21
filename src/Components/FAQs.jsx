@@ -8,7 +8,7 @@ function FAQs() {
     <div style={{ paddingTop: "50px" }}>
       <Container>
         <div className="mx-lg-4">
-          <div className="p-5 rounded rounded-4" style={{backgroundColor:"#0d3e72"}}>
+          <div className="p-4 rounded rounded-4" style={{backgroundColor:"#0d3e72"}}>
           <h1 className="fw-bold text-white text-center ">Frequently Asked Questions</h1>
 
           </div>
