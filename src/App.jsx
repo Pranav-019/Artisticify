@@ -189,7 +189,7 @@ const Root = () => (
         <Route path="/about" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blogdescription" element={<BlogDetail />} />
+        <Route path="/blogdescription/:blogId" element={<BlogDetail />} />
 
         <Route path="/home" element={<App />} />
         <Route path="/design" element={<Design />} />

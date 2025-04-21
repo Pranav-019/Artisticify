@@ -31,7 +31,7 @@ const Footer = () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        console.log("Raw API Response:", data);
+        // console.log("Raw API Response:", data);
 
         if (data && data.links && typeof data.links === "object") {
           const updatedLinks = {
@@ -42,7 +42,7 @@ const Footer = () => {
             facebook: data.links.facebook && data.links.facebook.trim() !== "" ? data.links.facebook : fallbackLinks.facebook,
           };
           setSocialLinks(updatedLinks);
-          console.log("Set Social Links:", updatedLinks);
+          // console.log("Set Social Links:", updatedLinks);
         } else {
           console.error("API returned invalid data or missing 'links' property:", data);
           setSocialLinks(fallbackLinks); // Use fallback if structure is wrong
