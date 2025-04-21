@@ -171,7 +171,6 @@ const App = () => {
       <ReverseCara />
       <Count />
       <Collection />
-      <OurService />
 
       <TestimonialSection />
       <FAQs />
