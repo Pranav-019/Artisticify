@@ -6,7 +6,6 @@ import {
   useNavigate,
 } from "react-router-dom";
 import "./App.css";
-import statueImage from "./assets/homepage-bg.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -57,7 +56,6 @@ import StepsDiagram from "./Components/StepsDiagram/StepsDiagram";
 import Blog from "./Components/Blog/blog";
 import BlogDetail from "./Components/Blog/blogdescription";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
-import heroImage from "./assets/poster_500-500-removebg-preview.png";
 import star from "./assets/star.png";
 import world from "./assets/images-removebg-preview (1).png";
 import { Carousel } from "react-bootstrap";
@@ -173,6 +171,7 @@ const App = () => {
       <ReverseCara />
       <Count />
       <Collection />
+
       <TestimonialSection />
       <FAQs />
     </div>
@@ -189,7 +188,7 @@ const Root = () => (
         <Route path="/about" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blogdescription" element={<BlogDetail />} />
+        <Route path="/blogdescription/:blogId" element={<BlogDetail />} />
 
         <Route path="/home" element={<App />} />
         <Route path="/design" element={<Design />} />

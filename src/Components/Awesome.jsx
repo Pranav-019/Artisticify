@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Card from "react-bootstrap/Card";
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 import { Container } from "react-bootstrap";

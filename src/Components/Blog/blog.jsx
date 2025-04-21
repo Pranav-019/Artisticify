@@ -2,29 +2,7 @@ import { useEffect, useState } from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
-import img1 from '../../assets/seoblog.jpg';
 import axios from 'axios';
-
-const blogs = [
-  {
-    id: 1,
-    title: 'Boost Your Online Visibility with Proven SEO Strategies',
-    description: 'Unlock your website’s potential with proven SEO strategies that increase visibility, drive targeted traffic, and boost your search engine rankings. From keyword research to technical SEO, these tactics help you stand out in search results and attract the right audience.',
-    image: img1,
-  },
-  {
-    id: 2,
-    title: 'Boosting Productivity at Work',
-    description: 'Learn effective techniques to stay focused and increase your productivity at the office.',
-    image: img1,
-  },
-  {
-    id: 3,
-    title: 'Office Design Trends in 2025',
-    description: 'Discover the latest trends in office interior design that enhance employee well-being.',
-    image: img1,
-  },
-];
 
 
 
