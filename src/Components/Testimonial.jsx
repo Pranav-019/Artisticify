@@ -118,9 +118,9 @@ function TestimonialSection() {
                         }}
                     >
                         {extendedCards.map((card, index) => (
-                            <Card className="packCard mx-3 p-4" key={index}>
+                            <Card className="packCard mx-3 py-4 px-2 px-lg-4" key={index}>
                                 <Row>
-                                    <Col xs={4}>
+                                    <Col xs={5} >
                                         <Card.Img
                                             variant="top"
                                             src={card.image}
@@ -128,14 +128,14 @@ function TestimonialSection() {
                                         />
                                     </Col>
 
-                                    <Col xs={8} className="my-auto">
+                                    <Col xs={7} className="my-auto ">
                                         <Card.Text>
                                             <strong>{card.name}</strong>
                                             <p className="text-wrap">{card.position}</p>
                                         </Card.Text>
                                     </Col>
                                 </Row>
-                                <Card.Body className="d-flex flex-column justify-content-between p-3 pt-3">
+                                <Card.Body className="d-flex flex-column justify-content-between py-3 pt-3">
                                     <div>
                                         <Card.Text>{card.text}</Card.Text>
                                     </div>
