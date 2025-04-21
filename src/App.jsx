@@ -63,6 +63,7 @@ import img1 from "./assets/poster_500-500-removebg-preview.png";
 import img2 from "./assets/istockphoto-1281819457-612x612-removebg-preview.png";
 import img3 from "./assets/letter_head-removebg-preview.png";
 import TestimonialSection from "./Components/Testimonial";
+import Testimonial from "./Components/Testimonial/Testinonial";
 const App = () => {
   // Create a reference to the contact form section
   const navigate = useNavigate();
@@ -171,7 +172,6 @@ const App = () => {
       <ReverseCara />
       <Count />
       <Collection />
-
       <TestimonialSection />
       <FAQs />
     </div>
