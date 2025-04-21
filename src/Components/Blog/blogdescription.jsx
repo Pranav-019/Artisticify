@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate, useParams } from "react-router-dom";
-import seoimg from "../../assets/seoblog.jpg";
 import axios from "axios";
 
 const BlogDescription = () => {
@@ -43,7 +42,11 @@ const BlogDescription = () => {
       {/* Image and Side Content */}
       <Row className="mb-4">
         <Col xs={12} md={12} lg={8} xl={8} xxl={8}>
-          <img src={seoimg} alt="SEO" className="img-fluid w-100" />
+          {!blogDetails ? (
+            <p>Loading blog details...</p>
+          ) : (
+            <img src={blogDetails.image} alt="SEO" className="img-fluid w-100" />
+          )}
         </Col>
         <Col xs={12} md={12} lg={4} xl={4} xxl={4}>
           <Card
