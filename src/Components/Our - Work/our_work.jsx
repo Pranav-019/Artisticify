@@ -185,7 +185,7 @@ const OurWork = () => {
       </div>
 
       <div className="d-flex justify-content-center align-items-center">
-        <div className="text-center p-5 my-4 w-75 ">
+        <div className="text-center py-5 my-4 w-75 ">
           <h1 className="fw-bold extra-bold heading my-3">
             Graphic Design Packages
           </h1>
