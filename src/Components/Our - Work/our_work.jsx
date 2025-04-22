@@ -206,7 +206,7 @@ const OurWork = () => {
       </div>
 
       <Container>
-        <div className="blue1 text-white p-3 w-50 logo-package">
+        <div className="blue1 text-white py-3 w-50 logo-package">
           <h1 className="fw-bold">Logo Design Package</h1>
         </div>
         <Row className="mb-5 pb-5">
