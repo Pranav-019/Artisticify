@@ -1,7 +1,7 @@
 import './about.css';
 import { Col, Container, Row } from 'react-bootstrap';
 import Why from "../About/aaa.png";
-import MainImg from '../../assets/postive-caring-relationships-teachers 1.png' 
+import MainImg from '../../assets/our work.jpg' 
 import { SEO } from '../SEO';
 const About = () => {
   return (
