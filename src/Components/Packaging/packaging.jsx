@@ -1,6 +1,6 @@
 import  { useEffect, useRef, useState } from 'react';
 import PackagingImage from '../../assets/packaging.jpg';
-import packImg from '../../assets/Packaging design newww.jpg';
+import packImg from '../../assets/Packaging designnewww.jpg';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { SEO } from '../SEO';
