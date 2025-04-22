@@ -118,7 +118,7 @@ function TestimonialSection() {
                         }}
                     >
                         {extendedCards.map((card, index) => (
-                            <Card className="packCard mx-3 py-4 px-2 px-lg-4" key={index}>
+                            <Card className="packCard mx-2 mx-sm-2 mx-md-3 mx-lg-3 py-4 px-2 px-lg-4" key={index}>
                                 <Row>
                                     <Col xs={5}>
                                         <Card.Img
