@@ -127,7 +127,7 @@ function ReverseCara() {
             }}
           >
             {cardData.concat(cardData.slice(0, 3)).map((card, index) => (
-              <Card className="packCard mx-3" key={index}>
+              <Card className="packCard mx-2 mx-sm-2 mx-md-3 mx-lg-3" key={index}>
                 <div className="card-img">
                   <Card.Img variant="top" src={card.image} />
                 </div>
