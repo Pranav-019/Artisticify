@@ -1608,6 +1608,13 @@ h2.text-center {
           height: 200px;
         }}
 
+        @media (max-width: 365px)  {
+          .packCard{
+            flex: 0 0 253px;
+            /* padding: 10px; */
+            height: 200px;
+          }}
+
   
 
 
