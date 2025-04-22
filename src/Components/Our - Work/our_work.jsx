@@ -89,7 +89,7 @@ const OurWork = () => {
     //     </div>
     //     <Row className="mb-5 pb-5">
     //       <Col md={6}>
-    //         <div className="our-content px-5">
+    //         <div className="our-content ">
     //           <h3
     //             className="mb-3"
     //             style={{ textShadow: "4px 4px 6px rgba(0, 0, 0, 0.4)" }}
@@ -153,7 +153,7 @@ const OurWork = () => {
     //         )}
     //       </Col>
     //       <Col md={6}>
-    //         <div className="our-content px-5">
+    //         <div className="our-content ">
     //           <h3
     //             className="mb-3"
     //             style={{ textShadow: "4px 4px 6px rgba(0, 0, 0, 0.4)" }}
@@ -206,12 +206,16 @@ const OurWork = () => {
       </div>
 
       <Container>
-        <div className="blue1 text-white py-3 w-50 logo-package">
+        <Row className="justify-content-center">
+        <Col xs={12} lg={6}>
+          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
           <h1 className="fw-bold">Logo Design Package</h1>
-        </div>
+          </div>
+        </Col>
+      </Row>
         <Row className="mb-5 pb-5">
           <Col md={6} className="my-auto">
-            <div className="our-content px-5">
+            <div className="our-content ">
               <h3
                 className="mb-3"
                 style={{ textShadow: "4px 4px 6px rgba(0, 0, 0, 0.4)" }}
@@ -265,9 +269,14 @@ const OurWork = () => {
         </Row>
       </Container>
       <Container className="">
-        <div className="blue1 text-white p-3 w-50 logo-package ">
+      <Row className="justify-content-center">
+        <Col xs={12} lg={6}>
+          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
           <h1 className="fw-bold">Brochure Design Package</h1>
-        </div>
+          </div>
+        </Col>
+      </Row>
+       
         <Row className="mb-5 pb-5">
           <Col md={6}>
             {works.length > 0 ? (
@@ -311,7 +320,7 @@ const OurWork = () => {
             )}
           </Col>
           <Col md={6} className="my-auto">
-            <div className="our-content px-5">
+            <div className="our-content ">
               <h3
                 className="mb-3"
                 style={{ textShadow: "4px 4px 6px rgba(0, 0, 0, 0.4)" }}
@@ -325,12 +334,17 @@ const OurWork = () => {
       </Container>
 
       <Container>
-        <div className="blue1 text-white p-3 w-50 logo-package">
+      <Row className="justify-content-center">
+        <Col xs={12} lg={6}>
+          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
           <h1 className="fw-bold">Flyer Design Package</h1>
-        </div>
+          </div>
+        </Col>
+      </Row>
+       
         <Row className="mb-5 pb-5">
           <Col md={6} className="my-auto">
-            <div className="our-content px-5">
+            <div className="our-content ">
               <h3
                 className="mb-3"
                 style={{ textShadow: "4px 4px 6px rgba(0, 0, 0, 0.4)" }}
@@ -384,9 +398,13 @@ const OurWork = () => {
         </Row>
       </Container>
       <Container className="">
-        <div className="blue1 text-white p-3 w-50 logo-package ">
-          <h1 className="fw-bold">Packaging Design </h1>
-        </div>
+      <Row className="justify-content-center">
+        <Col xs={12} lg={6}>
+          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
+          <h1 className="fw-bold">Packaging Design </h1>          </div>
+        </Col>
+      </Row>
+       
         <Row className="mb-5 pb-5">
           <Col md={6}>
             {works.length > 0 ? (
@@ -430,7 +448,7 @@ const OurWork = () => {
             )}
           </Col>
           <Col md={6} className="my-auto">
-            <div className="our-content px-5">
+            <div className="our-content ">
               <h3
                 className="mb-3"
                 style={{ textShadow: "4px 4px 6px rgba(0, 0, 0, 0.4)" }}
@@ -443,12 +461,17 @@ const OurWork = () => {
         </Row>
       </Container>
       <Container>
-        <div className="blue1 text-white p-3 w-50 logo-package">
+      <Row className="justify-content-center">
+        <Col xs={12} lg={6}>
+          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
           <h1 className="fw-bold">Icon Design Package</h1>
-        </div>
+          </div>
+        </Col>
+      </Row>
+       
         <Row className="mb-5 pb-5">
           <Col md={6} className="my-auto">
-            <div className="our-content px-5">
+            <div className="our-content ">
               <h3
                 className="mb-3"
                 style={{ textShadow: "4px 4px 6px rgba(0, 0, 0, 0.4)" }}
@@ -502,9 +525,14 @@ const OurWork = () => {
         </Row>
       </Container>
       <Container className="">
-        <div className="blue1 text-white p-3 w-50 logo-package ">
+      <Row className="justify-content-center">
+        <Col xs={12} lg={6}>
+          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
           <h1 className="fw-bold">UI/UX Design Package</h1>
-        </div>
+          </div>
+        </Col>
+      </Row>
+       
         <Row className="mb-5 pb-5">
           <Col md={6}>
             {works.length > 0 ? (
@@ -548,7 +576,7 @@ const OurWork = () => {
             )}
           </Col>
           <Col md={6} className="my-auto">
-            <div className="our-content px-5">
+            <div className="our-content ">
               <h3
                 className="mb-3"
                 style={{ textShadow: "4px 4px 6px rgba(0, 0, 0, 0.4)" }}
@@ -561,12 +589,17 @@ const OurWork = () => {
         </Row>
       </Container>
       <Container>
-        <div className="blue1 text-white p-3 w-50 logo-package">
+      <Row className="justify-content-center">
+        <Col xs={12} lg={6}>
+          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
           <h1 className="fw-bold">Stationary Design Package</h1>
-        </div>
+          </div>
+        </Col>
+      </Row>
+       
         <Row className="mb-5 pb-5">
           <Col md={6} className="my-auto">
-            <div className="our-content px-5">
+            <div className="our-content ">
               <h3
                 className="mb-3"
                 style={{ textShadow: "4px 4px 6px rgba(0, 0, 0, 0.4)" }}
@@ -620,9 +653,14 @@ const OurWork = () => {
         </Row>
       </Container>
       <Container className="">
-        <div className="blue1 text-white p-3 w-50 logo-package ">
+      <Row className="justify-content-center">
+        <Col xs={12} lg={6}>
+          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
           <h1 className="fw-bold">Magazine Add Package</h1>
-        </div>
+          </div>
+        </Col>
+      </Row>
+        
         <Row className="mb-5 pb-5">
           <Col md={6}>
             {works.length > 0 ? (
@@ -666,7 +704,7 @@ const OurWork = () => {
             )}
           </Col>
           <Col md={6} className="my-auto">
-            <div className="our-content px-5">
+            <div className="our-content ">
               <h3
                 className="mb-3"
                 style={{ textShadow: "4px 4px 6px rgba(0, 0, 0, 0.4)" }}
@@ -679,12 +717,17 @@ const OurWork = () => {
         </Row>
       </Container>
       <Container className="">
-        <div className="blue1 text-white p-3 w-50 logo-package ">
+      <Row className="justify-content-center">
+        <Col xs={12} lg={6}>
+          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
           <h1 className="fw-bold">Visual Aid Package</h1>
-        </div>
+          </div>
+        </Col>
+      </Row>
+       
         <Row className="mb-5 pb-5">
           <Col md={6} className="my-auto">
-            <div className="our-content px-5">
+            <div className="our-content ">
               <h3
                 className="mb-3"
                 style={{ textShadow: "4px 4px 6px rgba(0, 0, 0, 0.4)" }}
@@ -738,9 +781,14 @@ const OurWork = () => {
         </Row>
       </Container>
       <Container className="">
-        <div className="blue1 text-white p-3 w-50 logo-package ">
+      <Row className="justify-content-center">
+        <Col xs={12} lg={6}>
+          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
           <h1 className="fw-bold">Poster Package</h1>
-        </div>
+          </div>
+        </Col>
+      </Row>
+      
         <Row className="mb-5 pb-5">
           <Col md={6}>
             {works.length > 0 ? (
@@ -784,7 +832,7 @@ const OurWork = () => {
             )}
           </Col>
           <Col md={6} className="my-auto">
-            <div className="our-content px-5">
+            <div className="our-content ">
               <h3
                 className="mb-3"
                 style={{ textShadow: "4px 4px 6px rgba(0, 0, 0, 0.4)" }}
