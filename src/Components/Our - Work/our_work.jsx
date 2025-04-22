@@ -185,34 +185,35 @@ const OurWork = () => {
       </div>
 
       <div className="d-flex justify-content-center align-items-center">
-        <div className="text-center py-5 my-4 w-75 ">
-          <h1 className="fw-bold extra-bold heading my-3">
-            Graphic Design Packages
-          </h1>
-          <h4 className="blue my-3">
-            Customizable Packages to Match Your Budget
-          </h4>
-          <p className="text-secondary text pt-2">
-            Our team of expert designers is dedicated to bringing your vision to
-            life! Every design will be meticulously tailored to your exact
-            requirements, ensuring 100% personal attention and a unique touch
-            that meets your needs perfectly. Whether you have a small or large
-            project, we offer flexible options that fit your budget and exceed
-            your expectations! No matter the scope or scale, we promise
-            high-quality results that align with your goals. Let us help you
-            create something amazing that stands out!
-          </p>
-        </div>
+        <Row className="justify-content-center px-2">
+          <Col xs={12} lg={9} className="text-center py-5 my-4">
+            <h1 className="fw-bold extra-bold heading my-3">
+              Graphic Design Packages
+            </h1>
+            <h4 className="blue my-3">
+              Customizable Packages to Match Your Budget
+            </h4>
+            <p className="text-secondary text pt-2">
+              Our team of expert designers is dedicated to bringing your vision to life!
+              Every design will be meticulously tailored to your exact requirements,
+              ensuring 100% personal attention and a unique touch that meets your needs perfectly.
+              Whether you have a small or large project, we offer flexible options
+              that fit your budget and exceed your expectations!
+              No matter the scope or scale, we promise high-quality results that align with your goals.
+              Let us help you create something amazing that stands out!
+            </p>
+          </Col>
+        </Row>
       </div>
 
       <Container>
         <Row className="justify-content-center">
-        <Col xs={12} lg={6}>
-          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
-          <h1 className="fw-bold">Logo Design Package</h1>
-          </div>
-        </Col>
-      </Row>
+          <Col xs={12} lg={6}>
+            <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
+              <h1 className="fw-bold">Logo Design Package</h1>
+            </div>
+          </Col>
+        </Row>
         <Row className="mb-5 pb-5">
           <Col md={6} className="my-auto">
             <div className="our-content ">
@@ -269,14 +270,14 @@ const OurWork = () => {
         </Row>
       </Container>
       <Container className="">
-      <Row className="justify-content-center">
-        <Col xs={12} lg={6}>
-          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
-          <h1 className="fw-bold">Brochure Design Package</h1>
-          </div>
-        </Col>
-      </Row>
-       
+        <Row className="justify-content-center">
+          <Col xs={12} lg={6}>
+            <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
+              <h1 className="fw-bold">Brochure Design Package</h1>
+            </div>
+          </Col>
+        </Row>
+
         <Row className="mb-5 pb-5">
           <Col md={6}>
             {works.length > 0 ? (
@@ -334,14 +335,14 @@ const OurWork = () => {
       </Container>
 
       <Container>
-      <Row className="justify-content-center">
-        <Col xs={12} lg={6}>
-          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
-          <h1 className="fw-bold">Flyer Design Package</h1>
-          </div>
-        </Col>
-      </Row>
-       
+        <Row className="justify-content-center">
+          <Col xs={12} lg={6}>
+            <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
+              <h1 className="fw-bold">Flyer Design Package</h1>
+            </div>
+          </Col>
+        </Row>
+
         <Row className="mb-5 pb-5">
           <Col md={6} className="my-auto">
             <div className="our-content ">
@@ -398,13 +399,13 @@ const OurWork = () => {
         </Row>
       </Container>
       <Container className="">
-      <Row className="justify-content-center">
-        <Col xs={12} lg={6}>
-          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
-          <h1 className="fw-bold">Packaging Design </h1>          </div>
-        </Col>
-      </Row>
-       
+        <Row className="justify-content-center">
+          <Col xs={12} lg={6}>
+            <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
+              <h1 className="fw-bold">Packaging Design </h1>          </div>
+          </Col>
+        </Row>
+
         <Row className="mb-5 pb-5">
           <Col md={6}>
             {works.length > 0 ? (
@@ -461,14 +462,14 @@ const OurWork = () => {
         </Row>
       </Container>
       <Container>
-      <Row className="justify-content-center">
-        <Col xs={12} lg={6}>
-          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
-          <h1 className="fw-bold">Icon Design Package</h1>
-          </div>
-        </Col>
-      </Row>
-       
+        <Row className="justify-content-center">
+          <Col xs={12} lg={6}>
+            <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
+              <h1 className="fw-bold">Icon Design Package</h1>
+            </div>
+          </Col>
+        </Row>
+
         <Row className="mb-5 pb-5">
           <Col md={6} className="my-auto">
             <div className="our-content ">
@@ -525,14 +526,14 @@ const OurWork = () => {
         </Row>
       </Container>
       <Container className="">
-      <Row className="justify-content-center">
-        <Col xs={12} lg={6}>
-          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
-          <h1 className="fw-bold">UI/UX Design Package</h1>
-          </div>
-        </Col>
-      </Row>
-       
+        <Row className="justify-content-center">
+          <Col xs={12} lg={6}>
+            <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
+              <h1 className="fw-bold">UI/UX Design Package</h1>
+            </div>
+          </Col>
+        </Row>
+
         <Row className="mb-5 pb-5">
           <Col md={6}>
             {works.length > 0 ? (
@@ -589,14 +590,14 @@ const OurWork = () => {
         </Row>
       </Container>
       <Container>
-      <Row className="justify-content-center">
-        <Col xs={12} lg={6}>
-          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
-          <h1 className="fw-bold">Stationary Design Package</h1>
-          </div>
-        </Col>
-      </Row>
-       
+        <Row className="justify-content-center">
+          <Col xs={12} lg={6}>
+            <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
+              <h1 className="fw-bold">Stationary Design Package</h1>
+            </div>
+          </Col>
+        </Row>
+
         <Row className="mb-5 pb-5">
           <Col md={6} className="my-auto">
             <div className="our-content ">
@@ -653,14 +654,14 @@ const OurWork = () => {
         </Row>
       </Container>
       <Container className="">
-      <Row className="justify-content-center">
-        <Col xs={12} lg={6}>
-          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
-          <h1 className="fw-bold">Magazine Add Package</h1>
-          </div>
-        </Col>
-      </Row>
-        
+        <Row className="justify-content-center">
+          <Col xs={12} lg={6}>
+            <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
+              <h1 className="fw-bold">Magazine Add Package</h1>
+            </div>
+          </Col>
+        </Row>
+
         <Row className="mb-5 pb-5">
           <Col md={6}>
             {works.length > 0 ? (
@@ -717,14 +718,14 @@ const OurWork = () => {
         </Row>
       </Container>
       <Container className="">
-      <Row className="justify-content-center">
-        <Col xs={12} lg={6}>
-          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
-          <h1 className="fw-bold">Visual Aid Package</h1>
-          </div>
-        </Col>
-      </Row>
-       
+        <Row className="justify-content-center">
+          <Col xs={12} lg={6}>
+            <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
+              <h1 className="fw-bold">Visual Aid Package</h1>
+            </div>
+          </Col>
+        </Row>
+
         <Row className="mb-5 pb-5">
           <Col md={6} className="my-auto">
             <div className="our-content ">
@@ -781,14 +782,14 @@ const OurWork = () => {
         </Row>
       </Container>
       <Container className="">
-      <Row className="justify-content-center">
-        <Col xs={12} lg={6}>
-          <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
-          <h1 className="fw-bold">Poster Package</h1>
-          </div>
-        </Col>
-      </Row>
-      
+        <Row className="justify-content-center">
+          <Col xs={12} lg={6}>
+            <div className="blue1 text text-white py-3 w-100 w-lg-50 logo-package">
+              <h1 className="fw-bold">Poster Package</h1>
+            </div>
+          </Col>
+        </Row>
+
         <Row className="mb-5 pb-5">
           <Col md={6}>
             {works.length > 0 ? (
