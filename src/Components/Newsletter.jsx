@@ -1,5 +1,5 @@
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import News from '../assets/Group 37.png';
+import News from '../assets/Untitled-4 (1).png';
 import { IoMailOpenOutline } from "react-icons/io5";
 import { useState } from 'react';
 import axios from 'axios';
@@ -65,7 +65,7 @@ function Newsletter() {
                     Subscribe to
                   </h5>
                   <h2 className="lead display-6 fw-bold text-md-start ms-md-5 ps-md-5">Our Newsletter</h2>
-                  <p className="text-md-start ms-md-5 ps-md-5 w-75 news-p">
+                  <p className="text-md-start ms-md-5 ps-md-5 w-75 news-p text">
                     Stay Inspired, Stay Informed. We respect your privacy and promise no spam, only valuable updates.
                   </p>
 

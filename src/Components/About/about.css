@@ -39,7 +39,15 @@
   h1, h3 {
     margin: 0;
   }
-  
+  .about-col h2{
+    color: #0d3e72 !important;
+  }
+  .about-col h2{
+    color: #0d3e72 !important;
+  }
+  .about-col:hover h2{
+    color: white !important;
+  }
   .about-col {
     padding: 20px;
     border-radius: 8px; 

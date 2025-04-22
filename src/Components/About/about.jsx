@@ -6,17 +6,17 @@ import { SEO } from '../SEO';
 const About = () => {
   return (
     <div className="text">
-       <SEO title=" Artisticify " description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
-       <SEO title="Artisticify" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+      <SEO title=" Artisticify " description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
+      <SEO title="Artisticify" description="Artisticify is a design company that provides design and Digital Marketing services to businesses." />
       <div className='about'>
-  <div className='image-container'>
-    <img src={MainImg} className='main-about img-fluid '/>
-    <div className='overlay-text overlay-text11'>
-      <h1 className='fw-bold display-4 pb-2 text-start text-md-start text-center ms-md-5 ps-md-5'>About Artisticify Branding</h1>
-      <h3 className='lead  fw-bold text-md-start text-center ms-md-5 ps-md-5'>Logo, Graphics, Brochures and much more ...</h3>
-    </div>
-  </div>
-</div>
+        <div className='image-container'>
+          <img src={MainImg} className='main-about img-fluid ' />
+          <div className='overlay-text overlay-text11'>
+            <h1 className='fw-bold display-4 pb-2 text-start text-md-start text-center ms-md-5 ps-md-5'>About Artisticify Branding</h1>
+            <h3 className='lead  fw-bold text-md-start text-center ms-md-5 ps-md-5'>Logo, Graphics, Brochures and much more ...</h3>
+          </div>
+        </div>
+      </div>
 
 
       <div className="d-flex justify-content-center align-items-center text">
@@ -102,7 +102,7 @@ const About = () => {
           </Col>
           <Col md={4}>
             <div>
-              <img src={Why} alt="Polygon Image"  className='why'/>
+              <img src={Why} alt="Polygon Image" className='why' />
             </div>
 
 

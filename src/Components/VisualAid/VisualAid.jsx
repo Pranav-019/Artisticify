@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import PackagingImage from '../../assets/visual aid.png';
-import visualidImg from '../../assets/Visuals ads Design_1.jpg';
+import visualidImg from '../../assets/Visuals ads Design.jpg';
 import { SEO } from '../SEO';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
