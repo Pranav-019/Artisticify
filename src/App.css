@@ -272,10 +272,11 @@ body, html {
   color: #FD3765;
   
 }
+
 .nav-link-custom.talk-link {
   background-color: #13357B;
   color: #ffffff !important;
-  padding: 6px 12px;
+  padding: 6px 6px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
   display: inline-flex;

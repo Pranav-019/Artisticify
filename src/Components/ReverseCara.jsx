@@ -13,7 +13,6 @@ function ReverseCara() {
   const [cardsPerView, setCardsPerView] = useState(3);
   const [cardData, setCardData] = useState([]);
 
-  // ✅ Fetch card images from API
   useEffect(() => {
     const fetchCards = async () => {
       try {

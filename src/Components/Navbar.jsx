@@ -21,8 +21,12 @@ function ArtisticifyNavbar() {
         description="Artisticify is a design company that provides design and Digital Marketing services to businesses."
       />
 
-      <div className="bg-body-tertiary">
-        <Navbar expand="lg" sticky="top" className="bg-body-tertiary">
+      <div className="bg-body-tertiary sticky-navbar" >
+        <Navbar
+          expand="lg"
+          sticky="top"
+          className="bg-body-tertiary "
+        >
           <Container>
             <Navbar.Brand href="/">
               <img
@@ -221,7 +225,7 @@ function ArtisticifyNavbar() {
                     Our Work
                   </Nav.Link>
                   <Nav.Link
-                    className="nav-link-custom talk-link ms-lg-1"
+                    className="nav-link-custom talk-link ms-lg-4"
                     onClick={() => navigate("/Contact")}
                   >
                     Let's Talk <FaArrowRight />
@@ -241,6 +245,13 @@ function ArtisticifyNavbar() {
       {/* Custom CSS */}
       <style>
         {`
+        .sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
           .nav-link-custom {
             padding-left: 30px !important;  /* Reduced padding to fit all links in one line */
             font-size: 18px;
