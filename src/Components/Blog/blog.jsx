@@ -47,7 +47,7 @@ const Blog = () => {
                   <Card.Title style={{ color: '#13357b' }}>
                     {blog.mainTitle}
                   </Card.Title>
-                  <Card.Text>
+                  <Card.Text className='text'>
                     {blog.shortDescription || blog.description.slice(0, 100)}...
                   </Card.Text>
                   <Button

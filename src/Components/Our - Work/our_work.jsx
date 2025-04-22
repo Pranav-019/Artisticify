@@ -95,7 +95,7 @@ const OurWork = () => {
     //           >
     //             {ourwork[0].h1}
     //           </h3>
-    //           <p className="text-secondary">{ourwork[0].p1}</p>
+    //           <p className="text-secondary text">{ourwork[0].p1}</p>
     //         </div>
     //       </Col>
     //       <Col md={6}>
@@ -159,7 +159,7 @@ const OurWork = () => {
     //           >
     //             {ourwork[0].h1}
     //           </h3>
-    //           <p className="text-secondary">{ourwork[0].p1}</p>
+    //           <p className="text-secondary text">{ourwork[0].p1}</p>
     //         </div>
     //       </Col>
     //     </Row>
@@ -191,7 +191,7 @@ const OurWork = () => {
           <h4 className="blue my-3">
             Customizable Packages to Match Your Budget
           </h4>
-          <p className="text-secondary pt-2">
+          <p className="text-secondary text pt-2">
             Our team of expert designers is dedicated to bringing your vision to
             life! Every design will be meticulously tailored to your exact
             requirements, ensuring 100% personal attention and a unique touch
@@ -209,7 +209,7 @@ const OurWork = () => {
           <h1 className="fw-bold">Logo Design Package</h1>
         </div>
         <Row className="mb-5 pb-5">
-          <Col md={6}>
+          <Col md={6} className="my-auto">
             <div className="our-content px-5">
               <h3
                 className="mb-3"
@@ -217,7 +217,7 @@ const OurWork = () => {
               >
                 {ourwork[0].h1}
               </h3>
-              <p className="text-secondary">{ourwork[0].p1}</p>
+              <p className="text-secondary text text">{ourwork[0].p1}</p>
             </div>
           </Col>
           <Col md={6}>
@@ -306,7 +306,7 @@ const OurWork = () => {
               <p>Loading images or no images available...</p>
             )}
           </Col>
-          <Col md={6}>
+          <Col md={6} className="my-auto">
             <div className="our-content px-5">
               <h3
                 className="mb-3"
@@ -314,7 +314,7 @@ const OurWork = () => {
               >
                 {ourwork[1].h2}
               </h3>
-              <p className="text-secondary">{ourwork[1].p2}</p>
+              <p className="text-secondary text">{ourwork[1].p2}</p>
             </div>
           </Col>
         </Row>
@@ -325,7 +325,7 @@ const OurWork = () => {
           <h1 className="fw-bold">Flyer Design Package</h1>
         </div>
         <Row className="mb-5 pb-5">
-          <Col md={6}>
+          <Col md={6} className="my-auto">
             <div className="our-content px-5">
               <h3
                 className="mb-3"
@@ -333,7 +333,7 @@ const OurWork = () => {
               >
                 {ourwork[2].h3}
               </h3>
-              <p className="text-secondary">{ourwork[2].p3}</p>
+              <p className="text-secondary text">{ourwork[2].p3}</p>
             </div>
           </Col>
           <Col md={6}>
@@ -421,7 +421,7 @@ const OurWork = () => {
               <p>Loading images or no images available...</p>
             )}
           </Col>
-          <Col md={6}>
+          <Col md={6} className="my-auto">
             <div className="our-content px-5">
               <h3
                 className="mb-3"
@@ -429,7 +429,7 @@ const OurWork = () => {
               >
                 {ourwork[3].h4}
               </h3>
-              <p className="text-secondary">{ourwork[3].p4}</p>
+              <p className="text-secondary text">{ourwork[3].p4}</p>
             </div>
           </Col>
         </Row>
@@ -439,7 +439,7 @@ const OurWork = () => {
           <h1 className="fw-bold">Icon Design Package</h1>
         </div>
         <Row className="mb-5 pb-5">
-          <Col md={6}>
+          <Col md={6} className="my-auto">
             <div className="our-content px-5">
               <h3
                 className="mb-3"
@@ -447,7 +447,7 @@ const OurWork = () => {
               >
                 {ourwork[4].h5}
               </h3>
-              <p className="text-secondary">{ourwork[4].p5}</p>
+              <p className="text-secondary text">{ourwork[4].p5}</p>
             </div>
           </Col>
           <Col md={6}>
@@ -535,7 +535,7 @@ const OurWork = () => {
               <p>Loading images or no images available...</p>
             )}
           </Col>
-          <Col md={6}>
+          <Col md={6} className="my-auto">
             <div className="our-content px-5">
               <h3
                 className="mb-3"
@@ -543,7 +543,7 @@ const OurWork = () => {
               >
                 {ourwork[5].h6}
               </h3>
-              <p className="text-secondary">{ourwork[5].p6}</p>
+              <p className="text-secondary text">{ourwork[5].p6}</p>
             </div>
           </Col>
         </Row>
@@ -553,7 +553,7 @@ const OurWork = () => {
           <h1 className="fw-bold">Stationary Design Package</h1>
         </div>
         <Row className="mb-5 pb-5">
-          <Col md={6}>
+          <Col md={6} className="my-auto">
             <div className="our-content px-5">
               <h3
                 className="mb-3"
@@ -561,7 +561,7 @@ const OurWork = () => {
               >
                 {ourwork[6].h7}
               </h3>
-              <p className="text-secondary">{ourwork[6].p7}</p>
+              <p className="text-secondary text">{ourwork[6].p7}</p>
             </div>
           </Col>
           <Col md={6}>
@@ -649,7 +649,7 @@ const OurWork = () => {
               <p>Loading images or no images available...</p>
             )}
           </Col>
-          <Col md={6}>
+          <Col md={6} className="my-auto">
             <div className="our-content px-5">
               <h3
                 className="mb-3"
@@ -657,7 +657,7 @@ const OurWork = () => {
               >
                 {ourwork[7].h8}
               </h3>
-              <p className="text-secondary">{ourwork[7].p8}</p>
+              <p className="text-secondary text">{ourwork[7].p8}</p>
             </div>
           </Col>
         </Row>
@@ -667,7 +667,7 @@ const OurWork = () => {
           <h1 className="fw-bold">Visual Aid Package</h1>
         </div>
         <Row className="mb-5 pb-5">
-          <Col md={6}>
+          <Col md={6} className="my-auto">
             <div className="our-content px-5">
               <h3
                 className="mb-3"
@@ -675,7 +675,7 @@ const OurWork = () => {
               >
                 {ourwork[8].h9}
               </h3>
-              <p className="text-secondary">{ourwork[8].p9}</p>
+              <p className="text-secondary text">{ourwork[8].p9}</p>
             </div>
           </Col>
           <Col md={6}>
@@ -764,7 +764,7 @@ const OurWork = () => {
               <p>Loading images or no images available...</p>
             )}
           </Col>
-          <Col md={6}>
+          <Col md={6} className="my-auto">
             <div className="our-content px-5">
               <h3
                 className="mb-3"
@@ -772,7 +772,7 @@ const OurWork = () => {
               >
                 {ourwork[9].h10}
               </h3>
-              <p className="text-secondary">{ourwork[9].p10}</p>
+              <p className="text-secondary text ">{ourwork[9].p10}</p>
             </div>
           </Col>
         </Row>
