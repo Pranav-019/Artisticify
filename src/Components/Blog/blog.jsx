@@ -36,7 +36,7 @@ const Blog = () => {
         </h1>
         <Row>
           {blog.map((blog) => (
-            <Col xs={12} md={6} lg={4} key={blog._id} className="mb-4">
+            <Col xs={12} md={6} lg={4} key={blog._id} className="my-4">
               <Card className="shadow-sm h-100 d-flex flex-column">
                 <Card.Img
                   variant="top"

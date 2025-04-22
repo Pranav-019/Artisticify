@@ -1,5 +1,5 @@
 import "./our_work.css";
-import MainImg from '../../assets/postive-caring-relationships-teachers 1.png';
+import MainImg from '../../assets/our work.jpg';
 import { Col, Container, Row } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import { useEffect, useState } from "react";

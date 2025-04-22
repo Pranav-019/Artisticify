@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import PosterImage from '../../assets/social media.png';
-import PosterImg from '../../assets/special package for marketing.jpg';
+import PosterImg from '../../assets/social media.jpg';
 import social1 from '../../assets/azwyxexsop.jpg'
 import social3 from '../../assets/bigstock-Web-Traffic-business-Technol-166581227.4b2ff768.jpg'
 import social4 from '../../assets/images.jpg'
