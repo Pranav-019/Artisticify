@@ -1,5 +1,5 @@
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import News from '../assets/Group 37.png';
+import News from '../assets/Untitled-4 (1).png';
 import { IoMailOpenOutline } from "react-icons/io5";
 import { useState } from 'react';
 import axios from 'axios';

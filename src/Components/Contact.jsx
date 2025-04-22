@@ -8,7 +8,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import MainImg from '../assets/postive-caring-relationships-teachers 1.png';
+import MainImg from '../assets/our work.jpg';
 import { useLocation } from 'react-router-dom';
 
 function Contact() {
