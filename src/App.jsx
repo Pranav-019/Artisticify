@@ -210,7 +210,7 @@ const Root = () => (
         <Route path="/SearchEngine" element={<SearchEngine />} />
         <Route path="/SocialMedia" element={<SocialMedia />} />
         <Route path="/ContentMarketing" element={<ContentMarketing />} />
-        <Route path="/PayPer" element={<PayPer />} />
+        <Route path="/PayPerClick" element={<PayPer />} />
         <Route path="/SpecialPackages" element={<SpecialPackages />} />
         <Route path="/Googlemybusiness" element={<Googlemybusiness />} />
         <Route path="/GrowBusiness" element={<GrowBusiness />} />

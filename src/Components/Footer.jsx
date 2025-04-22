@@ -211,7 +211,7 @@ const Footer = () => {
         <li><a href="/SearchEngine" className="text-decoration-none text-white">SEO</a></li>
         <li><a href="/SocialMedia" className="text-decoration-none text-white">Social Media</a></li>
         <li><a href="/ContentMarketing" className="text-decoration-none text-white">Content Marketing</a></li>
-        <li><a href="/PayPer" className="text-decoration-none text-white">Pay Per Click</a></li>
+        <li><a href="/PayPerClick" className="text-decoration-none text-white">Pay Per Click</a></li>
         <li><a href="/Googlemybusiness" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-white">Google My Business</a></li>
         <li><a href="/SpecialPAckages" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-white">Special Packages</a></li>
        

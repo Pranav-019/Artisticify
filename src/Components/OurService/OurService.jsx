@@ -112,7 +112,7 @@ function OurService() {
       ),
       description:
         "Maximize ROI through precision-targeted Google and social ads. We optimize every click with smart budget allocation, compelling ad copy, and real-time performance monitoring.",
-      route: "/PayPer",
+      route: "/PayPerClick",
     },
     {
       id: 5,

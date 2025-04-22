@@ -194,7 +194,7 @@ function ArtisticifyNavbar() {
                     </NavDropdown.Item>
                     <NavDropdown.Item
                       className="dropdown-item-custom"
-                      href="/PayPer"
+                      href="/PayPerClick"
                     >
                       Pay Per Click
                     </NavDropdown.Item>
