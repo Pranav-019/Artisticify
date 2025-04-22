@@ -323,7 +323,7 @@ const OurWork = () => {
           <Col md={6} className="my-auto">
             <div className="our-content ">
               <h3
-                className="mb-3"
+                className="mb-3 mt-3"
                 style={{ textShadow: "4px 4px 6px rgba(0, 0, 0, 0.4)" }}
               >
                 {ourwork[1].h2}
