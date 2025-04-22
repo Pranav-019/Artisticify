@@ -21,7 +21,7 @@ function Graphicpanel() {
       </Container>
       <Container>
         <Row className="w-100">
-          <Col md={3} className="fade-in  ms-5 ms-lg-0 my-0 my-md-5 my-lg-0">
+          <Col md={3} className="fade-in  ms-2 ms-lg-0 my-0 my-md-5 my-lg-0">
             <div>
               <img
                 src={graphic1}
@@ -50,7 +50,10 @@ function Graphicpanel() {
 
         <hr />
         <Row className="w-100">
-          <Col md={3} className="fade-in d-block d-md-none ms-5 ms-lg-0 my-0 my-md-5 my-lg-0">
+          <Col
+            md={3}
+            className="fade-in d-block d-md-none ms-2 ms-lg-0 my-0 my-md-5 my-lg-0"
+          >
             <div>
               <img
                 src={graphic}
@@ -77,7 +80,10 @@ function Graphicpanel() {
               </p>
             </div>
           </Col>
-          <Col md={3} className="fade-in d-none d-md-block my-0 my-md-5 my-lg-0">
+          <Col
+            md={3}
+            className="fade-in d-none d-md-block my-0 my-md-5 my-lg-0"
+          >
             <div>
               <img
                 src={graphic}
@@ -90,7 +96,7 @@ function Graphicpanel() {
 
         <hr />
         <Row className="w-100">
-          <Col md={3} className="fade-in ms-5 ms-lg-0 my-0 my-md-5 my-lg-0">
+          <Col md={3} className="fade-in ms-2 ms-lg-0 my-0 my-md-5 my-lg-0">
             <div>
               <img
                 src={graphic2}
