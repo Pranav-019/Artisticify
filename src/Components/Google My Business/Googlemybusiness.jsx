@@ -134,6 +134,7 @@ function Googlemybusiness() {
                   variant="primary" 
                   className="mt-3 fw-bold"
                   onClick={handleEnquire}
+                  style={{ backgroundColor: "#13357B" }} 
                 >
                   <RiCustomerService2Fill className="me-2" />
                   Get Started Today
@@ -160,7 +161,7 @@ function Googlemybusiness() {
           <Row className="align-items-center">
             <Col md={6} className='p-4'>
               <h3>
-                <FaMapMarkerAlt className="me-2 text-primary" />
+                <FaMapMarkerAlt className="me-2 " style={{ color: "#13357B" }}  />
                 Google My Business Creation Service
               </h3>
               <h5 className='blue my-2'>Don't have a GMB profile yet? We'll set it up for you!</h5>
@@ -176,6 +177,7 @@ function Googlemybusiness() {
                   variant="outline-primary" 
                   className="mt-2"
                   onClick={handleEnquire}
+                  style={{ backgroundColor: "#13357B" , color: "#ffffff" }} 
                 >
                   Get Your Business Listed
                 </Button>
@@ -183,7 +185,7 @@ function Googlemybusiness() {
             </Col>
             <Col md={6}>
               <div className="p-4 text-center">
-                <FaSearchLocation size={150} className="text-primary mb-3" />
+                <FaSearchLocation size={150} className=" mb-3" style={{ color: "#13357B" }}  />
               </div>
             </Col>
           </Row>
@@ -196,7 +198,7 @@ function Googlemybusiness() {
             <Col md={6} className="order-md-2">
               <div className="p-4">
                 <h3>
-                  <MdManageAccounts className="me-2 text-primary" />
+                  <MdManageAccounts className="me-2" style={{ color: "#13357B" }}  />
                   Google My Business Optimization
                 </h3>
                 <h5 className='blue my-2'>Already have a profile? We'll make it perform better!</h5>
@@ -213,6 +215,7 @@ function Googlemybusiness() {
                     variant="outline-primary" 
                     className="mt-2"
                     onClick={handleEnquire}
+                    style={{ color: "#ffffff",backgroundColor: "#13357B" }} 
                   >
                     Optimize Your Profile
                   </Button>
@@ -221,7 +224,7 @@ function Googlemybusiness() {
             </Col>
             <Col md={6} className="order-md-1">
               <div className="p-4 text-center">
-                <FaEdit size={120} className="text-primary mb-4" />
+                <FaEdit size={120} className=" mb-4" style={{ color: "#13357B" }}  />
                 <div className="d-flex justify-content-center">
                   <FaChartLine size={60} className="text-success mx-3" />
                   <FaComments size={60} className="text-info mx-3" />
@@ -236,15 +239,15 @@ function Googlemybusiness() {
       {/* Benefits Section */}
       <div className='w-100 py-5'>
         <Container>
-          <h2 className="text-center mb-5">
-            <FaGoogle className="me-3 text-primary" />
+          <h2 className="text-center mb-5" style={{ color: "#13357B" }} >
+            <FaGoogle className="me-3" style={{ color: "#13357B" }}  />
             Why Your Business Needs GMB
           </h2>
           <Row className="g-4">
             <Col md={4}>
               <div className="p-4 text-center h-100">
                 <div className="bg-light p-4 rounded-circle d-inline-block mb-3">
-                  <FaSearchLocation size={40} className="text-primary" />
+                  <FaSearchLocation size={40} className="" style={{ color: "#13357B" }}  />
                 </div>
                 <h4>Local Visibility</h4>
                 <p className="text-secondary">Appear in Google's local pack results when customers search for services like yours</p>
@@ -275,12 +278,12 @@ function Googlemybusiness() {
       {/* Additional Features */}
       <div className='w-100 py-5' style={{ backgroundColor: "#F0F9FF" }}>
         <Container>
-          <h2 className="text-center mb-5">Our Comprehensive GMB Services</h2>
+          <h2 className="text-center mb-5" style={{ color: "#13357B" }}>Our Comprehensive GMB Services</h2>
           <Row>
             <Col md={6} className="mb-4">
               <div className="p-4 h-100 bg-white rounded shadow-sm">
                 <div className="d-flex align-items-center mb-3">
-                  <div className="bg-primary p-3 rounded-circle me-3">
+                  <div className=" p-3 rounded-circle me-3" style={{ backgroundColor: "#13357B" }} >
                     <FaComments size={24} className="text-white" />
                   </div>
                   <h4 className="mb-0">Review Management</h4>
@@ -298,8 +301,8 @@ function Googlemybusiness() {
             </Col>
             <Col md={6} className="mb-4">
               <div className="p-4 h-100 bg-white rounded shadow-sm">
-                <div className="d-flex align-items-center mb-3">
-                  <div className="bg-primary p-3 rounded-circle me-3">
+                <div className="d-flex align-items-center mb-3" >
+                  <div className=" p-3 rounded-circle me-3" style={{backgroundColor: "#13357B"}}>
                     <FaCalendarAlt size={24} className="text-white" />
                   </div>
                   <h4 className="mb-0">Regular Posts & Updates</h4>
