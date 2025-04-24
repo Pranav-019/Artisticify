@@ -1,6 +1,6 @@
 import './about.css';
 import { Col, Container, Row } from 'react-bootstrap';
-import Why from "../../assets/WhatsApp Image 2025-04-24 at 12.09.18 PM.jpeg";
+import Why from "../../assets/Untitled-2.png";
 import MainImg from '../../assets/our work.jpg' 
 import { SEO } from '../SEO';
 const About = () => {
@@ -82,10 +82,10 @@ const About = () => {
       </Container>
 
       <Container>
-        <Row className='my-5'>
+        <Row className='my-5 py-5'>
           <Col md={8}>
-            <div className='p-5 my-5 '>
-              <p className='text-secondary'>              Komal Shingare - Creative Head, Artisticify Branding
+            <div className='px-5 my-5 '>
+              <p className='fw-bold' style={{color:" #0d3e72"}}>              Komal Shingare - Creative Head, Artisticify Branding
               </p>
 
               <p className='text-secondary'>
@@ -102,7 +102,7 @@ const About = () => {
           </Col>
           <Col md={4}>
             <div>
-              <img src={Why} alt="Polygon Image" className='why img-fluid' />
+              <img src={Why} alt="Polygon Image" className='why img-fluid'  />
             </div>
 
 
