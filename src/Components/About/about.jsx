@@ -1,6 +1,6 @@
 import './about.css';
 import { Col, Container, Row } from 'react-bootstrap';
-import Why from "../About/aaa.png";
+import Why from "../../assets/WhatsApp Image 2025-04-24 at 12.09.18 PM.jpeg";
 import MainImg from '../../assets/our work.jpg' 
 import { SEO } from '../SEO';
 const About = () => {
@@ -102,7 +102,7 @@ const About = () => {
           </Col>
           <Col md={4}>
             <div>
-              <img src={Why} alt="Polygon Image" className='why' />
+              <img src={Why} alt="Polygon Image" className='why img-fluid' />
             </div>
 
 
